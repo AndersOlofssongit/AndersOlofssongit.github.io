@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skanna by LiDAR3D — Scan. Store. Design.</title>
+<meta name="description" content="Skanna turns your iPhone or iPad Pro into a professional LiDAR scanner. Capture dimensionally accurate 3D models of any space — entirely offline, entirely private.">
+<style>
+  :root {
+    --bg: #0b0b12;
+    --bg2: #0a0a0f;
+    --panel: rgba(255,255,255,0.05);
+    --rule: rgba(255,255,255,0.10);
+    --text: #f2f2f7;
+    --muted: rgba(255,255,255,0.60);
+    --faint: rgba(255,255,255,0.38);
+    --accent: #a78bfa;
+    --accent-deep: #7c5cf0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      linear-gradient(180deg, #12121d 0%, var(--bg) 40%, var(--bg2) 100%);
+    color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Architect grid backdrop */
+  .grid-bg {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.045) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(255,255,255,0.045) 0.5px, transparent 0.5px);
+    background-size: 38px 38px;
+    mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 60%, transparent);
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 60%, transparent);
+  }
+  main { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 24px 64px; }
+
+  nav {
+    display: flex; align-items: center; gap: 12px;
+    padding: 28px 0 0;
+  }
+  nav .name { font-weight: 700; letter-spacing: 0.02em; }
+  nav .by { color: var(--faint); font-size: 0.85em; margin-left: -4px; }
+
+  header.hero { text-align: center; padding: 72px 0 56px; }
+  .hero .mark { margin-bottom: 28px; }
+  .hero h1 {
+    font-size: clamp(2.1em, 6vw, 3.2em);
+    line-height: 1.1; margin: 0 0 14px; font-weight: 800; letter-spacing: -0.02em;
+  }
+  .hero h1 .dot { color: var(--accent); }
+  .hero p.lede {
+    max-width: 560px; margin: 0 auto 30px; color: var(--muted); font-size: 1.1em;
+  }
+  .badge {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    color: var(--text);
+    font-weight: 600; font-size: 0.95em;
+  }
+  .badge .soon { color: var(--accent); }
+
+  section { padding: 40px 0; border-top: 1px solid var(--rule); }
+  h2 {
+    font-size: 0.85em; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--faint); margin: 0 0 28px;
+  }
+  .features {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 1.02em; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.92em; }
+  .card .glyph { color: var(--accent); font-size: 1.25em; margin-bottom: 10px; }
+
+  .req-list, .contact-block { color: var(--muted); }
+  .req-list ul { margin: 0; padding-left: 20px; }
+  .req-list li { margin: 6px 0; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 28px 0 0; margin-top: 24px;
+    display: flex; flex-wrap: wrap; gap: 8px 24px;
+    justify-content: space-between; align-items: center;
+    color: var(--faint); font-size: 0.85em;
+  }
+  footer nav.links { padding: 0; display: flex; gap: 20px; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<main>
+  <nav>
+    <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path d="M50 2 L98 40 L50 98 L2 40 Z" stroke="#f2f2f7" stroke-width="4.5"/>
+      <path d="M50 2 L26 40 M50 2 L74 40 M26 40 L74 40 M26 40 L50 98 M74 40 L50 98 M2 40 L26 40 M74 40 L98 40"
+            stroke="#f2f2f7" stroke-opacity="0.55" stroke-width="3"/>
+    </svg>
+    <span class="name">Skanna</span><span class="by">by LiDAR3D</span>
+  </nav>
+
+  <header class="hero">
+    <div class="mark">
+      <svg width="88" height="88" viewBox="0 0 100 100" fill="none" aria-label="Skanna logo">
+        <path d="M50 2 L98 40 L50 98 L2 40 Z" stroke="#f2f2f7" stroke-width="2.6"/>
+        <path d="M50 2 L26 40 M50 2 L74 40 M26 40 L74 40 M26 40 L50 98 M74 40 L50 98 M2 40 L26 40 M74 40 L98 40"
+              stroke="#f2f2f7" stroke-opacity="0.55" stroke-width="1.7"/>
+      </svg>
+    </div>
+    <h1>Scan<span class="dot">.</span> Store<span class="dot">.</span> Design<span class="dot">.</span></h1>
+    <p class="lede">Skanna turns your iPhone or iPad Pro into a professional LiDAR scanner.
+    Capture dimensionally accurate 3D models of any space in minutes —
+    entirely on your device, entirely private.</p>
+    <span class="badge">Coming to the <strong>App&nbsp;Store</strong> — <span class="soon">launching&nbsp;soon</span></span>
+  </header>
+
+  <section id="features">
+    <h2>What it does</h2>
+    <div class="features">
+      <div class="card">
+        <div class="glyph">◈</div>
+        <h3>LiDAR capture</h3>
+        <p>Walk through a space with your iPhone or iPad Pro and build a true-to-scale
+        3D mesh in real time, with live coverage feedback while you scan.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">⚡</div>
+        <h3>Instant 3D preview</h3>
+        <p>Your model appears the moment you finish scanning. Photo-realistic colour
+        processing runs afterwards, while you keep working.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">📐</div>
+        <h3>Measure &amp; annotate</h3>
+        <p>Tap two points for real-world distances. Drop numbered pins with notes and
+        photos anywhere on the model.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">🧭</div>
+        <h3>Sites, not just scans</h3>
+        <p>Organise scans, photos, 360° panoramas, and files per property, with a
+        running site log — your whole project in one place.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">📦</div>
+        <h3>Open exports</h3>
+        <p>Export models as GLB, OBJ, DAE, or USDZ, or a complete site archive as ZIP.
+        Your data is never locked in.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">🔒</div>
+        <h3>Offline &amp; private</h3>
+        <p>Everything is captured, processed, and stored on your device. No account,
+        no cloud, no tracking. <a href="privacy.html">Read the privacy policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="requirements">
+    <h2>Requirements</h2>
+    <div class="req-list">
+      <ul>
+        <li>iPhone 12&nbsp;Pro or later Pro model, or iPad&nbsp;Pro (2020 or later) — a LiDAR sensor is required</li>
+        <li>iOS 16 or later</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="support">
+    <h2>Support &amp; contact</h2>
+    <div class="contact-block">
+      <p>Questions, feedback, or need help with the app?
+      Email <a href="mailto:anders830129@gmail.com">anders830129@gmail.com</a>
+      and you'll get a reply within a few days.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Anders Olofsson · Skanna by LiDAR3D</span>
+    <nav class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:anders830129@gmail.com">Support</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
