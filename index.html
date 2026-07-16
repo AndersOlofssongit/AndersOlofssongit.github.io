@@ -125,8 +125,13 @@
   }
   .btn:hover { text-decoration: none; filter: brightness(1.08); }
   .cta-row .aside { color: var(--faint); font-size: 0.85em; }
-  .shot-frame {
+  .shot-grid {
     margin-top: 28px;
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: start;
+  }
+  .shot-frame {
     border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
     background: rgba(255,255,255,0.03);
   }
@@ -143,22 +148,30 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
   .shot-frame img { display: block; width: 100%; height: auto; }
-  .shot-frame .placeholder {
-    aspect-ratio: 16 / 9; display: grid; place-items: center;
-    color: var(--faint); font-size: 0.9em;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.04) 0.5px, transparent 0.5px),
-      linear-gradient(90deg, rgba(255,255,255,0.04) 0.5px, transparent 0.5px);
-    background-size: 38px 38px;
+
+  /* Phone screenshot strip */
+  .phone-strip {
+    margin-top: 26px;
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+  .phone-strip img {
+    width: 100%; height: auto; display: block;
+    border-radius: 14px; border: 1px solid var(--rule);
   }
 
   /* How to scan section */
   .scan-guide {
     display: grid; gap: 14px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   }
   .scan-guide .card ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.92em; }
   .scan-guide .card li { margin: 7px 0; }
+  .scan-guide .scan-photo { padding: 0; overflow: hidden; position: relative; min-height: 240px; }
+  .scan-guide .scan-photo img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
   .scan-tip {
     margin-top: 14px;
     background: var(--panel); border: 1px solid rgba(167,139,250,0.35);
@@ -251,6 +264,12 @@
         no cloud, no tracking. <a href="privacy.html">Read the privacy policy</a>.</p>
       </div>
     </div>
+    <div class="phone-strip">
+      <img src="assets/app-scan.jpg" alt="iPhone scanning a room with the live LiDAR mesh overlay — scan buildings in 3D with LiDAR" loading="lazy">
+      <img src="assets/app-dome.jpg" alt="Capturing a 360° photo dome by aiming the circle at guide dots" loading="lazy">
+      <img src="assets/app-measure.jpg" alt="Measuring a 3.29 m distance on the 3D model in the app" loading="lazy">
+      <img src="assets/app-pins.jpg" alt="Numbered information pins with text and images placed on the 3D model" loading="lazy">
+    </div>
   </section>
 
   <section id="web">
@@ -266,9 +285,9 @@
       <div class="path highlight">
         <div class="kicker">Path two</div>
         <h3>Upload it to Skanna Web</h3>
-        <p>Open the same bundle in your browser and keep working: view, annotate,
-        and take the scan all the way to a BIM model. Free, no account —
-        everything stays on your machine.</p>
+        <p>Sign up and host your sites in the cloud for a small yearly fee.
+        Your scans stay online and ready to work on — and every tool, including
+        the full IFC / BIM authoring suite, is included at no extra cost.</p>
       </div>
     </div>
     <ul class="web-tools">
@@ -281,11 +300,17 @@
     </ul>
     <div class="cta-row">
       <a class="btn" href="app/">Open Skanna Web</a>
-      <span class="aside">Runs entirely in your browser — nothing is uploaded to a server.</span>
+      <span class="aside">Sign up to get access — one small yearly hosting fee, every feature included.</span>
     </div>
-    <div class="shot-frame">
-      <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — 3D viewer</span></div>
-      <div class="placeholder">Screenshot coming soon</div>
+    <div class="shot-grid">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — 3D viewer &amp; pins</span></div>
+        <img src="assets/web-viewer.jpg" alt="Skanna Web 3D viewer showing a scanned home in dollhouse view with an annotation pin panel open" loading="lazy">
+      </div>
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — BIM Author</span></div>
+        <img src="assets/bim-author.jpg" alt="Skanna Web BIM Author: 2D plan editor tracing a scan slice, with the 3D scan as reference and IFC export" loading="lazy">
+      </div>
     </div>
   </section>
 
@@ -318,6 +343,9 @@
           <li>Avoid windows, mirrors, and other reflective surfaces</li>
           <li>Avoid close-ups of flat, monotone areas like bare walls</li>
         </ul>
+      </div>
+      <div class="card scan-photo">
+        <img src="assets/scanning.jpg" alt="Live LiDAR scan in progress: the room is covered by a green-to-blue triangle mesh overlay" loading="lazy">
       </div>
     </div>
     <p class="scan-tip"><strong>Tip:</strong> scan room by room, floor by floor, or the whole
