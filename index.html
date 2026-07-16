@@ -148,6 +148,11 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
   .shot-frame img { display: block; width: 100%; height: auto; }
+  .shot-wide { margin-top: 14px; }
+  .ifc-note {
+    margin: 22px 0 0; color: var(--muted); font-size: 0.96em;
+    max-width: 720px;
+  }
 
   /* Phone screenshot strip */
   .phone-strip {
@@ -272,6 +277,45 @@
     </div>
   </section>
 
+  <section id="how-to-scan">
+    <h2>How to scan — best practices</h2>
+    <div class="scan-guide">
+      <div class="card">
+        <div class="glyph">1</div>
+        <h3>Prepare the space</h3>
+        <ul>
+          <li>Plan your route before you start</li>
+          <li>Open all doors and turn on the lights</li>
+          <li>Cover or remove photos and private information you don't want in the scan</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="glyph">2</div>
+        <h3>While scanning</h3>
+        <ul>
+          <li>Start in a corner</li>
+          <li>Keep 1.5–3 metres between you and what you're scanning</li>
+          <li>Move in a circle inside the space, sweeping up and down like an even coat of spray paint</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="glyph">3</div>
+        <h3>What to avoid</h3>
+        <ul>
+          <li>Don't scan the same area twice</li>
+          <li>Avoid windows, mirrors, and other reflective surfaces</li>
+          <li>Avoid close-ups of flat, monotone areas like bare walls</li>
+        </ul>
+      </div>
+      <div class="card scan-photo">
+        <img src="assets/scanning.jpg" alt="Live LiDAR scan in progress: the room is covered by a green-to-blue triangle mesh overlay" loading="lazy">
+      </div>
+    </div>
+    <p class="scan-tip"><strong>Tip:</strong> scan room by room, floor by floor, or the whole
+    house in one pass depending on the accuracy you need — and check your measurements
+    directly in the 3D model the moment you finish.</p>
+  </section>
+
   <section id="web">
     <h2>Take it further — Skanna Web</h2>
     <div class="paths">
@@ -312,45 +356,14 @@
         <img src="assets/bim-author.jpg" alt="Skanna Web BIM Author: 2D plan editor tracing a scan slice, with the 3D scan as reference and IFC export" loading="lazy">
       </div>
     </div>
-  </section>
-
-  <section id="how-to-scan">
-    <h2>How to scan — best practices</h2>
-    <div class="scan-guide">
-      <div class="card">
-        <div class="glyph">1</div>
-        <h3>Prepare the space</h3>
-        <ul>
-          <li>Plan your route before you start</li>
-          <li>Open all doors and turn on the lights</li>
-          <li>Cover or remove photos and private information you don't want in the scan</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="glyph">2</div>
-        <h3>While scanning</h3>
-        <ul>
-          <li>Start in a corner</li>
-          <li>Keep 1.5–3 metres between you and what you're scanning</li>
-          <li>Move in a circle inside the space, sweeping up and down like an even coat of spray paint</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="glyph">3</div>
-        <h3>What to avoid</h3>
-        <ul>
-          <li>Don't scan the same area twice</li>
-          <li>Avoid windows, mirrors, and other reflective surfaces</li>
-          <li>Avoid close-ups of flat, monotone areas like bare walls</li>
-        </ul>
-      </div>
-      <div class="card scan-photo">
-        <img src="assets/scanning.jpg" alt="Live LiDAR scan in progress: the room is covered by a green-to-blue triangle mesh overlay" loading="lazy">
-      </div>
+    <div class="shot-frame shot-wide">
+      <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — the finished IFC building model</span></div>
+      <img src="assets/ifc-assembly.jpg" alt="A completed IFC building model of a house in the Skanna Web viewer: walls, windows, doors, stairs, and chimney, with a storey list panel" loading="lazy">
     </div>
-    <p class="scan-tip"><strong>Tip:</strong> scan room by room, floor by floor, or the whole
-    house in one pass depending on the accuracy you need — and check your measurements
-    directly in the 3D model the moment you finish.</p>
+    <p class="ifc-note">From scan to building model: export the finished IFC from the web
+    authoring tool and open it in SketchUp, Revit, Blender, or your web CAD platform of
+    choice — to plan, design, and extract data — or keep it in the Skanna platform for
+    further development.</p>
   </section>
 
   <section id="requirements">
