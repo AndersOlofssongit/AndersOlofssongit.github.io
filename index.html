@@ -85,6 +85,88 @@
   .card p { margin: 0; color: var(--muted); font-size: 0.92em; }
   .card .glyph { color: var(--accent); font-size: 1.25em; margin-bottom: 10px; }
 
+  /* Skanna Web section */
+  .paths {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 26px;
+  }
+  .path {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 22px 24px;
+  }
+  .path .kicker {
+    font-size: 0.72em; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+  }
+  .path h3 { margin: 0 0 8px; font-size: 1.1em; }
+  .path p { margin: 0; color: var(--muted); font-size: 0.94em; }
+  .path.highlight { border-color: rgba(167,139,250,0.45); }
+  .web-tools {
+    display: grid; gap: 10px 22px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: 0 0 26px; padding: 0; list-style: none;
+    color: var(--muted); font-size: 0.94em;
+  }
+  .web-tools li { padding-left: 22px; position: relative; }
+  .web-tools li::before {
+    content: "◆"; position: absolute; left: 0; top: 1px;
+    color: var(--accent); font-size: 0.7em;
+  }
+  .web-tools li strong { color: var(--text); font-weight: 600; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-block; padding: 12px 24px; border-radius: 999px;
+    font-weight: 650; font-size: 0.95em;
+    background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+    color: #0b0b12; border: 1px solid rgba(255,255,255,0.18);
+  }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  .cta-row .aside { color: var(--faint); font-size: 0.85em; }
+  .shot-frame {
+    margin-top: 28px;
+    border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
+    background: rgba(255,255,255,0.03);
+  }
+  .shot-frame .chrome {
+    display: flex; align-items: center; gap: 6px;
+    padding: 10px 14px; border-bottom: 1px solid var(--rule);
+  }
+  .shot-frame .chrome i {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: rgba(255,255,255,0.16); display: inline-block;
+  }
+  .shot-frame .chrome span {
+    margin-left: 10px; color: var(--faint); font-size: 0.75em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .shot-frame img { display: block; width: 100%; height: auto; }
+  .shot-frame .placeholder {
+    aspect-ratio: 16 / 9; display: grid; place-items: center;
+    color: var(--faint); font-size: 0.9em;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 0.5px, transparent 0.5px);
+    background-size: 38px 38px;
+  }
+
+  /* How to scan section */
+  .scan-guide {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .scan-guide .card ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.92em; }
+  .scan-guide .card li { margin: 7px 0; }
+  .scan-tip {
+    margin-top: 14px;
+    background: var(--panel); border: 1px solid rgba(167,139,250,0.35);
+    border-radius: 14px; padding: 18px 22px;
+    color: var(--muted); font-size: 0.94em;
+  }
+  .scan-tip strong { color: var(--text); }
+
   .req-list, .contact-block { color: var(--muted); }
   .req-list ul { margin: 0; padding-left: 20px; }
   .req-list li { margin: 6px 0; }
@@ -159,8 +241,8 @@
       <div class="card">
         <div class="glyph">📦</div>
         <h3>Open exports</h3>
-        <p>Export models as GLB, OBJ, DAE, or USDZ, or a complete site archive as ZIP.
-        Your data is never locked in.</p>
+        <p>Export any scan as an industry-standard GLB model, or your whole site as a
+        ZIP bundle — models, photos, panoramas, and pins. Your data is never locked in.</p>
       </div>
       <div class="card">
         <div class="glyph">🔒</div>
@@ -169,6 +251,78 @@
         no cloud, no tracking. <a href="privacy.html">Read the privacy policy</a>.</p>
       </div>
     </div>
+  </section>
+
+  <section id="web">
+    <h2>Take it further — Skanna Web</h2>
+    <div class="paths">
+      <div class="path">
+        <div class="kicker">Path one</div>
+        <h3>Use your files anywhere</h3>
+        <p>Every scan exports as a standard GLB model inside an open ZIP bundle.
+        Drop it into Blender, Unreal, Revit workflows, or any tool that reads GLB —
+        no conversion, no lock-in.</p>
+      </div>
+      <div class="path highlight">
+        <div class="kicker">Path two</div>
+        <h3>Upload it to Skanna Web</h3>
+        <p>Open the same bundle in your browser and keep working: view, annotate,
+        and take the scan all the way to a BIM model. Free, no account —
+        everything stays on your machine.</p>
+      </div>
+    </div>
+    <ul class="web-tools">
+      <li><strong>3D viewer</strong> — orbit, pan, zoom, and dollhouse view of your scans, right in the browser</li>
+      <li><strong>Pins &amp; collaboration</strong> — numbered pins on the model with notes, replies, and photos</li>
+      <li><strong>Measure</strong> — real-world distances on the web model, just like in the app</li>
+      <li><strong>360° panoramas</strong> — captured panoramas open in a full spherical viewer, linked to the model</li>
+      <li><strong>CAD &amp; IFC viewing</strong> — open IFC files alongside or overlaid on your scan</li>
+      <li><strong>BIM Author</strong> — trace your scan in a 2D plan editor and export a real IFC building model, floor by floor</li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn" href="app/">Open Skanna Web</a>
+      <span class="aside">Runs entirely in your browser — nothing is uploaded to a server.</span>
+    </div>
+    <div class="shot-frame">
+      <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — 3D viewer</span></div>
+      <div class="placeholder">Screenshot coming soon</div>
+    </div>
+  </section>
+
+  <section id="how-to-scan">
+    <h2>How to scan — best practices</h2>
+    <div class="scan-guide">
+      <div class="card">
+        <div class="glyph">1</div>
+        <h3>Prepare the space</h3>
+        <ul>
+          <li>Plan your route before you start</li>
+          <li>Open all doors and turn on the lights</li>
+          <li>Cover or remove photos and private information you don't want in the scan</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="glyph">2</div>
+        <h3>While scanning</h3>
+        <ul>
+          <li>Start in a corner</li>
+          <li>Keep 1.5–3 metres between you and what you're scanning</li>
+          <li>Move in a circle inside the space, sweeping up and down like an even coat of spray paint</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="glyph">3</div>
+        <h3>What to avoid</h3>
+        <ul>
+          <li>Don't scan the same area twice</li>
+          <li>Avoid windows, mirrors, and other reflective surfaces</li>
+          <li>Avoid close-ups of flat, monotone areas like bare walls</li>
+        </ul>
+      </div>
+    </div>
+    <p class="scan-tip"><strong>Tip:</strong> scan room by room, floor by floor, or the whole
+    house in one pass depending on the accuracy you need — and check your measurements
+    directly in the 3D model the moment you finish.</p>
   </section>
 
   <section id="requirements">
