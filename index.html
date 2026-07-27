@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skanna by LiDAR3D — Scan. Store. Design.</title>
-<meta name="description" content="Skanna turns your iPhone or iPad Pro into a professional LiDAR scanner. Capture dimensionally accurate 3D models of any space — entirely offline, entirely private.">
+<title>Skanna by LiDAR3D — Everything your building needs.</title>
+<meta name="description" content="Skanna is the one-stop platform for buildings: scan with your iPhone, author real IFC building models in the browser, and store, plan and design everything in one place.">
 <style>
   :root {
     --bg: #0b0b12;
@@ -38,22 +38,26 @@
   }
   main { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 24px 64px; }
 
-  nav {
+  nav.top {
     display: flex; align-items: center; gap: 12px;
     padding: 28px 0 0;
   }
-  nav .name { font-weight: 700; letter-spacing: 0.02em; }
-  nav .by { color: var(--faint); font-size: 0.85em; margin-left: -4px; }
+  nav.top .name { font-weight: 700; letter-spacing: 0.02em; }
+  nav.top .by { color: var(--faint); font-size: 0.85em; margin-left: -4px; }
 
-  header.hero { text-align: center; padding: 72px 0 56px; }
+  header.hero { text-align: center; padding: 64px 0 40px; }
   .hero .mark { margin-bottom: 28px; }
+  .hero .kicker {
+    font-size: 0.78em; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+  }
   .hero h1 {
-    font-size: clamp(2.1em, 6vw, 3.2em);
-    line-height: 1.1; margin: 0 0 14px; font-weight: 800; letter-spacing: -0.02em;
+    font-size: clamp(2.1em, 6vw, 3.3em);
+    line-height: 1.08; margin: 0 0 16px; font-weight: 800; letter-spacing: -0.02em;
   }
   .hero h1 .dot { color: var(--accent); }
   .hero p.lede {
-    max-width: 560px; margin: 0 auto 30px; color: var(--muted); font-size: 1.1em;
+    max-width: 640px; margin: 0 auto 30px; color: var(--muted); font-size: 1.1em;
   }
   .badge {
     display: inline-block;
@@ -66,11 +70,46 @@
   }
   .badge .soon { color: var(--accent); }
 
-  section { padding: 40px 0; border-top: 1px solid var(--rule); }
+  /* Pillar overview */
+  .pillars {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    margin: 44px 0 0;
+    text-align: left;
+  }
+  .pillar {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 20px 22px;
+    position: relative;
+  }
+  .pillar .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72em; font-weight: 700; letter-spacing: 0.14em;
+    color: var(--accent); margin-bottom: 10px;
+  }
+  .pillar h3 { margin: 0 0 6px; font-size: 1.02em; }
+  .pillar p { margin: 0; color: var(--muted); font-size: 0.9em; }
+  .pillar .tag {
+    display: inline-block; margin-top: 10px;
+    font-size: 0.7em; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .hero p.span-note {
+    max-width: 680px; margin: 30px auto 0; color: var(--muted); font-size: 0.98em;
+  }
+  .hero p.span-note strong { color: var(--text); }
+
+  section { padding: 44px 0; border-top: 1px solid var(--rule); }
   h2 {
     font-size: 0.85em; font-weight: 700; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--faint); margin: 0 0 28px;
+    text-transform: uppercase; color: var(--faint); margin: 0 0 14px;
   }
+  .section-lede {
+    margin: 0 0 28px; color: var(--muted); font-size: 1em; max-width: 720px;
+  }
+  .section-lede strong { color: var(--text); }
   .features {
     display: grid; gap: 14px;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -164,7 +203,35 @@
     border-radius: 14px; border: 1px solid var(--rule);
   }
 
-  /* How to scan section */
+  /* Pricing */
+  .tiers {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .tier {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex; flex-direction: column;
+  }
+  .tier.highlight { border-color: rgba(167,139,250,0.45); }
+  .tier .kicker {
+    font-size: 0.72em; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+  }
+  .tier h3 { margin: 0 0 8px; font-size: 1.1em; }
+  .tier p { margin: 0 0 12px; color: var(--muted); font-size: 0.92em; }
+  .tier ul {
+    margin: 0; padding-left: 18px;
+    color: var(--muted); font-size: 0.9em;
+  }
+  .tier li { margin: 5px 0; }
+  .pricing-note {
+    margin: 22px 0 0; color: var(--faint); font-size: 0.88em; max-width: 720px;
+  }
+
+  /* Learn section */
   .scan-guide {
     display: grid; gap: 14px;
     grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
@@ -183,6 +250,17 @@
     color: var(--muted); font-size: 0.94em;
   }
   .scan-tip strong { color: var(--text); }
+  .course-list {
+    display: grid; gap: 10px 22px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin: 18px 0 0; padding: 0; list-style: none;
+    color: var(--muted); font-size: 0.94em;
+  }
+  .course-list li { padding-left: 22px; position: relative; }
+  .course-list li::before {
+    content: "◆"; position: absolute; left: 0; top: 1px;
+    color: var(--accent); font-size: 0.7em;
+  }
 
   .req-list, .contact-block { color: var(--muted); }
   .req-list ul { margin: 0; padding-left: 20px; }
@@ -190,6 +268,7 @@
 
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
+  a.btn { color: #0b0b12; }
 
   footer {
     border-top: 1px solid var(--rule);
@@ -198,13 +277,13 @@
     justify-content: space-between; align-items: center;
     color: var(--faint); font-size: 0.85em;
   }
-  footer nav.links { padding: 0; display: flex; gap: 20px; }
+  footer nav.links { display: flex; gap: 20px; }
 </style>
 </head>
 <body>
 <div class="grid-bg"></div>
 <main>
-  <nav>
+  <nav class="top">
     <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
       <path d="M50 2 L98 40 L50 98 L2 40 Z" stroke="#f2f2f7" stroke-width="4.5"/>
       <path d="M50 2 L26 40 M50 2 L74 40 M26 40 L74 40 M26 40 L50 98 M74 40 L50 98 M2 40 L26 40 M74 40 L98 40"
@@ -221,45 +300,83 @@
               stroke="#f2f2f7" stroke-opacity="0.55" stroke-width="1.7"/>
       </svg>
     </div>
-    <h1>Scan<span class="dot">.</span> Store<span class="dot">.</span> Design<span class="dot">.</span></h1>
-    <p class="lede">Skanna turns your iPhone or iPad Pro into a professional LiDAR scanner.
-    Capture dimensionally accurate 3D models of any space in minutes —
-    entirely on your device, entirely private.</p>
+    <div class="kicker">One platform · Scan to digital twin</div>
+    <h1>Everything your building needs<span class="dot">.</span></h1>
+    <p class="lede">Skanna is the first one-stop platform for buildings. Scan a property with
+    your iPhone, turn the capture into a real IFC building model in your browser, and store,
+    plan and design everything in one place.</p>
     <span class="badge">Coming to the <strong>App&nbsp;Store</strong> — <span class="soon">launching&nbsp;soon</span></span>
+
+    <!-- GIF slots: when the scan/view/author/IFC gifs are ready, they can replace
+         or sit inside these four pillar cards as looping previews. -->
+    <div class="pillars">
+      <div class="pillar">
+        <div class="num">01 · SCAN</div>
+        <h3>LiDAR scanner</h3>
+        <p>A scanner made for properties, not for everything. Capture any space in minutes
+        with just your iPhone or iPad Pro. Free to use.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">02 · MODEL</div>
+        <h3>BIM Author</h3>
+        <p>Turn scans into real building models in your browser and export IFC, the open
+        standard for structured building data. Learn it in a day.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">03 · STORE</div>
+        <h3>Property portal</h3>
+        <p>Host models, photos, panoramas and documents online in one property portal.
+        Or export everything and run your own setup.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">04 · DESIGN</div>
+        <h3>AI floor planning</h3>
+        <p>AI-assisted floor planning and interior design built on actual, correct
+        measurements from your scan.</p>
+        <span class="tag">Launching in the coming weeks</span>
+      </div>
+    </div>
+
+    <p class="span-note">From units ready for renovation to finished showpiece homes:
+    <strong>one scan becomes the foundation of a complete digital twin</strong> — and your
+    data is always yours to take with you.</p>
   </header>
 
-  <section id="features">
-    <h2>What it does</h2>
+  <section id="app">
+    <h2>The Skanna app</h2>
+    <p class="section-lede">Skanna turns your iPhone or iPad Pro into a professional LiDAR
+    scanner. Capture dimensionally accurate 3D models of any space in minutes, entirely on
+    your device, entirely private.</p>
     <div class="features">
       <div class="card">
         <div class="glyph">◈</div>
         <h3>LiDAR capture</h3>
-        <p>Walk through a space with your iPhone or iPad Pro and build a true-to-scale
-        3D mesh in real time, with live coverage feedback while you scan.</p>
+        <p>Scan a space with your iPhone or iPad Pro and build a true-to-scale 3D mesh in
+        real time, with live coverage feedback while you scan.</p>
       </div>
       <div class="card">
         <div class="glyph">⚡</div>
         <h3>Instant 3D preview</h3>
-        <p>Your model appears the moment you finish scanning. Photo-realistic colour
-        processing runs afterwards, while you keep working.</p>
+        <p>Your model appears the moment you finish scanning. Processing to a clean white
+        finish or full photo color happens afterwards, in no time.</p>
       </div>
       <div class="card">
         <div class="glyph">📐</div>
         <h3>Measure &amp; annotate</h3>
-        <p>Tap two points for real-world distances. Drop numbered pins with notes and
-        photos anywhere on the model.</p>
+        <p>Tap two points to measure distances. Drop numbered pins with notes, photos and
+        panorama domes anywhere on the model.</p>
       </div>
       <div class="card">
         <div class="glyph">🧭</div>
-        <h3>Sites, not just scans</h3>
-        <p>Organise scans, photos, 360° panoramas, and files per property, with a
-        running site log — your whole project in one place.</p>
+        <h3>Store &amp; organize</h3>
+        <p>Save scans, photos, 360° panoramas, and files per property, with a site log,
+        comments and your whole site in one place.</p>
       </div>
       <div class="card">
         <div class="glyph">📦</div>
         <h3>Open exports</h3>
-        <p>Export any scan as an industry-standard GLB model, or your whole site as a
-        ZIP bundle — models, photos, panoramas, and pins. Your data is never locked in.</p>
+        <p>Export scans in GLB format, or your whole site as a ZIP bundle with models,
+        photos, panoramas, and pins. Your data is never locked in.</p>
       </div>
       <div class="card">
         <div class="glyph">🔒</div>
@@ -268,6 +385,7 @@
         no cloud, no tracking. <a href="privacy.html">Read the privacy policy</a>.</p>
       </div>
     </div>
+    <!-- GIF slot: scanning gif can replace app-scan.jpg here when ready. -->
     <div class="phone-strip">
       <img src="assets/app-scan.jpg" alt="iPhone scanning a room with the live LiDAR mesh overlay — scan buildings in 3D with LiDAR" loading="lazy">
       <img src="assets/app-dome.jpg" alt="Capturing a 360° photo dome by aiming the circle at guide dots" loading="lazy">
@@ -276,8 +394,102 @@
     </div>
   </section>
 
-  <section id="how-to-scan">
-    <h2>How to scan — best practices</h2>
+  <section id="web">
+    <h2>Skanna Web — BIM Author &amp; property portal</h2>
+    <p class="section-lede">An easy-to-use BIM authoring tool that runs entirely in the
+    browser. Trace your scan, build a real IFC model floor by floor, and skip the heavy
+    CAD suite: for a large share of properties, Skanna does the job of SketchUp, Blender
+    or Revit — <strong>and most people learn it in a day</strong>.</p>
+    <div class="paths">
+      <div class="path">
+        <div class="kicker">Your files, anywhere</div>
+        <h3>Export and build your own solution</h3>
+        <p>Every scan exports as a standard GLB model and every building model as IFC,
+        the ideal format for structured data about buildings. Use them in any tool or
+        platform you like — no conversion, no lock-in.</p>
+      </div>
+      <div class="path highlight">
+        <div class="kicker">Or host it with us</div>
+        <h3>Keep everything on the Skanna platform</h3>
+        <p>Host your models and data online, work on them from any browser, and share
+        with anyone. If you ever decide to leave, you take all of your data with you.</p>
+      </div>
+    </div>
+    <ul class="web-tools">
+      <li><strong>3D viewer</strong> — orbit, pan, zoom, and dollhouse view of your scans, right in the browser</li>
+      <li><strong>Pins &amp; collaboration</strong> — numbered pins on the model with notes, replies, and photos</li>
+      <li><strong>Measure</strong> — real-world distances on the web model, just like in the app</li>
+      <li><strong>360° panoramas</strong> — captured panoramas open in a full spherical viewer, linked to the model</li>
+      <li><strong>CAD &amp; IFC viewing</strong> — open IFC files alongside or overlaid on your scan</li>
+      <li><strong>BIM Author</strong> — trace your scan in a 2D plan editor and export a real IFC building model, floor by floor</li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn" href="app/">Open Skanna Web</a>
+      <span class="aside">AI-assisted floor planning and interior design launching in the coming weeks.</span>
+    </div>
+    <!-- GIF slots: authoring gif → bim-author frame, finished-IFC gif → ifc-assembly frame. -->
+    <div class="shot-grid">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — 3D viewer &amp; pins</span></div>
+        <img src="assets/web-viewer.jpg" alt="Skanna Web 3D viewer showing a scanned home in dollhouse view with an annotation pin panel open" loading="lazy">
+      </div>
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — BIM Author</span></div>
+        <img src="assets/bim-author.jpg" alt="Skanna Web BIM Author: 2D plan editor tracing a scan slice, with the 3D scan as reference and IFC export" loading="lazy">
+      </div>
+    </div>
+    <div class="shot-frame shot-wide">
+      <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — the finished IFC building model</span></div>
+      <img src="assets/ifc-assembly.jpg" alt="A completed IFC building model of a house in the Skanna Web viewer: walls, windows, doors, stairs, and chimney, with a storey list panel" loading="lazy">
+    </div>
+    <p class="ifc-note">From scan to building model: export the finished IFC and open it in
+    SketchUp, Revit, Blender, or your web CAD platform of choice — to plan, design, and
+    extract data — or keep it on the Skanna platform for further development.</p>
+  </section>
+
+  <section id="pricing">
+    <h2>How pricing works</h2>
+    <p class="section-lede">Start free, pay only when Skanna starts doing real work for
+    you — at a fraction of the cost of a traditional CAD license.</p>
+    <div class="tiers">
+      <div class="tier">
+        <div class="kicker">Free</div>
+        <h3>Capture</h3>
+        <p>The full scanner, free on the App Store.</p>
+        <ul>
+          <li>Unlimited scanning</li>
+          <li>View, measure and annotate on device</li>
+          <li>No account required, fully private</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <div class="kicker">One-time unlock</div>
+        <h3>Export</h3>
+        <p>A single one-time purchase unlocks exporting your captures.</p>
+        <ul>
+          <li>GLB scans and full site ZIP bundles</li>
+          <li>Includes 1 month of Skanna Web: BIM Author and online hosting</li>
+          <li>Your data is yours, forever</li>
+        </ul>
+      </div>
+      <div class="tier highlight">
+        <div class="kicker">Subscription</div>
+        <h3>Skanna Web</h3>
+        <p>A low monthly price for the browser platform.</p>
+        <ul>
+          <li>BIM Author with IFC export</li>
+          <li>Online hosting of models, panoramas and site data</li>
+          <li>AI floor planning &amp; interior design as optional add-ons</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pricing-note">Final pricing is announced at launch.</p>
+  </section>
+
+  <section id="learn">
+    <h2>Learn — scan like a pro</h2>
+    <p class="section-lede">Good captures make good models. Start with the essentials below —
+    full course material is on the way.</p>
     <div class="scan-guide">
       <div class="card">
         <div class="glyph">1</div>
@@ -313,56 +525,16 @@
     <p class="scan-tip"><strong>Tip:</strong> scan room by room, floor by floor, or the whole
     house in one pass depending on the accuracy you need — and check your measurements
     directly in the 3D model the moment you finish.</p>
-  </section>
-
-  <section id="web">
-    <h2>Take it further — Skanna Web</h2>
-    <div class="paths">
-      <div class="path">
-        <div class="kicker">Path one</div>
-        <h3>Use your files anywhere</h3>
-        <p>Every scan exports as a standard GLB model inside an open ZIP bundle.
-        Drop it into Blender, Unreal, Revit workflows, or any tool that reads GLB —
-        no conversion, no lock-in.</p>
-      </div>
-      <div class="path highlight">
-        <div class="kicker">Path two</div>
-        <h3>Upload it to Skanna Web</h3>
-        <p>Sign up and host your sites in the cloud for a small yearly fee.
-        Your scans stay online and ready to work on — and every tool, including
-        the full IFC / BIM authoring suite, is included at no extra cost.</p>
-      </div>
+    <div class="scan-tip">
+      <strong>Coming soon — the Skanna course library:</strong>
+      <ul class="course-list">
+        <li>Preparing a property for scanning</li>
+        <li>Capture techniques for interiors and exteriors</li>
+        <li>From scan to a correct IFC model in BIM Author</li>
+        <li>Photo guidelines for residential interiors</li>
+        <li>Presenting renderings and design concepts for renovation projects</li>
+      </ul>
     </div>
-    <ul class="web-tools">
-      <li><strong>3D viewer</strong> — orbit, pan, zoom, and dollhouse view of your scans, right in the browser</li>
-      <li><strong>Pins &amp; collaboration</strong> — numbered pins on the model with notes, replies, and photos</li>
-      <li><strong>Measure</strong> — real-world distances on the web model, just like in the app</li>
-      <li><strong>360° panoramas</strong> — captured panoramas open in a full spherical viewer, linked to the model</li>
-      <li><strong>CAD &amp; IFC viewing</strong> — open IFC files alongside or overlaid on your scan</li>
-      <li><strong>BIM Author</strong> — trace your scan in a 2D plan editor and export a real IFC building model, floor by floor</li>
-    </ul>
-    <div class="cta-row">
-      <a class="btn" href="app/">Open Skanna Web</a>
-      <span class="aside">Sign up to get access — one small yearly hosting fee, every feature included.</span>
-    </div>
-    <div class="shot-grid">
-      <div class="shot-frame">
-        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — 3D viewer &amp; pins</span></div>
-        <img src="assets/web-viewer.jpg" alt="Skanna Web 3D viewer showing a scanned home in dollhouse view with an annotation pin panel open" loading="lazy">
-      </div>
-      <div class="shot-frame">
-        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — BIM Author</span></div>
-        <img src="assets/bim-author.jpg" alt="Skanna Web BIM Author: 2D plan editor tracing a scan slice, with the 3D scan as reference and IFC export" loading="lazy">
-      </div>
-    </div>
-    <div class="shot-frame shot-wide">
-      <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — the finished IFC building model</span></div>
-      <img src="assets/ifc-assembly.jpg" alt="A completed IFC building model of a house in the Skanna Web viewer: walls, windows, doors, stairs, and chimney, with a storey list panel" loading="lazy">
-    </div>
-    <p class="ifc-note">From scan to building model: export the finished IFC from the web
-    authoring tool and open it in SketchUp, Revit, Blender, or your web CAD platform of
-    choice — to plan, design, and extract data — or keep it in the Skanna platform for
-    further development.</p>
   </section>
 
   <section id="requirements">
@@ -371,6 +543,7 @@
       <ul>
         <li>iPhone 12&nbsp;Pro or later Pro model, or iPad&nbsp;Pro (2020 or later) — a LiDAR sensor is required</li>
         <li>iOS 16 or later</li>
+        <li>Skanna Web runs in any modern desktop browser</li>
       </ul>
     </div>
   </section>
