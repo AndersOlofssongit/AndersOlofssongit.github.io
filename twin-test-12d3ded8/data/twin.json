@@ -1,62 +1,76 @@
 {
   "version": 1,
-  "name": "Test",
+  "name": "My home 🏡",
+  "subtitle": "Sukhumvit Bangkok",
   "models": [
     {
-      "name": "Test BIM 2026-08-02",
-      "file": "models/Test BIM 2026-08-02.ifc"
+      "name": "My home 🏡 BIM 2026-08-02",
+      "file": "models/My home BIM 2026-08-02.ifc"
     }
   ],
   "pins": [
     {
-      "id": "eb6e88d6-7433-4f47-aad7-07babee96f0c",
+      "id": "79EBA261-9772-4EC2-9FA9-DEF737A4251D",
       "label": "Pin 1",
-      "body": null,
+      "body": "Test ",
       "position": [
-        6.297574519366525,
-        0.5819534156545147,
-        -6.857255654692305
+        -2.1811809394766906,
+        0.06901453088294218,
+        3.653761070369439
       ],
       "normal": [
-        -0.006234545114195535,
-        0.999980094580308,
-        -0.0009699950399604371
+        -0.2508882736801584,
+        0.940593421459198,
+        -0.22877213631192428
       ],
-      "createdAt": "2026-08-02T11:13:21.567Z",
+      "createdAt": "2026-07-18T11:05:46Z",
       "photo": null,
-      "panorama": "media/IMG_8201.JPG",
+      "panorama": "media/Pin 1 360.jpg",
+      "replies": [
+        {
+          "createdAt": "2026-07-18T11:08:08Z",
+          "photo": null,
+          "panorama": "media/Pin 1 reply 360.jpg"
+        }
+      ]
+    },
+    {
+      "id": "A81C87BA-1FFC-4053-B673-AF7C2C313E91",
+      "label": "Pano first floor ",
+      "body": "Center living ",
+      "position": [
+        -8.33113291648496,
+        0.11684942245483398,
+        3.879852862807862
+      ],
+      "normal": [
+        -0.0006648822941244352,
+        0.9990267157554626,
+        0.04399887397867176
+      ],
+      "createdAt": "2026-07-18T16:10:13Z",
+      "photo": null,
+      "panorama": "media/Pano first floor 360.jpg",
       "replies": []
     },
     {
-      "id": "9e7c8800-549e-4a75-89a1-14200c1effd2",
-      "label": "Pin 2",
-      "body": null,
+      "id": "51BE1E76-8CA9-4A36-9450-8B011F987C70",
+      "label": "Photo ",
+      "body": "Photo sofa and screens ",
       "position": [
-        6.16800946547912,
-        0.3122051472435736,
-        -12.23101548841792
+        -7.0578921259522955,
+        0.09262657165527344,
+        4.606906305989412
       ],
       "normal": [
-        -0.0038509352755903515,
-        0.9997505327091134,
-        -0.02200096919109035
+        0.027537082108573772,
+        0.9996150732040405,
+        0.0022810329213765173
       ],
-      "createdAt": "2026-08-02T11:14:26.136Z",
-      "photo": null,
-      "panorama": "media/varaha-cave-temple.jpg",
+      "createdAt": "2026-07-18T16:12:12Z",
+      "photo": "media/Photo photo.jpg",
+      "panorama": null,
       "replies": []
-    }
-  ],
-  "scans": [
-    {
-      "name": "mep Assembly 2026-07-29",
-      "file": "models/mep Assembly 2026-07-29.glb",
-      "alignment": {
-        "rotDeg": 0,
-        "tx": 0,
-        "ty": 0,
-        "tz": 0
-      }
     }
   ]
 }
