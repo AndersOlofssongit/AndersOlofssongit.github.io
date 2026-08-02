@@ -6,6 +6,14 @@
     {
       "name": "My home 🏡 BIM 2026-08-02",
       "file": "models/My home BIM 2026-08-02.ifc"
+    },
+    {
+      "name": "My home 🏡 BIM 2026-08-02",
+      "file": "models/My home BIM 2026-08-02-2.ifc"
+    },
+    {
+      "name": "My home 🏡 BIM 2026-08-02",
+      "file": "models/My home BIM 2026-08-02-2-3.ifc"
     }
   ],
   "pins": [
@@ -72,5 +80,8 @@
       "panorama": null,
       "replies": []
     }
-  ]
+  ],
+  "bim": {
+    "file": "bim.json"
+  }
 }
