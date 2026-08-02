@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "name": "Test",
+  "models": [
+    {
+      "name": "Test BIM 2026-08-02",
+      "file": "models/Test BIM 2026-08-02.ifc"
+    }
+  ],
+  "pins": [
+    {
+      "id": "eb6e88d6-7433-4f47-aad7-07babee96f0c",
+      "label": "Pin 1",
+      "body": null,
+      "position": [
+        6.297574519366525,
+        0.5819534156545147,
+        -6.857255654692305
+      ],
+      "normal": [
+        -0.006234545114195535,
+        0.999980094580308,
+        -0.0009699950399604371
+      ],
+      "createdAt": "2026-08-02T11:13:21.567Z",
+      "photo": null,
+      "panorama": "media/IMG_8201.JPG",
+      "replies": []
+    },
+    {
+      "id": "9e7c8800-549e-4a75-89a1-14200c1effd2",
+      "label": "Pin 2",
+      "body": null,
+      "position": [
+        6.16800946547912,
+        0.3122051472435736,
+        -12.23101548841792
+      ],
+      "normal": [
+        -0.0038509352755903515,
+        0.9997505327091134,
+        -0.02200096919109035
+      ],
+      "createdAt": "2026-08-02T11:14:26.136Z",
+      "photo": null,
+      "panorama": "media/varaha-cave-temple.jpg",
+      "replies": []
+    }
+  ],
+  "scans": [
+    {
+      "name": "mep Assembly 2026-07-29",
+      "file": "models/mep Assembly 2026-07-29.glb",
+      "alignment": {
+        "rotDeg": 0,
+        "tx": 0,
+        "ty": 0,
+        "tz": 0
+      }
+    }
+  ]
+}
