@@ -1,0 +1,1035 @@
+{
+  "version": 1,
+  "model": {
+    "version": 1,
+    "projectName": "503 based on plans",
+    "storeys": [
+      {
+        "id": "631d53fd",
+        "name": "Ground floor",
+        "elevation": 0.2,
+        "height": 4.05,
+        "scans": [
+          {
+            "scanId": "893b9449-d36e-47b5-8d97-8d99cf6b8beb",
+            "alignment": {
+              "rotDeg": 0,
+              "tx": -14.82345403267291,
+              "ty": 7.246313522640791,
+              "tz": 0
+            }
+          }
+        ],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "ec952482",
+        "name": "Storey 2",
+        "elevation": 4.55,
+        "height": 4.1,
+        "scans": [
+          {
+            "scanId": "893b9449-d36e-47b5-8d97-8d99cf6b8beb",
+            "alignment": {
+              "rotDeg": 0,
+              "tx": 0,
+              "ty": 0,
+              "tz": 0
+            }
+          }
+        ],
+        "images": [],
+        "vectorRefs": []
+      }
+    ],
+    "walls": [
+      {
+        "id": "e1d209e6",
+        "storeyId": "631d53fd",
+        "ax": 0,
+        "ay": 0,
+        "bx": 28.2,
+        "by": 0,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "eb2ef7bb",
+        "storeyId": "631d53fd",
+        "ax": 0,
+        "ay": 0,
+        "bx": 2.1431318985078682e-15,
+        "by": 35,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "75c604af",
+        "storeyId": "631d53fd",
+        "ax": 28.2,
+        "ay": 0,
+        "bx": 28.580000000000002,
+        "by": 35,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "0979a2bd",
+        "storeyId": "631d53fd",
+        "ax": 2.1431318985078682e-15,
+        "ay": 35,
+        "bx": 28.580000000000002,
+        "by": 35,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "c11e568d",
+        "storeyId": "631d53fd",
+        "ax": 2.4000000000000004,
+        "ay": 0,
+        "bx": 2.400000000000001,
+        "by": 6,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "32763d19",
+        "storeyId": "631d53fd",
+        "ax": 2.400000000000001,
+        "ay": 6,
+        "bx": 13.75,
+        "by": 6,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "a3182646",
+        "storeyId": "631d53fd",
+        "ax": 9.350000000000001,
+        "ay": -7.216449660063518e-16,
+        "bx": 9.350000000000001,
+        "by": 8.8,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "ba1d3542",
+        "storeyId": "631d53fd",
+        "ax": 9.35,
+        "ay": 8.79,
+        "bx": 19.93,
+        "by": 8.79,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "e4deb1e6",
+        "storeyId": "631d53fd",
+        "ax": 15.350000000000001,
+        "ay": 8.8,
+        "bx": 15.350000000000001,
+        "by": 0,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "6513786f",
+        "storeyId": "631d53fd",
+        "ax": 15.350000000000001,
+        "ay": 6.000000000000001,
+        "bx": 13.750000000000002,
+        "by": 6.000000000000001,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "46baac90",
+        "storeyId": "631d53fd",
+        "ax": 13.750000000000002,
+        "ay": 6.000000000000001,
+        "bx": 13.750000000000002,
+        "by": 8.8,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "5d6dbb83",
+        "storeyId": "631d53fd",
+        "ax": 26,
+        "ay": 35,
+        "bx": 26,
+        "by": 0,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "2aebcc16",
+        "storeyId": "631d53fd",
+        "ax": 26,
+        "ay": 35,
+        "bx": 20,
+        "by": 35,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "8328f1fd",
+        "storeyId": "631d53fd",
+        "ax": 20,
+        "ay": 35,
+        "bx": 20.000000000000004,
+        "by": -0.00999999999999801,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "da003f2f",
+        "storeyId": "631d53fd",
+        "ax": 15.350000000000001,
+        "ay": 6.300000000000001,
+        "bx": 19.93,
+        "by": 6.300000000000001,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "31969010",
+        "storeyId": "ec952482",
+        "ax": 0,
+        "ay": 0.45,
+        "bx": 28.2,
+        "by": 0.45,
+        "thickness": 0.15,
+        "height": 0.6,
+        "baseOffset": 0
+      },
+      {
+        "id": "016e2cdc",
+        "storeyId": "ec952482",
+        "ax": 0,
+        "ay": 0,
+        "bx": 2.1431318985078682e-15,
+        "by": 35,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "d3cd83a9",
+        "storeyId": "ec952482",
+        "ax": 28.2,
+        "ay": 0,
+        "bx": 28.580000000000002,
+        "by": 35,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "6eafc378",
+        "storeyId": "ec952482",
+        "ax": 2.1431318985078682e-15,
+        "ay": 35,
+        "bx": 28.580000000000002,
+        "by": 35,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "e55bf85e",
+        "storeyId": "ec952482",
+        "ax": 26,
+        "ay": 35,
+        "bx": 20,
+        "by": 35,
+        "thickness": 0.15,
+        "height": 4.05,
+        "baseOffset": 0
+      },
+      {
+        "id": "17b08c0b",
+        "storeyId": "ec952482",
+        "ax": 2.2100000000000004,
+        "ay": 0.32000000000000006,
+        "bx": 2.6100000000000003,
+        "by": 0.32000000000000006,
+        "thickness": 0.4,
+        "height": 0.8,
+        "baseOffset": 0
+      },
+      {
+        "id": "fd413f5a",
+        "storeyId": "ec952482",
+        "ax": 5.520000000000001,
+        "ay": 0.31999999999999995,
+        "bx": 5.920000000000002,
+        "by": 0.31999999999999995,
+        "thickness": 0.4,
+        "height": 0.8,
+        "baseOffset": 0
+      },
+      {
+        "id": "b532a481",
+        "storeyId": "ec952482",
+        "ax": 8.930000000000001,
+        "ay": 0.31999999999999973,
+        "bx": 9.33,
+        "by": 0.31999999999999973,
+        "thickness": 0.4,
+        "height": 0.8,
+        "baseOffset": 0
+      },
+      {
+        "id": "4d638812",
+        "storeyId": "ec952482",
+        "ax": 15.380000000000003,
+        "ay": 0.3199999999999995,
+        "bx": 15.780000000000001,
+        "by": 0.3199999999999995,
+        "thickness": 0.4,
+        "height": 0.8,
+        "baseOffset": 0
+      },
+      {
+        "id": "06e212ad",
+        "storeyId": "ec952482",
+        "ax": 18.82,
+        "ay": 0.3199999999999995,
+        "bx": 19.22,
+        "by": 0.3199999999999995,
+        "thickness": 0.4,
+        "height": 0.8,
+        "baseOffset": 0
+      },
+      {
+        "id": "ba8ec8a1",
+        "storeyId": "ec952482",
+        "ax": 22.840000000000003,
+        "ay": 0.31999999999999956,
+        "bx": 23.240000000000002,
+        "by": 0.31999999999999956,
+        "thickness": 0.4,
+        "height": 0.8,
+        "baseOffset": 0
+      },
+      {
+        "id": "32217709",
+        "storeyId": "631d53fd",
+        "ax": 6.950000000000003,
+        "ay": 0.05000000000000053,
+        "bx": 6.950000000000003,
+        "by": 2.8500000000000005,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "30c747dc",
+        "storeyId": "631d53fd",
+        "ax": 4.700000000000003,
+        "ay": 0.05000000000000053,
+        "bx": 4.700000000000003,
+        "by": 2.8500000000000005,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      },
+      {
+        "id": "a6ceda91",
+        "storeyId": "631d53fd",
+        "ax": 2.4000000000000004,
+        "ay": 2.8500000000000005,
+        "bx": 6.979999999999999,
+        "by": 2.8500000000000005,
+        "thickness": 0.15,
+        "height": 3,
+        "baseOffset": 0
+      }
+    ],
+    "wallJoins": [
+      {
+        "id": "0baf259c",
+        "type": "mitre",
+        "throughWallId": "75c604af",
+        "endingWallId": "e1d209e6",
+        "endingEnd": "b"
+      },
+      {
+        "id": "8c5f0767",
+        "type": "mitre",
+        "throughWallId": "eb2ef7bb",
+        "endingWallId": "e1d209e6",
+        "endingEnd": "a"
+      },
+      {
+        "id": "b2e87800",
+        "type": "mitre",
+        "throughWallId": "0979a2bd",
+        "endingWallId": "eb2ef7bb",
+        "endingEnd": "b"
+      },
+      {
+        "id": "bcf54e5f",
+        "type": "mitre",
+        "throughWallId": "75c604af",
+        "endingWallId": "0979a2bd",
+        "endingEnd": "b"
+      }
+    ],
+    "slabs": [
+      {
+        "id": "8b9a5682",
+        "storeyId": "631d53fd",
+        "kind": "floor",
+        "outline": [
+          [
+            -30.150000000000002,
+            -6.9
+          ],
+          [
+            69.7,
+            -7.6000000000000005
+          ],
+          [
+            70.05,
+            -26.950000000000003
+          ],
+          [
+            -30.150000000000002,
+            -26.25
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#5D9B9B"
+        },
+        "cuts": []
+      },
+      {
+        "id": "3159b6ed",
+        "storeyId": "631d53fd",
+        "kind": "floor",
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1431318985078682e-15,
+            35
+          ],
+          [
+            28.580000000000002,
+            35
+          ],
+          [
+            28.2,
+            0
+          ]
+        ],
+        "thickness": 0.2,
+        "cuts": []
+      },
+      {
+        "id": "c0c958b7",
+        "storeyId": "ec952482",
+        "kind": "floor",
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            2.1431318985078682e-15,
+            35
+          ],
+          [
+            28.580000000000002,
+            35
+          ],
+          [
+            28.2,
+            0
+          ]
+        ],
+        "thickness": 0.6,
+        "cuts": [
+          {
+            "outline": [
+              [
+                9.35,
+                0.5000000000000018
+              ],
+              [
+                15.35,
+                0.5000000000000018
+              ],
+              [
+                15.35,
+                16.5
+              ],
+              [
+                9.35,
+                16.5
+              ]
+            ],
+            "tag": "pool:8cc9e153"
+          }
+        ]
+      },
+      {
+        "id": "85602657",
+        "storeyId": "631d53fd",
+        "kind": "ceiling",
+        "outline": [
+          [
+            19.900000000000002,
+            0.1
+          ],
+          [
+            2.4000000000000004,
+            0
+          ],
+          [
+            2.400000000000001,
+            6
+          ],
+          [
+            9.35,
+            6.050000000000001
+          ],
+          [
+            9.350000000000001,
+            8.8
+          ],
+          [
+            19.93,
+            8.79
+          ]
+        ],
+        "thickness": 0.05,
+        "baseOffset": -1.05,
+        "cuts": []
+      }
+    ],
+    "openings": [
+      {
+        "id": "c9dd8028",
+        "wallId": "e1d209e6",
+        "kind": "door",
+        "doorType": "single_swing",
+        "s": 27.500005533720227,
+        "width": 1.1,
+        "sill": 0,
+        "head": 2.1,
+        "flipY": true,
+        "flipX": true
+      },
+      {
+        "id": "7036d507",
+        "wallId": "e1d209e6",
+        "kind": "door",
+        "doorType": "garage_sectional",
+        "s": 23.018334188044,
+        "width": 5,
+        "sill": 0,
+        "head": 2.2,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#26282B"
+          }
+        },
+        "doorMaterial": "steel",
+        "doorColor": "#7A7B7A"
+      },
+      {
+        "id": "f47c33cb",
+        "wallId": "e1d209e6",
+        "kind": "opening",
+        "doorType": "single_swing",
+        "s": 26.477441985194336,
+        "width": 0.6,
+        "sill": 0,
+        "head": 1
+      },
+      {
+        "id": "be924dc0",
+        "wallId": "e1d209e6",
+        "kind": "door",
+        "doorType": "garage_sectional",
+        "s": 17.76002282491687,
+        "width": 3,
+        "sill": 0,
+        "head": 2.2,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#26282B"
+          }
+        },
+        "doorMaterial": "steel"
+      },
+      {
+        "id": "d327829e",
+        "wallId": "e1d209e6",
+        "kind": "opening",
+        "doorType": "single_swing",
+        "s": 12.346614896104292,
+        "width": 4,
+        "sill": 0,
+        "head": 2.1
+      },
+      {
+        "id": "92ff2060",
+        "wallId": "e1d209e6",
+        "kind": "window",
+        "windowType": "single_panel",
+        "s": 8.048454700388223,
+        "width": 0.6,
+        "sill": 0.5,
+        "head": 2.5,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#0A0A0A"
+          }
+        }
+      },
+      {
+        "id": "d068442c",
+        "wallId": "e1d209e6",
+        "kind": "window",
+        "windowType": "single_panel",
+        "s": 5.762333656221172,
+        "width": 0.6,
+        "sill": 0.5,
+        "head": 2.5,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#0A0A0A"
+          }
+        }
+      },
+      {
+        "id": "8faa1399",
+        "wallId": "e1d209e6",
+        "kind": "window",
+        "windowType": "single_panel",
+        "s": 3.510027082105827,
+        "width": 0.6,
+        "sill": 0.5,
+        "head": 2.5,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#0A0A0A"
+          }
+        }
+      }
+    ],
+    "stairs": [
+      {
+        "id": "4196e903",
+        "storeyId": "631d53fd",
+        "x": 27.05,
+        "y": 6.049999999999999,
+        "rotDeg": 89.5,
+        "run": 15,
+        "rise": 2.7,
+        "width": 2.3
+      }
+    ],
+    "railings": [],
+    "ramps": [
+      {
+        "id": "4e8853f7",
+        "storeyId": "631d53fd",
+        "x": 23,
+        "y": -1.399999999999998,
+        "rotDeg": 90,
+        "width": 5.8,
+        "run": 1.5,
+        "rise": 0.2,
+        "thickness": 0.15,
+        "baseOffset": 0
+      },
+      {
+        "id": "ded4d72d",
+        "storeyId": "631d53fd",
+        "x": 23,
+        "y": 0.10000000000000231,
+        "rotDeg": 90,
+        "width": 5.8,
+        "run": 5.9,
+        "rise": 0.2,
+        "thickness": 0.15,
+        "baseOffset": 0.2
+      },
+      {
+        "id": "474a1ebf",
+        "storeyId": "631d53fd",
+        "x": 23,
+        "y": 6.0500000000000025,
+        "rotDeg": 90,
+        "width": 5.8,
+        "run": 15,
+        "rise": 2.96,
+        "thickness": 0.15,
+        "baseOffset": 0.4
+      },
+      {
+        "id": "47053613",
+        "storeyId": "631d53fd",
+        "x": 22.99,
+        "y": 21.070000000000004,
+        "rotDeg": 90,
+        "width": 5.8,
+        "run": 11.2,
+        "rise": 0.59,
+        "thickness": 0.15,
+        "baseOffset": 3.36
+      }
+    ],
+    "items": [
+      {
+        "id": "8cc9e153",
+        "storeyId": "ec952482",
+        "assetId": "pool",
+        "name": "Swimming pool",
+        "x": 12.35,
+        "y": 8.500000000000002,
+        "rotDeg": 180,
+        "w": 6,
+        "d": 16,
+        "h": 1.4,
+        "elevation": -1.34
+      },
+      {
+        "id": "4b072642",
+        "storeyId": "631d53fd",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 11.3,
+        "y": 4.3500000000000005,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 2.1
+      },
+      {
+        "id": "9a790f68",
+        "storeyId": "631d53fd",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 11.200000000000001,
+        "y": 7.4,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 2.1
+      },
+      {
+        "id": "d78d8846",
+        "storeyId": "631d53fd",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 16.8,
+        "y": 7.8500000000000005,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 2.1
+      },
+      {
+        "id": "a6c513f5",
+        "storeyId": "631d53fd",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 13.350000000000001,
+        "y": 13.200000000000001,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 3.15
+      },
+      {
+        "id": "c94fc9d1",
+        "storeyId": "631d53fd",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 23.75,
+        "y": 7.550000000000001,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 3.15
+      },
+      {
+        "id": "65a9e3df",
+        "storeyId": "631d53fd",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 5.75,
+        "y": 5.1000000000000005,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 2.1
+      },
+      {
+        "id": "256e1546",
+        "storeyId": "631d53fd",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 1.9000000000000001,
+        "y": 13.5,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 3.15
+      },
+      {
+        "id": "ab3f7e9a",
+        "storeyId": "631d53fd",
+        "assetId": "led_strip",
+        "name": "LED strip",
+        "x": 9.65,
+        "y": 20.1,
+        "rotDeg": 0,
+        "w": 1.5,
+        "d": 0.03,
+        "h": 0.03,
+        "elevation": 4.02
+      },
+      {
+        "id": "11dde07f",
+        "storeyId": "631d53fd",
+        "assetId": "ceiling_light",
+        "name": "Ceiling light",
+        "x": 6.1000000000000005,
+        "y": 17.05,
+        "rotDeg": 0,
+        "w": 0.34,
+        "d": 0.34,
+        "h": 0.09,
+        "elevation": 3.96
+      },
+      {
+        "id": "d0654847",
+        "storeyId": "631d53fd",
+        "assetId": "ceiling_light",
+        "name": "Ceiling light",
+        "x": 14.4,
+        "y": 17.900000000000002,
+        "rotDeg": 0,
+        "w": 0.34,
+        "d": 0.34,
+        "h": 0.09,
+        "elevation": 3.96
+      },
+      {
+        "id": "ea9922dd",
+        "storeyId": "631d53fd",
+        "assetId": "ac_wall",
+        "name": "Air conditioner (wall)",
+        "x": 3.45,
+        "y": 20.35,
+        "rotDeg": 0,
+        "w": 1,
+        "d": 0.3,
+        "h": 0.4,
+        "elevation": 2.2
+      },
+      {
+        "id": "18c3d0f8",
+        "storeyId": "631d53fd",
+        "assetId": "radiator",
+        "name": "Radiator",
+        "x": 11.200000000000001,
+        "y": 18.3,
+        "rotDeg": 0,
+        "w": 1,
+        "d": 0.1,
+        "h": 0.5,
+        "elevation": 0.15
+      }
+    ],
+    "columns": [],
+    "beams": [],
+    "finishes": [
+      {
+        "id": "9cd1dd7f",
+        "kind": "region",
+        "storeyId": "631d53fd",
+        "outline": [
+          [
+            17.650000000000002,
+            -2.95
+          ],
+          [
+            17.6,
+            -6.25
+          ],
+          [
+            19.150000000000002,
+            -6.1000000000000005
+          ],
+          [
+            18.95,
+            -3.1
+          ],
+          [
+            21.1,
+            -3
+          ],
+          [
+            20.900000000000002,
+            -1.8
+          ],
+          [
+            15.450000000000001,
+            -1.85
+          ],
+          [
+            15.600000000000001,
+            -3.35
+          ]
+        ],
+        "thickness": 0.012,
+        "material": "tile",
+        "finish": {
+          "tileStone": "emperador",
+          "tileColor": "#eceae5"
+        }
+      },
+      {
+        "id": "46aa870b",
+        "kind": "band",
+        "wallId": "e1d209e6",
+        "face": 1,
+        "s0": 15.53,
+        "s1": 16.08,
+        "z0": 0.9,
+        "z1": 1.5,
+        "thickness": 0.008,
+        "material": "tile"
+      },
+      {
+        "id": "768d41fc",
+        "kind": "band",
+        "wallId": "e1d209e6",
+        "face": 1,
+        "s0": 8.5,
+        "s1": 9.38,
+        "z0": 0.9,
+        "z1": 1.5,
+        "thickness": 0.008,
+        "material": "tile",
+        "finish": {
+          "tileW": 0.16,
+          "tileStone": "sandstone",
+          "tileColor": "#4a4a4d"
+        }
+      },
+      {
+        "id": "5a40f20f",
+        "kind": "band",
+        "wallId": "17b08c0b",
+        "face": 1,
+        "s0": 0,
+        "s1": 0.4,
+        "z0": 0.9,
+        "z1": 0.8,
+        "thickness": 0.008,
+        "material": "stone",
+        "finish": {
+          "stonePattern": "small"
+        }
+      }
+    ],
+    "mepRuns": [],
+    "roofs": [],
+    "skylights": [],
+    "chimneys": [],
+    "solarArrays": [],
+    "north": {
+      "x": 75.55,
+      "y": -17,
+      "dirDeg": 14.999999999999998
+    },
+    "optionSets": [
+      {
+        "id": "9fbb404f",
+        "label": "Choices",
+        "targets": [
+          "finish:9cd1dd7f"
+        ],
+        "choices": [
+          {
+            "id": "4b5ecf57",
+            "label": "Tile — Emperador brown",
+            "material": "tile",
+            "finish": {
+              "tileStone": "emperador",
+              "tileColor": "#eceae5"
+            }
+          },
+          {
+            "id": "88c6bdec",
+            "label": "Tile — Emperador brown",
+            "material": "tile",
+            "finish": {
+              "tileStone": "emperador",
+              "tileColor": "#eceae5"
+            }
+          }
+        ]
+      }
+    ],
+    "skybox": {
+      "yawDeg": 210,
+      "pitchDeg": 8,
+      "intensity": 1,
+      "horizonFadeDeg": 12,
+      "lighting": false,
+      "mediaId": "324d60e8-5fee-47dc-8da0-ed8158f66028"
+    },
+    "kitchen": {
+      "fronts": {
+        "color": "#0A0A0A"
+      }
+    }
+  }
+}

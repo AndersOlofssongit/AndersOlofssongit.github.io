@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "name": "503 based on plans",
+  "subtitle": "Falcon Hill, Hua Hin",
+  "models": [
+    {
+      "name": "503 based on plans BIM 2026-08-04",
+      "file": "models/503 based on plans BIM 2026-08-04.ifc"
+    }
+  ],
+  "pins": [],
+  "gps": {
+    "lat": 12.533824,
+    "lng": 99.935158
+  },
+  "northDeg": 14.999999999999998,
+  "bim": {
+    "file": "bim.json"
+  },
+  "skybox": {
+    "file": "media/503panorooftop.JPG",
+    "yawDeg": 210,
+    "pitchDeg": 8,
+    "intensity": 1,
+    "horizonFadeDeg": 12,
+    "lighting": false
+  }
+}
