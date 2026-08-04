@@ -2,6 +2,16 @@
   "version": 1,
   "name": "Finish relief test",
   "subtitle": "Brick · flagstone · slat panelling · travertine — all rebuilt from Pset_SkannaFinish",
-  "models": [{ "name": "Finish relief test", "file": "models/model.ifc" }],
-  "pins": []
+  "models": [
+    {
+      "name": "Finish relief test",
+      "file": "models/model.ifc"
+    }
+  ],
+  "pins": [],
+  "gps": {
+    "lat": 12.5684,
+    "lng": 99.9577
+  },
+  "northDeg": 60
 }
