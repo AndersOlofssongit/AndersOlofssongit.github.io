@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "name": "My home 🏡",
+  "subtitle": "Rendered from IFC — finishes rebuilt from Pset_SkannaFinish",
+  "models": [
+    {
+      "name": "My home 🏡",
+      "file": "models/model.ifc"
+    }
+  ],
+  "pins": [
+    {
+      "id": "79EBA261-9772-4EC2-9FA9-DEF737A4251D",
+      "label": "Pin 1",
+      "body": "Test ",
+      "position": [
+        -2.1811809394766906,
+        0.06901453088294218,
+        3.653761070369439
+      ],
+      "normal": [
+        -0.2508882736801584,
+        0.940593421459198,
+        -0.22877213631192428
+      ],
+      "createdAt": "2026-07-18T11:05:46Z",
+      "photo": null,
+      "panorama": "media/Pin 1 360.jpg",
+      "replies": [
+        {
+          "createdAt": "2026-07-18T11:08:08Z",
+          "photo": null,
+          "panorama": "media/Pin 1 reply 360.jpg"
+        }
+      ]
+    },
+    {
+      "id": "A81C87BA-1FFC-4053-B673-AF7C2C313E91",
+      "label": "Pano first floor ",
+      "body": "Center living ",
+      "position": [
+        -8.33113291648496,
+        0.11684942245483398,
+        3.879852862807862
+      ],
+      "normal": [
+        -0.0006648822941244352,
+        0.9990267157554626,
+        0.04399887397867176
+      ],
+      "createdAt": "2026-07-18T16:10:13Z",
+      "photo": null,
+      "panorama": "media/Pano first floor 360.jpg",
+      "replies": []
+    },
+    {
+      "id": "51BE1E76-8CA9-4A36-9450-8B011F987C70",
+      "label": "Photo ",
+      "body": "Photo sofa and screens ",
+      "position": [
+        -7.0578921259522955,
+        0.09262657165527344,
+        4.606906305989412
+      ],
+      "normal": [
+        0.027537082108573772,
+        0.9996150732040405,
+        0.0022810329213765173
+      ],
+      "createdAt": "2026-07-18T16:12:12Z",
+      "photo": "media/Photo photo.jpg",
+      "panorama": null,
+      "replies": []
+    }
+  ]
+}
