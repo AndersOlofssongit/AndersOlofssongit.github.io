@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "A1",
+  "subtitle": "TEST",
+  "models": [
+    {
+      "name": "A1 BIM 2026-08-05",
+      "file": "models/A1 BIM 2026-08-05.ifc"
+    }
+  ],
+  "pins": [],
+  "northDeg": 90,
+  "bim": {
+    "file": "bim.json",
+    "assets": [
+      {
+        "assetId": "custom:bcd983bc-b6d1-4c66-b73c-4520e3f3bd8e",
+        "file": "bim-assets/bcd983bc-b6d1-4c66-b73c-4520e3f3bd8e.glb",
+        "format": "glb"
+      }
+    ]
+  }
+}
