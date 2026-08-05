@@ -371,19 +371,26 @@
         "sill": 0,
         "head": 2.1,
         "doorMaterial": "wood",
-        "doorColor": "#FFFFFF"
+        "doorColor": "#FFFFFF",
+        "frame": {
+          "width": 0.02,
+          "depth": 0.08,
+          "finish": {
+            "color": "#F4F2EE"
+          }
+        }
       },
       {
         "id": "61e93fd4",
         "wallId": "baf79ebb",
         "kind": "door",
-        "doorType": "single_swing",
+        "doorType": "sliding",
         "s": 2.9713732144100655,
         "width": 0.9,
         "sill": 0,
         "head": 2.1,
-        "doorMaterial": "wood",
-        "doorColor": "#FFFFFF"
+        "doorMaterial": "steel",
+        "doorColor": "#474A51"
       },
       {
         "id": "b12e0b95",
@@ -401,7 +408,7 @@
         "id": "b4c714fd",
         "wallId": "e7e125fe",
         "kind": "door",
-        "doorType": "single_swing",
+        "doorType": "folding",
         "s": 2.4894031242990735,
         "width": 0.9,
         "sill": 0,
@@ -418,7 +425,7 @@
         "width": 0.9,
         "sill": 0,
         "head": 2.1,
-        "doorMaterial": "wood",
+        "doorMaterial": "glass",
         "doorColor": "#FFFFFF"
       },
       {
@@ -435,9 +442,11 @@
           "width": 0.02,
           "depth": 0.08,
           "finish": {
-            "color": "#8C9095"
+            "color": "#8C9095",
+            "wood": "walnut"
           }
-        }
+        },
+        "frosted": true
       },
       {
         "id": "57d6e2fa",
@@ -453,7 +462,7 @@
           "width": 0.02,
           "depth": 0.08,
           "finish": {
-            "color": "#8C9095"
+            "color": "#9DA1AA"
           }
         }
       },
@@ -515,7 +524,15 @@
         "s": 9.099367732800978,
         "width": 0.9,
         "sill": 0,
-        "head": 2.1
+        "head": 2.1,
+        "flipY": true,
+        "frame": {
+          "width": 0.1,
+          "depth": 0.05,
+          "finish": {
+            "color": "#26282B"
+          }
+        }
       }
     ],
     "stairs": [],
@@ -958,19 +975,6 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "683af978",
-        "storeyId": "51163529",
-        "assetId": "vent_in",
-        "name": "Ventilation in",
-        "x": 10.25,
-        "y": 9.55,
-        "rotDeg": 0,
-        "w": 0.3,
-        "d": 0.3,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
-      },
-      {
         "id": "1d4725ab",
         "storeyId": "51163529",
         "assetId": "vent_in",
@@ -1136,34 +1140,22 @@
         "rotDeg": 0,
         "w": 0.8,
         "d": 0.8,
-        "h": 0.3,
-        "elevation": 2.4000000000000004
-      },
-      {
-        "id": "649770f4",
-        "storeyId": "51163529",
-        "assetId": "sofa",
-        "name": "Sofa",
-        "x": 12.05,
-        "y": 6.800000000000001,
-        "rotDeg": 0,
-        "w": 2,
-        "d": 0.9,
-        "h": 0.8,
-        "elevation": 0
-      },
-      {
-        "id": "8bd12403",
-        "storeyId": "51163529",
-        "assetId": "table",
-        "name": "Table",
-        "x": 11.96,
-        "y": 8.520000000000001,
-        "rotDeg": 0,
-        "w": 1.4,
-        "d": 0.8,
-        "h": 0.75,
-        "elevation": 0
+        "h": 0.05,
+        "elevation": 2.4000000000000004,
+        "props": [
+          {
+            "k": "Capacity",
+            "v": "123"
+          },
+          {
+            "k": "Add Whatever you want",
+            "v": "123"
+          },
+          {
+            "k": "Line by line with gree text ",
+            "v": "10"
+          }
+        ]
       },
       {
         "id": "0f698f68",
@@ -1218,64 +1210,12 @@
         "elevation": 1.6
       },
       {
-        "id": "960da470",
-        "storeyId": "51163529",
-        "assetId": "tree",
-        "name": "Tree",
-        "x": 20.650000000000002,
-        "y": 12.100000000000001,
-        "rotDeg": 0,
-        "w": 3,
-        "d": 3,
-        "h": 4,
-        "elevation": -2
-      },
-      {
-        "id": "4aeba085",
-        "storeyId": "51163529",
-        "assetId": "tree",
-        "name": "Tree",
-        "x": 24.1,
-        "y": 7.75,
-        "rotDeg": 0,
-        "w": 3,
-        "d": 3,
-        "h": 4,
-        "elevation": -2
-      },
-      {
-        "id": "148fe695",
-        "storeyId": "51163529",
-        "assetId": "tree",
-        "name": "Tree",
-        "x": 22.700000000000003,
-        "y": 0.75,
-        "rotDeg": 0,
-        "w": 3,
-        "d": 3,
-        "h": 4,
-        "elevation": -2
-      },
-      {
-        "id": "e99e798d",
-        "storeyId": "51163529",
-        "assetId": "bush",
-        "name": "Bush",
-        "x": 22.5,
-        "y": 4.55,
-        "rotDeg": 0,
-        "w": 1.2,
-        "d": 1.2,
-        "h": 0.8,
-        "elevation": -2
-      },
-      {
         "id": "bff20294",
         "storeyId": "51163529",
         "assetId": "bush",
         "name": "Bush",
-        "x": 20.85,
-        "y": 7.15,
+        "x": 21.55,
+        "y": 0.5499999999999998,
         "rotDeg": 0,
         "w": 1.2,
         "d": 1.2,
@@ -1287,8 +1227,8 @@
         "storeyId": "51163529",
         "assetId": "bush",
         "name": "Bush",
-        "x": 23.700000000000003,
-        "y": 11.700000000000001,
+        "x": 22.250000000000004,
+        "y": -1.4000000000000004,
         "rotDeg": 0,
         "w": 1.2,
         "d": 1.2,
@@ -1339,8 +1279,8 @@
         "storeyId": "51163529",
         "assetId": "pool",
         "name": "Swimming pool",
-        "x": 33.800000000000004,
-        "y": 4.6000000000000005,
+        "x": 23.750000000000004,
+        "y": 9.100000000000001,
         "rotDeg": 0,
         "w": 6,
         "d": 3,
@@ -1352,8 +1292,8 @@
         "storeyId": "51163529",
         "assetId": "pergola",
         "name": "Pergola",
-        "x": 28.35,
-        "y": 4.55,
+        "x": 25.650000000000002,
+        "y": 4.8999999999999995,
         "rotDeg": 0,
         "w": 3,
         "d": 3,
@@ -1365,8 +1305,8 @@
         "storeyId": "51163529",
         "assetId": "fire_pit",
         "name": "Fire pit",
-        "x": 32.25,
-        "y": 7.7,
+        "x": 28.2,
+        "y": 1.7000000000000002,
         "rotDeg": 0,
         "w": 1,
         "d": 1,
@@ -1378,8 +1318,8 @@
         "storeyId": "51163529",
         "assetId": "patio_chair",
         "name": "Patio chair",
-        "x": 31.200000000000003,
-        "y": 8.9,
+        "x": 27.6,
+        "y": 3,
         "rotDeg": 0,
         "w": 0.45,
         "d": 0.5,
@@ -1391,8 +1331,8 @@
         "storeyId": "51163529",
         "assetId": "patio_chair",
         "name": "Patio chair",
-        "x": 33.2,
-        "y": 8.799999999999999,
+        "x": 28.950000000000003,
+        "y": 2.9999999999999982,
         "rotDeg": 0,
         "w": 0.45,
         "d": 0.5,
@@ -1449,7 +1389,7 @@
         "w": 0.2,
         "d": 0.05,
         "h": 2,
-        "elevation": 0.8,
+        "elevation": 0.68,
         "color": "#E6D2B5"
       },
       {
@@ -1463,7 +1403,7 @@
         "w": 0.2,
         "d": 0.05,
         "h": 2,
-        "elevation": 0.8,
+        "elevation": 0.68,
         "color": "#E6D2B5"
       },
       {
@@ -1477,7 +1417,7 @@
         "w": 0.2,
         "d": 0.05,
         "h": 2,
-        "elevation": 0.8,
+        "elevation": 0.68,
         "color": "#E6D2B5"
       },
       {
@@ -1491,7 +1431,7 @@
         "w": 0.2,
         "d": 0.05,
         "h": 2,
-        "elevation": 0.8,
+        "elevation": 0.67,
         "color": "#E6D2B5"
       },
       {
@@ -1505,7 +1445,7 @@
         "w": 0.2,
         "d": 0.05,
         "h": 2,
-        "elevation": 0.8,
+        "elevation": 0.67,
         "color": "#E6D2B5"
       },
       {
@@ -1519,7 +1459,7 @@
         "w": 0.2,
         "d": 0.05,
         "h": 2,
-        "elevation": 0.8,
+        "elevation": 0.67,
         "color": "#E6D2B5"
       },
       {
@@ -1534,6 +1474,7 @@
         "d": 0.2,
         "h": 0.05,
         "elevation": 0.4,
+        "material": "brick",
         "color": "#E6D2B5"
       },
       {
@@ -1550,6 +1491,84 @@
         "elevation": 0.6,
         "material": "wood",
         "color": "#382C1E"
+      },
+      {
+        "id": "0c663b30",
+        "storeyId": "51163529",
+        "assetId": "custom:c0354625-4acc-4bcf-860f-0e291a05182d",
+        "name": "klicka",
+        "x": 9.88,
+        "y": 9.49,
+        "rotDeg": 29.999999999999996,
+        "w": 1.05,
+        "d": 0.07059747738145461,
+        "h": 0.55,
+        "elevation": 1.2
+      },
+      {
+        "id": "8a7c83d3",
+        "storeyId": "51163529",
+        "assetId": "custom:7823f734-263e-48ef-b5f3-9259e274d77f",
+        "name": "painting",
+        "x": 3.8500000000000005,
+        "y": 4.74,
+        "rotDeg": -180,
+        "w": 2,
+        "d": 0.07059747738145461,
+        "h": 1.1044464111328125,
+        "elevation": 1.2
+      },
+      {
+        "id": "680931dc",
+        "storeyId": "51163529",
+        "assetId": "custom:b27147f9-db41-415f-8012-b4958aef696d",
+        "name": "testklicka",
+        "x": 11.200000000000001,
+        "y": 6.3500000000000005,
+        "rotDeg": -180,
+        "w": 0.7399906983099537,
+        "d": 1.3,
+        "h": 0.34,
+        "elevation": 2
+      },
+      {
+        "id": "264d4299",
+        "storeyId": "51163529",
+        "assetId": "custom:ad0b786f-3336-4e00-8887-530798b2f850",
+        "name": "testklicka2",
+        "x": 30.6,
+        "y": 13.3,
+        "rotDeg": -149.99999999999997,
+        "w": 1.915000081062317,
+        "d": 8.781267187780713,
+        "h": 4.942871570587158,
+        "elevation": 0
+      },
+      {
+        "id": "223663ac",
+        "storeyId": "51163529",
+        "assetId": "custom:28a133fd-b2fe-4097-a265-94e53119e291",
+        "name": "golden_eagle_trophy",
+        "x": 13.450000000000001,
+        "y": 11.05,
+        "rotDeg": 164.99999999999997,
+        "w": 1.7915550470352173,
+        "d": 0.8862724602222443,
+        "h": 1.9033717513084412,
+        "elevation": 0
+      },
+      {
+        "id": "d1b50cef",
+        "storeyId": "51163529",
+        "assetId": "custom:28a133fd-b2fe-4097-a265-94e53119e291",
+        "name": "golden_eagle_trophy",
+        "x": 11.05,
+        "y": 11.100000000000001,
+        "rotDeg": -164.99999999999997,
+        "w": 1.7915550470352173,
+        "d": 0.8862724602222443,
+        "h": 1.9033717513084412,
+        "elevation": 0
       }
     ],
     "columns": [
@@ -1635,7 +1654,7 @@
         "thickness": 0.012,
         "material": "carpet",
         "finish": {
-          "colorFace1": "#5B3A29"
+          "colorFace1": "#20603D"
         }
       },
       {
@@ -1663,8 +1682,12 @@
         "thickness": 0.012,
         "material": "tile",
         "finish": {
-          "tileStone": "granite_grey",
-          "tileColor": "#eceae5"
+          "tileStone": "nero_marquina",
+          "tileColor": "#0A0A0A",
+          "tileJoint": 0.002,
+          "tileW": 0.6,
+          "tileH": 0.6,
+          "tileJointColor": "#FFFFFF"
         }
       }
     ],
@@ -2062,27 +2085,35 @@
         ],
         "choices": [
           {
-            "id": "f8a73ccb",
-            "label": "Carpet 1",
-            "material": "carpet",
+            "id": "1e488ca8",
+            "label": "Brick — Red common",
+            "material": "brick",
             "finish": {
-              "colorFace1": "#2F4538"
+              "colorFace1": "#AF2B1E"
             }
           },
           {
-            "id": "ee63b8cd",
-            "label": "Carpet 2",
-            "material": "carpet",
+            "id": "7a56ab3a",
+            "label": "Steel",
+            "material": "steel",
             "finish": {
-              "colorFace1": "#2A6478"
+              "colorFace1": "#5D9B9B"
             }
           },
           {
-            "id": "74127cee",
-            "label": "Carpet 3",
+            "id": "8855600f",
+            "label": "Painted — Traffic red",
+            "material": "plaster",
+            "finish": {
+              "colorFace1": "#CC0605"
+            }
+          },
+          {
+            "id": "06b56dd5",
+            "label": "Carpet",
             "material": "carpet",
             "finish": {
-              "colorFace1": "#2A6478"
+              "colorFace1": "#20603D"
             }
           }
         ]
@@ -2104,30 +2135,38 @@
             }
           },
           {
-            "id": "1d573b27",
-            "label": "Tile — Statuario",
-            "material": "tile",
-            "finish": {
-              "tileStone": "statuario",
-              "tileColor": "#eceae5"
-            }
-          },
-          {
-            "id": "5c38e419",
-            "label": "Tile — Nero Marquina",
-            "material": "tile",
-            "finish": {
-              "tileStone": "nero_marquina",
-              "tileColor": "#eceae5"
-            }
-          },
-          {
             "id": "d94e7570",
             "label": "Tile — Grey granite",
             "material": "tile",
             "finish": {
               "tileStone": "granite_grey",
               "tileColor": "#eceae5"
+            }
+          },
+          {
+            "id": "762e104b",
+            "label": "Tile — Statuario",
+            "material": "tile",
+            "finish": {
+              "tileStone": "statuario",
+              "tileColor": "#eceae5",
+              "tileJoint": 0.008,
+              "tileJointColor": "#e9e6e0",
+              "tileW": 0.6,
+              "tileH": 0.6
+            }
+          },
+          {
+            "id": "fc1ebf63",
+            "label": "Tile — Nero Marquina",
+            "material": "tile",
+            "finish": {
+              "tileStone": "nero_marquina",
+              "tileColor": "#0A0A0A",
+              "tileJoint": 0.002,
+              "tileW": 0.6,
+              "tileH": 0.6,
+              "tileJointColor": "#FFFFFF"
             }
           }
         ]
@@ -2144,7 +2183,7 @@
       },
       "appliances": "black"
     },
-    "optionsOnly": true,
+    "optionsOnly": false,
     "north": {
       "x": 13.55,
       "y": 15.350000000000001,

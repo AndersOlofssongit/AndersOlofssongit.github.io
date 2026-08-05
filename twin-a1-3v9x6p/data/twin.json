@@ -1,14 +1,26 @@
 {
   "version": 1,
-  "name": "A1",
-  "subtitle": "TEST",
+  "name": "Thomas test",
+  "subtitle": "A1",
   "models": [
     {
       "name": "A1 BIM 2026-08-05",
       "file": "models/A1 BIM 2026-08-05.ifc"
+    },
+    {
+      "name": "A1 BIM 2026-08-05",
+      "file": "models/A1 BIM 2026-08-05-2.ifc"
+    },
+    {
+      "name": "A1 BIM 2026-08-05",
+      "file": "models/A1 BIM 2026-08-05-2-3.ifc"
     }
   ],
   "pins": [],
+  "gps": {
+    "lat": 12.57065,
+    "lng": 99.95876
+  },
   "northDeg": 90,
   "bim": {
     "file": "bim.json",
@@ -16,6 +28,31 @@
       {
         "assetId": "custom:bcd983bc-b6d1-4c66-b73c-4520e3f3bd8e",
         "file": "bim-assets/bcd983bc-b6d1-4c66-b73c-4520e3f3bd8e.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:c0354625-4acc-4bcf-860f-0e291a05182d",
+        "file": "bim-assets/c0354625-4acc-4bcf-860f-0e291a05182d.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:7823f734-263e-48ef-b5f3-9259e274d77f",
+        "file": "bim-assets/7823f734-263e-48ef-b5f3-9259e274d77f.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:b27147f9-db41-415f-8012-b4958aef696d",
+        "file": "bim-assets/b27147f9-db41-415f-8012-b4958aef696d.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:ad0b786f-3336-4e00-8887-530798b2f850",
+        "file": "bim-assets/ad0b786f-3336-4e00-8887-530798b2f850.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:28a133fd-b2fe-4097-a265-94e53119e291",
+        "file": "bim-assets/28a133fd-b2fe-4097-a265-94e53119e291.glb",
         "format": "glb"
       }
     ]
