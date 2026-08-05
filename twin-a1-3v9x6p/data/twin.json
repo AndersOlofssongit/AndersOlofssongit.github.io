@@ -1,19 +1,11 @@
 {
   "version": 1,
-  "name": "Thomas test",
-  "subtitle": "A1",
+  "name": "A1",
+  "subtitle": "Thomas FH",
   "models": [
     {
       "name": "A1 BIM 2026-08-05",
       "file": "models/A1 BIM 2026-08-05.ifc"
-    },
-    {
-      "name": "A1 BIM 2026-08-05",
-      "file": "models/A1 BIM 2026-08-05-2.ifc"
-    },
-    {
-      "name": "A1 BIM 2026-08-05",
-      "file": "models/A1 BIM 2026-08-05-2-3.ifc"
     }
   ],
   "pins": [],
