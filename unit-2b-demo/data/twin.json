@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "name": "Unit 2B demo",
+  "subtitle": "Falcon Hill, Hua Hin",
+  "models": [
+    {
+      "name": "Unit 2B BIM",
+      "file": "models/Unit 2B BIM 2026-08-08-2.ifc"
+    }
+  ],
+  "pins": [
+    {
+      "id": "f7d02170-9fc5-4bd8-86a4-dba65f95fcc1",
+      "label": "Pin 1",
+      "body": null,
+      "position": [
+        6.776806038908256,
+        0.8362113833427429,
+        -7.769818725734659
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-08-08T14:32:28.018Z",
+      "photo": null,
+      "panorama": "media/varaha-cave-temple.jpg",
+      "replies": []
+    }
+  ],
+  "gps": {
+    "lat": 12.57065,
+    "lng": 99.95876
+  },
+  "northDeg": 0,
+  "bim": {
+    "file": "bim.json"
+  },
+  "skybox": {
+    "file": "media/503panorooftop.JPG",
+    "yawDeg": 195,
+    "pitchDeg": 0,
+    "intensity": 1,
+    "horizonFadeDeg": 12,
+    "lighting": false
+  }
+}
