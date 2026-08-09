@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "name": "Unit 2B",
+  "subtitle": "Falcon Hill, Hua Hin",
+  "models": [
+    {
+      "name": "Unit 2B BIM 2026-08-09",
+      "file": "models/Unit 2B BIM 2026-08-09.ifc"
+    }
+  ],
+  "pins": [
+    {
+      "id": "f7d02170-9fc5-4bd8-86a4-dba65f95fcc1",
+      "label": "Pin 1",
+      "body": null,
+      "position": [
+        6.776806038908256,
+        0.8362113833427429,
+        -7.769818725734659
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-08-08T14:32:28.018Z",
+      "photo": null,
+      "panorama": "media/varaha-cave-temple.jpg",
+      "replies": []
+    }
+  ],
+  "gps": {
+    "lat": 12.57065,
+    "lng": 99.95876
+  },
+  "northDeg": 0,
+  "bim": {
+    "file": "bim.json",
+    "assets": [
+      {
+        "assetId": "custom:74976c4a-b4bc-4e37-b793-0863b9270423",
+        "file": "bim-assets/74976c4a-b4bc-4e37-b793-0863b9270423.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:3659a4dd-fd5a-44f7-91cf-68003406f612",
+        "file": "bim-assets/3659a4dd-fd5a-44f7-91cf-68003406f612.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:3d739d39-e052-4a80-b12e-70003d4c238c",
+        "file": "bim-assets/3d739d39-e052-4a80-b12e-70003d4c238c.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:f88f71a1-3658-4c4a-8f90-84addd21a0a5",
+        "file": "bim-assets/f88f71a1-3658-4c4a-8f90-84addd21a0a5.glb",
+        "format": "glb"
+      }
+    ]
+  },
+  "skybox": {
+    "file": "media/503panorooftop.JPG",
+    "yawDeg": 195,
+    "pitchDeg": 0,
+    "intensity": 1,
+    "horizonFadeDeg": 12,
+    "lighting": false
+  }
+}
