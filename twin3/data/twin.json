@@ -35,29 +35,7 @@
   },
   "northDeg": 0,
   "bim": {
-    "file": "bim.json",
-    "assets": [
-      {
-        "assetId": "custom:74976c4a-b4bc-4e37-b793-0863b9270423",
-        "file": "bim-assets/74976c4a-b4bc-4e37-b793-0863b9270423.glb",
-        "format": "glb"
-      },
-      {
-        "assetId": "custom:3659a4dd-fd5a-44f7-91cf-68003406f612",
-        "file": "bim-assets/3659a4dd-fd5a-44f7-91cf-68003406f612.glb",
-        "format": "glb"
-      },
-      {
-        "assetId": "custom:3d739d39-e052-4a80-b12e-70003d4c238c",
-        "file": "bim-assets/3d739d39-e052-4a80-b12e-70003d4c238c.glb",
-        "format": "glb"
-      },
-      {
-        "assetId": "custom:f88f71a1-3658-4c4a-8f90-84addd21a0a5",
-        "file": "bim-assets/f88f71a1-3658-4c4a-8f90-84addd21a0a5.glb",
-        "format": "glb"
-      }
-    ]
+    "file": "bim.json"
   },
   "skybox": {
     "file": "media/503panorooftop.JPG",

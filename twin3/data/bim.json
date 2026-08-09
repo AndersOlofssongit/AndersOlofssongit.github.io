@@ -784,7 +784,7 @@
         "id": "i51",
         "storeyId": "st1",
         "assetId": "bed_king",
-        "name": "Bed — king",
+        "name": "Bed \u2014 king",
         "x": 1.263,
         "y": 6.064,
         "rotDeg": 90,
@@ -1304,7 +1304,7 @@
         "id": "i91",
         "storeyId": "st1",
         "assetId": "bed_king",
-        "name": "Bed — king",
+        "name": "Bed \u2014 king",
         "x": 1.263,
         "y": 17.674,
         "rotDeg": 90,
@@ -1421,7 +1421,7 @@
         "id": "i100",
         "storeyId": "st1",
         "assetId": "bed_single",
-        "name": "Bed — single",
+        "name": "Bed \u2014 single",
         "x": 9.276,
         "y": 17.866,
         "rotDeg": 270,
@@ -1963,7 +1963,7 @@
         "id": "fab16c2d",
         "storeyId": "st1",
         "assetId": "car_small",
-        "name": "Car — small (hatchback)",
+        "name": "Car \u2014 small (hatchback)",
         "x": 12.100000000000001,
         "y": 17.55,
         "rotDeg": 0,
@@ -1984,58 +1984,6 @@
         "d": 0.5,
         "h": 0.7,
         "elevation": 1.5
-      },
-      {
-        "id": "2c4972c1",
-        "storeyId": "st1",
-        "assetId": "custom:74976c4a-b4bc-4e37-b793-0863b9270423",
-        "name": "aqQkRkC03GmIqMat3KLb5",
-        "x": -8.099999999999998,
-        "y": -3.0000000000000004,
-        "rotDeg": 0,
-        "w": 0.9995884001255035,
-        "d": 0.9684703648090363,
-        "h": 0.1946047767996788,
-        "elevation": 0
-      },
-      {
-        "id": "da3ebb60",
-        "storeyId": "st1",
-        "assetId": "custom:3659a4dd-fd5a-44f7-91cf-68003406f612",
-        "name": "GNbI5YwZheRFpzL3rWEJE",
-        "x": -6.4,
-        "y": -2.9500000000000006,
-        "rotDeg": 0,
-        "w": 2,
-        "d": 1.2,
-        "h": 0.54,
-        "elevation": 0
-      },
-      {
-        "id": "463a7c08",
-        "storeyId": "st1",
-        "assetId": "custom:3d739d39-e052-4a80-b12e-70003d4c238c",
-        "name": "X83k0AUMN7H8kHHo6FwWg",
-        "x": -4.9,
-        "y": -2.85,
-        "rotDeg": 0,
-        "w": 0.6073869168758392,
-        "d": 0.6000864505767822,
-        "h": 1.0009816884994507,
-        "elevation": 0
-      },
-      {
-        "id": "16b6918c",
-        "storeyId": "st1",
-        "assetId": "custom:f88f71a1-3658-4c4a-8f90-84addd21a0a5",
-        "name": "pPm1L6gK4WATQxUVfzFBG",
-        "x": -3.9000000000000004,
-        "y": -2.7,
-        "rotDeg": 0,
-        "w": 1,
-        "d": 0.3,
-        "h": 1.56,
-        "elevation": 0
       },
       {
         "id": "785dc7f9",
@@ -2781,7 +2729,7 @@
         "choices": [
           {
             "id": "30ae55f5",
-            "label": "Wood — Walnut",
+            "label": "Wood \u2014 Walnut",
             "material": "wood",
             "finish": {
               "woodTone": "walnut"
@@ -2798,7 +2746,7 @@
         "choices": [
           {
             "id": "6a4ffde2",
-            "label": "Tile — Carrara marble",
+            "label": "Tile \u2014 Carrara marble",
             "material": "tile",
             "finish": {
               "tileStone": "carrara",
@@ -2807,7 +2755,7 @@
           },
           {
             "id": "19c889ca",
-            "label": "Tile — Emperador brown",
+            "label": "Tile \u2014 Emperador brown",
             "material": "tile",
             "finish": {
               "tileStone": "emperador",
@@ -2816,7 +2764,7 @@
           },
           {
             "id": "fb898e6d",
-            "label": "Tile — Absolute black granite",
+            "label": "Tile \u2014 Absolute black granite",
             "material": "tile",
             "finish": {
               "tileStone": "granite_black",
@@ -2827,7 +2775,7 @@
           },
           {
             "id": "8b947307",
-            "label": "Stone — plain",
+            "label": "Stone \u2014 plain",
             "material": "stone",
             "finish": {
               "tileStone": "granite_black",
@@ -2839,7 +2787,7 @@
           },
           {
             "id": "aeba1e39",
-            "label": "Painted — Pale green",
+            "label": "Painted \u2014 Pale green",
             "material": "concrete",
             "finish": {
               "tileStone": "granite_black",
