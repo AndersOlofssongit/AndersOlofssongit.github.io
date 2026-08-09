@@ -307,43 +307,7 @@
         "thickness": 0.2,
         "material": "concrete",
         "cuts": [],
-        "finish": {
-          "colorFace1": "#F4F4F4"
-        }
-      },
-      {
-        "id": "s43",
-        "storeyId": "st1",
-        "kind": "ceiling",
-        "outline": [
-          [
-            0.001,
-            3.602
-          ],
-          [
-            4.774,
-            3.602
-          ],
-          [
-            4.774,
-            4.902
-          ],
-          [
-            10.474,
-            4.902
-          ],
-          [
-            10.474,
-            19.602
-          ],
-          [
-            0.001,
-            19.602
-          ]
-        ],
-        "thickness": 0.05,
-        "material": "plaster",
-        "cuts": []
+        "finish": {}
       },
       {
         "id": "fb6e669c",
@@ -421,6 +385,31 @@
           "colorFace1": "#7A7B7A"
         },
         "cuts": []
+      },
+      {
+        "id": "47cec61a",
+        "storeyId": "st1",
+        "kind": "floor",
+        "outline": [
+          [
+            -9.25,
+            -2.0500000000000003
+          ],
+          [
+            -9.25,
+            -7.300000000000001
+          ],
+          [
+            -0.55,
+            -7.3500000000000005
+          ],
+          [
+            -0.6000000000000001,
+            -1.9500000000000002
+          ]
+        ],
+        "thickness": 0.2,
+        "cuts": []
       }
     ],
     "openings": [
@@ -465,7 +454,16 @@
         "width": 0.825,
         "sill": 0,
         "head": 2.2,
-        "flipX": true
+        "flipX": true,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#F4F2EE"
+          }
+        },
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
       },
       {
         "id": "o32",
@@ -476,7 +474,16 @@
         "width": 0.775,
         "sill": 0,
         "head": 2.2,
-        "flipX": true
+        "flipX": true,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#FFFFFF"
+          }
+        },
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
       },
       {
         "id": "o33",
@@ -487,7 +494,16 @@
         "width": 0.86,
         "sill": 0,
         "head": 2.2,
-        "flipY": true
+        "flipY": true,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#FFFFFF"
+          }
+        },
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
       },
       {
         "id": "o34",
@@ -498,7 +514,16 @@
         "width": 0.865,
         "sill": 0,
         "head": 2.2,
-        "flipY": true
+        "flipY": true,
+        "frame": {
+          "width": 0.055,
+          "depth": 0.08,
+          "finish": {
+            "color": "#FFFFFF"
+          }
+        },
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
       },
       {
         "id": "o35",
@@ -508,7 +533,9 @@
         "s": 5.638,
         "width": 0.935,
         "sill": 0,
-        "head": 2.2
+        "head": 2.2,
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
       },
       {
         "id": "o36",
@@ -563,7 +590,7 @@
         "casing": {
           "width": 0.07,
           "thickness": 0.015,
-          "color": "#f4f2ee",
+          "color": "#0A0A0A",
           "side": "both"
         }
       },
@@ -1577,52 +1604,48 @@
         "storeyId": "st1",
         "assetId": "water_tank",
         "name": "Water tank",
-        "x": 12.950000000000001,
-        "y": 15.450000000000001,
+        "x": 13.3,
+        "y": 15.100000000000001,
         "rotDeg": 0,
-        "w": 1.6,
-        "d": 1.6,
-        "h": 1.5,
+        "w": 1,
+        "d": 1,
+        "h": 2,
         "elevation": 0
       },
       {
         "id": "80757567",
         "storeyId": "st1",
         "assetId": "generic_box",
-        "name": "Box (generic)",
+        "name": "Solar battery",
         "x": 11.25,
         "y": 15.05,
         "rotDeg": 180,
         "w": 1,
         "d": 0.6,
         "h": 0.5,
-        "elevation": 0
-      },
-      {
-        "id": "b54beea7",
-        "storeyId": "st1",
-        "assetId": "gym_treadmill",
-        "name": "Treadmill",
-        "x": 13.3,
-        "y": 17.35,
-        "rotDeg": 0,
-        "w": 0.9,
-        "d": 2.05,
-        "h": 1.45,
-        "elevation": 0
-      },
-      {
-        "id": "567548b6",
-        "storeyId": "st1",
-        "assetId": "gym_multi",
-        "name": "Multi-gym / cable machine",
-        "x": 11.3,
-        "y": 16.400000000000002,
-        "rotDeg": -180,
-        "w": 1.5,
-        "d": 1.3,
-        "h": 2.15,
-        "elevation": 0
+        "elevation": 0,
+        "props": [
+          {
+            "k": "Brand",
+            "v": "SolarPower"
+          },
+          {
+            "k": "Capacity",
+            "v": "12345"
+          },
+          {
+            "k": "Purchase year",
+            "v": "2025"
+          },
+          {
+            "k": "Info",
+            "v": "This unit has a screw loose at the bottom..."
+          },
+          {
+            "k": "",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "e2276783",
@@ -1935,6 +1958,110 @@
         "d": 3,
         "h": 1.4,
         "elevation": -1.34
+      },
+      {
+        "id": "fab16c2d",
+        "storeyId": "st1",
+        "assetId": "car_small",
+        "name": "Car — small (hatchback)",
+        "x": 12.100000000000001,
+        "y": 17.55,
+        "rotDeg": 0,
+        "w": 1.78,
+        "d": 3.95,
+        "h": 1.48,
+        "elevation": 0
+      },
+      {
+        "id": "553a7fd6",
+        "storeyId": "st1",
+        "assetId": "cooker_hood",
+        "name": "Cooker hood / extractor",
+        "x": 8.74,
+        "y": 13.43,
+        "rotDeg": 0,
+        "w": 0.6,
+        "d": 0.5,
+        "h": 0.7,
+        "elevation": 1.5
+      },
+      {
+        "id": "fb7733d2",
+        "storeyId": "st1",
+        "assetId": "radiator",
+        "name": "Radiator",
+        "x": -1.2000000000000002,
+        "y": -2.2,
+        "rotDeg": 0,
+        "w": 1,
+        "d": 0.1,
+        "h": 0.5,
+        "elevation": 0.15
+      },
+      {
+        "id": "785dc7f9",
+        "storeyId": "st1",
+        "assetId": "water_heater",
+        "name": "Water heater / boiler",
+        "x": -2.2,
+        "y": -2.25,
+        "rotDeg": 0,
+        "w": 0.5,
+        "d": 0.5,
+        "h": 1.3,
+        "elevation": 0
+      },
+      {
+        "id": "b7f91c24",
+        "storeyId": "st1",
+        "assetId": "vent_in",
+        "name": "Ventilation in",
+        "x": -3,
+        "y": -5.4,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "c477ee9d",
+        "storeyId": "st1",
+        "assetId": "vent_out",
+        "name": "Ventilation out",
+        "x": -1.4500000000000002,
+        "y": -5.3500000000000005,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "74420fbf",
+        "storeyId": "st1",
+        "assetId": "radiator",
+        "name": "Radiator",
+        "x": -4.4,
+        "y": -6.550000000000001,
+        "rotDeg": 0,
+        "w": 1,
+        "d": 0.1,
+        "h": 0.5,
+        "elevation": 0.15
+      },
+      {
+        "id": "0c870025",
+        "storeyId": "st1",
+        "assetId": "fireplace",
+        "name": "Fireplace",
+        "x": -4.4,
+        "y": -5.5,
+        "rotDeg": 0,
+        "w": 1.1,
+        "d": 0.35,
+        "h": 1.1,
+        "elevation": 0
       }
     ],
     "columns": [
@@ -2170,6 +2297,136 @@
           "tileH": 0.6,
           "tileJoint": 0.003
         }
+      },
+      {
+        "id": "09eb2d6f",
+        "kind": "band",
+        "wallId": "w1",
+        "face": 2,
+        "s0": 3.85,
+        "s1": 8,
+        "z0": 0,
+        "z1": 2.7,
+        "thickness": 0.008,
+        "material": "stone",
+        "finish": {
+          "woodTone": "walnut",
+          "stoneType": "granite_grey",
+          "stonePattern": "rubble"
+        }
+      },
+      {
+        "id": "c74062e6",
+        "kind": "band",
+        "wallId": "w16",
+        "face": 2,
+        "s0": 1.05,
+        "s1": 3.96,
+        "z0": 0.9,
+        "z1": 1.5,
+        "thickness": 0.008,
+        "material": "tile",
+        "finish": {
+          "tileW": 0.02,
+          "tileH": 0.02,
+          "tileStone": "nero_marquina",
+          "tileColor": "#f7f6f3"
+        }
+      },
+      {
+        "id": "17ebcd42",
+        "kind": "band",
+        "wallId": "w3",
+        "face": 1,
+        "s0": 6.25,
+        "s1": 8.99,
+        "z0": 0.9,
+        "z1": 1.5,
+        "thickness": 0.008,
+        "material": "tile",
+        "finish": {
+          "tileW": 0.02,
+          "tileH": 0.02,
+          "tileStone": "nero_marquina",
+          "tileColor": "#1f1f22"
+        }
+      },
+      {
+        "id": "c0a50896",
+        "kind": "region",
+        "storeyId": "st1",
+        "outline": [
+          [
+            0.15000000000000002,
+            10.75
+          ],
+          [
+            0.15000000000000002,
+            8.5
+          ],
+          [
+            4.72,
+            8.402
+          ],
+          [
+            4.65,
+            10.76
+          ]
+        ],
+        "thickness": 0.012,
+        "material": "concrete",
+        "finish": {
+          "tilePattern": "basketweave",
+          "stoneType": "travertine",
+          "colorFace1": "#20214F"
+        }
+      },
+      {
+        "id": "ca8806bf",
+        "kind": "band",
+        "wallId": "w6",
+        "face": 2,
+        "s0": 1.435,
+        "s1": 10.115,
+        "z0": 0,
+        "z1": 2.7,
+        "thickness": 0.008,
+        "material": "wood",
+        "finish": {
+          "colorFace1": "#0E294B",
+          "tilePattern": "running",
+          "stoneType": "nero_marquina",
+          "woodTone": "ash"
+        }
+      },
+      {
+        "id": "6b3e07e1",
+        "kind": "region",
+        "storeyId": "st1",
+        "outline": [
+          [
+            -8.6,
+            -4.3500000000000005
+          ],
+          [
+            -8.6,
+            -6.050000000000001
+          ],
+          [
+            -6.3500000000000005,
+            -6.050000000000001
+          ],
+          [
+            -6.4,
+            -4.3
+          ]
+        ],
+        "thickness": 0.012,
+        "material": "tile",
+        "finish": {
+          "tileStone": "carrara",
+          "tileColor": "#eceae5"
+        }
       }
     ],
     "mepRuns": [
@@ -2391,13 +2648,172 @@
         "diameter": 0.2,
         "connectA": "d694f5e2",
         "hostWallId": "w3"
+      },
+      {
+        "id": "563c8ad5",
+        "storeyId": "st1",
+        "kind": "water",
+        "placement": "concealed",
+        "ax": -1.1500000000000001,
+        "ay": -2.9000000000000004,
+        "az": 0.3,
+        "bx": -1.15,
+        "by": -6.65,
+        "bz": 0.3,
+        "diameter": 0.022
+      },
+      {
+        "id": "5d4d57b9",
+        "storeyId": "st1",
+        "kind": "drain",
+        "placement": "concealed",
+        "ax": -2.5500000000000003,
+        "ay": -3.25,
+        "az": 0.1,
+        "bx": -2.5500000000000003,
+        "by": -6.65,
+        "bz": 0.1,
+        "diameter": 0.05
+      },
+      {
+        "id": "2df24416",
+        "storeyId": "st1",
+        "kind": "gas",
+        "placement": "concealed",
+        "ax": -3.45,
+        "ay": -3.9000000000000004,
+        "az": 0.3,
+        "bx": -3.45,
+        "by": -6.6000000000000005,
+        "bz": 0.3,
+        "diameter": 0.025
+      },
+      {
+        "id": "b01dd2a6",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": -1.8,
+        "ay": -2.95,
+        "az": 0.3,
+        "bx": -1.7999999999999998,
+        "by": -6.65,
+        "bz": 0.3,
+        "diameter": 0.014
+      },
+      {
+        "id": "65e2793c",
+        "storeyId": "st1",
+        "kind": "data",
+        "placement": "concealed",
+        "ax": -0.75,
+        "ay": -2.75,
+        "az": 0.3,
+        "bx": -0.7499999999999998,
+        "by": -6.8500000000000005,
+        "bz": 0.3,
+        "diameter": 0.009
+      },
+      {
+        "id": "e57f89f6",
+        "storeyId": "st1",
+        "kind": "vent",
+        "placement": "concealed",
+        "ax": -3.6500000000000004,
+        "ay": -7.4,
+        "az": 2.6,
+        "bx": -0.6000000000000001,
+        "by": -7.4,
+        "bz": 2.6,
+        "diameter": 0.2
       }
     ],
     "roofs": [],
     "skylights": [],
     "chimneys": [],
     "solarArrays": [],
-    "optionSets": [],
+    "optionSets": [
+      {
+        "id": "562091c3",
+        "label": "Choices",
+        "targets": [
+          "finish:09eb2d6f"
+        ],
+        "choices": [
+          {
+            "id": "30ae55f5",
+            "label": "Wood — Walnut",
+            "material": "wood",
+            "finish": {
+              "woodTone": "walnut"
+            }
+          }
+        ]
+      },
+      {
+        "id": "e768f44f",
+        "label": "Choices",
+        "targets": [
+          "finish:6b3e07e1"
+        ],
+        "choices": [
+          {
+            "id": "6a4ffde2",
+            "label": "Tile — Carrara marble",
+            "material": "tile",
+            "finish": {
+              "tileStone": "carrara",
+              "tileColor": "#eceae5"
+            }
+          },
+          {
+            "id": "19c889ca",
+            "label": "Tile — Emperador brown",
+            "material": "tile",
+            "finish": {
+              "tileStone": "emperador",
+              "tileColor": "#eceae5"
+            }
+          },
+          {
+            "id": "fb898e6d",
+            "label": "Tile — Absolute black granite",
+            "material": "tile",
+            "finish": {
+              "tileStone": "granite_black",
+              "tileColor": "#eceae5",
+              "tileJoint": 0.008,
+              "tilePattern": "hexagon"
+            }
+          },
+          {
+            "id": "8b947307",
+            "label": "Stone — plain",
+            "material": "stone",
+            "finish": {
+              "tileStone": "granite_black",
+              "tileColor": "#eceae5",
+              "tileJoint": 0.008,
+              "tilePattern": "hexagon",
+              "stonePattern": "large"
+            }
+          },
+          {
+            "id": "aeba1e39",
+            "label": "Painted — Pale green",
+            "material": "concrete",
+            "finish": {
+              "tileStone": "granite_black",
+              "tileColor": "#eceae5",
+              "tileJoint": 0.008,
+              "tilePattern": "hexagon",
+              "stonePattern": "large",
+              "colorFace1": "#89AC76"
+            }
+          }
+        ]
+      }
+    ],
     "furniture": [],
     "north": {
       "x": 18.75,
