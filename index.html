@@ -110,6 +110,11 @@
     margin: 0 0 28px; color: var(--muted); font-size: 1em; max-width: 720px;
   }
   .section-lede strong { color: var(--text); }
+  .sub-head {
+    margin: 44px 0 12px; font-size: 1.12em; font-weight: 600; color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .sub-head + .section-lede { margin-bottom: 20px; }
   .features {
     display: grid; gap: 14px;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -422,29 +427,130 @@
       <li><strong>360° panoramas</strong> — captured panoramas open in a full spherical viewer, linked to the model</li>
       <li><strong>CAD &amp; IFC viewing</strong> — open IFC files alongside or overlaid on your scan</li>
       <li><strong>BIM Author</strong> — trace your scan in a 2D plan editor and export a real IFC building model, floor by floor</li>
+      <li><strong>Drawings</strong> — plans, elevations and sections generated onto a title block, exported as PDF, SVG or DXF</li>
+      <li><strong>Shared digital twin</strong> — publish the finished model to a link with sun study, lighting, restyling and building services</li>
     </ul>
     <div class="cta-row">
       <a class="btn" href="app/">Open Skanna Web</a>
       <span class="aside">AI-assisted floor planning and interior design launching in the coming weeks.</span>
     </div>
-    <!-- GIF slots: authoring gif → bim-author frame, finished-IFC gif → ifc-assembly frame. -->
     <div class="shot-grid">
       <div class="shot-frame">
-        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — 3D viewer &amp; pins</span></div>
-        <img src="assets/web-viewer.jpg" alt="Skanna Web 3D viewer showing a scanned home in dollhouse view with an annotation pin panel open" loading="lazy">
+        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — the property portal</span></div>
+        <img src="assets/web-viewer.jpg" alt="The Skanna Web property page for a unit, with folders for scans, photos, panoramas, files and CAD models, and buttons for BIM Author, Drawings, Share Twin and Export Site" loading="lazy">
       </div>
       <div class="shot-frame">
         <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — BIM Author</span></div>
-        <img src="assets/bim-author.jpg" alt="Skanna Web BIM Author: 2D plan editor tracing a scan slice, with the 3D scan as reference and IFC export" loading="lazy">
+        <img src="assets/bim-author.jpg" alt="Skanna Web BIM Author: the 2D plan editor with walls, doors, windows, slabs, roofs, stairs, railings, columns, beams, items, finishes and MEP tools, the 3D model alongside it, and the scan loaded as a tracing reference" loading="lazy">
       </div>
     </div>
     <div class="shot-frame shot-wide">
       <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — the finished IFC building model</span></div>
-      <img src="assets/ifc-assembly.jpg" alt="A completed IFC building model of a house in the Skanna Web viewer: walls, windows, doors, stairs, and chimney, with a storey list panel" loading="lazy">
+      <img src="assets/ifc-assembly.jpg" alt="A completed IFC building model in the Skanna Web assembly view, with orbit, walk, measure and explorer tools and IFC and GLB export" loading="lazy">
     </div>
     <p class="ifc-note">From scan to building model: export the finished IFC and open it in
     SketchUp, Revit, Blender, or your web CAD platform of choice — to plan, design, and
     extract data — or keep it on the Skanna platform for further development.</p>
+
+    <h3 class="sub-head">Permit drawings, straight from the model</h3>
+    <p class="section-lede">The model also produces the paper deliverable. Plans, elevations
+    and sections are generated onto a real title block with dimensions, grid bubbles, room
+    schedules and a legend — then exported as PDF, SVG or DXF at any standard scale.</p>
+    <div class="shot-grid">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Drawings — A3 floor plan at 1:100</span></div>
+        <img src="assets/web-drawing-plan.jpg" alt="An A3 floor plan sheet generated from the building model, with dimension strings, grid bubbles, room areas, a door and window legend and a project title block, alongside the sheet settings panel" loading="lazy">
+      </div>
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Drawings — section A-A at 1:50</span></div>
+        <img src="assets/web-drawing-section.jpg" alt="A generated A3 section sheet showing hatched cut walls, existing ground level and top of beam level annotations on a project title block" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="twin">
+    <h2>The shared digital twin</h2>
+    <p class="section-lede">When the model is finished, publish it to a link. Anyone you
+    send it to opens a fully rendered building in their browser — no software, no account,
+    no download. They can orbit it, walk through it, click anything for its data, measure
+    it, and see how it behaves through the day.</p>
+
+    <div class="shot-frame shot-wide">
+      <div class="chrome"><i></i><i></i><i></i><span>Digital twin — dollhouse view</span></div>
+      <img src="assets/twin-hero-dollhouse.jpg" alt="A digital twin of a residential unit in dollhouse view: rendered walls, floors, furniture, terrace, pool and daylight shadows" loading="lazy">
+    </div>
+
+    <h3 class="sub-head">Sun study</h3>
+    <p class="section-lede">Real solar geometry for the building's own coordinates. Move
+    the time of day and the date and the shadows follow — so a buyer can see which rooms
+    get the morning light and where the terrace is shaded in the afternoon.</p>
+    <div class="shot-grid">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Midsummer, 08:00</span></div>
+        <img src="assets/twin-sun-morning.jpg" alt="The twin at eight in the morning at midsummer, with the sun study panel showing solar altitude, azimuth and the site coordinates, and shadows cast across the terrace" loading="lazy">
+      </div>
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Midsummer, 17:15</span></div>
+        <img src="assets/twin-sun-evening.jpg" alt="The same view late in the afternoon, with the sun low in the west and the shadows swung around to the opposite side of the building" loading="lazy">
+      </div>
+    </div>
+
+    <h3 class="sub-head">Lighting</h3>
+    <p class="section-lede">Every light fixture in the model is a real emitter. Switch them
+    on individually or all at once, set the colour temperature, and see the building after
+    dark.</p>
+    <div class="shot-frame shot-wide">
+      <div class="chrome"><i></i><i></i><i></i><span>Digital twin — after dark, fixtures on at 2700 K</span></div>
+      <img src="assets/twin-lights-night.jpg" alt="The twin at night with every light fixture switched on at a warm colour temperature, the interior glowing through the openings, and the lighting panel listing each fixture" loading="lazy">
+    </div>
+
+    <h3 class="sub-head">Materials and colours</h3>
+    <p class="section-lede">Click any wall, floor or ceiling and restyle it — paint, wood,
+    tile, stone, brick or concrete. Changes belong to whoever is viewing; the published
+    model is never touched.</p>
+    <div class="shot-grid">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Before — the published finish</span></div>
+        <img src="assets/twin-materials-before.jpg" alt="A terrace slab selected in the twin, with the materials panel offering painted, wood, tile, stone, brick and concrete finishes" loading="lazy">
+      </div>
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>After — restyled to timber decking</span></div>
+        <img src="assets/twin-materials-after.jpg" alt="The same terrace after picking a wood finish, now rendered as timber decking, with the swatch palette and a reset control" loading="lazy">
+      </div>
+    </div>
+
+    <h3 class="sub-head">Building services</h3>
+    <p class="section-lede">Ventilation, electrical, water, drainage, gas and data runs are
+    real objects in the model, each one selectable and listed by discipline. Turn on airflow
+    and heat to see, indicatively, where air moves and what warms a room.</p>
+    <div class="shot-grid">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Airflow along a ventilation run</span></div>
+        <img src="assets/twin-mep-airflow.jpg" alt="A ventilation duct in the twin with particles streaming along it, colour-coded service runs nearby and warm particles rising from a heat emitter" loading="lazy">
+      </div>
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Heat rising off an emitter</span></div>
+        <img src="assets/twin-heat-plume.jpg" alt="Warm-coloured particles rising in a plume from a fireplace in the twin against a blue sky" loading="lazy">
+      </div>
+    </div>
+    <div class="shot-frame shot-wide">
+      <div class="chrome"><i></i><i></i><i></i><span>Every service run, listed by discipline</span></div>
+      <img src="assets/twin-explorer-mep.jpg" alt="The twin's model explorer filtered to service runs, listing ventilation, electrical, water, drain, gas and data runs as individually selectable objects" loading="lazy">
+    </div>
+
+    <h3 class="sub-head">Walk it, measure it, question it</h3>
+    <div class="shot-grid">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Walk mode</span></div>
+        <img src="assets/twin-walk-interior.jpg" alt="First-person walk mode inside the twin, standing in the living space looking towards the kitchen with pendant lights overhead" loading="lazy">
+      </div>
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Click anything for its data</span></div>
+        <img src="assets/twin-infobox.jpg" alt="A window selected in the twin, with an information panel giving its type, storey, width, height and sill height" loading="lazy">
+      </div>
+    </div>
+    <p class="ifc-note">The twin is a link, not an app. Send it to a buyer, a contractor or
+    a lender and it opens on their phone or laptop exactly as you published it.</p>
   </section>
 
   <section id="pricing">
