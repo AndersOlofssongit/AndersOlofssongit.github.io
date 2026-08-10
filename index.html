@@ -335,6 +335,53 @@
   .req-list ul { margin: 0; padding-left: 20px; }
   .req-list li { margin: 6px 0; }
 
+  /* ── Closing CTA ──────────────────────────────────────────── */
+  section#start { border-top: 1px solid var(--rule); padding-bottom: 8px; }
+  .closer-head { max-width: 720px; }
+  .closer-head h3 {
+    font-size: clamp(1.6em, 3vw, 2.15em); line-height: 1.12;
+    margin: 0 0 16px; font-weight: 800; letter-spacing: -0.022em;
+  }
+  .closer-head p { margin: 0 0 14px; color: var(--muted); font-size: 1.02em; }
+  .closer-head p strong { color: var(--text); font-weight: 600; }
+  .offer {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px;
+    margin: 26px 0 30px; padding: 18px 22px;
+    border: 1px solid rgba(167,139,250,0.45); border-radius: 14px;
+    background: rgba(167,139,250,0.09);
+  }
+  .offer .count {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72em; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .offer .terms { color: var(--text); font-size: 1.02em; font-weight: 600; }
+  .offer .fine { color: var(--muted); font-size: 0.9em; }
+
+  .doors {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .door {
+    border: 1px solid var(--rule); border-radius: 14px;
+    padding: 24px 26px 26px; background: var(--panel);
+    display: flex; flex-direction: column;
+  }
+  .door.primary { border-color: rgba(167,139,250,0.45); background: rgba(167,139,250,0.05); }
+  .door .for {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.7em; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+  }
+  .door h4 { margin: 0 0 10px; font-size: 1.16em; letter-spacing: -0.01em; font-weight: 700; }
+  .door p { margin: 0 0 14px; color: var(--muted); font-size: 0.93em; }
+  .door ul {
+    margin: 0 0 20px; padding-left: 18px; color: var(--muted); font-size: 0.9em;
+  }
+  .door li { margin: 5px 0; }
+  .door .act { margin-top: auto; }
+  .door .after { margin: 12px 0 0; color: var(--faint); font-size: 0.83em; }
+
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   a.btn { color: #0b0b12; }
@@ -366,6 +413,7 @@
       <a href="#web">Web</a>
       <a href="#twin">Digital twin</a>
       <a href="#pricing">Pricing</a>
+      <a href="#start">Get access</a>
     </nav>
   </nav>
 
@@ -823,6 +871,65 @@
       <p>Questions, feedback, or need help with the app?
       Email <a href="mailto:anders830129@gmail.com">anders830129@gmail.com</a>
       and you'll get a reply within a few days.</p>
+    </div>
+  </section>
+
+  <section id="start">
+    <h2>Get access</h2>
+    <div class="closer-head">
+      <h3>This is in production, not in beta.</h3>
+      <p>Every part of the chain on this page exists and is being used: the scanner,
+      the browser BIM tool, the drawing generator and the published twin are producing
+      the permit drawings, the models and the buyer walkthroughs for a live 50-unit
+      development right now.</p>
+      <p><strong>Access is opening in stages</strong>, so the people already doing this
+      work get in first.</p>
+    </div>
+
+    <div class="offer">
+      <span class="count">First 100</span>
+      <span class="terms">Seven days of the full platform, free.</span>
+      <span class="fine">BIM Author, drawing sets, hosting and a published twin — the
+      whole tool, not a trial version.</span>
+    </div>
+
+    <div class="doors">
+      <div class="door primary">
+        <div class="for">If you'd use it yourself</div>
+        <h4>Join the interest list</h4>
+        <p>For anyone who captures, draws or delivers property work today and is tired
+        of paying for three tools that don't talk to each other — surveyors, designers,
+        architects, contractors, agents, developers, fit-out and renovation teams.</p>
+        <ul>
+          <li>Replace the capture app, the CAD seat and the delivery pipeline with one chain</li>
+          <li>Your models in IFC and your drawings in PDF and DXF, so nothing is trapped</li>
+          <li>Most people are productive in the authoring tool in a day</li>
+        </ul>
+        <div class="act">
+          <a class="btn" href="mailto:anders830129@gmail.com?subject=Skanna%20interest%20list&amp;body=I%27d%20like%20a%20place%20on%20the%20Skanna%20interest%20list.%0A%0AName%3A%0ACompany%3A%0ACountry%3A%0AWhat%20I%20work%20on%20(surveys%2C%20drawings%2C%20renovations%2C%20sales...)%3A%0AWhat%20I%20use%20today%3A%0AHow%20many%20properties%20a%20year%3A%0A">Join the interest list</a>
+        </div>
+        <p class="after">One email, no account. You'll hear back with your access window
+        and a date.</p>
+      </div>
+
+      <div class="door">
+        <div class="for">If you make the products</div>
+        <h4>Talk partnerships</h4>
+        <p>For manufacturers and suppliers who want their own catalogue inside the
+        model — furniture, materials and finishes, windows, doors, kitchens,
+        sanitaryware, lighting, flooring.</p>
+        <ul>
+          <li>Your products become placeable objects carrying their real dimensions and specifications</li>
+          <li>They appear in front of the person actually choosing, at the moment they choose</li>
+          <li>Everything specified flows into the schedules, quantities and drawings automatically</li>
+          <li>White-labelling the authoring tool for your own customers</li>
+        </ul>
+        <div class="act">
+          <a class="btn-ghost" href="mailto:anders830129@gmail.com?subject=Skanna%20partnership%3A%20product%20catalogue&amp;body=We%27d%20like%20to%20talk%20about%20getting%20our%20catalogue%20into%20Skanna.%0A%0ACompany%3A%0AProduct%20category%20(furniture%2C%20materials%2C%20windows%2C%20doors%2C%20kitchens%2C%20sanitaryware%2C%20lighting%2C%20flooring%2C%20other)%3A%0AMarkets%3A%0ARoughly%20how%20many%20products%3A%0AWhat%20we%27d%20want%20out%20of%20it%3A%0A">Talk partnerships</a>
+        </div>
+        <p class="after">A different conversation from the one above — this one goes
+        straight to me.</p>
+      </div>
     </div>
   </section>
 
