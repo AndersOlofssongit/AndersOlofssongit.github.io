@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skanna by LiDAR3D — Everything your building needs.</title>
-<meta name="description" content="Skanna is the one-stop platform for buildings: scan with your iPhone, author real IFC building models in the browser, and store, plan and design everything in one place.">
+<title>Skanna by LiDAR3D — Scan a building once. Everything else comes out of the model.</title>
+<meta name="description" content="Capture a property with an iPhone, author a real IFC building model in your browser, and get dimensioned drawing sets, a digital twin on a link, and live data on every object — out of one file.">
 <style>
   :root {
     --bg: #0b0b12;
@@ -36,7 +36,7 @@
     mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 60%, transparent);
     -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 60%, transparent);
   }
-  main { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 24px 64px; }
+  main { position: relative; z-index: 1; max-width: 1040px; margin: 0 auto; padding: 0 24px 64px; }
 
   nav.top {
     display: flex; align-items: center; gap: 12px;
@@ -44,62 +44,126 @@
   }
   nav.top .name { font-weight: 700; letter-spacing: 0.02em; }
   nav.top .by { color: var(--faint); font-size: 0.85em; margin-left: -4px; }
+  nav.top .spacer { flex: 1; }
+  nav.top .links { display: flex; gap: 22px; font-size: 0.88em; }
+  nav.top .links a { color: var(--muted); }
+  nav.top .links a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 720px) { nav.top .links { display: none; } }
 
-  header.hero { text-align: center; padding: 64px 0 40px; }
-  .hero .mark { margin-bottom: 28px; }
+  /* ── Hero ─────────────────────────────────────────────────── */
+  header.hero { padding: 40px 0 12px; }
+  .hero-grid {
+    display: grid; gap: 40px; align-items: center;
+    grid-template-columns: 1.02fr 1fr;
+  }
   .hero .kicker {
-    font-size: 0.78em; font-weight: 700; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72em; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
   }
   .hero h1 {
-    font-size: clamp(2.1em, 6vw, 3.3em);
-    line-height: 1.08; margin: 0 0 16px; font-weight: 800; letter-spacing: -0.02em;
+    font-size: clamp(1.95em, 3.7vw, 2.55em);
+    line-height: 1.08; margin: 0 0 18px; font-weight: 800; letter-spacing: -0.025em;
+    text-wrap: balance;
   }
   .hero h1 .dot { color: var(--accent); }
   .hero p.lede {
-    max-width: 640px; margin: 0 auto 30px; color: var(--muted); font-size: 1.1em;
+    margin: 0 0 28px; color: var(--muted); font-size: 1.06em; max-width: 46ch;
   }
-  .badge {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 999px;
-    background: var(--panel);
-    border: 1px solid var(--rule);
-    color: var(--text);
-    font-weight: 600; font-size: 0.95em;
+  .hero p.lede strong { color: var(--text); font-weight: 600; }
+  .hero .cta-row { margin-bottom: 14px; }
+  .btn-ghost {
+    display: inline-block; padding: 12px 24px; border-radius: 999px;
+    font-weight: 650; font-size: 0.95em;
+    background: var(--panel); border: 1px solid var(--rule); color: var(--text);
   }
-  .badge .soon { color: var(--accent); }
+  .btn-ghost:hover { text-decoration: none; border-color: rgba(167,139,250,0.5); }
+  .hero .store-note { margin: 0; color: var(--faint); font-size: 0.86em; }
+  .hero .store-note strong { color: var(--muted); font-weight: 600; }
 
-  /* Pillar overview */
-  .pillars {
-    display: grid; gap: 14px;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    margin: 44px 0 0;
-    text-align: left;
+  /* Hero media (video with image poster fallback) */
+  .hero-media { position: relative; }
+  .hero-media video, .hero-media img {
+    display: block; width: 100%; height: auto; aspect-ratio: 4 / 3;
+    object-fit: cover; background: rgba(255,255,255,0.03);
   }
-  .pillar {
-    background: var(--panel);
-    border: 1px solid var(--rule);
-    border-radius: 14px;
-    padding: 20px 22px;
-    position: relative;
+  .hero-media .caption {
+    margin: 10px 2px 0; color: var(--faint); font-size: 0.8em;
   }
-  .pillar .num {
+
+  /* Proof strip */
+  .proof {
+    display: grid; gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin: 40px 0 0;
+    background: var(--rule);
+    border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
+  }
+  .proof div {
+    background: #0d0d16; padding: 16px 18px;
+    color: var(--muted); font-size: 0.86em; line-height: 1.45;
+  }
+  .proof strong { display: block; color: var(--text); font-weight: 650; font-size: 1.05em; margin-bottom: 2px; }
+
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+    .hero p.lede { max-width: none; }
+  }
+
+  /* ── Outputs: what comes out of the model ─────────────────── */
+  .outputs {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .output {
+    background: var(--panel); border: 1px solid var(--rule);
+    border-radius: 14px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .output > img {
+    display: block; width: 100%; height: 170px; object-fit: cover;
+    border-bottom: 1px solid var(--rule);
+  }
+  .output .body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+  .output .num {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 0.72em; font-weight: 700; letter-spacing: 0.14em;
-    color: var(--accent); margin-bottom: 10px;
+    font-size: 0.7em; font-weight: 700; letter-spacing: 0.14em;
+    color: var(--accent); margin-bottom: 8px;
   }
-  .pillar h3 { margin: 0 0 6px; font-size: 1.02em; }
-  .pillar p { margin: 0; color: var(--muted); font-size: 0.9em; }
-  .pillar .tag {
-    display: inline-block; margin-top: 10px;
-    font-size: 0.7em; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--accent);
+  .output h3 { margin: 0 0 8px; font-size: 1.08em; letter-spacing: -0.01em; }
+  .output p { margin: 0 0 14px; color: var(--muted); font-size: 0.91em; }
+  .output .go { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+
+  /* ── Process strip ────────────────────────────────────────── */
+  .process {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 4px;
   }
-  .hero p.span-note {
-    max-width: 680px; margin: 30px auto 0; color: var(--muted); font-size: 0.98em;
+  .step { position: relative; padding-top: 16px; border-top: 2px solid rgba(167,139,250,0.35); }
+  .step .n {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.7em; font-weight: 700; letter-spacing: 0.14em;
+    color: var(--accent); display: block; margin-bottom: 6px;
   }
-  .hero p.span-note strong { color: var(--text); }
+  .step h3 { margin: 0 0 5px; font-size: 1em; }
+  .step p { margin: 0; color: var(--muted); font-size: 0.88em; }
+
+  /* ── ICP router ───────────────────────────────────────────── */
+  .router { display: grid; gap: 1px; background: var(--rule);
+    border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+  .router a.row {
+    display: grid; grid-template-columns: 220px 1fr auto; gap: 20px; align-items: center;
+    background: #0d0d16; padding: 18px 22px; color: var(--text);
+  }
+  .router a.row:hover { background: rgba(167,139,250,0.07); text-decoration: none; }
+  .router .who { font-weight: 650; font-size: 0.96em; }
+  .router .what { color: var(--muted); font-size: 0.9em; }
+  .router .arrow { color: var(--accent); font-size: 0.9em; }
+  @media (max-width: 720px) {
+    .router a.row { grid-template-columns: 1fr; gap: 4px; }
+    .router .arrow { display: none; }
+  }
 
   section { padding: 44px 0; border-top: 1px solid var(--rule); }
   h2 {
@@ -295,57 +359,158 @@
             stroke="#f2f2f7" stroke-opacity="0.55" stroke-width="3"/>
     </svg>
     <span class="name">Skanna</span><span class="by">by LiDAR3D</span>
+    <span class="spacer"></span>
+    <nav class="links">
+      <a href="#outputs">What you get</a>
+      <a href="#app">App</a>
+      <a href="#web">Web</a>
+      <a href="#twin">Digital twin</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
   </nav>
 
   <header class="hero">
-    <div class="mark">
-      <svg width="88" height="88" viewBox="0 0 100 100" fill="none" aria-label="Skanna logo">
-        <path d="M50 2 L98 40 L50 98 L2 40 Z" stroke="#f2f2f7" stroke-width="2.6"/>
-        <path d="M50 2 L26 40 M50 2 L74 40 M26 40 L74 40 M26 40 L50 98 M74 40 L50 98 M2 40 L26 40 M74 40 L98 40"
-              stroke="#f2f2f7" stroke-opacity="0.55" stroke-width="1.7"/>
-      </svg>
-    </div>
-    <div class="kicker">One platform · Scan to digital twin</div>
-    <h1>Everything your building needs<span class="dot">.</span></h1>
-    <p class="lede">Skanna is the first one-stop platform for buildings. Scan a property with
-    your iPhone, turn the capture into a real IFC building model in your browser, and store,
-    plan and design everything in one place.</p>
-    <span class="badge">Coming to the <strong>App&nbsp;Store</strong> — <span class="soon">launching&nbsp;soon</span></span>
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Capture · Model · Publish</div>
+        <h1>Scan a building once. Everything else comes out of the model<span class="dot">.</span></h1>
+        <p class="lede">Capture a property with an iPhone. Trace it into a real building
+        model in your browser. Out come <strong>dimensioned drawing sets</strong>, an
+        <strong>interactive twin anyone can open on a link</strong>, and
+        <strong>data on every object</strong> — from one file that can't disagree with
+        itself.</p>
+        <div class="cta-row">
+          <a class="btn" href="unit-2b-demo/">Open a finished building</a>
+          <a class="btn-ghost" href="app/">Try the modelling tool</a>
+        </div>
+        <p class="store-note">Live links, not mock-ups — they open in your browser, no
+        account. <strong>The free iPhone scanner is coming to the App&nbsp;Store.</strong></p>
+      </div>
 
-    <!-- GIF slots: when the scan/view/author/IFC gifs are ready, they can replace
-         or sit inside these four pillar cards as looping previews. -->
-    <div class="pillars">
-      <div class="pillar">
-        <div class="num">01 · SCAN</div>
-        <h3>LiDAR scanner</h3>
-        <p>A scanner made for properties, not for everything. Capture any space in minutes
-        with just your iPhone or iPad Pro. Free to use.</p>
-      </div>
-      <div class="pillar">
-        <div class="num">02 · MODEL</div>
-        <h3>BIM Author</h3>
-        <p>Turn scans into real building models in your browser and export IFC, the open
-        standard for structured building data. Learn it in a day.</p>
-      </div>
-      <div class="pillar">
-        <div class="num">03 · STORE</div>
-        <h3>Property portal</h3>
-        <p>Host models, photos, panoramas and documents online in one property portal.
-        Or export everything and run your own setup.</p>
-      </div>
-      <div class="pillar">
-        <div class="num">04 · DESIGN</div>
-        <h3>AI floor planning</h3>
-        <p>AI-assisted floor planning and interior design built on actual, correct
-        measurements from your scan.</p>
-        <span class="tag">Launching in the coming weeks</span>
-      </div>
+      <!-- VIDEO SLOT — drop assets/hero-loop.mp4 in and it plays automatically.
+           Until then the poster image below is what shows. -->
+      <figure class="hero-media shot-frame" style="margin:0">
+        <div class="chrome"><i></i><i></i><i></i><span>A published building — live in the browser</span></div>
+        <video autoplay muted loop playsinline preload="metadata"
+               poster="assets/twin-hero-dollhouse.jpg"
+               aria-label="A digital twin of a residential unit: orbiting the building, walking through it, and clicking objects for their specification">
+          <source src="assets/hero-loop.mp4" type="video/mp4">
+        </video>
+      </figure>
     </div>
 
-    <p class="span-note">From units ready for renovation to finished showpiece homes:
-    <strong>one scan becomes the foundation of a complete digital twin</strong> — and your
-    data is always yours to take with you.</p>
+    <div class="proof">
+      <div><strong>Running today</strong>Producing the drawings, models and buyer walkthroughs for a live 50-unit development.</div>
+      <div><strong>No per-seat licence</strong>The modelling tool runs in a browser. Most people are productive in a day.</div>
+      <div><strong>IFC · DXF · PDF out</strong>Open formats only. Everything you make is yours to take anywhere.</div>
+      <div><strong>Measured, not guessed</strong>Real LiDAR geometry off the actual building — no AI-invented walls.</div>
+    </div>
   </header>
+
+  <section id="outputs">
+    <h2>What comes out of it</h2>
+    <p class="section-lede">One model per building, and three deliverables generated from
+    it. Change the model once and all three follow — <strong>they're views of the same
+    file, so they can't contradict each other.</strong></p>
+    <div class="outputs">
+      <div class="output">
+        <img src="assets/twin-walk-interior.jpg" alt="First-person walk mode inside a digital twin, standing in the living space looking towards the kitchen" loading="lazy">
+        <div class="body">
+          <div class="num">01</div>
+          <h3>Interactive experiences</h3>
+          <p>The finished building on a URL — no app, no login. Orbit it, walk through it,
+          click anything for its specification, measure any two points. A real sun study on
+          the site's own coordinates, light fixtures that switch on, and finishes the viewer
+          can change for themselves.</p>
+          <a class="go" href="unit-2b-demo/">Open a live twin →</a>
+        </div>
+      </div>
+      <div class="output">
+        <img src="assets/web-drawing-plan.jpg" alt="An A3 floor plan sheet generated from the building model, with dimension strings, grid bubbles, room areas and a title block" loading="lazy">
+        <div class="body">
+          <div class="num">02</div>
+          <h3>Automatic drawings</h3>
+          <p>Plans, elevations and sections generated onto your own title block, with
+          dimensions, grid bubbles, room schedules and a legend. PDF, SVG or DXF at any
+          standard scale. A revision is a re-issue from the model — minutes, not a redraw.</p>
+          <a class="go" href="#web">See a generated sheet →</a>
+        </div>
+      </div>
+      <div class="output">
+        <img src="assets/twin-lights-night.jpg" alt="The twin at night with every light fixture switched on at a warm colour temperature, the interior glowing through the openings" loading="lazy">
+        <div class="body">
+          <div class="num">03</div>
+          <h3>Visuals &amp; building data</h3>
+          <p>The render is the model — no separate visualisation pipeline and no render
+          budget per campaign. Every wall, opening, fixture and service run carries its real
+          specification, so areas, quantities, schedules and inventory come out of the same
+          file.</p>
+          <a class="go" href="#twin">See what a twin knows →</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">How a building gets there</h3>
+    <p class="section-lede">Four steps, once per building. Everything above is an output of
+    the same model.</p>
+    <div class="process">
+      <div class="step">
+        <span class="n">STEP 1</span>
+        <h3>Capture</h3>
+        <p>Walk the building with an iPhone or iPad Pro — geometry, photos and 360°
+        panoramas, all positioned in space. No survey crew.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 2</span>
+        <h3>Model</h3>
+        <p>Trace the scan into walls, slabs, openings, roofs, stairs, MEP and finishes,
+        each carrying its real specification. In a browser.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 3</span>
+        <h3>Publish</h3>
+        <p>Drawing sets on your title block, and the twin on a link. Send either to a
+        buyer, a contractor, a lender or the permit office.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 4</span>
+        <h3>Operate</h3>
+        <p>The model stays alive next to the building — inventory, condition, service
+        history and renovation progress on the objects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="who">
+    <h2>Where you'd start</h2>
+    <p class="section-lede">Same platform, different first move.</p>
+    <div class="router">
+      <a class="row" href="#twin">
+        <span class="who">Property developers</span>
+        <span class="what">Sell off-plan. A buyer explores their own unit, sees the morning
+        light in it and picks finishes months before there is anything to visit.</span>
+        <span class="arrow">The twin →</span>
+      </a>
+      <a class="row" href="#twin">
+        <span class="who">Hotel &amp; property operators</span>
+        <span class="what">Know what you own. Every vent, riser, fixture and finish located
+        and specified, so a refurbishment starts without re-surveying.</span>
+        <span class="arrow">Building data →</span>
+      </a>
+      <a class="row" href="#web">
+        <span class="who">Designers &amp; fit-out teams</span>
+        <span class="what">Author and share in a browser — no CAD seat, no render budget,
+        and drawings that come out of the model instead of being redrawn.</span>
+        <span class="arrow">Skanna Web →</span>
+      </a>
+      <a class="row" href="#support">
+        <span class="who">Teams paying for CAD seats</span>
+        <span class="what">Cut the licence, survey and drawing-production lines. We baseline
+        it together, and I'm paid from the measured savings.</span>
+        <span class="arrow">Talk it through →</span>
+      </a>
+    </div>
+  </section>
 
   <section id="app">
     <h2>The Skanna app</h2>
@@ -432,7 +597,7 @@
     </ul>
     <div class="cta-row">
       <a class="btn" href="app/">Open Skanna Web</a>
-      <span class="aside">AI-assisted floor planning and interior design launching in the coming weeks.</span>
+      <span class="aside">It opens straight into the tool — no account, nothing to install.</span>
     </div>
     <div class="shot-grid">
       <div class="shot-frame">
@@ -584,8 +749,8 @@
         <p>A low monthly price for the browser platform.</p>
         <ul>
           <li>BIM Author with IFC export</li>
-          <li>Online hosting of models, panoramas and site data</li>
-          <li>AI floor planning &amp; interior design as optional add-ons</li>
+          <li>Drawing sets on your own title block — PDF, SVG, DXF</li>
+          <li>Online hosting, and published twins on a link</li>
         </ul>
       </div>
     </div>
