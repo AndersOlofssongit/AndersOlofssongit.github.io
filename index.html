@@ -242,6 +242,33 @@
     color: #0b0b12; border: 1px solid rgba(255,255,255,0.18);
   }
   .btn:hover { text-decoration: none; filter: brightness(1.08); }
+
+  /* Interest list form */
+  form.signup { display: grid; gap: 10px; margin: 4px 0 10px; position: relative; }
+  form.signup .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 560px) { form.signup .row2 { grid-template-columns: 1fr; } }
+  form.signup input {
+    width: 100%; padding: 11px 14px; border-radius: 10px;
+    background: rgba(255,255,255,0.04); border: 1px solid var(--rule);
+    color: var(--text); font: inherit; font-size: 0.95em;
+  }
+  form.signup input::placeholder { color: var(--faint); }
+  form.signup input:focus-visible {
+    outline: none; border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(167,139,250,0.18);
+  }
+  /* Hidden from people without shifting the layout — an off-canvas negative
+     offset would widen the page and make the body scroll sideways. */
+  form.signup input.hp {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  form.signup button.btn { cursor: pointer; font-family: inherit; justify-self: start; }
+  form.signup button.btn[disabled] { opacity: 0.55; cursor: default; }
+  .formnote { color: var(--faint); font-size: 0.86em; margin: 2px 0 0; line-height: 1.55; }
+  .formnote.ok { color: var(--accent); }
+  .formnote.bad { color: #ff8f88; }
+  .offer .count.taken { display: block; font-size: 0.62em; color: var(--faint); font-weight: 400; letter-spacing: 0; text-transform: none; margin-top: 4px; }
   .cta-row .aside { color: var(--faint); font-size: 0.85em; }
   .shot-grid {
     margin-top: 28px;
@@ -899,7 +926,7 @@
     </div>
 
     <div class="offer">
-      <span class="count">First 100</span>
+      <span class="count">First 100<span class="taken" id="placesTaken"></span></span>
       <span class="terms">Seven days of the full platform, free.</span>
       <span class="fine">BIM Author, drawing sets, hosting and a published twin — the
       whole tool, not a trial version.</span>
@@ -917,11 +944,27 @@
           <li>Your models in IFC and your drawings in PDF and DXF, so nothing is trapped</li>
           <li>Most people are productive in the authoring tool in a day</li>
         </ul>
-        <div class="act">
-          <a class="btn" href="mailto:anders@skanna.site?subject=Skanna%20interest%20list&amp;body=I%27d%20like%20a%20place%20on%20the%20Skanna%20interest%20list.%0A%0AName%3A%0ACompany%3A%0ACountry%3A%0AWhat%20I%20work%20on%20(surveys%2C%20drawings%2C%20renovations%2C%20sales...)%3A%0AWhat%20I%20use%20today%3A%0AHow%20many%20properties%20a%20year%3A%0A">Join the interest list</a>
-        </div>
-        <p class="after">One email, no account. You'll hear back with your access window
-        and a date.</p>
+        <form class="signup" id="signupForm" novalidate>
+          <input type="email" name="email" required placeholder="you@company.com"
+                 autocomplete="email" aria-label="Your email">
+          <div class="row2">
+            <input type="text" name="name" placeholder="Name" autocomplete="name" aria-label="Your name">
+            <input type="text" name="company" placeholder="Company" autocomplete="organization" aria-label="Your company">
+          </div>
+          <div class="row2">
+            <input type="text" name="country" placeholder="Country" autocomplete="country-name" aria-label="Country">
+            <input type="text" name="works_on" placeholder="What you work on" aria-label="What you work on">
+          </div>
+          <!-- Bots fill every field they can see; people never see this one. -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+          <button class="btn" type="submit">Claim a place</button>
+          <p class="formnote" id="signupNote" role="status" aria-live="polite">
+            Email is the only thing required. The rest just helps me put you in the
+            right access window.
+          </p>
+        </form>
+        <p class="after">No account, no card. You'll hear back from me directly with
+        your access window and a date.</p>
       </div>
 
       <div class="door">
@@ -953,5 +996,92 @@
     </nav>
   </footer>
 </main>
+
+<script>
+// Interest list. Posts straight to Supabase — the key below is the publishable
+// anon key, which is meant to be public; the table's RLS allows INSERT only, so
+// this cannot be used to read the list back.
+(function () {
+  var API = 'https://zvlengsphwrxviwbdlrr.supabase.co';
+  var KEY = 'sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw';
+  var PLACES = 100;
+
+  var form = document.getElementById('signupForm');
+  var note = document.getElementById('signupNote');
+  var taken = document.getElementById('placesTaken');
+  if (!form) return;
+
+  // Real scarcity or none — never a number we made up.
+  fetch(API + '/rest/v1/rpc/signup_count', {
+    method: 'POST',
+    headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' },
+    body: '{}'
+  })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (n) {
+      if (typeof n !== 'number' || !taken) return;
+      var left = Math.max(0, PLACES - n);
+      taken.textContent = left === 0
+        ? 'all places claimed'
+        : left + ' of ' + PLACES + ' places left';
+    })
+    .catch(function () { /* the offer still reads fine without a counter */ });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+
+    if (data.get('website')) { say('Thanks — you’re on the list.', 'ok'); return; }
+
+    var email = (data.get('email') || '').toString().trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      say('That email doesn’t look right — check it and try again.', 'bad');
+      return;
+    }
+
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    say('Adding you…', '');
+
+    fetch(API + '/rest/v1/signups', {
+      method: 'POST',
+      headers: {
+        apikey: KEY,
+        Authorization: 'Bearer ' + KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal'
+      },
+      body: JSON.stringify({
+        email: email,
+        name: str(data.get('name')),
+        company: str(data.get('company')),
+        country: str(data.get('country')),
+        works_on: str(data.get('works_on')),
+        interest: 'founding',
+        source: 'site-interest-list'
+      })
+    })
+      .then(function (r) {
+        // 409 means the address is already on the list. Saying so out loud
+        // would let anyone test whether a given person signed up, so a repeat
+        // submission looks exactly like a first one.
+        if (r.ok || r.status === 409) {
+          form.reset();
+          say('You’re on the list. I’ll be in touch with your access window.', 'ok');
+        } else {
+          say('That didn’t save. Email anders@skanna.site and I’ll add you by hand.', 'bad');
+          btn.disabled = false;
+        }
+      })
+      .catch(function () {
+        say('No connection. Email anders@skanna.site and I’ll add you by hand.', 'bad');
+        btn.disabled = false;
+      });
+  });
+
+  function str(v) { v = (v || '').toString().trim(); return v || null; }
+  function say(msg, cls) { note.textContent = msg; note.className = 'formnote' + (cls ? ' ' + cls : ''); }
+})();
+</script>
 </body>
 </html>
