@@ -11,7 +11,7 @@
         "height": 2.7,
         "scans": [
           {
-            "scanId": "2e02c208-534c-42d8-8f75-0fe46ac84ceb",
+            "scanId": "29546372-d509-4e2f-915a-cad0c8a5d535",
             "alignment": {
               "rotDeg": 0,
               "tx": 0,
@@ -59,13 +59,7 @@
         "thickness": 0.15,
         "height": 2.7,
         "baseOffset": 0,
-        "material": "concrete",
-        "skirting": {
-          "height": 0.07,
-          "thickness": 0.015,
-          "color": "#f4f2ee",
-          "side": "both"
-        }
+        "material": "concrete"
       },
       {
         "id": "w4",
@@ -89,13 +83,7 @@
         "thickness": 0.15,
         "height": 2.7,
         "baseOffset": 0,
-        "material": "concrete",
-        "skirting": {
-          "height": 0.07,
-          "thickness": 0.015,
-          "color": "#f4f2ee",
-          "side": "both"
-        }
+        "material": "concrete"
       },
       {
         "id": "w6",
@@ -107,13 +95,7 @@
         "thickness": 0.1,
         "height": 2.7,
         "baseOffset": 0,
-        "material": "plaster",
-        "skirting": {
-          "height": 0.07,
-          "thickness": 0.015,
-          "color": "#f4f2ee",
-          "side": "both"
-        }
+        "material": "plaster"
       },
       {
         "id": "w7",
@@ -305,110 +287,104 @@
           ]
         ],
         "thickness": 0.2,
-        "material": "concrete",
+        "material": "tile",
         "cuts": [],
-        "finish": {}
+        "finish": {
+          "tileW": 0.6,
+          "tileH": 0.6
+        }
       },
       {
-        "id": "fb6e669c",
+        "id": "s43",
         "storeyId": "st1",
-        "kind": "floor",
+        "kind": "ceiling",
         "outline": [
           [
-            4.72,
-            4.9
+            0.001,
+            3.602
+          ],
+          [
+            4.774,
+            3.602
+          ],
+          [
+            4.774,
+            4.902
           ],
           [
             10.474,
             4.902
           ],
           [
-            10.48,
-            5.82
+            10.474,
+            19.602
           ],
           [
-            11.6,
-            5.8100000000000005
-          ],
-          [
-            11.6,
-            1.09
-          ],
-          [
-            5.8100000000000005,
-            1.09
-          ],
-          [
-            5.8100000000000005,
-            -0.01
-          ],
-          [
-            -0.02,
-            -0.03
-          ],
-          [
-            -0.01,
-            3.6
-          ],
-          [
-            4.72,
-            3.6
+            0.001,
+            19.602
           ]
         ],
-        "thickness": 0.2,
+        "thickness": 0.05,
+        "material": "plaster",
         "cuts": []
       },
       {
-        "id": "684111c5",
+        "id": "2db6fe4b",
         "storeyId": "st1",
         "kind": "floor",
         "outline": [
           [
-            10.49,
-            14.450000000000001
+            4.66,
+            4.91
           ],
           [
-            13.98,
-            14.450000000000001
+            4.66,
+            3.65
           ],
           [
-            13.98,
-            19.6
+            0.07,
+            3.66
+          ],
+          [
+            0.07,
+            0.03
+          ],
+          [
+            5.752,
+            0.054
+          ],
+          [
+            5.752,
+            1.154
+          ],
+          [
+            11.522,
+            1.154
+          ],
+          [
+            11.522,
+            5.75
           ],
           [
             10.474,
-            19.602
+            5.75
+          ],
+          [
+            10.474,
+            4.902
           ]
         ],
         "thickness": 0.2,
         "finish": {
-          "colorFace1": "#7A7B7A"
+          "tileW": 0.6,
+          "tileH": 0.6,
+          "tileJointColor": "#c6c2ba",
+          "tileJoint": 0.003,
+          "tileStone": "carrara",
+          "tileColor": "#f4f1ea",
+          "woodTone": "ash"
         },
-        "cuts": []
-      },
-      {
-        "id": "47cec61a",
-        "storeyId": "st1",
-        "kind": "floor",
-        "outline": [
-          [
-            -9.25,
-            -2.0500000000000003
-          ],
-          [
-            -9.25,
-            -7.300000000000001
-          ],
-          [
-            -0.55,
-            -7.3500000000000005
-          ],
-          [
-            -0.6000000000000001,
-            -1.9500000000000002
-          ]
-        ],
-        "thickness": 0.2,
+        "material": "wood",
         "cuts": []
       }
     ],
@@ -424,14 +400,7 @@
         "head": 2.2,
         "flipX": true,
         "doorMaterial": "wood",
-        "doorColor": "#FFFFFF",
-        "frame": {
-          "width": 0.02,
-          "depth": 0.05,
-          "finish": {
-            "color": "#0A0A0A"
-          }
-        }
+        "doorColor": "#FFFFFF"
       },
       {
         "id": "o30",
@@ -455,13 +424,6 @@
         "sill": 0,
         "head": 2.2,
         "flipX": true,
-        "frame": {
-          "width": 0.055,
-          "depth": 0.08,
-          "finish": {
-            "color": "#F4F2EE"
-          }
-        },
         "doorMaterial": "wood",
         "doorColor": "#FFFFFF"
       },
@@ -475,13 +437,6 @@
         "sill": 0,
         "head": 2.2,
         "flipX": true,
-        "frame": {
-          "width": 0.055,
-          "depth": 0.08,
-          "finish": {
-            "color": "#FFFFFF"
-          }
-        },
         "doorMaterial": "wood",
         "doorColor": "#FFFFFF"
       },
@@ -495,13 +450,6 @@
         "sill": 0,
         "head": 2.2,
         "flipY": true,
-        "frame": {
-          "width": 0.055,
-          "depth": 0.08,
-          "finish": {
-            "color": "#FFFFFF"
-          }
-        },
         "doorMaterial": "wood",
         "doorColor": "#FFFFFF"
       },
@@ -519,7 +467,7 @@
           "width": 0.055,
           "depth": 0.08,
           "finish": {
-            "color": "#FFFFFF"
+            "color": "#F4F2EE"
           }
         },
         "doorMaterial": "wood",
@@ -535,7 +483,8 @@
         "sill": 0,
         "head": 2.2,
         "doorMaterial": "wood",
-        "doorColor": "#FFFFFF"
+        "doorColor": "#FFFFFF",
+        "frosted": true
       },
       {
         "id": "o36",
@@ -555,20 +504,7 @@
         "s": 2.443,
         "width": 3.935,
         "sill": 0,
-        "head": 2.2,
-        "frame": {
-          "width": 0.055,
-          "depth": 0.08,
-          "finish": {
-            "color": "#8C9095"
-          }
-        },
-        "casing": {
-          "width": 0.07,
-          "thickness": 0.015,
-          "color": "#474A51",
-          "side": "both"
-        }
+        "head": 2.2
       },
       {
         "id": "o38",
@@ -579,20 +515,7 @@
         "s": 2.88,
         "width": 4.04,
         "sill": 0,
-        "head": 2.2,
-        "frame": {
-          "width": 0.055,
-          "depth": 0.08,
-          "finish": {
-            "color": "#8C9095"
-          }
-        },
-        "casing": {
-          "width": 0.07,
-          "thickness": 0.015,
-          "color": "#0A0A0A",
-          "side": "both"
-        }
+        "head": 2.2
       },
       {
         "id": "o39",
@@ -628,76 +551,70 @@
     "stairs": [],
     "railings": [
       {
-        "id": "56629ed7",
+        "id": "061e7a85",
         "storeyId": "st1",
         "kind": "railing",
-        "ax": 10.48,
-        "ay": 5.82,
-        "bx": 11.6,
-        "by": 5.8100000000000005,
+        "ax": 10.474,
+        "ay": 5.75,
+        "bx": 11.522,
+        "by": 5.75,
         "height": 1,
-        "baseOffset": 0,
-        "barSpacing": 0.3
+        "baseOffset": 0
       },
       {
-        "id": "8e8a351f",
+        "id": "f97ef563",
         "storeyId": "st1",
         "kind": "railing",
-        "ax": 11.6,
-        "ay": 5.8100000000000005,
-        "bx": 11.6,
-        "by": 1.09,
+        "ax": 11.522,
+        "ay": 5.75,
+        "bx": 11.522,
+        "by": 1.1499999999999995,
         "height": 1,
-        "baseOffset": 0,
-        "barSpacing": 0.3
+        "baseOffset": 0
       },
       {
-        "id": "6283734a",
+        "id": "976bfed3",
         "storeyId": "st1",
         "kind": "railing",
-        "ax": 11.6,
-        "ay": 1.09,
-        "bx": 5.8100000000000005,
-        "by": 1.09,
+        "ax": 11.522,
+        "ay": 1.1499999999999995,
+        "bx": 5.752,
+        "by": 1.154,
         "height": 1,
-        "baseOffset": 0,
-        "barSpacing": 0.3
+        "baseOffset": 0
       },
       {
-        "id": "81d84c34",
+        "id": "657db061",
         "storeyId": "st1",
         "kind": "railing",
-        "ax": 5.8100000000000005,
-        "ay": 1.09,
-        "bx": 5.8100000000000005,
-        "by": -0.01,
+        "ax": 5.752,
+        "ay": 1.154,
+        "bx": 5.752,
+        "by": 0.054,
         "height": 1,
-        "baseOffset": 0,
-        "barSpacing": 0.3
+        "baseOffset": 0
       },
       {
-        "id": "9e0416d1",
+        "id": "ec198b31",
         "storeyId": "st1",
         "kind": "railing",
-        "ax": 5.8100000000000005,
-        "ay": -0.01,
-        "bx": -0.02,
-        "by": -0.03,
+        "ax": 5.752,
+        "ay": 0.054,
+        "bx": 0.07200000000000006,
+        "by": 0.05400000000000069,
         "height": 1,
-        "baseOffset": 0,
-        "barSpacing": 0.3
+        "baseOffset": 0
       },
       {
-        "id": "633a7829",
+        "id": "e6433eb0",
         "storeyId": "st1",
         "kind": "railing",
-        "ax": -0.02,
-        "ay": -0.03,
-        "bx": -0.01999999999999999,
-        "by": 0.15,
+        "ax": 0.07200000000000006,
+        "ay": 0.05400000000000069,
+        "bx": 0.07200000000000006,
+        "by": 0.1040000000000007,
         "height": 1,
-        "baseOffset": 0,
-        "barSpacing": 0.3
+        "baseOffset": 0
       }
     ],
     "ramps": [],
@@ -1349,7 +1266,7 @@
         "rotDeg": 90,
         "w": 2.39,
         "d": 0.343,
-        "h": 1,
+        "h": 1.996,
         "elevation": 0
       },
       {
@@ -1522,38 +1439,12 @@
         "elevation": 0.752
       },
       {
-        "id": "d694f5e2",
-        "storeyId": "st1",
-        "assetId": "ac_wall",
-        "name": "Air conditioner (wall)",
-        "x": 8.41,
-        "y": 16.05,
-        "rotDeg": -180,
-        "w": 1,
-        "d": 0.3,
-        "h": 0.4,
-        "elevation": 2.2
-      },
-      {
-        "id": "7a27b6d5",
-        "storeyId": "st1",
-        "assetId": "water_in",
-        "name": "Water in",
-        "x": 7.49,
-        "y": 15.75,
-        "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.15,
-        "elevation": 0.5
-      },
-      {
-        "id": "3d102f96",
+        "id": "e1e3eabe",
         "storeyId": "st1",
         "assetId": "water_out",
         "name": "Water out",
-        "x": 7.51,
-        "y": 15.51,
+        "x": 11.42,
+        "y": 1.26,
         "rotDeg": 0,
         "w": 0.15,
         "d": 0.15,
@@ -1561,37 +1452,24 @@
         "elevation": 0
       },
       {
-        "id": "46ac3081",
+        "id": "7ff6cc66",
         "storeyId": "st1",
-        "assetId": "spotlight",
-        "name": "Spotlight",
-        "x": 11.05,
-        "y": 1.55,
+        "assetId": "light_switch",
+        "name": "Light switch",
+        "x": 5.32,
+        "y": 4.89,
         "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
+        "w": 0.08,
+        "d": 0.02,
+        "h": 0.08,
+        "elevation": 1
       },
       {
-        "id": "590347c5",
+        "id": "54886172",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 5.25,
-        "y": 0.35000000000000003,
-        "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
-      },
-      {
-        "id": "ed0353e6",
-        "storeyId": "st1",
-        "assetId": "spotlight",
-        "name": "Spotlight",
-        "x": 0.5,
+        "x": 5.45,
         "y": 0.30000000000000004,
         "rotDeg": 0,
         "w": 0.1,
@@ -1600,151 +1478,12 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "ffd36788",
-        "storeyId": "st1",
-        "assetId": "water_tank",
-        "name": "Water tank",
-        "x": 13.3,
-        "y": 15.100000000000001,
-        "rotDeg": 0,
-        "w": 1,
-        "d": 1,
-        "h": 2,
-        "elevation": 0
-      },
-      {
-        "id": "80757567",
-        "storeyId": "st1",
-        "assetId": "generic_box",
-        "name": "Solar battery",
-        "x": 11.25,
-        "y": 15.05,
-        "rotDeg": 180,
-        "w": 1,
-        "d": 0.6,
-        "h": 0.5,
-        "elevation": 0,
-        "props": [
-          {
-            "k": "Brand",
-            "v": "SolarPower"
-          },
-          {
-            "k": "Capacity",
-            "v": "12345"
-          },
-          {
-            "k": "Purchase year",
-            "v": "2025"
-          },
-          {
-            "k": "Info",
-            "v": "This unit has a screw loose at the bottom..."
-          },
-          {
-            "k": "",
-            "v": ""
-          }
-        ]
-      },
-      {
-        "id": "e2276783",
-        "storeyId": "st1",
-        "assetId": "distribution_board",
-        "name": "Distribution board",
-        "x": 9.53,
-        "y": 15.72,
-        "rotDeg": 0,
-        "w": 0.4,
-        "d": 0.12,
-        "h": 0.5,
-        "elevation": 1.6
-      },
-      {
-        "id": "9b317fa5",
-        "storeyId": "st1",
-        "assetId": "pendant_light",
-        "name": "Pendant light",
-        "x": 7.550000000000001,
-        "y": 11.65,
-        "rotDeg": 0,
-        "w": 0.3,
-        "d": 0.3,
-        "h": 0.9,
-        "elevation": 1.8000000000000003
-      },
-      {
-        "id": "0692ab9b",
-        "storeyId": "st1",
-        "assetId": "pendant_light",
-        "name": "Pendant light",
-        "x": 7.550000000000001,
-        "y": 10.65,
-        "rotDeg": 0,
-        "w": 0.3,
-        "d": 0.3,
-        "h": 0.9,
-        "elevation": 1.8000000000000003
-      },
-      {
-        "id": "4dbbc902",
-        "storeyId": "st1",
-        "assetId": "led_strip",
-        "name": "LED strip",
-        "x": 4.6000000000000005,
-        "y": 9.700000000000001,
-        "rotDeg": -90,
-        "w": 1.5,
-        "d": 0.03,
-        "h": 0.03,
-        "elevation": 2.6700000000000004
-      },
-      {
-        "id": "9f3c9b35",
-        "storeyId": "st1",
-        "assetId": "led_strip",
-        "name": "LED strip",
-        "x": 0.15000000000000013,
-        "y": 9.7,
-        "rotDeg": -90,
-        "w": 1.5,
-        "d": 0.03,
-        "h": 0.03,
-        "elevation": 2.6700000000000004
-      },
-      {
-        "id": "a471b82e",
-        "storeyId": "st1",
-        "assetId": "wall_sconce",
-        "name": "Wall sconce",
-        "x": 5.2,
-        "y": 4.8500000000000005,
-        "rotDeg": 0,
-        "w": 0.16,
-        "d": 0.14,
-        "h": 0.24,
-        "elevation": 1.8
-      },
-      {
-        "id": "43e92aec",
-        "storeyId": "st1",
-        "assetId": "wall_sconce",
-        "name": "Wall sconce",
-        "x": 9.9,
-        "y": 4.8500000000000005,
-        "rotDeg": 0,
-        "w": 0.16,
-        "d": 0.14,
-        "h": 0.24,
-        "elevation": 1.8
-      },
-      {
-        "id": "6f3aec30",
+        "id": "1925696e",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 6,
-        "y": 5.95,
+        "x": 11.200000000000001,
+        "y": 1.35,
         "rotDeg": 0,
         "w": 0.1,
         "d": 0.1,
@@ -1752,38 +1491,12 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "03514634",
-        "storeyId": "st1",
-        "assetId": "spotlight",
-        "name": "Spotlight",
-        "x": 9.25,
-        "y": 5.95,
-        "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
-      },
-      {
-        "id": "5faaec75",
-        "storeyId": "st1",
-        "assetId": "spotlight",
-        "name": "Spotlight",
-        "x": 6.050000000000001,
-        "y": 9.35,
-        "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
-      },
-      {
-        "id": "4957bb75",
+        "id": "45001676",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
         "x": 9.3,
-        "y": 9.4,
+        "y": 5.75,
         "rotDeg": 0,
         "w": 0.1,
         "d": 0.1,
@@ -1791,11 +1504,24 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "4ce3a251",
+        "id": "90eb1c81",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 6,
+        "x": 5.65,
+        "y": 5.9,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "c0530521",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 5.7,
         "y": 12.25,
         "rotDeg": 0,
         "w": 0.1,
@@ -1804,12 +1530,12 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "999c5772",
+        "id": "b55da0de",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 9.05,
-        "y": 12.350000000000001,
+        "x": 9,
+        "y": 12.25,
         "rotDeg": 0,
         "w": 0.1,
         "d": 0.1,
@@ -1817,12 +1543,12 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "5bd12ad5",
+        "id": "993511e5",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 8.4,
-        "y": 14.55,
+        "x": 9.25,
+        "y": 14.600000000000001,
         "rotDeg": 0,
         "w": 0.1,
         "d": 0.1,
@@ -1830,12 +1556,12 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "b2e1ce86",
+        "id": "1d40af30",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 9.200000000000001,
-        "y": 17.85,
+        "x": 7.95,
+        "y": 14.65,
         "rotDeg": 0,
         "w": 0.1,
         "d": 0.1,
@@ -1843,12 +1569,12 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "bc5d751e",
+        "id": "fb6e87ab",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 1.4500000000000002,
-        "y": 17.75,
+        "x": 8.450000000000001,
+        "y": 16.75,
         "rotDeg": 0,
         "w": 0.1,
         "d": 0.1,
@@ -1856,12 +1582,12 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "d75bb5b8",
+        "id": "d0552a6f",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 1.9000000000000001,
-        "y": 14.200000000000001,
+        "x": 8.450000000000001,
+        "y": 18.75,
         "rotDeg": 0,
         "w": 0.1,
         "d": 0.1,
@@ -1869,64 +1595,12 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "ddcd8513",
-        "storeyId": "st1",
-        "assetId": "spotlight",
-        "name": "Spotlight",
-        "x": 3.45,
-        "y": 11.25,
-        "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
-      },
-      {
-        "id": "1894a58e",
-        "storeyId": "st1",
-        "assetId": "spotlight",
-        "name": "Spotlight",
-        "x": 3.8000000000000003,
-        "y": 12.55,
-        "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
-      },
-      {
-        "id": "391530f7",
-        "storeyId": "st1",
-        "assetId": "spotlight",
-        "name": "Spotlight",
-        "x": 1.35,
-        "y": 11.25,
-        "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
-      },
-      {
-        "id": "9721528d",
-        "storeyId": "st1",
-        "assetId": "spotlight",
-        "name": "Spotlight",
-        "x": 1.25,
-        "y": 12.55,
-        "rotDeg": 0,
-        "w": 0.1,
-        "d": 0.1,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
-      },
-      {
-        "id": "2ccdb378",
+        "id": "18ca8573",
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
         "x": 2.3000000000000003,
-        "y": 9.55,
+        "y": 19.05,
         "rotDeg": 0,
         "w": 0.1,
         "d": 0.1,
@@ -1934,77 +1608,181 @@
         "elevation": 2.6500000000000004
       },
       {
-        "id": "3bec95ed",
+        "id": "398321b7",
         "storeyId": "st1",
-        "assetId": "ceiling_light",
-        "name": "Ceiling light",
-        "x": 2.6500000000000004,
-        "y": 6,
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 2.3000000000000003,
+        "y": 16.400000000000002,
         "rotDeg": 0,
-        "w": 0.34,
-        "d": 0.34,
-        "h": 0.09,
-        "elevation": 2.6100000000000003
-      },
-      {
-        "id": "5dc766a6",
-        "storeyId": "st1",
-        "assetId": "pool",
-        "name": "Swimming pool",
-        "x": 6.050000000000001,
-        "y": -4.2,
-        "rotDeg": 0,
-        "w": 6,
-        "d": 3,
-        "h": 1.4,
-        "elevation": -1.34
-      },
-      {
-        "id": "fab16c2d",
-        "storeyId": "st1",
-        "assetId": "car_small",
-        "name": "Car — small (hatchback)",
-        "x": 12.100000000000001,
-        "y": 17.55,
-        "rotDeg": 0,
-        "w": 1.78,
-        "d": 3.95,
-        "h": 1.48,
-        "elevation": 0
-      },
-      {
-        "id": "553a7fd6",
-        "storeyId": "st1",
-        "assetId": "cooker_hood",
-        "name": "Cooker hood / extractor",
-        "x": 8.74,
-        "y": 13.43,
-        "rotDeg": 0,
-        "w": 0.6,
-        "d": 0.5,
-        "h": 0.7,
-        "elevation": 1.5
-      },
-      {
-        "id": "fb7733d2",
-        "storeyId": "st1",
-        "assetId": "radiator",
-        "name": "Radiator",
-        "x": -1.2000000000000002,
-        "y": -2.2,
-        "rotDeg": 0,
-        "w": 1,
+        "w": 0.1,
         "d": 0.1,
-        "h": 0.5,
-        "elevation": 0.15
+        "h": 0.05,
+        "elevation": 2.6500000000000004
       },
       {
-        "id": "785dc7f9",
+        "id": "8ffe5482",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 1.8,
+        "y": 14.450000000000001,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "987e419d",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 1.4000000000000001,
+        "y": 12,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "d8cf8add",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 3,
+        "y": 11.950000000000001,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "18a41172",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 0.8,
+        "y": 9.700000000000001,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "479cd59e",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 3.85,
+        "y": 9.65,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "984dffde",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 2.3000000000000003,
+        "y": 9.65,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "60391448",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 2.0500000000000003,
+        "y": 7.6000000000000005,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "6de0aa8d",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 2,
+        "y": 4.7,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "9883c38d",
+        "storeyId": "st1",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 7.5600000000000005,
+        "y": 11.44,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 1.8000000000000003
+      },
+      {
+        "id": "fe3bd829",
+        "storeyId": "st1",
+        "assetId": "pendant_light",
+        "name": "Pendant light",
+        "x": 7.5600000000000005,
+        "y": 10.88,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "h": 0.9,
+        "elevation": 1.8000000000000003
+      },
+      {
+        "id": "cf020be1",
+        "storeyId": "st1",
+        "assetId": "wall_sconce",
+        "name": "Wall sconce",
+        "x": 0.24,
+        "y": 3.12,
+        "rotDeg": 90,
+        "w": 0.16,
+        "d": 0.14,
+        "h": 0.24,
+        "elevation": 1.8
+      },
+      {
+        "id": "61bd0afb",
+        "storeyId": "st1",
+        "assetId": "wall_sconce",
+        "name": "Wall sconce",
+        "x": 0.23,
+        "y": 0.66,
+        "rotDeg": 90,
+        "w": 0.16,
+        "d": 0.14,
+        "h": 0.24,
+        "elevation": 1.8
+      },
+      {
+        "id": "f4d1fd2c",
         "storeyId": "st1",
         "assetId": "water_heater",
         "name": "Water heater / boiler",
-        "x": -2.2,
-        "y": -2.25,
+        "x": 10.81,
+        "y": 12.43,
         "rotDeg": 0,
         "w": 0.5,
         "d": 0.5,
@@ -2012,80 +1790,98 @@
         "elevation": 0
       },
       {
-        "id": "b7f91c24",
+        "id": "da1cec6d",
         "storeyId": "st1",
-        "assetId": "vent_in",
-        "name": "Ventilation in",
-        "x": -3,
-        "y": -5.4,
+        "assetId": "water_tank",
+        "name": "Water tank",
+        "x": 11.350000000000001,
+        "y": 13.55,
         "rotDeg": 0,
-        "w": 0.3,
-        "d": 0.3,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
+        "w": 1.6,
+        "d": 1.6,
+        "h": 1.5,
+        "elevation": 0
       },
       {
-        "id": "c477ee9d",
+        "id": "29562de1",
         "storeyId": "st1",
-        "assetId": "vent_out",
-        "name": "Ventilation out",
-        "x": -1.4500000000000002,
-        "y": -5.3500000000000005,
-        "rotDeg": 0,
-        "w": 0.3,
-        "d": 0.3,
-        "h": 0.05,
-        "elevation": 2.6500000000000004
+        "assetId": "distribution_board",
+        "name": "Distribution board",
+        "x": 0.21000000000000002,
+        "y": 9.57,
+        "rotDeg": 90,
+        "w": 0.4,
+        "d": 0.12,
+        "h": 0.5,
+        "elevation": 1.6
       },
       {
-        "id": "74420fbf",
+        "id": "8eb08c34",
         "storeyId": "st1",
-        "assetId": "radiator",
-        "name": "Radiator",
-        "x": -4.4,
-        "y": -6.550000000000001,
+        "assetId": "ac_wall",
+        "name": "Air conditioner (wall)",
+        "x": 1,
+        "y": 8.200000000000001,
         "rotDeg": 0,
         "w": 1,
-        "d": 0.1,
-        "h": 0.5,
-        "elevation": 0.15
+        "d": 0.3,
+        "h": 0.4,
+        "elevation": 2.2
       },
       {
-        "id": "0c870025",
+        "id": "6ee10ef9",
         "storeyId": "st1",
-        "assetId": "fireplace",
-        "name": "Fireplace",
-        "x": -4.4,
-        "y": -5.5,
+        "assetId": "generic_cylinder",
+        "name": "Cylinder (generic)",
+        "x": 10.8,
+        "y": 15.65,
         "rotDeg": 0,
-        "w": 1.1,
-        "d": 0.35,
-        "h": 1.1,
-        "elevation": 0
+        "w": 0.5,
+        "d": 0.5,
+        "h": 1,
+        "elevation": 0,
+        "props": [
+          {
+            "k": "Gas tank",
+            "v": "Purchased 2024"
+          },
+          {
+            "k": "Phone ",
+            "v": "095252 test"
+          },
+          {
+            "k": "Brand",
+            "v": "Gasbrand "
+          },
+          {
+            "k": "",
+            "v": ""
+          }
+        ]
       }
     ],
     "columns": [
       {
-        "id": "6892593c",
+        "id": "b4213f45",
         "storeyId": "st1",
         "shape": "round",
-        "x": 10.850000000000001,
-        "y": 1.8,
+        "x": 5.25,
+        "y": 0.6000000000000001,
         "rotDeg": 0,
-        "w": 0.3,
-        "d": 0.3,
+        "w": 0.4,
+        "d": 0.4,
         "height": 2.7,
         "baseOffset": 0
       },
       {
-        "id": "b8d51244",
+        "id": "08947ea6",
         "storeyId": "st1",
         "shape": "round",
-        "x": 5.100000000000001,
-        "y": 0.6,
+        "x": 11,
+        "y": 1.6,
         "rotDeg": 0,
-        "w": 0.3,
-        "d": 0.3,
+        "w": 0.4,
+        "d": 0.4,
         "height": 2.7,
         "baseOffset": 0
       }
@@ -2093,639 +1889,380 @@
     "beams": [],
     "finishes": [
       {
-        "id": "85893532",
+        "id": "1a1fb4f3",
         "kind": "band",
         "wallId": "w1",
         "face": 2,
-        "s0": 1.965,
-        "s1": 3.245,
-        "z0": 0.9,
-        "z1": 1.5,
-        "thickness": 0.008,
-        "material": "stone",
-        "finish": {
-          "tileW": 0.3,
-          "tileH": 0.3,
-          "tilePattern": "running",
-          "stonePattern": "small",
-          "stoneType": "onyx"
-        }
-      },
-      {
-        "id": "52903ecc",
-        "kind": "band",
-        "wallId": "w1",
-        "face": 2,
-        "s0": 0.49,
-        "s1": 1.72,
+        "s0": 0.27,
+        "s1": 3.33,
         "z0": 0,
         "z1": 2.7,
         "thickness": 0.008,
         "material": "stone",
         "finish": {
-          "stonePattern": "rubble",
-          "stoneType": "quartzite"
-        }
-      },
-      {
-        "id": "e0caf63d",
-        "kind": "region",
-        "storeyId": "st1",
-        "outline": [
-          [
-            4.62,
-            13.15
-          ],
-          [
-            4.62,
-            10.86
-          ],
-          [
-            0.14,
-            10.85
-          ],
-          [
-            0.15,
-            13.15
-          ]
-        ],
-        "thickness": 0.012,
-        "material": "stone",
-        "finish": {
-          "stoneType": "nero_marquina"
-        }
-      },
-      {
-        "id": "5d9a64b3",
-        "kind": "band",
-        "wallId": "w3",
-        "face": 1,
-        "s0": 1.6,
-        "s1": 3.72,
-        "z0": 0,
-        "z1": 2.7,
-        "thickness": 0.008,
-        "material": "tile",
-        "finish": {
-          "tileStone": "sandstone",
-          "tileColor": "#e6cfa3",
-          "tileJoint": 0,
-          "tileW": 1
-        }
-      },
-      {
-        "id": "6eaa9a89",
-        "kind": "region",
-        "storeyId": "st1",
-        "outline": [
-          [
-            4.674,
-            13.77
-          ],
-          [
-            10.47,
-            13.752
-          ],
-          [
-            10.474,
-            4.902
-          ],
-          [
-            4.72,
-            4.9
-          ]
-        ],
-        "thickness": 0.012,
-        "material": "stone",
-        "finish": {
-          "stoneType": "granite_grey"
-        }
-      },
-      {
-        "id": "335388ad",
-        "kind": "region",
-        "storeyId": "st1",
-        "outline": [
-          [
-            4.75,
-            19.450000000000003
-          ],
-          [
-            4.674,
-            13.77
-          ],
-          [
-            10.47,
-            13.752
-          ],
-          [
-            10.47,
-            19.527
-          ]
-        ],
-        "thickness": 0.012,
-        "material": "tile",
-        "finish": {
-          "tileW": 0.6,
-          "tileH": 0.6
-        }
-      },
-      {
-        "id": "634be485",
-        "kind": "region",
-        "storeyId": "st1",
-        "outline": [
-          [
-            0.005,
-            15.202
-          ],
-          [
-            3.247,
-            15.25
-          ],
-          [
-            3.247,
-            13.155
-          ],
-          [
-            0.005,
-            13.202
-          ]
-        ],
-        "thickness": 0.012,
-        "material": "tile",
-        "finish": {
-          "tilePattern": "basketweave",
-          "tileStone": "basalt",
-          "tileColor": "#eceae5"
-        }
-      },
-      {
-        "id": "17f90771",
-        "kind": "region",
-        "storeyId": "st1",
-        "outline": [
-          [
-            4.674,
-            13.77
-          ],
-          [
-            3.3000000000000003,
-            13.700000000000001
-          ],
-          [
-            3.247,
-            15.25
-          ],
-          [
-            0.005,
-            15.202
-          ],
-          [
-            0.005,
-            19.527
-          ],
-          [
-            4.75,
-            19.400000000000002
-          ]
-        ],
-        "thickness": 0.012,
-        "material": "tile",
-        "finish": {
-          "tileW": 0.6,
-          "tileH": 0.6,
-          "tileJoint": 0.003
-        }
-      },
-      {
-        "id": "09eb2d6f",
-        "kind": "band",
-        "wallId": "w1",
-        "face": 2,
-        "s0": 3.85,
-        "s1": 8,
-        "z0": 0,
-        "z1": 2.7,
-        "thickness": 0.008,
-        "material": "stone",
-        "finish": {
-          "woodTone": "walnut",
-          "stoneType": "granite_grey",
           "stonePattern": "rubble"
-        }
-      },
-      {
-        "id": "c74062e6",
-        "kind": "band",
-        "wallId": "w16",
-        "face": 2,
-        "s0": 1.05,
-        "s1": 3.96,
-        "z0": 0.9,
-        "z1": 1.5,
-        "thickness": 0.008,
-        "material": "tile",
-        "finish": {
-          "tileW": 0.02,
-          "tileH": 0.02,
-          "tileStone": "nero_marquina",
-          "tileColor": "#f7f6f3"
-        }
-      },
-      {
-        "id": "17ebcd42",
-        "kind": "band",
-        "wallId": "w3",
-        "face": 1,
-        "s0": 6.25,
-        "s1": 8.99,
-        "z0": 0.9,
-        "z1": 1.5,
-        "thickness": 0.008,
-        "material": "tile",
-        "finish": {
-          "tileW": 0.02,
-          "tileH": 0.02,
-          "tileStone": "nero_marquina",
-          "tileColor": "#1f1f22"
-        }
-      },
-      {
-        "id": "c0a50896",
-        "kind": "region",
-        "storeyId": "st1",
-        "outline": [
-          [
-            0.15000000000000002,
-            10.75
-          ],
-          [
-            0.15000000000000002,
-            8.5
-          ],
-          [
-            4.72,
-            8.402
-          ],
-          [
-            4.65,
-            10.76
-          ]
-        ],
-        "thickness": 0.012,
-        "material": "concrete",
-        "finish": {
-          "tilePattern": "basketweave",
-          "stoneType": "travertine",
-          "colorFace1": "#20214F"
-        }
-      },
-      {
-        "id": "ca8806bf",
-        "kind": "band",
-        "wallId": "w6",
-        "face": 2,
-        "s0": 1.435,
-        "s1": 10.115,
-        "z0": 0,
-        "z1": 2.7,
-        "thickness": 0.008,
-        "material": "wood",
-        "finish": {
-          "colorFace1": "#0E294B",
-          "tilePattern": "running",
-          "stoneType": "nero_marquina",
-          "woodTone": "ash"
-        }
-      },
-      {
-        "id": "6b3e07e1",
-        "kind": "region",
-        "storeyId": "st1",
-        "outline": [
-          [
-            -8.6,
-            -4.3500000000000005
-          ],
-          [
-            -8.6,
-            -6.050000000000001
-          ],
-          [
-            -6.3500000000000005,
-            -6.050000000000001
-          ],
-          [
-            -6.4,
-            -4.3
-          ]
-        ],
-        "thickness": 0.012,
-        "material": "tile",
-        "finish": {
-          "tileStone": "carrara",
-          "tileColor": "#eceae5"
         }
       }
     ],
     "mepRuns": [
       {
-        "id": "d2754dc1",
+        "id": "1f8fbb9f",
         "storeyId": "st1",
         "kind": "water",
         "placement": "concealed",
-        "ax": 11.25,
-        "ay": 15.05,
+        "ax": 11.42,
+        "ay": 1.26,
         "az": 0.3,
-        "bx": 10.399,
-        "by": 15.043707522703151,
+        "bx": 11.350000000000001,
+        "by": 13.55,
         "bz": 0.3,
         "diameter": 0.022,
-        "connectA": "80757567",
+        "connectA": "e1e3eabe",
+        "connectB": "da1cec6d"
+      },
+      {
+        "id": "17e6a21e",
+        "storeyId": "st1",
+        "kind": "water",
+        "placement": "concealed",
+        "ax": 10.81,
+        "ay": 12.43,
+        "az": 0.3,
+        "bx": 11.360000000000001,
+        "by": 12.43,
+        "bz": 0.3,
+        "diameter": 0.022,
+        "connectA": "f4d1fd2c"
+      },
+      {
+        "id": "1c673b81",
+        "storeyId": "st1",
+        "kind": "water",
+        "placement": "concealed",
+        "ax": 10.81,
+        "ay": 12.43,
+        "az": 0.3,
+        "bx": 10.399,
+        "by": 12.430438544469057,
+        "bz": 0.3,
+        "diameter": 0.022,
+        "connectA": "f4d1fd2c",
         "hostWallId": "w3"
       },
       {
-        "id": "e9e4bf9e",
+        "id": "a4cc68a2",
         "storeyId": "st1",
         "kind": "water",
         "placement": "concealed",
         "ax": 10.399,
-        "ay": 15.043707522703151,
+        "ay": 12.430438544469057,
         "az": 0.3,
-        "bx": 10.407389127369008,
-        "by": 15.852,
+        "bx": 10.399,
+        "by": 10.730484238274748,
         "bz": 0.3,
         "diameter": 0.022,
         "hostWallId": "w3"
       },
       {
-        "id": "2f5c9cae",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 10.407389127369008,
-        "ay": 15.852,
-        "az": 0.3,
-        "bx": 7.611185117831768,
-        "by": 15.852,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "hostWallId": "w17"
-      },
-      {
-        "id": "da033965",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 7.611185117831768,
-        "ay": 15.852,
-        "az": 0.3,
-        "bx": 7.49,
-        "by": 15.75,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "connectB": "7a27b6d5",
-        "hostWallId": "w17"
-      },
-      {
-        "id": "7455c976",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 7.49,
-        "ay": 15.75,
-        "az": 0.3,
-        "bx": 6.959,
-        "by": 15.489,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "connectA": "7a27b6d5",
-        "connectB": "i99"
-      },
-      {
-        "id": "eb7a87df",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 8.687723181649195,
-        "ay": 15.852,
-        "az": 0.3,
-        "bx": 8.727,
-        "by": 15.502,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "connectB": "i97",
-        "hostWallId": "w17"
-      },
-      {
-        "id": "f284a029",
+        "id": "39664686",
         "storeyId": "st1",
         "kind": "electrical",
         "placement": "concealed",
-        "ax": 7.51,
-        "ay": 15.51,
-        "az": 0.3,
-        "bx": 8.261190465725045,
-        "by": 15.852,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "connectA": "3d102f96",
-        "hostWallId": "w17"
-      },
-      {
-        "id": "88511102",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 9.53,
-        "ay": 15.72,
-        "az": 0.3,
-        "bx": 9.536804354381099,
-        "by": 15.852,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "connectA": "e2276783",
-        "hostWallId": "w17"
-      },
-      {
-        "id": "f91d964a",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 9.536804354381099,
-        "ay": 15.852,
-        "az": 0.3,
-        "bx": 6.464546205635084,
-        "by": 15.852,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "hostWallId": "w17"
-      },
-      {
-        "id": "7dd6e0e1",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 6.464546205635084,
-        "ay": 15.852,
-        "az": 0.3,
-        "bx": 6.474,
-        "by": 13.762660962431232,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "hostWallId": "w17"
-      },
-      {
-        "id": "49d1ec0c",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 6.474,
-        "ay": 13.762660962431232,
-        "az": 0.3,
-        "bx": 10.419853663844192,
-        "by": 13.752,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "hostWallId": "w15"
-      },
-      {
-        "id": "8d002941",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
-        "ax": 10.419853663844192,
-        "ay": 13.752,
-        "az": 0.3,
-        "bx": 10.399,
-        "by": 11.16340780833804,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "hostWallId": "w16"
-      },
-      {
-        "id": "035b2c1e",
-        "storeyId": "st1",
-        "kind": "water",
-        "placement": "concealed",
         "ax": 10.399,
-        "ay": 11.643362651941262,
+        "ay": 10.730484238274748,
         "az": 0.3,
-        "bx": 7.550000000000001,
-        "by": 11.65,
+        "bx": 10.026,
+        "by": 10.793,
         "bz": 0.3,
         "diameter": 0.022,
-        "hostWallId": "w3",
-        "connectB": "9b317fa5"
-      },
-      {
-        "id": "00d8224e",
-        "storeyId": "st1",
-        "kind": "vent",
-        "placement": "concealed",
-        "ax": 7.550000000000001,
-        "ay": 10.65,
-        "az": 0.3,
-        "bx": 7.548999999999998,
-        "by": 11.658636957408147,
-        "bz": 0.3,
-        "diameter": 0.022,
-        "hostWallId": "w3",
-        "connectA": "0692ab9b"
-      },
-      {
-        "id": "a8a60d87",
-        "storeyId": "st1",
-        "kind": "vent",
-        "placement": "concealed",
-        "ax": 8.41,
-        "ay": 16.05,
-        "az": 2.8,
-        "bx": 10.399,
-        "by": 16.041906379870596,
-        "bz": 2.8,
-        "diameter": 0.2,
-        "connectA": "d694f5e2",
+        "connectB": "i74",
         "hostWallId": "w3"
       },
       {
-        "id": "563c8ad5",
+        "id": "9ae55607",
         "storeyId": "st1",
         "kind": "water",
         "placement": "concealed",
-        "ax": -1.1500000000000001,
-        "ay": -2.9000000000000004,
+        "ax": 5.32,
+        "ay": 4.89,
         "az": 0.3,
-        "bx": -1.15,
-        "by": -6.65,
+        "bx": 5.1524275682041365,
+        "by": 4.977,
         "bz": 0.3,
-        "diameter": 0.022
+        "diameter": 0.022,
+        "connectA": "7ff6cc66",
+        "hostWallId": "w5"
       },
       {
-        "id": "5d4d57b9",
+        "id": "96eb8807",
         "storeyId": "st1",
-        "kind": "drain",
+        "kind": "water",
         "placement": "concealed",
-        "ax": -2.5500000000000003,
-        "ay": -3.25,
-        "az": 0.1,
-        "bx": -2.5500000000000003,
-        "by": -6.65,
-        "bz": 0.1,
-        "diameter": 0.05
+        "ax": 5.1524275682041365,
+        "ay": 4.977,
+        "az": 0.3,
+        "bx": 4.682104173348271,
+        "by": 4.977,
+        "bz": 0.3,
+        "diameter": 0.022,
+        "hostWallId": "w5"
       },
       {
-        "id": "2df24416",
+        "id": "12f663d2",
+        "storeyId": "st1",
+        "kind": "water",
+        "placement": "concealed",
+        "ax": 4.682104173348271,
+        "ay": 4.977,
+        "az": 0.3,
+        "bx": 4.674,
+        "by": 3.671173215732713,
+        "bz": 0.3,
+        "diameter": 0.022,
+        "hostWallId": "w6"
+      },
+      {
+        "id": "749b164f",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.076,
+        "ay": 0.1899196963246037,
+        "az": 0.3,
+        "bx": 0.076,
+        "by": 0.6717074240123504,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w1"
+      },
+      {
+        "id": "6246e8be",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.076,
+        "ay": 0.6717074240123504,
+        "az": 0.3,
+        "bx": 0.23,
+        "by": 0.66,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "connectB": "61bd0afb",
+        "hostWallId": "w1"
+      },
+      {
+        "id": "36d2ad03",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.23,
+        "ay": 0.66,
+        "az": 0.3,
+        "bx": 0.076,
+        "by": 0.6763743465120761,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "connectA": "61bd0afb",
+        "hostWallId": "w1"
+      },
+      {
+        "id": "cb943492",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.076,
+        "ay": 0.6763743465120761,
+        "az": 0.3,
+        "bx": 0.076,
+        "by": 3.1084315362226,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w1"
+      },
+      {
+        "id": "fdc4245c",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.076,
+        "ay": 3.1084315362226,
+        "az": 0.3,
+        "bx": 0.24,
+        "by": 3.12,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "connectB": "cf020be1",
+        "hostWallId": "w1"
+      },
+      {
+        "id": "1a36ae53",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.24,
+        "ay": 3.12,
+        "az": 0.3,
+        "bx": 0.076,
+        "by": 3.108546768876914,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "connectA": "cf020be1",
+        "hostWallId": "w1"
+      },
+      {
+        "id": "fa68a8c8",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.076,
+        "ay": 3.108546768876914,
+        "az": 0.3,
+        "bx": 0.07692395215263298,
+        "by": 3.677,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w1"
+      },
+      {
+        "id": "d490ef60",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.07692395215263298,
+        "ay": 3.677,
+        "az": 0.3,
+        "bx": 0.35850934705121457,
+        "by": 3.677,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w4"
+      },
+      {
+        "id": "a74fbf84",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.35850934705121457,
+        "ay": 3.677,
+        "az": 0.3,
+        "bx": 0.076,
+        "by": 3.6810081914281616,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w4"
+      },
+      {
+        "id": "96d56ffb",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.076,
+        "ay": 3.6810081914281616,
+        "az": 0.3,
+        "bx": 0.076,
+        "by": 8.414996801096198,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w1"
+      },
+      {
+        "id": "48adf8d8",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.076,
+        "ay": 8.414996801096198,
+        "az": 0.3,
+        "bx": 1.6272452914436615,
+        "by": 8.402,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w1"
+      },
+      {
+        "id": "2cb8c39f",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 1.6272452914436615,
+        "ay": 8.402,
+        "az": 0.3,
+        "bx": 0.076,
+        "by": 8.42177528488695,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w7"
+      },
+      {
+        "id": "7cae523a",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 0.076,
+        "ay": 8.42177528488695,
+        "az": 0.3,
+        "bx": 0.076,
+        "by": 9.569122857047773,
+        "bz": 0.3,
+        "diameter": 0.014,
+        "hostWallId": "w1"
+      },
+      {
+        "id": "08cac2c3",
         "storeyId": "st1",
         "kind": "gas",
         "placement": "concealed",
-        "ax": -3.45,
-        "ay": -3.9000000000000004,
+        "ax": 6.474,
+        "ay": 19.535509294356594,
         "az": 0.3,
-        "bx": -3.45,
-        "by": -6.6000000000000005,
+        "bx": 6.474,
+        "by": 17.03486588332545,
         "bz": 0.3,
-        "diameter": 0.025
+        "diameter": 0.009,
+        "hostWallId": "w15"
       },
       {
-        "id": "b01dd2a6",
-        "storeyId": "st1",
-        "kind": "electrical",
-        "placement": "concealed",
-        "ax": -1.8,
-        "ay": -2.95,
-        "az": 0.3,
-        "bx": -1.7999999999999998,
-        "by": -6.65,
-        "bz": 0.3,
-        "diameter": 0.014
-      },
-      {
-        "id": "65e2793c",
+        "id": "51334352",
         "storeyId": "st1",
         "kind": "data",
         "placement": "concealed",
-        "ax": -0.75,
-        "ay": -2.75,
+        "ax": 10.392598997822256,
+        "ay": 15.852,
         "az": 0.3,
-        "bx": -0.7499999999999998,
-        "by": -6.8500000000000005,
+        "bx": 10.399,
+        "by": 13.733952713808922,
         "bz": 0.3,
-        "diameter": 0.009
+        "diameter": 0.009,
+        "hostWallId": "w17"
       },
       {
-        "id": "e57f89f6",
+        "id": "8df08498",
         "storeyId": "st1",
-        "kind": "vent",
+        "kind": "data",
         "placement": "concealed",
-        "ax": -3.6500000000000004,
-        "ay": -7.4,
-        "az": 2.6,
-        "bx": -0.6000000000000001,
-        "by": -7.4,
-        "bz": 2.6,
-        "diameter": 0.2
+        "ax": 10.399,
+        "ay": 13.733952713808922,
+        "az": 0.3,
+        "bx": 8.682897408366712,
+        "by": 13.752,
+        "bz": 0.3,
+        "diameter": 0.009,
+        "hostWallId": "w3"
+      },
+      {
+        "id": "6a928e5c",
+        "storeyId": "st1",
+        "kind": "data",
+        "placement": "concealed",
+        "ax": 8.682897408366712,
+        "ay": 13.752,
+        "az": 0.3,
+        "bx": 8.739,
+        "by": 13.419,
+        "bz": 0.3,
+        "diameter": 0.009,
+        "connectB": "i71",
+        "hostWallId": "w16"
       }
     ],
     "roofs": [],
@@ -2734,109 +2271,110 @@
     "solarArrays": [],
     "optionSets": [
       {
-        "id": "562091c3",
+        "id": "ad146082",
         "label": "Choices",
         "targets": [
-          "finish:09eb2d6f"
+          "slab:2db6fe4b"
         ],
         "choices": [
           {
-            "id": "30ae55f5",
-            "label": "Wood — Walnut",
+            "id": "816295ef",
+            "label": "Concrete",
+            "material": "concrete",
+            "finish": {}
+          },
+          {
+            "id": "17a51280",
+            "label": "Tile — plain",
+            "material": "tile",
+            "finish": {
+              "tileW": 0.6,
+              "tileH": 0.6
+            }
+          },
+          {
+            "id": "a8d4dcc2",
+            "label": "Tile — plain grout joint 8mm",
+            "material": "tile",
+            "finish": {
+              "tileW": 0.6,
+              "tileH": 0.6,
+              "tileJointColor": "#3a3a3c",
+              "tileJoint": 0.008
+            }
+          },
+          {
+            "id": "1df93db1",
+            "label": "Wood — Ash",
             "material": "wood",
             "finish": {
-              "woodTone": "walnut"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e768f44f",
-        "label": "Choices",
-        "targets": [
-          "finish:6b3e07e1"
-        ],
-        "choices": [
-          {
-            "id": "6a4ffde2",
-            "label": "Tile — Carrara marble",
-            "material": "tile",
-            "finish": {
+              "tileW": 0.6,
+              "tileH": 0.6,
+              "tileJointColor": "#c6c2ba",
+              "tileJoint": 0.003,
               "tileStone": "carrara",
-              "tileColor": "#eceae5"
-            }
-          },
-          {
-            "id": "19c889ca",
-            "label": "Tile — Emperador brown",
-            "material": "tile",
-            "finish": {
-              "tileStone": "emperador",
-              "tileColor": "#eceae5"
-            }
-          },
-          {
-            "id": "fb898e6d",
-            "label": "Tile — Absolute black granite",
-            "material": "tile",
-            "finish": {
-              "tileStone": "granite_black",
-              "tileColor": "#eceae5",
-              "tileJoint": 0.008,
-              "tilePattern": "hexagon"
-            }
-          },
-          {
-            "id": "8b947307",
-            "label": "Stone — plain",
-            "material": "stone",
-            "finish": {
-              "tileStone": "granite_black",
-              "tileColor": "#eceae5",
-              "tileJoint": 0.008,
-              "tilePattern": "hexagon",
-              "stonePattern": "large"
-            }
-          },
-          {
-            "id": "aeba1e39",
-            "label": "Painted — Pale green",
-            "material": "concrete",
-            "finish": {
-              "tileStone": "granite_black",
-              "tileColor": "#eceae5",
-              "tileJoint": 0.008,
-              "tilePattern": "hexagon",
-              "stonePattern": "large",
-              "colorFace1": "#89AC76"
+              "tileColor": "#f4f1ea",
+              "woodTone": "ash"
             }
           }
         ]
       }
     ],
-    "furniture": [],
+    "furniture": [
+      {
+        "id": "661c9075",
+        "assetId": "sofa",
+        "label": "Sofa",
+        "w": 2.453,
+        "d": 0.8,
+        "h": 0.69,
+        "group": "Group tst"
+      },
+      {
+        "id": "64ae3508",
+        "assetId": "patio_chair",
+        "label": "Patio chair",
+        "w": 0.42,
+        "d": 0.516,
+        "h": 0.813
+      },
+      {
+        "id": "82b7356c",
+        "assetId": "patio_table",
+        "label": "Patio table",
+        "w": 0.52,
+        "d": 0.52,
+        "h": 0.465
+      },
+      {
+        "id": "719ac632",
+        "assetId": "bed_king",
+        "label": "Bed — king",
+        "w": 1.989,
+        "d": 2.187,
+        "h": 0.835
+      },
+      {
+        "id": "9bc2e19f",
+        "assetId": "bathtub",
+        "label": "Bathtub",
+        "w": 2.3,
+        "d": 1.022,
+        "h": 0.45
+      }
+    ],
     "north": {
-      "x": 18.75,
-      "y": 15.850000000000001,
-      "dirDeg": 0
+      "x": 14.15,
+      "y": 1,
+      "dirDeg": 164.99999999999997
     },
     "skybox": {
-      "yawDeg": 195,
+      "yawDeg": 225,
       "pitchDeg": 0,
       "intensity": 1,
       "horizonFadeDeg": 12,
       "lighting": false,
-      "mediaId": "e9409224-78ef-44e3-ab3d-0df967e69658"
-    },
-    "kitchen": {
-      "fronts": {
-        "color": "#FFFFFF"
-      },
-      "worktop": {
-        "material": "laminate",
-        "color": "#0A0A0A"
-      },
-      "appliances": "black"
+      "mediaId": "6a29cfad-a416-4f05-953a-b49a71a402aa"
     }
   }
 }
