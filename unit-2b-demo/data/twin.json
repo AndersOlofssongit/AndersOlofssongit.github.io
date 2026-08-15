@@ -9,6 +9,10 @@
     }
   ],
   "pins": [],
+  "gps": {
+    "lat": 60,
+    "lng": 18
+  },
   "northDeg": 164.99999999999997,
   "bim": {
     "file": "bim.json"
