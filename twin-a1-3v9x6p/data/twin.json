@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "name": "A1",
-  "subtitle": "Thomas FH",
+  "name": "Skanna Demo",
+  "subtitle": "Digital twin — apartment with asset library",
   "models": [
     {
       "name": "A1 BIM 2026-08-05",

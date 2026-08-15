@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "name": "503 based on plans",
-  "subtitle": "Falcon Hill, Hua Hin",
+  "name": "Skanna Demo",
+  "subtitle": "Digital twin — drawn from architect’s plans",
   "models": [
     {
       "name": "503 based on plans BIM 2026-08-04",
