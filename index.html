@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skanna — Scan a building once. Everything else comes out of the model.</title>
-<meta name="description" content="Capture a property with an iPhone, author a real IFC building model in your browser, and get dimensioned drawing sets, a digital twin on a link, and live data on every object — out of one file.">
+<title>Skanna — Every building should have a model. Here's how you make one.</title>
+<meta name="description" content="Make a real building model in your browser — from a phone scan, an old floor plan, a DXF, or nothing at all. Drawings, a shared twin, and data on every object.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Skanna">
-<meta property="og:title" content="Skanna — Scan a building once. Everything else comes out of the model.">
-<meta property="og:description" content="Capture a property with an iPhone, author a real IFC building model in your browser, and get dimensioned drawing sets, a digital twin on a link, and live data on every object — out of one file.">
+<meta property="og:title" content="Skanna — Every building should have a model. Here's how you make one.">
+<meta property="og:description" content="Make a real building model in your browser — from a phone scan, an old floor plan, a DXF, or nothing at all. Drawings, a shared twin, and data on every object.">
 <meta property="og:image" content="https://skanna.site/assets/og-image.png">
 <meta property="og:url" content="https://skanna.site/">
 <meta name="twitter:card" content="summary_large_image">
@@ -344,7 +344,8 @@
   }
   .scan-guide .card ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.92em; }
   .scan-guide .card li { margin: 7px 0; }
-  .scan-guide .scan-photo { padding: 0; overflow: hidden; position: relative; min-height: 240px; }
+  .scan-guide .scan-photo { padding: 0; overflow: hidden; position: relative; min-height: 240px;
+    grid-column: 1 / -1; }
   .scan-guide .scan-photo img {
     position: absolute; inset: 0;
     width: 100%; height: 100%; object-fit: cover; display: block;
@@ -445,6 +446,7 @@
     <span class="name">Skanna</span>
     <span class="spacer"></span>
     <nav class="links">
+      <a href="#ways">Ways in</a>
       <a href="#outputs">What you get</a>
       <a href="#app">App</a>
       <a href="#web">Web</a>
@@ -457,20 +459,21 @@
   <header class="hero">
     <div class="hero-grid">
       <div>
-        <div class="kicker">Capture · Model · Publish</div>
-        <h1>Scan a building once. Everything else comes out of the model<span class="dot">.</span></h1>
-        <p class="lede">Capture a property with an iPhone. Trace it into a real building
-        model in your browser. Out come <strong>dimensioned drawing sets</strong>, an
-        <strong>interactive twin anyone can open on a link</strong>, and
-        <strong>data on every object</strong> — from one file that can't disagree with
-        itself.</p>
+        <div class="kicker">Start from anything · Model once · Publish everything</div>
+        <h1>Every building should have a model. Start yours today<span class="dot">.</span></h1>
+        <p class="lede">Scan it with an iPhone, trace the floor plan you already have,
+        upload a 3D model from any other tool, or draw it from scratch. Out come
+        <strong>dimensioned drawing sets</strong>, an <strong>interactive twin anyone can
+        open on a link</strong>, and <strong>data on every object</strong> — from one file
+        that can't disagree with itself.</p>
         <div class="cta-row">
           <a class="btn" href="unit-2b-demo/">Open a finished building</a>
-          <a class="btn-ghost" href="#start">Request access to the modelling tool</a>
+          <a class="btn-ghost" href="#ways">See the four ways to start</a>
         </div>
         <p class="store-note">A live link, not a mock-up — the finished building opens in
-        your browser, no account. The modelling tool is opening to accounts shortly.
-        <strong>The iPhone scanner is coming to the App&nbsp;Store.</strong></p>
+        your browser, no account. <strong>The modelling tool needs nothing but a
+        browser</strong>, and it's opening to accounts shortly. The iPhone scanner is coming
+        to the App&nbsp;Store for anyone who wants to capture their own.</p>
       </div>
 
       <figure class="hero-media shot-frame" style="margin:0">
@@ -485,11 +488,52 @@
 
     <div class="proof">
       <div><strong>Running today</strong>Producing the drawings, models and buyer walkthroughs for a live 50-unit development.</div>
-      <div><strong>No per-seat licence</strong>The modelling tool runs in a browser. Most people are productive in a day.</div>
+      <div><strong>No hardware to buy</strong>The modelling tool runs in any browser. No CAD seat, no scanner, no plug-ins.</div>
       <div><strong>IFC · DXF · PDF out</strong>Open formats only. Everything you make is yours to take anywhere.</div>
-      <div><strong>Measured, not guessed</strong>Real LiDAR geometry off the actual building — no AI-invented walls.</div>
+      <div><strong>Nothing is invented</strong>Geometry comes off a real measurement: your scan, your drawing, or your tape.</div>
     </div>
   </header>
+
+  <section id="ways">
+    <h2>Four ways to start</h2>
+    <p class="section-lede">All four end at the same model. <strong>Only the first one needs a
+    scanner</strong> — everything after it, the authoring, the drawings and the twin, happens
+    in a browser tab.</p>
+    <div class="process">
+      <div class="step">
+        <span class="n">NEEDS A PRO IPHONE</span>
+        <h3>Scan it</h3>
+        <p>Walk the building and get measured geometry, photos and 360° panoramas, all
+        positioned in space. The fastest and most accurate way in — iPhone 12&nbsp;Pro or
+        later Pro model, iPad&nbsp;Pro 2020 or later.</p>
+      </div>
+      <div class="step">
+        <span class="n">BROWSER ONLY</span>
+        <h3>Trace what you have</h3>
+        <p>A photo of a paper plan, a page from an old PDF, an SVG, or a DXF from an
+        architect. Drop it in as a tracing underlay, set the scale once, and build straight on
+        top of it. DXF arrives at its own real-world scale.</p>
+      </div>
+      <div class="step">
+        <span class="n">BROWSER ONLY</span>
+        <h3>Bring a model you own</h3>
+        <p>Any GLB — from SketchUp, Blender, Revit, a drone survey or another scanning app —
+        loads as a reference to trace, in metres. Existing IFC opens alongside it. Nothing
+        needs converting first.</p>
+      </div>
+      <div class="step">
+        <span class="n">BROWSER ONLY</span>
+        <h3>Draw it from nothing</h3>
+        <p>A tape measure and the plan editor. Walls, openings, slabs, roofs, stairs, services
+        and finishes — no reference of any kind required. Plenty of buildings get modelled
+        exactly this way.</p>
+      </div>
+    </div>
+    <p class="scan-tip">Mix them freely: scan the ground floor, trace the architect's DXF for
+    the first, and draw the loft from a tape measure — it's one model either way. And it
+    doesn't have to be finished to be useful. <strong>Start today with whatever you already
+    have, and build on it as you go.</strong></p>
+  </section>
 
   <section id="outputs">
     <h2>What comes out of it</h2>
@@ -540,9 +584,9 @@
     <div class="process">
       <div class="step">
         <span class="n">STEP 1</span>
-        <h3>Capture</h3>
-        <p>Walk the building with an iPhone or iPad Pro — geometry, photos and 360°
-        panoramas, all positioned in space. No survey crew.</p>
+        <h3>Get a reference</h3>
+        <p>Scan it, trace a drawing you already have, upload an existing model, or measure it
+        yourself. Whichever route, you end up looking at the building in the plan editor.</p>
       </div>
       <div class="step">
         <span class="n">STEP 2</span>
@@ -569,6 +613,13 @@
     <h2>Where you'd start</h2>
     <p class="section-lede">Same platform, different first move.</p>
     <div class="router">
+      <a class="row" href="#ways">
+        <span class="who">Property owners</span>
+        <span class="what">You own the building; it should have a model. If you have an old
+        floor plan you never need to scan anything — and every trade, valuer, insurer and
+        buyer after that starts from the model instead of a tape measure.</span>
+        <span class="arrow">Start your own →</span>
+      </a>
       <a class="row" href="#twin">
         <span class="who">Property developers</span>
         <span class="what">Sell off-plan. A buyer explores their own unit, sees the morning
@@ -583,8 +634,9 @@
       </a>
       <a class="row" href="#web">
         <span class="who">Designers &amp; fit-out teams</span>
-        <span class="what">Author and share in a browser — no CAD seat, no render budget,
-        and drawings that come out of the model instead of being redrawn.</span>
+        <span class="what">Author and share in a browser — no CAD seat, no scanning device,
+        no render budget, and drawings that come out of the model instead of being
+        redrawn.</span>
         <span class="arrow">Skanna Web →</span>
       </a>
       <a class="row" href="#support">
@@ -598,7 +650,8 @@
 
   <section id="app">
     <h2>The Skanna app</h2>
-    <p class="section-lede">Skanna turns your iPhone or iPad Pro into a professional LiDAR
+    <p class="section-lede"><strong>Optional, and the best way in if you have the
+    hardware.</strong> Skanna turns your iPhone or iPad Pro into a professional LiDAR
     scanner. Capture dimensionally accurate 3D models of any space in minutes, entirely on
     your device, entirely private.</p>
     <div class="features">
@@ -646,14 +699,17 @@
       <img src="assets/app-measure.jpg" alt="Measuring a 3.29 m distance on the 3D model in the app" loading="lazy">
       <img src="assets/app-pins.jpg" alt="Numbered information pins with text and images placed on the 3D model" loading="lazy">
     </div>
+    <p class="ifc-note">No Pro iPhone? Nothing else on this page needs one — see
+    <a href="#ways">the four ways to start</a>.</p>
   </section>
 
   <section id="web">
     <h2>Skanna Web — BIM Author &amp; property portal</h2>
     <p class="section-lede">An easy-to-use BIM authoring tool that runs entirely in the
-    browser. Trace your scan, build a real IFC model floor by floor, and skip the heavy
-    CAD suite: for a large share of properties, Skanna does the job of SketchUp, Blender
-    or Revit — <strong>and most people learn it in a day</strong>.</p>
+    browser. Trace a scan, an old floor plan or a model you already own — or draw from
+    nothing — build a real IFC model floor by floor, and skip the heavy CAD suite: for a
+    large share of properties, Skanna does the job of SketchUp, Blender or Revit —
+    <strong>and most people learn it in a day</strong>.</p>
     <div class="paths">
       <div class="path">
         <div class="kicker">Your files, anywhere</div>
@@ -675,7 +731,7 @@
       <li><strong>Measure</strong> — real-world distances on the web model, just like in the app</li>
       <li><strong>360° panoramas</strong> — captured panoramas open in a full spherical viewer, linked to the model</li>
       <li><strong>CAD &amp; IFC viewing</strong> — open IFC files alongside or overlaid on your scan</li>
-      <li><strong>BIM Author</strong> — trace your scan in a 2D plan editor and export a real IFC building model, floor by floor</li>
+      <li><strong>BIM Author</strong> — trace a scan, a floor-plan image, an SVG or DXF, or nothing at all, in a 2D plan editor, and export a real IFC building model floor by floor</li>
       <li><strong>Drawings</strong> — plans, elevations and sections generated onto a title block, exported as PDF, SVG or DXF</li>
       <li><strong>Shared digital twin</strong> — publish the finished model to a link with sun study, lighting, restyling and building services</li>
     </ul>
@@ -698,9 +754,9 @@
       <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — the finished IFC building model</span></div>
       <img src="assets/ifc-assembly.jpg" alt="A completed IFC building model in the Skanna Web assembly view, with orbit, walk, measure and explorer tools and IFC and GLB export" loading="lazy">
     </div>
-    <p class="ifc-note">From scan to building model: export the finished IFC and open it in
-    SketchUp, Revit, Blender, or your web CAD platform of choice — to plan, design, and
-    extract data — or keep it on the Skanna platform for further development.</p>
+    <p class="ifc-note">However you started, you end up here: export the finished IFC and
+    open it in SketchUp, Revit, Blender, or your web CAD platform of choice — to plan,
+    design, and extract data — or keep it on the Skanna platform for further development.</p>
 
     <h3 class="sub-head">Permit drawings, straight from the model</h3>
     <p class="section-lede">The model also produces the paper deliverable. Plans, elevations
@@ -839,7 +895,8 @@
         </ul>
       </div>
     </div>
-    <p class="pricing-note">Final pricing is announced at launch.</p>
+    <p class="pricing-note">No scanner? The seven-day platform trial below needs nothing but
+    a browser. Final pricing is announced at launch.</p>
   </section>
 
   <section id="learn">
@@ -874,6 +931,15 @@
           <li>Avoid close-ups of flat, monotone areas like bare walls</li>
         </ul>
       </div>
+      <div class="card">
+        <div class="glyph">4</div>
+        <h3>Not scanning? Start here</h3>
+        <ul>
+          <li>Photograph the plan square-on, or export the PDF page as an image</li>
+          <li>Set the scale once against a dimension you know — a door, a room width</li>
+          <li>Trace the walls, then check a second known dimension to confirm it</li>
+        </ul>
+      </div>
       <div class="card scan-photo">
         <img src="assets/scanning.jpg" alt="Live LiDAR scan in progress: the room is covered by a green-to-blue triangle mesh overlay" loading="lazy">
       </div>
@@ -895,13 +961,21 @@
 
   <section id="requirements">
     <h2>Requirements</h2>
+    <p class="section-lede"><strong>To model, publish and deliver — a browser.</strong>
+    That's the whole list. Skanna Web runs in any modern desktop browser. No install, no CAD
+    seat, no plug-ins.</p>
     <div class="req-list">
       <ul>
-        <li>iPhone 12&nbsp;Pro or later Pro model, or iPad&nbsp;Pro (2020 or later) — a LiDAR sensor is required</li>
-        <li>iOS 16 or later</li>
-        <li>Skanna Web runs in any modern desktop browser</li>
+        <li><strong>Modelling, drawings and the twin</strong> — any modern desktop browser.
+        Nothing to install</li>
+        <li><strong>Scanning with your own phone — optional</strong> — iPhone 12&nbsp;Pro or
+        later Pro model, or iPad&nbsp;Pro 2020 or later, running iOS 16 or later. Those are
+        the devices with a LiDAR sensor</li>
       </ul>
     </div>
+    <p class="ifc-note">Scanning is the fastest way to get measured geometry. It is not the
+    way in. The model can start from a floor-plan image, an SVG or DXF, a GLB or IFC you
+    already own, or nothing but a tape measure.</p>
   </section>
 
   <section id="support">
@@ -938,11 +1012,14 @@
         <h4>Join the interest list</h4>
         <p>For anyone who captures, draws or delivers property work today and is tired
         of paying for three tools that don't talk to each other — surveyors, designers,
-        architects, contractors, agents, developers, fit-out and renovation teams.</p>
+        architects, contractors, agents, developers, fit-out and renovation teams.
+        <strong>And owners</strong> — if you own the building and want its model, you're in
+        the right place. You don't need to be in the trade, and you don't need a scanner.</p>
         <ul>
           <li>Replace the capture app, the CAD seat and the delivery pipeline with one chain</li>
           <li>Your models in IFC and your drawings in PDF and DXF, so nothing is trapped</li>
-          <li>Most people are productive in the authoring tool in a day</li>
+          <li>Start from a scan, an old drawing, a model you already have, or nothing at all
+          — most people are productive in the authoring tool in a day</li>
         </ul>
         <form class="signup" id="signupForm" novalidate>
           <input type="email" name="email" required placeholder="you@company.com"
