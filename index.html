@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skanna — Every building should have a model. Here's how you make one.</title>
-<meta name="description" content="Make a real building model in your browser — from a phone scan, an old floor plan, a DXF, or nothing at all. Drawings, a shared twin, and data on every object.">
+<title>Skanna — Every building should have a digital twin. Here's how you make one.</title>
+<meta name="description" content="Buildings lose their information: drawings go stale, as-builts never get made, renovations go unrecorded. Skanna gives a building one living twin — from a phone scan, an old floor plan, a DXF, or nothing at all — with drawings, visuals and data that stay true for as long as it stands.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Skanna">
-<meta property="og:title" content="Skanna — Every building should have a model. Here's how you make one.">
-<meta property="og:description" content="Make a real building model in your browser — from a phone scan, an old floor plan, a DXF, or nothing at all. Drawings, a shared twin, and data on every object.">
+<meta property="og:title" content="Skanna — Every building should have a digital twin. Here's how you make one.">
+<meta property="og:description" content="Buildings lose their information: drawings go stale, as-builts never get made, renovations go unrecorded. Skanna gives a building one living twin — from a phone scan, an old floor plan, a DXF, or nothing at all — with drawings, visuals and data that stay true for as long as it stands.">
 <meta property="og:image" content="https://skanna.site/assets/og-image.png">
 <meta property="og:url" content="https://skanna.site/">
 <meta name="twitter:card" content="summary_large_image">
@@ -101,7 +101,19 @@
     margin: 10px 2px 0; color: var(--faint); font-size: 0.8em;
   }
 
-  /* Proof strip */
+  /* Proof strip. The lead claim is a paragraph rather than a pillar, so it sits
+     in its own box above — inside the strip it would stretch all four cells to
+     its own height and leave the short ones mostly empty. */
+  .proof-lead {
+    margin: 40px 0 0; padding: 16px 18px;
+    background: #0d0d16;
+    border: 1px solid rgba(167,139,250,0.35); border-radius: 14px;
+    color: var(--muted); font-size: 0.86em; line-height: 1.5;
+  }
+  .proof-lead strong {
+    display: block; color: var(--text); font-weight: 650;
+    font-size: 1.05em; margin-bottom: 2px;
+  }
   .proof {
     display: grid; gap: 1px;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -109,6 +121,7 @@
     background: var(--rule);
     border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
   }
+  .proof-lead + .proof { margin-top: 12px; }
   .proof div {
     background: #0d0d16; padding: 16px 18px;
     color: var(--muted); font-size: 0.86em; line-height: 1.45;
@@ -143,6 +156,20 @@
   .output h3 { margin: 0 0 8px; font-size: 1.08em; letter-spacing: -0.01em; }
   .output p { margin: 0 0 14px; color: var(--muted); font-size: 0.91em; }
   .output .go { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+  /* The fourth output is the one the other three live inside, so it runs the
+     full width rather than sitting as an orphan in a three-up row. */
+  .output.wide { grid-column: 1 / -1; display: grid; grid-template-columns: 320px 1fr; }
+  .output.wide > img {
+    height: 100%; min-height: 200px;
+    border-bottom: 0; border-right: 1px solid var(--rule);
+  }
+  @media (max-width: 720px) {
+    .output.wide { grid-template-columns: 1fr; }
+    .output.wide > img {
+      height: 170px; min-height: 0;
+      border-right: 0; border-bottom: 1px solid var(--rule);
+    }
+  }
 
   /* ── Process strip ────────────────────────────────────────── */
   .process {
@@ -199,6 +226,8 @@
     border-radius: 14px;
     padding: 20px 22px;
   }
+  /* Four failure cards want two clean rows, not three-plus-an-orphan. */
+  #why .features { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
   .card h3 { margin: 0 0 6px; font-size: 1.02em; }
   .card p { margin: 0; color: var(--muted); font-size: 0.92em; }
   .card .glyph { color: var(--accent); font-size: 1.25em; margin-bottom: 10px; }
@@ -268,7 +297,7 @@
   .formnote { color: var(--faint); font-size: 0.86em; margin: 2px 0 0; line-height: 1.55; }
   .formnote.ok { color: var(--accent); }
   .formnote.bad { color: #ff8f88; }
-  .offer .count.taken { display: block; font-size: 0.62em; color: var(--faint); font-weight: 400; letter-spacing: 0; text-transform: none; margin-top: 4px; }
+  .offer .count .taken { display: block; font-size: 0.86em; color: var(--faint); font-weight: 400; letter-spacing: 0.04em; text-transform: none; margin-top: 4px; }
   .cta-row .aside { color: var(--faint); font-size: 0.85em; }
   .shot-grid {
     margin-top: 28px;
@@ -337,10 +366,11 @@
     margin: 22px 0 0; color: var(--faint); font-size: 0.88em; max-width: 720px;
   }
 
-  /* Learn section */
+  /* Learn section. Six modules, so three to a row rather than four and a
+     stranded pair. */
   .scan-guide {
     display: grid; gap: 14px;
-    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
   .scan-guide .card ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.92em; }
   .scan-guide .card li { margin: 7px 0; }
@@ -406,6 +436,8 @@
     display: flex; flex-direction: column;
   }
   .door.primary { border-color: rgba(167,139,250,0.45); background: rgba(167,139,250,0.05); }
+  /* A single door in its own row shouldn't stretch a form across the page. */
+  .door.solo { max-width: 620px; }
   .door .for {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 0.7em; font-weight: 700; letter-spacing: 0.14em;
@@ -446,12 +478,14 @@
     <span class="name">Skanna</span>
     <span class="spacer"></span>
     <nav class="links">
+      <a href="#why">Why</a>
       <a href="#ways">Ways in</a>
       <a href="#outputs">What you get</a>
       <a href="#app">App</a>
       <a href="#web">Web</a>
       <a href="#twin">Digital twin</a>
       <a href="#pricing">Pricing</a>
+      <a href="#learn">Course</a>
       <a href="#start">Get access</a>
     </nav>
   </nav>
@@ -459,13 +493,14 @@
   <header class="hero">
     <div class="hero-grid">
       <div>
-        <div class="kicker">Start from anything · Model once · Publish everything</div>
-        <h1>Every building should have a model. Start yours today<span class="dot">.</span></h1>
+        <div class="kicker">Start from anything · Model once · Keep it for life</div>
+        <h1>Every building should have a digital twin. Start yours today<span class="dot">.</span></h1>
         <p class="lede">Scan it with an iPhone, trace the floor plan you already have,
         upload a 3D model from any other tool, or draw it from scratch. Out come
         <strong>dimensioned drawing sets</strong>, an <strong>interactive twin anyone can
         open on a link</strong>, and <strong>data on every object</strong> — from one file
-        that can't disagree with itself.</p>
+        that can't disagree with itself, and that <strong>stays with the building for as
+        long as it stands</strong>.</p>
         <div class="cta-row">
           <a class="btn" href="unit-2b-demo/">Open a finished building</a>
           <a class="btn-ghost" href="#ways">See the four ways to start</a>
@@ -486,13 +521,77 @@
       </figure>
     </div>
 
+    <div class="proof-lead">
+      <strong>Running today</strong>Producing the drawings, the visualisations and the
+      internal operations and maintenance system for a 100-unit housing development — one
+      model behind all three. They are dropping the clunky CAD tools and the scattered
+      systems for booking, service and unit records, cutting the overall cost, and getting
+      software shaped around the way they actually work instead of the other way round.
+    </div>
+
     <div class="proof">
-      <div><strong>Running today</strong>Producing the drawings, models and buyer walkthroughs for Falcon Hill, a 50-unit development in Hua Hin, Thailand.</div>
       <div><strong>No hardware to buy</strong>The modelling tool runs in any browser. No CAD seat, no scanner, no plug-ins.</div>
       <div><strong>IFC · DXF · PDF out</strong>Open formats only. Everything you make is yours to take anywhere.</div>
       <div><strong>Nothing is invented</strong>Geometry comes off a real measurement: your scan, your drawing, or your tape.</div>
     </div>
   </header>
+
+  <section id="why">
+    <h2>Why buildings lose their information</h2>
+    <p class="section-lede">Buildings are the most valuable things we own, and almost none of
+    them have an accurate, current record of what they are. <strong>The way this has always
+    been done doesn't work.</strong> Information about a building gets produced in bursts —
+    for a permit, for a sale — and then it goes stale, gets contradicted on site, or simply
+    disappears. Everyone downstream pays for that, forever.</p>
+    <div class="features">
+      <div class="card">
+        <div class="glyph">◷</div>
+        <h3>Drawings are incomplete and out of date</h3>
+        <p>A set is drawn for a purpose and a date. Half of what matters was never drawn at
+        all, and the day something changes on site the whole set is quietly wrong — but it
+        stays in the folder, and people keep building from it.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">⚠</div>
+        <h3>What gets built isn't what was drawn</h3>
+        <p>No building is executed 100% to the drawings. Routes move, dimensions shift,
+        details get solved on the spot. As-builts are the deliverable that most often never
+        arrives — so the gap between paper and reality is never closed.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">◱</div>
+        <h3>Renovations are rarely documented</h3>
+        <p>Walls come down, services get rerouted, a bathroom is rebuilt — and nothing is
+        recorded. Twenty years of changes leave no trace, so the next person to touch the
+        building starts by guessing, or by surveying it all over again.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">◇</div>
+        <h3>The visuals are made to sell, then thrown away</h3>
+        <p>Floor plans, 3D visualisations, photorealistic renderings — commissioned around a
+        transaction, used for a few months of marketing, then gone. Real money spent on
+        assets that were never connected to the building and were never meant to last.</p>
+      </div>
+    </div>
+    <div class="scan-tip">
+      <strong>And the bill lands somewhere else entirely.</strong> Bad building information
+      is not an admin problem, it's a cost:
+      <ul class="course-list">
+        <li>Site visits that exist only to measure something that should already be known</li>
+        <li>Something ordered, delivered and then found not to fit</li>
+        <li>Too much material bought and scrapped, or too little and the job stops</li>
+        <li>Surveys paid for twice because nobody kept the first one</li>
+        <li>Decisions made from a drawing that stopped being true years ago</li>
+      </ul>
+    </div>
+    <p class="ifc-note"><strong>Skanna is a different approach to the whole thing.</strong>
+    One accurate digital twin per building, made once from whatever you already have, kept
+    current as the building changes, and handed on with the property when it sells. Drawings,
+    visuals, quantities and operations all come out of that single model instead of being
+    commissioned separately and going out of date separately. <strong>That is how the waste
+    disappears</strong> — and it only works if the record is accurate, live, and in one place.
+    That is what this platform is for.</p>
+  </section>
 
   <section id="ways">
     <h2>Four ways to start</h2>
@@ -537,9 +636,11 @@
 
   <section id="outputs">
     <h2>What comes out of it</h2>
-    <p class="section-lede">One model per building, and three deliverables generated from
-    it. Change the model once and all three follow — <strong>they're views of the same
-    file, so they can't contradict each other.</strong></p>
+    <p class="section-lede">One model per building, and everything else generated from it.
+    Change the model once and the drawings, the visuals and the data all follow —
+    <strong>they're views of the same file, so they can't contradict each other.</strong>
+    And the model itself doesn't expire when the project ends: it lives online as the
+    building's permanent record.</p>
     <div class="outputs">
       <div class="output">
         <img src="assets/twin-walk-interior.jpg" alt="First-person walk mode inside a digital twin, standing in the living space looking towards the kitchen" loading="lazy">
@@ -576,17 +677,42 @@
           <a class="go" href="#twin">See what a twin knows →</a>
         </div>
       </div>
+      <div class="output wide">
+        <img src="assets/web-viewer.jpg" alt="The Skanna Web property portal: one building's page with folders of scans, photos and panoramas, a dated site log of everything added, and buttons for BIM Author, Drawings, Share Twin and Export Site" loading="lazy">
+        <div class="body">
+          <div class="num">04</div>
+          <h3>One place where all your buildings live — permanently</h3>
+          <p>Every property you own or manage in a single online portal, each with its twin,
+          its drawings, its documents, its media and a dated log of everything that has ever
+          been done to it. It is not a project folder that closes when the job does:
+          <strong>the twin keeps getting updated for as long as the building exists</strong>
+          — renovations, replacements, service history, new measurements — so the record
+          never goes stale again. Reach it from any browser, share exactly as much of it as
+          you choose, and <strong>hand the digital twin over with the physical property when
+          you sell it</strong>, the way keys and deeds change hands. The next owner inherits
+          twenty years of accurate building information instead of starting from a tape
+          measure.</p>
+          <a class="go" href="#web">See the property portal →</a>
+        </div>
+      </div>
     </div>
 
     <h3 class="sub-head">How a building gets there</h3>
-    <p class="section-lede">Four steps, once per building. Everything above is an output of
-    the same model.</p>
+    <p class="section-lede">Four steps, once per building — then it stays alive.
+    <strong>We recommend starting with the Skanna scanner</strong>: it was developed
+    specifically to capture building sites, not objects or faces, so it gives you true-to-scale
+    geometry, photos and 360° panoramas in one walk-through, and it is by a distance the
+    fastest and most accurate way in. <strong>No iPhone, no 3D model and no drawings to
+    hand?</strong> It still works — trace a floor-plan image, an SVG or a DXF, or draw the
+    building from scratch with a tape measure. Everything above is an output of the same
+    model.</p>
     <div class="process">
       <div class="step">
         <span class="n">STEP 1</span>
-        <h3>Get a reference</h3>
-        <p>Scan it, trace a drawing you already have, upload an existing model, or measure it
-        yourself. Whichever route, you end up looking at the building in the plan editor.</p>
+        <h3>Scan and collect all data</h3>
+        <p>Walk the building with the scanner and capture the geometry, photos, panoramas
+        and notes in one pass — or, without a scanner, bring the drawing, model or
+        measurements you have. Everything lands on the building's page together.</p>
       </div>
       <div class="step">
         <span class="n">STEP 2</span>
@@ -604,45 +730,69 @@
         <span class="n">STEP 4</span>
         <h3>Operate</h3>
         <p>The model stays alive next to the building — inventory, condition, service
-        history and renovation progress on the objects.</p>
+        history, bookings and renovation progress on the objects — and transfers to the
+        next owner when the property does.</p>
       </div>
     </div>
   </section>
 
   <section id="who">
     <h2>Where you'd start</h2>
-    <p class="section-lede">Same platform, different first move.</p>
+    <p class="section-lede">Everybody gets the same platform — <strong>the whole of it</strong>.
+    Scanning, browser modelling, drawing sets, the published twin, the property portal and the
+    operations side are one product, not tiers sold to different trades. The only difference
+    between the rows below is which part you'll reach for first; the rest is sitting there
+    waiting, and most people end up using all of it. <strong>The sales twin a developer
+    publishes and the maintenance record their operations team works from are the same
+    file.</strong></p>
     <div class="router">
       <a class="row" href="#ways">
         <span class="who">Property owners</span>
-        <span class="what">You own the building; it should have a model. If you have an old
-        floor plan you never need to scan anything — and every trade, valuer, insurer and
-        buyer after that starts from the model instead of a tape measure.</span>
+        <span class="what">You own the building; it should have a twin. If you have an old
+        floor plan you never need to scan anything. Every trade, valuer, insurer and buyer
+        after that starts from the model instead of a tape measure — and when you sell, the
+        twin goes with the property.</span>
         <span class="arrow">Start your own →</span>
       </a>
       <a class="row" href="#twin">
         <span class="who">Property developers</span>
-        <span class="what">Sell off-plan. A buyer explores their own unit, sees the morning
-        light in it and picks finishes months before there is anything to visit.</span>
+        <span class="what">Sell off-plan: a buyer explores their own unit, sees the morning
+        light in it and picks finishes months before there is anything to visit. Then keep
+        going with the same models — permit and construction drawings, handover
+        documentation, and an operations and maintenance system for the finished estate:
+        unit records, service history, bookings, and renovation, repurposing or extension
+        planned against geometry that is actually correct.</span>
         <span class="arrow">The twin →</span>
       </a>
       <a class="row" href="#twin">
         <span class="who">Hotel &amp; property operators</span>
         <span class="what">Know what you own. Every vent, riser, fixture and finish located
-        and specified, so a refurbishment starts without re-surveying.</span>
+        and specified, so a refurbishment starts without re-surveying, quantities come out of
+        the model, and maintenance, inspections and inventory hang off the objects instead of
+        living in a spreadsheet nobody trusts.</span>
         <span class="arrow">Building data →</span>
       </a>
       <a class="row" href="#web">
         <span class="who">Designers &amp; fit-out teams</span>
         <span class="what">Author and share in a browser — no CAD seat, no scanning device,
-        no render budget, and drawings that come out of the model instead of being
-        redrawn.</span>
+        no render budget, and drawings that come out of the model instead of being redrawn.
+        The visualisation and the drawing set are the same model, so they can never drift
+        apart.</span>
         <span class="arrow">Skanna Web →</span>
+      </a>
+      <a class="row" href="#learn">
+        <span class="who">People who want to sell this</span>
+        <span class="what">Architecture students, CAD-literate contractors, surveyors and
+        agents: learn the whole chain on the course, then digitise buildings in your own
+        market as a service. One person with a phone and a browser can deliver what used to
+        need a survey firm, a CAD office and a visualisation studio.</span>
+        <span class="arrow">The course →</span>
       </a>
       <a class="row" href="#support">
         <span class="who">Teams paying for CAD seats</span>
-        <span class="what">Cut the licence, survey and drawing-production lines. We baseline
-        it together, and I'm paid from the measured savings.</span>
+        <span class="what">Cut the licence, survey and drawing-production lines — and the
+        separate booking, service and document systems alongside them. We baseline it
+        together, and I'm paid from the measured savings.</span>
         <span class="arrow">Talk it through →</span>
       </a>
     </div>
@@ -705,11 +855,13 @@
 
   <section id="web">
     <h2>Skanna Web — BIM Author &amp; property portal</h2>
-    <p class="section-lede">An easy-to-use BIM authoring tool that runs entirely in the
-    browser. Trace a scan, an old floor plan or a model you already own — or draw from
-    nothing — build a real IFC model floor by floor, and skip the heavy CAD suite: for a
-    large share of properties, Skanna does the job of SketchUp, Blender or Revit —
-    <strong>and most people learn it in a day</strong>.</p>
+    <p class="section-lede">Two halves of one product. The <strong>BIM Author</strong> is an
+    easy-to-use authoring tool that runs entirely in the browser: trace a scan, an old floor
+    plan or a model you already own — or draw from nothing — build a real IFC model floor by
+    floor, and skip the heavy CAD suite. For a large share of properties, Skanna does the job
+    of SketchUp, Blender or Revit, <strong>and most people learn it in a day</strong>. The
+    <strong>property portal</strong> is where those models then live: every building you own
+    or manage in one place, online, kept current for as long as the building exists.</p>
     <div class="paths">
       <div class="path">
         <div class="kicker">Your files, anywhere</div>
@@ -734,6 +886,9 @@
       <li><strong>BIM Author</strong> — trace a scan, a floor-plan image, an SVG or DXF, or nothing at all, in a 2D plan editor, and export a real IFC building model floor by floor</li>
       <li><strong>Drawings</strong> — plans, elevations and sections generated onto a title block, exported as PDF, SVG or DXF</li>
       <li><strong>Shared digital twin</strong> — publish the finished model to a link with sun study, lighting, building services, and curated material and furniture choices the viewer picks from</li>
+      <li><strong>Property portal</strong> — every building you own or manage on its own page, with folders, documents, media and a dated log of everything that has ever been added</li>
+      <li><strong>Operations</strong> — inventory, condition, service history and renovation progress recorded on the objects themselves, so the record updates instead of expiring</li>
+      <li><strong>Sharing &amp; handover</strong> — give a contractor, a buyer or a valuer exactly the access you choose, and pass the whole twin on when the property changes hands</li>
     </ul>
     <div class="cta-row">
       <a class="btn" href="#start">Request access to Skanna Web</a>
@@ -760,6 +915,19 @@
     <p class="ifc-note">However you started, you end up here: export the finished IFC and
     open it in SketchUp, Revit, Blender, or your web CAD platform of choice — to plan,
     design, and extract data — or keep it on the Skanna platform for further development.</p>
+
+    <h3 class="sub-head">The property portal — where the buildings live afterwards</h3>
+    <p class="section-lede">A finished model that sits on somebody's laptop is just another
+    drawing set waiting to go stale. On the portal, each building has a permanent page: its
+    scans, panoramas and photos, its drawing sets, its documents, its published twin, and a
+    dated site log of every scan, pin, comment and change anyone has made. <strong>Work on it
+    from any browser, from anywhere, and keep working on it for the life of the
+    building</strong> — a renovation, a new service run, a replaced boiler or a fresh scan of
+    one floor updates the same record rather than starting a new one. Then hand it over: the
+    twin transfers with the property, so the next owner inherits the whole history instead of
+    an empty folder. For teams running many units, this is the operations and maintenance
+    system as well — bookings, service jobs and unit records against real geometry, replacing
+    the scattered tools that never talked to each other.</p>
 
     <h3 class="sub-head">Permit drawings, straight from the model</h3>
     <p class="section-lede">The model also produces the paper deliverable. Plans, elevations
@@ -916,67 +1084,121 @@
         </ul>
       </div>
     </div>
-    <p class="pricing-note">No scanner? The seven-day platform trial below needs nothing but
-    a browser. Final pricing is announced at launch.</p>
+    <p class="pricing-note">No scanner? Nothing here needs one — the whole platform runs in a
+    browser. The <a href="#start">first ten people who email about access</a> get seven days
+    of it free. Final pricing is announced at launch.</p>
   </section>
 
   <section id="learn">
-    <h2>Learn — scan like a pro</h2>
-    <p class="section-lede">Good captures make good models. Start with the essentials below —
-    full course material is on the way.</p>
+    <h2>Learn it — the Skanna course</h2>
+    <p class="section-lede">Sign up and learn the entire chain, end to end: walk into a
+    building with a phone, walk out with drawings, a digital twin and a client who pays for
+    it. <strong>There is no other platform that covers all of this in one place</strong> — no
+    jumping between a scanning app, a CAD suite, a rendering tool and a viewer, no converting
+    formats at every step, no plug-ins, no special installations, no heavy CAD software and no
+    workstation to buy. That is exactly why it can be taught in days rather than years, and
+    why one person can now deliver what used to take three companies.</p>
     <div class="scan-guide">
       <div class="card">
         <div class="glyph">1</div>
-        <h3>Prepare the space</h3>
+        <h3>Scan a building properly</h3>
         <ul>
-          <li>Plan your route before you start</li>
-          <li>Open all doors and turn on the lights</li>
-          <li>Cover or remove photos and private information you don't want in the scan</li>
+          <li>Planning the route, and preparing a property before you arrive</li>
+          <li>Capture technique for interiors, exteriors and the awkward parts</li>
+          <li>Panoramas, photos and pins — collecting everything in one visit</li>
         </ul>
       </div>
       <div class="card">
         <div class="glyph">2</div>
-        <h3>While scanning</h3>
+        <h3>Work from drawings you already have</h3>
         <ul>
-          <li>Start in a corner</li>
-          <li>Keep 1.5–3 metres between you and what you're scanning</li>
-          <li>Move in a circle inside the space, sweeping up and down like an even coat of spray paint</li>
+          <li>Using a plan image, PDF page, SVG or DXF as a scaled reference</li>
+          <li>Setting scale once, and proving it against a second known dimension</li>
+          <li>Modelling a building with no scan and no drawings at all</li>
         </ul>
       </div>
       <div class="card">
         <div class="glyph">3</div>
-        <h3>What to avoid</h3>
+        <h3>The browser CAD tool</h3>
         <ul>
-          <li>Don't scan the same area twice</li>
-          <li>Avoid windows, mirrors, and other reflective surfaces</li>
-          <li>Avoid close-ups of flat, monotone areas like bare walls</li>
+          <li>Walls, openings, slabs, roofs, stairs, services and finishes</li>
+          <li>Tracing a scan into a correct, structured IFC model floor by floor</li>
+          <li>Giving every object its real specification, so the data comes free</li>
         </ul>
       </div>
       <div class="card">
         <div class="glyph">4</div>
-        <h3>Not scanning? Start here</h3>
+        <h3>Getting drawings out</h3>
         <ul>
-          <li>Photograph the plan square-on, or export the PDF page as an image</li>
-          <li>Set the scale once against a dimension you know — a door, a room width</li>
-          <li>Trace the walls, then check a second known dimension to confirm it</li>
+          <li>Plans, elevations and sections onto your own title block</li>
+          <li>Dimensions, grid bubbles, room schedules and legends</li>
+          <li>Exporting PDF, SVG and DXF at the right scale, and re-issuing revisions</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="glyph">5</div>
+        <h3>Creating the digital twin</h3>
+        <ul>
+          <li>Publishing to a link, with sun study, lighting and building services</li>
+          <li>Curating the material and furniture choices a viewer gets to make</li>
+          <li>Making it look good — the difference between a model and a sales tool</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="glyph">6</div>
+        <h3>Selling the service</h3>
+        <ul>
+          <li>Who actually buys this: developers, owners, operators, agents, architects</li>
+          <li>What to charge, how to scope a building, and what a day's work covers</li>
+          <li>The pitch that lands — and the demo that closes it</li>
         </ul>
       </div>
       <div class="card scan-photo">
         <img src="assets/scanning.jpg" alt="Live LiDAR scan in progress: the room is covered by a green-to-blue triangle mesh overlay" loading="lazy">
       </div>
     </div>
-    <p class="scan-tip"><strong>Tip:</strong> scan room by room, floor by floor, or the whole
-    house in one pass depending on the accuracy you need — and check your measurements
-    directly in the 3D model the moment you finish.</p>
+
     <div class="scan-tip">
-      <strong>Coming soon — the Skanna course library:</strong>
-      <ul class="course-list">
-        <li>Preparing a property for scanning</li>
-        <li>Capture techniques for interiors and exteriors</li>
-        <li>From scan to a correct IFC model in BIM Author</li>
-        <li>Photo guidelines for residential interiors</li>
-        <li>Presenting renderings and design concepts for renovation projects</li>
-      </ul>
+      <strong>Who this is really for.</strong> You'll get the most out of it if you already
+      understand buildings and drawings — <strong>architecture students with CAD
+      experience</strong>, contractors and site managers, surveyors, technical designers,
+      estate agents who work with plans, and anyone comfortable with software who reads a
+      floor plan without effort. You do not need a Revit licence, a CAD career or a scanner
+      of your own to start; you do need to be the kind of person who enjoys getting a
+      building exactly right.
+    </div>
+
+    <div class="offer">
+      <span class="count">Launch promotion<span class="taken">30% off until 30 September</span></span>
+      <span class="terms">$209 instead of $299 — the complete course.</span>
+      <span class="fine">Every module above, from first scan to first invoice. The
+      promotional price ends when September does.</span>
+    </div>
+
+    <div class="doors">
+      <div class="door primary solo">
+        <div class="for">Sign up to learn</div>
+        <h4>Take the course</h4>
+        <p>Leave your email and I'll send you the enrolment details and the start date.
+        Tell me what you do today and I'll tell you honestly whether this is worth your
+        $209 before you spend it.</p>
+        <form class="signup" id="courseForm" data-interest="course" data-source="site-course">
+          <input type="email" name="email" required placeholder="you@company.com"
+                 autocomplete="email" aria-label="Your email">
+          <div class="row2">
+            <input type="text" name="name" placeholder="Name" autocomplete="name" aria-label="Your name">
+            <input type="text" name="country" placeholder="Country" autocomplete="country-name" aria-label="Country">
+          </div>
+          <input type="text" name="works_on" placeholder="What you do today — student, contractor, agent, designer…" aria-label="What you do today">
+          <!-- Bots fill every field they can see; people never see this one. -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+          <button class="btn" type="submit">Sign up for the course</button>
+          <p class="formnote" role="status" aria-live="polite">
+            No payment here — you'll get the enrolment link by email, at the promotional
+            price if you sign up before 30 September.
+          </p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -1014,17 +1236,19 @@
       <h3>This is in production, not in beta.</h3>
       <p>Every part of the chain on this page exists and is being used: the scanner,
       the browser BIM tool, the drawing generator and the published twin are producing
-      the permit drawings, the models and the buyer walkthroughs for a live 50-unit
-      development right now.</p>
+      the permit drawings, the models, the buyer walkthroughs and the operations system
+      for a live 100-unit development right now.</p>
       <p><strong>Access is opening in stages</strong>, so the people already doing this
       work get in first.</p>
     </div>
 
     <div class="offer">
-      <span class="count">First 100<span class="taken" id="placesTaken"></span></span>
+      <span class="count">First 10 to email<span class="taken">after that, the interest list below</span></span>
       <span class="terms">Seven days of the full platform, free.</span>
-      <span class="fine">BIM Author, drawing sets, hosting and a published twin — the
-      whole tool, not a trial version.</span>
+      <span class="fine">BIM Author, drawing sets, hosting and a published twin — the whole
+      tool, not a trial version. Email me about access and if you're one of the first ten,
+      the week is yours.
+      <a href="mailto:anders@skanna.site?subject=Skanna%20access%3A%20free%20week&amp;body=I%27d%20like%20one%20of%20the%20first%20ten%20free%20weeks.%0A%0AName%3A%0ACompany%3A%0ACountry%3A%0AWhat%20I%27d%20use%20it%20for%3A%0A">Email about access →</a></span>
     </div>
 
     <div class="doors">
@@ -1034,7 +1258,7 @@
         <p>For anyone who captures, draws or delivers property work today and is tired
         of paying for three tools that don't talk to each other — surveyors, designers,
         architects, contractors, agents, developers, fit-out and renovation teams.
-        <strong>And owners</strong> — if you own the building and want its model, you're in
+        <strong>And owners</strong> — if you own the building and want its twin, you're in
         the right place. You don't need to be in the trade, and you don't need a scanner.</p>
         <ul>
           <li>Replace the capture app, the CAD seat and the delivery pipeline with one chain</li>
@@ -1042,7 +1266,7 @@
           <li>Start from a scan, an old drawing, a model you already have, or nothing at all
           — most people are productive in the authoring tool in a day</li>
         </ul>
-        <form class="signup" id="signupForm" novalidate>
+        <form class="signup" id="signupForm" data-interest="founding" data-source="site-interest-list" novalidate>
           <input type="email" name="email" required placeholder="you@company.com"
                  autocomplete="email" aria-label="Your email">
           <div class="row2">
@@ -1056,7 +1280,7 @@
           <!-- Bots fill every field they can see; people never see this one. -->
           <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
           <button class="btn" type="submit">Claim a place</button>
-          <p class="formnote" id="signupNote" role="status" aria-live="polite">
+          <p class="formnote" role="status" aria-live="polite">
             Email is the only thing required. The rest just helps me put you in the
             right access window.
           </p>
@@ -1096,89 +1320,88 @@
 </main>
 
 <script>
-// Interest list. Posts straight to Supabase — the key below is the publishable
-// anon key, which is meant to be public; the table's RLS allows INSERT only, so
-// this cannot be used to read the list back.
+// Interest list and course sign-up. Both post straight to Supabase — the key
+// below is the publishable anon key, which is meant to be public; the table's
+// RLS allows INSERT only, so this cannot be used to read the list back. The two
+// forms differ only in the interest/source they record, taken off the markup.
 (function () {
   var API = 'https://zvlengsphwrxviwbdlrr.supabase.co';
   var KEY = 'sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw';
-  var PLACES = 100;
 
-  var form = document.getElementById('signupForm');
-  var note = document.getElementById('signupNote');
-  var taken = document.getElementById('placesTaken');
-  if (!form) return;
+  var DONE = {
+    founding: 'You’re on the list. I’ll be in touch with your access window.',
+    course: 'You’re signed up. I’ll email you the enrolment details and the start date.'
+  };
 
-  // Real scarcity or none — never a number we made up.
-  fetch(API + '/rest/v1/rpc/signup_count', {
-    method: 'POST',
-    headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json' },
-    body: '{}'
-  })
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (n) {
-      if (typeof n !== 'number' || !taken) return;
-      var left = Math.max(0, PLACES - n);
-      taken.textContent = left === 0
-        ? 'all places claimed'
-        : left + ' of ' + PLACES + ' places left';
-    })
-    .catch(function () { /* the offer still reads fine without a counter */ });
+  Array.prototype.forEach.call(document.querySelectorAll('form.signup'), wire);
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var data = new FormData(form);
+  function wire(form) {
+    var note = form.querySelector('.formnote');
+    var interest = form.getAttribute('data-interest') || 'founding';
+    var source = form.getAttribute('data-source') || 'site';
 
-    if (data.get('website')) { say('Thanks — you’re on the list.', 'ok'); return; }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(form);
 
-    var email = (data.get('email') || '').toString().trim();
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      say('That email doesn’t look right — check it and try again.', 'bad');
-      return;
-    }
+      if (data.get('website')) { say('Thanks — you’re on the list.', 'ok'); return; }
 
-    var btn = form.querySelector('button');
-    btn.disabled = true;
-    say('Adding you…', '');
+      var email = (data.get('email') || '').toString().trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        say('That email doesn’t look right — check it and try again.', 'bad');
+        return;
+      }
 
-    fetch(API + '/rest/v1/signups', {
-      method: 'POST',
-      headers: {
-        apikey: KEY,
-        Authorization: 'Bearer ' + KEY,
-        'Content-Type': 'application/json',
-        Prefer: 'return=minimal'
-      },
-      body: JSON.stringify({
-        email: email,
-        name: str(data.get('name')),
-        company: str(data.get('company')),
-        country: str(data.get('country')),
-        works_on: str(data.get('works_on')),
-        interest: 'founding',
-        source: 'site-interest-list'
+      var btn = form.querySelector('button');
+      btn.disabled = true;
+      say('Adding you…', '');
+
+      fetch(API + '/rest/v1/signups', {
+        method: 'POST',
+        headers: {
+          apikey: KEY,
+          Authorization: 'Bearer ' + KEY,
+          'Content-Type': 'application/json',
+          Prefer: 'return=minimal'
+        },
+        body: JSON.stringify({
+          email: email,
+          name: str(data.get('name')),
+          company: str(data.get('company')),
+          country: str(data.get('country')),
+          works_on: str(data.get('works_on')),
+          interest: interest,
+          source: source
+        })
       })
-    })
-      .then(function (r) {
-        // 409 means the address is already on the list. Saying so out loud
-        // would let anyone test whether a given person signed up, so a repeat
-        // submission looks exactly like a first one.
-        if (r.ok || r.status === 409) {
-          form.reset();
-          say('You’re on the list. I’ll be in touch with your access window.', 'ok');
-        } else {
-          say('That didn’t save. Email anders@skanna.site and I’ll add you by hand.', 'bad');
+        .then(function (r) {
+          // 409 means the address is already in the table. Saying so out loud
+          // would let anyone test whether a given person signed up, so a repeat
+          // submission looks exactly like a first one. It also means someone who
+          // joined the interest list and later signs up for the course lands in
+          // the same row — the follow-up email sorts that out by hand.
+          if (r.ok || r.status === 409) {
+            form.reset();
+            say(DONE[interest] || DONE.founding, 'ok');
+          } else {
+            say('That didn’t save. Email anders@skanna.site and I’ll add you by hand.', 'bad');
+            btn.disabled = false;
+          }
+        })
+        .catch(function () {
+          say('No connection. Email anders@skanna.site and I’ll add you by hand.', 'bad');
           btn.disabled = false;
-        }
-      })
-      .catch(function () {
-        say('No connection. Email anders@skanna.site and I’ll add you by hand.', 'bad');
-        btn.disabled = false;
-      });
-  });
+        });
+    });
+
+    function say(msg, cls) {
+      if (!note) return;
+      note.textContent = msg;
+      note.className = 'formnote' + (cls ? ' ' + cls : '');
+    }
+  }
 
   function str(v) { v = (v || '').toString().trim(); return v || null; }
-  function say(msg, cls) { note.textContent = msg; note.className = 'formnote' + (cls ? ' ' + cls : ''); }
 })();
 </script>
 </body>
