@@ -1,11 +1,11 @@
 {
   "version": 1,
   "name": "Skanna Demo",
-  "subtitle": "Digital twin — a two-bedroom apartment",
+  "subtitle": "Sweden",
   "models": [
     {
-      "name": "Unit 2B BIM 2026-08-15",
-      "file": "models/Unit 2B BIM 2026-08-15.ifc"
+      "name": "Skanna Demo BIM 2026-08-17",
+      "file": "models/Skanna Demo BIM 2026-08-17.ifc"
     }
   ],
   "pins": [],
@@ -15,7 +15,64 @@
   },
   "northDeg": 164.99999999999997,
   "bim": {
-    "file": "bim.json"
+    "file": "bim.json",
+    "assets": [
+      {
+        "assetId": "custom:44b30eaf-7df1-4df3-a8c4-5226099f7974",
+        "file": "bim-assets/44b30eaf-7df1-4df3-a8c4-5226099f7974.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:b905bf6a-969f-43fb-8a79-274362fd9752",
+        "file": "bim-assets/b905bf6a-969f-43fb-8a79-274362fd9752.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:bb269702-212d-4694-8608-857e5c1353f1",
+        "file": "bim-assets/bb269702-212d-4694-8608-857e5c1353f1.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:9104c125-32f8-46d2-9606-3d4002c3a18e",
+        "file": "bim-assets/9104c125-32f8-46d2-9606-3d4002c3a18e.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:13a7e17f-9e07-4c56-b050-b922005f3878",
+        "file": "bim-assets/13a7e17f-9e07-4c56-b050-b922005f3878.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:f5989977-4c9e-4baa-bf6c-a250cd803214",
+        "file": "bim-assets/f5989977-4c9e-4baa-bf6c-a250cd803214.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:924bb99f-3817-4996-9cd2-129c02007e9c",
+        "file": "bim-assets/924bb99f-3817-4996-9cd2-129c02007e9c.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:1d8ceccd-0d0e-4a46-8c34-c8ac3339d3cb",
+        "file": "bim-assets/1d8ceccd-0d0e-4a46-8c34-c8ac3339d3cb.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:10b1734a-9906-4a51-a386-f868ff621a86",
+        "file": "bim-assets/10b1734a-9906-4a51-a386-f868ff621a86.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:fb440ac2-db77-4c23-8c3a-1465a6a64139",
+        "file": "bim-assets/fb440ac2-db77-4c23-8c3a-1465a6a64139.ifc",
+        "format": "ifc"
+      },
+      {
+        "assetId": "custom:60ad2b91-d449-444b-93ad-f5bfa2c78335",
+        "file": "bim-assets/60ad2b91-d449-444b-93ad-f5bfa2c78335.ifc",
+        "format": "ifc"
+      }
+    ]
   },
   "skybox": {
     "file": "media/skybox.jpg",
