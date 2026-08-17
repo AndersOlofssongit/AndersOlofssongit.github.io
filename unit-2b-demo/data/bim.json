@@ -18,6 +18,15 @@
               "ty": 0,
               "tz": 0
             }
+          },
+          {
+            "scanId": "fac6dcce-309c-4b2e-8ea4-79f1eeb98ee7",
+            "alignment": {
+              "rotDeg": -89.582,
+              "tx": 5.304201715631164,
+              "ty": 9.725435931899426,
+              "tz": 1.362
+            }
           }
         ],
         "images": [],
@@ -59,7 +68,13 @@
         "thickness": 0.15,
         "height": 2.7,
         "baseOffset": 0,
-        "material": "concrete"
+        "material": "concrete",
+        "skirting": {
+          "height": 0.07,
+          "thickness": 0.015,
+          "color": "#f4f2ee",
+          "side": "both"
+        }
       },
       {
         "id": "w4",
@@ -83,7 +98,13 @@
         "thickness": 0.15,
         "height": 2.7,
         "baseOffset": 0,
-        "material": "concrete"
+        "material": "concrete",
+        "skirting": {
+          "height": 0.07,
+          "thickness": 0.015,
+          "color": "#f4f2ee",
+          "side": "both"
+        }
       },
       {
         "id": "w6",
@@ -95,7 +116,13 @@
         "thickness": 0.1,
         "height": 2.7,
         "baseOffset": 0,
-        "material": "plaster"
+        "material": "plaster",
+        "skirting": {
+          "height": 0.07,
+          "thickness": 0.015,
+          "color": "#f4f2ee",
+          "side": "both"
+        }
       },
       {
         "id": "w7",
@@ -167,7 +194,13 @@
         "thickness": 0.1,
         "height": 2.7,
         "baseOffset": 0,
-        "material": "plaster"
+        "material": "plaster",
+        "skirting": {
+          "height": 0.07,
+          "thickness": 0.015,
+          "color": "#f4f2ee",
+          "side": "both"
+        }
       },
       {
         "id": "w13",
@@ -203,7 +236,13 @@
         "thickness": 0.1,
         "height": 2.7,
         "baseOffset": 0,
-        "material": "plaster"
+        "material": "plaster",
+        "skirting": {
+          "height": 0.07,
+          "thickness": 0.015,
+          "color": "#f4f2ee",
+          "side": "both"
+        }
       },
       {
         "id": "w16",
@@ -332,40 +371,6 @@
           "colorFace1": "#F6F6F6",
           "tileColor": "#ece5d8"
         }
-      },
-      {
-        "id": "s43",
-        "storeyId": "st1",
-        "kind": "ceiling",
-        "outline": [
-          [
-            0.001,
-            3.602
-          ],
-          [
-            4.774,
-            3.602
-          ],
-          [
-            4.774,
-            4.902
-          ],
-          [
-            10.474,
-            4.902
-          ],
-          [
-            10.474,
-            19.602
-          ],
-          [
-            0.001,
-            19.602
-          ]
-        ],
-        "thickness": 0.05,
-        "material": "plaster",
-        "cuts": []
       },
       {
         "id": "2db6fe4b",
@@ -1275,8 +1280,8 @@
         "storeyId": "st1",
         "assetId": "wall_sconce",
         "name": "Wall sconce",
-        "x": 0.2299999999999993,
-        "y": 0.7799999999999996,
+        "x": 0.2399999999999993,
+        "y": 0.3499999999999996,
         "rotDeg": 90,
         "w": 0.16,
         "d": 0.14,
@@ -1359,7 +1364,8 @@
         "w": 3,
         "d": 2,
         "h": 1.4,
-        "elevation": -1.34
+        "elevation": -1.34,
+        "material": "concrete"
       },
       {
         "id": "518c4b1b",
@@ -1510,7 +1516,7 @@
         "assetId": "wall_sconce",
         "name": "Wall sconce",
         "x": 0.22999999999999926,
-        "y": 2.62,
+        "y": 3.35,
         "rotDeg": 90,
         "w": 0.16,
         "d": 0.14,
@@ -1569,6 +1575,97 @@
             "v": "Add any info in the bim author tool"
           }
         ]
+      },
+      {
+        "id": "39c2fbee",
+        "storeyId": "st1",
+        "assetId": "custom:c1db64b7-58d5-48a9-ad8c-afa280707f09",
+        "name": "skanna-art-01-furniture-30x40",
+        "x": 4.74,
+        "y": 10.85,
+        "rotDeg": 90,
+        "w": 0.30000001192092896,
+        "d": 0.02500000037252903,
+        "h": 0.4000000059604645,
+        "elevation": 1.2
+      },
+      {
+        "id": "09feecc8",
+        "storeyId": "st1",
+        "assetId": "custom:f3582f08-7a9a-4620-a492-fb1151aea276",
+        "name": "skanna-art-04-measure-30x40",
+        "x": 4.74,
+        "y": 11.350000000000001,
+        "rotDeg": 90,
+        "w": 0.30000001192092896,
+        "d": 0.02500000037252903,
+        "h": 0.4000000059604645,
+        "elevation": 1.2
+      },
+      {
+        "id": "b512bda4",
+        "storeyId": "st1",
+        "assetId": "custom:f11d1f0e-b78d-481b-adfb-8535ce4255ae",
+        "name": "skanna-art-05-spec-30x40",
+        "x": 4.74,
+        "y": 11.850000000000001,
+        "rotDeg": 90,
+        "w": 0.30000001192092896,
+        "d": 0.02500000037252903,
+        "h": 0.4000000059604645,
+        "elevation": 1.2
+      },
+      {
+        "id": "3f60849c",
+        "storeyId": "st1",
+        "assetId": "custom:d300e80e-80e4-4369-964b-3555cc8bac83",
+        "name": "skanna-art-06-services-40x30",
+        "x": 10.309999999999999,
+        "y": 9.16,
+        "rotDeg": -90,
+        "w": 0.4000000059604645,
+        "d": 0.02500000037252903,
+        "h": 0.30000001192092896,
+        "elevation": 1.6
+      },
+      {
+        "id": "4b5dd333",
+        "storeyId": "st1",
+        "assetId": "custom:b2a3e737-64d1-4f31-9bc4-572951e685df",
+        "name": "skanna-art-03-sun-40x30",
+        "x": 10.31,
+        "y": 9.16,
+        "rotDeg": -90,
+        "w": 0.4000000059604645,
+        "d": 0.02500000037252903,
+        "h": 0.30000001192092896,
+        "elevation": 1.2
+      },
+      {
+        "id": "221fdcd0",
+        "storeyId": "st1",
+        "assetId": "custom:902491e5-4d61-4014-a04a-a47ea5a135e1",
+        "name": "skanna-art-08-just-a-link-30x40",
+        "x": 4.740000000000001,
+        "y": 10.350000000000001,
+        "rotDeg": 90,
+        "w": 0.30000001192092896,
+        "d": 0.02500000037252903,
+        "h": 0.4000000059604645,
+        "elevation": 1.2
+      },
+      {
+        "id": "fcbb6fac",
+        "storeyId": "st1",
+        "assetId": "custom:e42c77e5-b0e0-424e-b9f6-7fe8d9429b80",
+        "name": "skanna-art-09-captured-with-a-phone-30x40",
+        "x": 4.740000000000001,
+        "y": 9.85,
+        "rotDeg": 90,
+        "w": 0.30000001192092896,
+        "d": 0.02500000037252903,
+        "h": 0.4000000059604645,
+        "elevation": 1.2
       }
     ],
     "columns": [
@@ -1847,10 +1944,10 @@
         "kind": "vent",
         "placement": "concealed",
         "ax": -0.19999999999999787,
-        "ay": 2.040000000000001,
+        "ay": 2.0500000000000007,
         "az": 2.6,
         "bx": -0.1999999999999972,
-        "by": 12.890000000000002,
+        "by": 12.900000000000002,
         "bz": 2.6,
         "diameter": 0.2,
         "connectA": "42fbd5c2"
@@ -2005,19 +2102,105 @@
         "placement": "concealed",
         "ax": 10.399,
         "ay": 15.596578924464353,
-        "az": 0.3,
+        "az": 0.8,
         "bx": 10.649999999999999,
         "by": 15.6,
-        "bz": 0.3,
+        "bz": 0.8,
         "diameter": 0.025,
         "connectB": "0340a1d4",
         "hostWallId": "w3"
+      },
+      {
+        "id": "65ec33ca",
+        "storeyId": "st1",
+        "kind": "vent",
+        "placement": "concealed",
+        "ax": -0.25,
+        "ay": 1.78,
+        "az": 0.6,
+        "bx": -0.19999999999999787,
+        "by": 2.040000000000001,
+        "bz": 2.7,
+        "diameter": 0.2,
+        "connectB": "42fbd5c2",
+        "hostWallId": "w1"
+      },
+      {
+        "id": "bb070470",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 10.399,
+        "ay": 15.845202601890314,
+        "az": 0.3,
+        "bx": 10.399,
+        "by": 18.635400943627364,
+        "bz": 2.7,
+        "diameter": 0.014,
+        "hostWallId": "w3"
+      },
+      {
+        "id": "20c409c4",
+        "storeyId": "st1",
+        "kind": "electrical",
+        "placement": "concealed",
+        "ax": 10.399,
+        "ay": 18.6578422171534,
+        "az": 2.7,
+        "bx": 11.299,
+        "by": 18.6578422171534,
+        "bz": 2.9,
+        "diameter": 0.014,
+        "hostWallId": "w3"
       }
     ],
-    "roofs": [],
+    "roofs": [
+      {
+        "id": "de2aadbb",
+        "storeyId": "st1",
+        "roofType": "flat",
+        "footprint": [
+          [
+            14.02,
+            14.39
+          ],
+          [
+            10.48,
+            14.38
+          ],
+          [
+            10.450000000000001,
+            19.67
+          ],
+          [
+            14.02,
+            19.67
+          ]
+        ],
+        "pitchDeg": 30,
+        "overhangEave": 0,
+        "overhangGable": 0,
+        "material": "slate",
+        "thickness": 0.2,
+        "gutters": false,
+        "downpipes": false,
+        "manualFootprint": true
+      }
+    ],
     "skylights": [],
     "chimneys": [],
-    "solarArrays": [],
+    "solarArrays": [
+      {
+        "id": "cf57dc67",
+        "roofId": "de2aadbb",
+        "x": 12.2425,
+        "y": 17.027500000000003,
+        "w": 3,
+        "l": 5,
+        "rotDeg": 0,
+        "portrait": true
+      }
+    ],
     "optionSets": [
       {
         "id": "9873dbeb",
@@ -2288,12 +2471,46 @@
     },
     "skybox": {
       "mediaId": "170ddd7d-b342-41b0-a33d-a74e3cc33c5a",
-      "yawDeg": 225,
+      "yawDeg": 220,
       "pitchDeg": 0,
       "intensity": 1,
       "horizonFadeDeg": 12,
       "lighting": false
     },
-    "optionsOnly": true
+    "optionsOnly": true,
+    "pins": [
+      {
+        "id": "86482c8e",
+        "storeyId": "st1",
+        "x": 8.41,
+        "y": 15.620000000000001,
+        "z": 1.5,
+        "label": "Pin 1",
+        "createdAt": "2026-08-17T13:08:21.883Z",
+        "body": "Add detailed information here",
+        "photoMediaId": "9ffb53ad-2df4-4658-98ed-9527a6cefcbc"
+      },
+      {
+        "id": "703a1065",
+        "storeyId": "st1",
+        "x": 8.35,
+        "y": 8.450000000000001,
+        "z": 1.5,
+        "label": "Pin 2",
+        "createdAt": "2026-08-17T13:10:11.038Z",
+        "body": "Example from Gemeni (free AI from Google)",
+        "panoMediaId": "96c272c4-74e6-4ceb-afe7-df809e33c3c4"
+      }
+    ],
+    "kitchen": {
+      "fronts": {
+        "color": "#F4F2EE"
+      },
+      "worktop": {
+        "material": "laminate",
+        "color": "#0A0A0A"
+      },
+      "appliances": "black"
+    }
   }
 }
