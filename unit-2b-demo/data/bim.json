@@ -2638,8 +2638,8 @@
         "z": 1.5,
         "label": "Pin 2",
         "createdAt": "2026-08-17T13:10:11.038Z",
-        "body": "Example panorama in 3D. You can upload any 360 image to a pin.",
-        "panoMediaId": "96c272c4-74e6-4ceb-afe7-df809e33c3c4"
+        "body": "Upload any 360 image to a pin. \n\nUpdate it as time goes and as redesigns and changes occour.",
+        "panoMediaId": "170ddd7d-b342-41b0-a33d-a74e3cc33c5a"
       }
     ],
     "kitchen": {

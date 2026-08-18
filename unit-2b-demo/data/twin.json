@@ -31,7 +31,7 @@
     {
       "id": "703a1065",
       "label": "Pin 2",
-      "body": "Example panorama in 3D. You can upload any 360 image to a pin.",
+      "body": "Upload any 360 image to a pin. \n\nUpdate it as time goes and as redesigns and changes occour.",
       "position": [
         8.35,
         1.5,
@@ -44,7 +44,7 @@
       ],
       "createdAt": "2026-08-17T13:10:11.038Z",
       "photo": null,
-      "panorama": "media/image-1786973309409.jpg",
+      "panorama": "media/skybox.jpg",
       "replies": []
     }
   ],
