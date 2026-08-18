@@ -110,9 +110,9 @@
         "id": "w6",
         "storeyId": "st1",
         "ax": 4.674,
-        "ay": 3.605,
+        "ay": 3.555,
         "bx": 4.674,
-        "by": 13.77,
+        "by": 13.719999999999999,
         "thickness": 0.1,
         "height": 2.7,
         "baseOffset": 0,
@@ -370,6 +370,10 @@
           "woodTone": "birch",
           "colorFace1": "#F6F6F6",
           "tileColor": "#ece5d8"
+        },
+        "slope": {
+          "dirDeg": 0,
+          "pitchDeg": 1
         }
       },
       {
@@ -1045,9 +1049,9 @@
         "assetId": "sofa",
         "name": "Sofa",
         "x": 7.000000000000001,
-        "y": 7.3,
+        "y": 7.5,
         "rotDeg": 90,
-        "w": 2.6,
+        "w": 2.2,
         "d": 0.9,
         "h": 0.8,
         "elevation": 0
@@ -1084,8 +1088,8 @@
         "storeyId": "st1",
         "assetId": "table",
         "name": "Table",
-        "x": 8.15,
-        "y": 7.1499999999999995,
+        "x": 8.3,
+        "y": 7.35,
         "rotDeg": -90,
         "w": 1,
         "d": 0.6,
@@ -1351,7 +1355,17 @@
         "w": 0.4,
         "d": 0.12,
         "h": 0.5,
-        "elevation": 1.6
+        "elevation": 1.6,
+        "props": [
+          {
+            "k": "Into text",
+            "v": "123"
+          },
+          {
+            "k": "",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "fca33ef9",
@@ -1450,9 +1464,9 @@
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 5.5200000000000005,
-        "y": 5.990000000000001,
-        "rotDeg": 0,
+        "x": 4.94,
+        "y": 5.660000000000001,
+        "rotDeg": 90,
         "w": 0.1,
         "d": 0.1,
         "h": 0.05,
@@ -1463,9 +1477,9 @@
         "storeyId": "st1",
         "assetId": "spotlight",
         "name": "Spotlight",
-        "x": 9.07,
-        "y": 6.040000000000001,
-        "rotDeg": 0,
+        "x": 4.94,
+        "y": 6.590000000000001,
+        "rotDeg": 90,
         "w": 0.1,
         "d": 0.1,
         "h": 0.05,
@@ -1529,7 +1543,7 @@
         "assetId": "screen",
         "name": "TV / flat panel",
         "x": 10.250000000000002,
-        "y": 7.550000000000001,
+        "y": 7.61,
         "rotDeg": -90,
         "w": 1.76,
         "d": 0.05,
@@ -1581,12 +1595,12 @@
         "storeyId": "st1",
         "assetId": "custom:c1db64b7-58d5-48a9-ad8c-afa280707f09",
         "name": "skanna-art-01-furniture-30x40",
-        "x": 4.74,
-        "y": 10.85,
+        "x": 4.75,
+        "y": 10.700000000000001,
         "rotDeg": 90,
-        "w": 0.30000001192092896,
-        "d": 0.02500000037252903,
-        "h": 0.4000000059604645,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.8,
         "elevation": 1.2
       },
       {
@@ -1594,12 +1608,12 @@
         "storeyId": "st1",
         "assetId": "custom:f3582f08-7a9a-4620-a492-fb1151aea276",
         "name": "skanna-art-04-measure-30x40",
-        "x": 4.74,
-        "y": 11.350000000000001,
+        "x": 4.75,
+        "y": 9.900000000000002,
         "rotDeg": 90,
-        "w": 0.30000001192092896,
-        "d": 0.02500000037252903,
-        "h": 0.4000000059604645,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.8,
         "elevation": 1.2
       },
       {
@@ -1607,12 +1621,12 @@
         "storeyId": "st1",
         "assetId": "custom:f11d1f0e-b78d-481b-adfb-8535ce4255ae",
         "name": "skanna-art-05-spec-30x40",
-        "x": 4.74,
-        "y": 11.850000000000001,
+        "x": 4.75,
+        "y": 11.5,
         "rotDeg": 90,
-        "w": 0.30000001192092896,
-        "d": 0.02500000037252903,
-        "h": 0.4000000059604645,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.8,
         "elevation": 1.2
       },
       {
@@ -1620,52 +1634,156 @@
         "storeyId": "st1",
         "assetId": "custom:d300e80e-80e4-4369-964b-3555cc8bac83",
         "name": "skanna-art-06-services-40x30",
-        "x": 10.309999999999999,
-        "y": 9.16,
-        "rotDeg": -90,
-        "w": 0.4000000059604645,
-        "d": 0.02500000037252903,
-        "h": 0.30000001192092896,
-        "elevation": 1.6
+        "x": 4.749999999999998,
+        "y": 5.69,
+        "rotDeg": 90,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.5,
+        "elevation": 1.05
       },
       {
         "id": "4b5dd333",
         "storeyId": "st1",
         "assetId": "custom:b2a3e737-64d1-4f31-9bc4-572951e685df",
         "name": "skanna-art-03-sun-40x30",
-        "x": 10.31,
-        "y": 9.16,
-        "rotDeg": -90,
-        "w": 0.4000000059604645,
-        "d": 0.02500000037252903,
-        "h": 0.30000001192092896,
-        "elevation": 1.2
+        "x": 4.75,
+        "y": 5.690000000000002,
+        "rotDeg": 90,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.5,
+        "elevation": 0.4
       },
       {
         "id": "221fdcd0",
         "storeyId": "st1",
         "assetId": "custom:902491e5-4d61-4014-a04a-a47ea5a135e1",
         "name": "skanna-art-08-just-a-link-30x40",
-        "x": 4.740000000000001,
-        "y": 10.350000000000001,
+        "x": 4.75,
+        "y": 6.6,
         "rotDeg": 90,
-        "w": 0.30000001192092896,
-        "d": 0.02500000037252903,
-        "h": 0.4000000059604645,
-        "elevation": 1.2
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.8,
+        "elevation": 0.4
       },
       {
         "id": "fcbb6fac",
         "storeyId": "st1",
         "assetId": "custom:e42c77e5-b0e0-424e-b9f6-7fe8d9429b80",
         "name": "skanna-art-09-captured-with-a-phone-30x40",
-        "x": 4.740000000000001,
-        "y": 9.85,
+        "x": 4.750000000000001,
+        "y": 9.1,
         "rotDeg": 90,
-        "w": 0.30000001192092896,
-        "d": 0.02500000037252903,
-        "h": 0.4000000059604645,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.8,
         "elevation": 1.2
+      },
+      {
+        "id": "53e2c8d8",
+        "storeyId": "st1",
+        "assetId": "custom:61bd0c35-9d22-453d-824b-d9847525a441",
+        "name": "skanna-art-02-lighting-30x40",
+        "x": 4.749999999999999,
+        "y": 6.600000000000001,
+        "rotDeg": 90,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.8,
+        "elevation": 1.4
+      },
+      {
+        "id": "dd3dbbbc",
+        "storeyId": "st1",
+        "assetId": "custom:9ae1fd19-d2e1-4ff4-9288-f0ab3e403ade",
+        "name": "skanna-art-10-drawings-40x30",
+        "x": 4.75,
+        "y": 5.690000000000001,
+        "rotDeg": 90,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.5,
+        "elevation": 1.7
+      },
+      {
+        "id": "e9233b34",
+        "storeyId": "st1",
+        "assetId": "custom:8ffc55f6-1d8a-4856-bfe9-7d81b1729704",
+        "name": "skanna-art-07-nothing-guessed-30x40",
+        "x": 4.750000000000001,
+        "y": 12.3,
+        "rotDeg": 90,
+        "w": 0.6,
+        "d": 0.05,
+        "h": 0.8,
+        "elevation": 1.2
+      },
+      {
+        "id": "1347d76c",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 4.949999999999999,
+        "y": 9.100000000000001,
+        "rotDeg": 90,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "f65c8375",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 4.949999999999999,
+        "y": 9.890000000000002,
+        "rotDeg": 90,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "4248068a",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 4.949999999999999,
+        "y": 10.700000000000001,
+        "rotDeg": 90,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "25cf66e0",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 4.949999999999999,
+        "y": 11.490000000000002,
+        "rotDeg": 90,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "6afca12c",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 4.949999999999999,
+        "y": 12.29,
+        "rotDeg": 90,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
       }
     ],
     "columns": [
@@ -1821,6 +1939,19 @@
         "z1": 2.7,
         "thickness": 0.008,
         "material": "tile"
+      },
+      {
+        "id": "edb3701d",
+        "kind": "band",
+        "wallId": "w3",
+        "face": 1,
+        "s0": 1.32,
+        "s1": 4.06,
+        "z0": 0,
+        "z1": 2.7,
+        "thickness": 0.008,
+        "material": "stone",
+        "finish": {}
       }
     ],
     "mepRuns": [
@@ -2462,6 +2593,15 @@
         "w": 0.6,
         "d": 0.6,
         "h": 2
+      },
+      {
+        "id": "25c830d0",
+        "assetId": "spotlight",
+        "label": "Spotlight",
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
       }
     ],
     "north": {
@@ -2498,7 +2638,7 @@
         "z": 1.5,
         "label": "Pin 2",
         "createdAt": "2026-08-17T13:10:11.038Z",
-        "body": "Example from Gemeni (free AI from Google)",
+        "body": "Example panorama in 3D. You can upload any 360 image to a pin.",
         "panoMediaId": "96c272c4-74e6-4ceb-afe7-df809e33c3c4"
       }
     ],

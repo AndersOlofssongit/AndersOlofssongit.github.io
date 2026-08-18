@@ -4,8 +4,8 @@
   "subtitle": "Sweden",
   "models": [
     {
-      "name": "Skanna Demo BIM 2026-08-17",
-      "file": "models/Skanna Demo BIM 2026-08-17.ifc"
+      "name": "Skanna Demo BIM 2026-08-18",
+      "file": "models/Skanna Demo BIM 2026-08-18.ifc"
     }
   ],
   "pins": [
@@ -31,7 +31,7 @@
     {
       "id": "703a1065",
       "label": "Pin 2",
-      "body": "Example from Gemeni (free AI from Google)",
+      "body": "Example panorama in 3D. You can upload any 360 image to a pin.",
       "position": [
         8.35,
         1.5,
@@ -129,6 +129,21 @@
       {
         "assetId": "custom:e42c77e5-b0e0-424e-b9f6-7fe8d9429b80",
         "file": "bim-assets/e42c77e5-b0e0-424e-b9f6-7fe8d9429b80.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:61bd0c35-9d22-453d-824b-d9847525a441",
+        "file": "bim-assets/61bd0c35-9d22-453d-824b-d9847525a441.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:9ae1fd19-d2e1-4ff4-9288-f0ab3e403ade",
+        "file": "bim-assets/9ae1fd19-d2e1-4ff4-9288-f0ab3e403ade.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:8ffc55f6-1d8a-4856-bfe9-7d81b1729704",
+        "file": "bim-assets/8ffc55f6-1d8a-4856-bfe9-7d81b1729704.glb",
         "format": "glb"
       },
       {
