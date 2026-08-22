@@ -1,0 +1,911 @@
+{
+  "version": 1,
+  "model": {
+    "version": 1,
+    "projectName": "Baan C&L",
+    "storeys": [
+      {
+        "id": "1f665b0f",
+        "name": "Ground floor",
+        "elevation": 0,
+        "height": 4.7,
+        "scans": [
+          {
+            "scanId": "50b0b093-25c1-4091-8907-0d222eb8bd65",
+            "alignment": {
+              "rotDeg": 0,
+              "tx": -31.274682991045335,
+              "ty": -42.267594241611675,
+              "tz": 0
+            }
+          }
+        ],
+        "images": [
+          {
+            "id": "9a9b8f26",
+            "name": "Screenshot 2026-08-18 at 18.09.04.png",
+            "mediaId": "e2457493-314b-460f-9245-e9c103b1b13e",
+            "x": 13.120000000000001,
+            "y": 9.539999999999997,
+            "w": 57.88518855662454,
+            "h": 42.26710938002584,
+            "rotDeg": 0,
+            "opacity": 0.4,
+            "locked": false,
+            "visible": true
+          },
+          {
+            "id": "817cf487",
+            "name": "Screenshot 2026-08-18 at 18.09.35.png",
+            "mediaId": "4dc8fa90-f873-414e-8444-bf2b3c336709",
+            "x": 16.55,
+            "y": 11.450000000000001,
+            "w": 41.165081553550046,
+            "h": 28.69164881525028,
+            "rotDeg": 0,
+            "opacity": 0,
+            "locked": true,
+            "visible": true
+          }
+        ],
+        "vectorRefs": []
+      }
+    ],
+    "walls": [
+      {
+        "id": "5195886c",
+        "storeyId": "1f665b0f",
+        "ax": -7.7,
+        "ay": -8.95,
+        "bx": 33.27,
+        "by": -7.5,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "2b1d7398",
+        "storeyId": "1f665b0f",
+        "ax": 33.27,
+        "ay": -7.5,
+        "bx": 38.45006799556341,
+        "by": 25.46043265130693,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "7ef22d07",
+        "storeyId": "1f665b0f",
+        "ax": 38.45006799556341,
+        "ay": 25.46043265130693,
+        "bx": -6.9999320044365945,
+        "by": 25.460432651306924,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "3e5a35c0",
+        "storeyId": "1f665b0f",
+        "ax": -6.9999320044365945,
+        "ay": 25.460432651306924,
+        "bx": -7.7,
+        "by": -8.95,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "d72ac57e",
+        "storeyId": "1f665b0f",
+        "ax": 6.24,
+        "ay": 4.8,
+        "bx": 23.39,
+        "by": 4.8100000000000005,
+        "thickness": 0.25,
+        "height": 4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "9f5407ef",
+        "storeyId": "1f665b0f",
+        "ax": 6.24,
+        "ay": 4.8,
+        "bx": 6.24,
+        "by": 19.93,
+        "thickness": 0.25,
+        "height": 4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "8c96ed2a",
+        "storeyId": "1f665b0f",
+        "ax": 16.32,
+        "ay": 19.93,
+        "bx": 6.24,
+        "by": 19.93,
+        "thickness": 0.25,
+        "height": 4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "e75d607f",
+        "storeyId": "1f665b0f",
+        "ax": 16.32,
+        "ay": 19.93,
+        "bx": 16.31,
+        "by": 22.46,
+        "thickness": 0.25,
+        "height": 4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "438cc495",
+        "storeyId": "1f665b0f",
+        "ax": 25.89,
+        "ay": 22.48,
+        "bx": 16.31,
+        "by": 22.46,
+        "thickness": 0.25,
+        "height": 4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "d834316c",
+        "storeyId": "1f665b0f",
+        "ax": 25.89,
+        "ay": 22.48,
+        "bx": 25.86,
+        "by": 14.85,
+        "thickness": 0.25,
+        "height": 4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "ebd6e070",
+        "storeyId": "1f665b0f",
+        "ax": 25.86,
+        "ay": 14.85,
+        "bx": 23.38,
+        "by": 14.870000000000001,
+        "thickness": 0.25,
+        "height": 4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "3c1fa478",
+        "storeyId": "1f665b0f",
+        "ax": 23.39,
+        "ay": 4.8100000000000005,
+        "bx": 23.38,
+        "by": 14.870000000000001,
+        "thickness": 0.25,
+        "height": 4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "76fa704b",
+        "storeyId": "1f665b0f",
+        "ax": 27.92,
+        "ay": 18.87,
+        "bx": 27.925,
+        "by": 21.98,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.1
+      },
+      {
+        "id": "bb3c197f",
+        "storeyId": "1f665b0f",
+        "ax": 31.965,
+        "ay": 18.86,
+        "bx": 31.965,
+        "by": 21.98,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.1
+      },
+      {
+        "id": "f54d543f",
+        "storeyId": "1f665b0f",
+        "ax": 31.965,
+        "ay": 18.86,
+        "bx": 27.91,
+        "by": 18.88,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.1
+      },
+      {
+        "id": "f79cb212",
+        "storeyId": "1f665b0f",
+        "ax": 30.700000000000003,
+        "ay": 18.900000000000002,
+        "bx": 30.700000000000003,
+        "by": 22,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.1
+      },
+      {
+        "id": "b4e16f3f",
+        "storeyId": "1f665b0f",
+        "ax": 31.9627805448747,
+        "ay": 21.960005473345568,
+        "bx": 27.9077805448747,
+        "by": 21.980005473345567,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.1
+      },
+      {
+        "id": "138743e2",
+        "storeyId": "1f665b0f",
+        "ax": 11.33,
+        "ay": 19.06,
+        "bx": 11.33,
+        "by": 19.81,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "7793e539",
+        "storeyId": "1f665b0f",
+        "ax": 11.34,
+        "ay": 14.97,
+        "bx": 11.33,
+        "by": 17.179999999999996,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "fe06aa52",
+        "storeyId": "1f665b0f",
+        "ax": 21.45,
+        "ay": 14.88,
+        "bx": 6.4,
+        "by": 14.850000000000001,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "a48dac7e",
+        "storeyId": "1f665b0f",
+        "ax": 21.45,
+        "ay": 14.88,
+        "bx": 21.430004606714544,
+        "by": 19.927963821749834,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "bef4c680",
+        "storeyId": "1f665b0f",
+        "ax": 16.32,
+        "ay": 19.93,
+        "bx": 21.430004606714544,
+        "by": 19.927963821749834,
+        "thickness": 0.25,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "e7250734",
+        "storeyId": "1f665b0f",
+        "ax": 11.4,
+        "ay": 16.42,
+        "bx": 14.44,
+        "by": 16.44,
+        "thickness": 0.1,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "4aa55c4b",
+        "storeyId": "1f665b0f",
+        "ax": 14.44,
+        "ay": 14.94,
+        "bx": 14.44,
+        "by": 16.44,
+        "thickness": 0.1,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "d42ae3dd",
+        "storeyId": "1f665b0f",
+        "ax": 7.68,
+        "ay": 15.99,
+        "bx": 7.680004606714543,
+        "by": 18.727963821749835,
+        "thickness": 0.15,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "4d6f4ba0",
+        "storeyId": "1f665b0f",
+        "ax": 6.357368478001505,
+        "ay": 17.0399913437713,
+        "bx": 7.6000000000000005,
+        "by": 17.05,
+        "thickness": 0.1,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "ed3b5099",
+        "storeyId": "1f665b0f",
+        "ax": 21.430004606714544,
+        "ay": 19.927963821749834,
+        "bx": 25.757368478001503,
+        "by": 19.929991343771306,
+        "thickness": 0.1,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "4ebffaf9",
+        "storeyId": "1f665b0f",
+        "ax": 23.35,
+        "ay": 22.35,
+        "bx": 23.330000000000002,
+        "by": 16.27,
+        "thickness": 0.1,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "80976486",
+        "storeyId": "1f665b0f",
+        "ax": 16.93,
+        "ay": 18.619999999999997,
+        "bx": 16.93,
+        "by": 16.119999999999997,
+        "thickness": 0.1,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "2e57abfd",
+        "storeyId": "1f665b0f",
+        "ax": 24.580000000000002,
+        "ay": 18.56,
+        "bx": 24.57,
+        "by": 16.47,
+        "thickness": 0.1,
+        "height": 3.4,
+        "baseOffset": 0.7
+      },
+      {
+        "id": "95846167",
+        "storeyId": "1f665b0f",
+        "ax": 24.62,
+        "ay": 16.52,
+        "bx": 25.742,
+        "by": 16.52,
+        "thickness": 0.1,
+        "height": 3.4,
+        "baseOffset": 0.7
+      }
+    ],
+    "wallJoins": [
+      {
+        "id": "24ec8b1c",
+        "type": "mitre",
+        "throughWallId": "2b1d7398",
+        "endingWallId": "5195886c",
+        "endingEnd": "b"
+      },
+      {
+        "id": "802ee358",
+        "type": "mitre",
+        "throughWallId": "7ef22d07",
+        "endingWallId": "2b1d7398",
+        "endingEnd": "b"
+      },
+      {
+        "id": "ea4f450c",
+        "type": "mitre",
+        "throughWallId": "3e5a35c0",
+        "endingWallId": "7ef22d07",
+        "endingEnd": "b"
+      },
+      {
+        "id": "24fb7903",
+        "type": "mitre",
+        "throughWallId": "5195886c",
+        "endingWallId": "3e5a35c0",
+        "endingEnd": "b"
+      },
+      {
+        "id": "b970fab8",
+        "type": "mitre",
+        "throughWallId": "d834316c",
+        "endingWallId": "438cc495",
+        "endingEnd": "a"
+      },
+      {
+        "id": "f44bfa8c",
+        "type": "mitre",
+        "throughWallId": "d834316c",
+        "endingWallId": "ebd6e070",
+        "endingEnd": "a"
+      },
+      {
+        "id": "986e1d24",
+        "type": "mitre",
+        "throughWallId": "3c1fa478",
+        "endingWallId": "ebd6e070",
+        "endingEnd": "b"
+      },
+      {
+        "id": "d008757f",
+        "type": "mitre",
+        "throughWallId": "3c1fa478",
+        "endingWallId": "d72ac57e",
+        "endingEnd": "b"
+      },
+      {
+        "id": "3c4f00bb",
+        "type": "mitre",
+        "throughWallId": "9f5407ef",
+        "endingWallId": "d72ac57e",
+        "endingEnd": "a"
+      },
+      {
+        "id": "407c3ce3",
+        "type": "mitre",
+        "throughWallId": "9f5407ef",
+        "endingWallId": "8c96ed2a",
+        "endingEnd": "b"
+      },
+      {
+        "id": "a9c7453e",
+        "type": "mitre",
+        "throughWallId": "e75d607f",
+        "endingWallId": "8c96ed2a",
+        "endingEnd": "a"
+      },
+      {
+        "id": "90c03374",
+        "type": "mitre",
+        "throughWallId": "e75d607f",
+        "endingWallId": "438cc495",
+        "endingEnd": "b"
+      },
+      {
+        "id": "97e9e8dc",
+        "type": "butt",
+        "throughWallId": "b4e16f3f",
+        "endingWallId": "f79cb212",
+        "endingEnd": "b"
+      },
+      {
+        "id": "c6a7875b",
+        "type": "butt",
+        "throughWallId": "f54d543f",
+        "endingWallId": "f79cb212",
+        "endingEnd": "a"
+      },
+      {
+        "id": "64e6c70c",
+        "type": "mitre",
+        "throughWallId": "bb3c197f",
+        "endingWallId": "f54d543f",
+        "endingEnd": "a"
+      },
+      {
+        "id": "0557fe0e",
+        "type": "mitre",
+        "throughWallId": "76fa704b",
+        "endingWallId": "f54d543f",
+        "endingEnd": "b"
+      },
+      {
+        "id": "f0d93ab6",
+        "type": "mitre",
+        "throughWallId": "b4e16f3f",
+        "endingWallId": "76fa704b",
+        "endingEnd": "b"
+      },
+      {
+        "id": "e1ca2a03",
+        "type": "mitre",
+        "throughWallId": "b4e16f3f",
+        "endingWallId": "bb3c197f",
+        "endingEnd": "b"
+      }
+    ],
+    "slabs": [
+      {
+        "id": "4a0d683b",
+        "storeyId": "1f665b0f",
+        "kind": "ground",
+        "outline": [
+          [
+            -7.7,
+            -8.95
+          ],
+          [
+            -6.9999320044365945,
+            25.460432651306924
+          ],
+          [
+            38.45006799556341,
+            25.46043265130693
+          ],
+          [
+            33.27,
+            -7.5
+          ]
+        ],
+        "thickness": 0.1,
+        "cuts": [
+          {
+            "outline": [
+              [
+                -6.4,
+                -7.75
+              ],
+              [
+                11.6,
+                -7.75
+              ],
+              [
+                11.6,
+                -1.75
+              ],
+              [
+                -6.4,
+                -1.75
+              ]
+            ],
+            "tag": "pool:af86fbf0"
+          }
+        ]
+      },
+      {
+        "id": "113ffc56",
+        "storeyId": "1f665b0f",
+        "kind": "floor",
+        "outline": [
+          [
+            6.12,
+            4.75
+          ],
+          [
+            6.11,
+            19.990000000000002
+          ],
+          [
+            16.11,
+            19.990000000000002
+          ],
+          [
+            16.11,
+            22.46
+          ],
+          [
+            25.85,
+            22.48
+          ],
+          [
+            25.86,
+            14.75
+          ],
+          [
+            23.35,
+            14.75
+          ],
+          [
+            23.35,
+            4.75
+          ]
+        ],
+        "thickness": 0.7,
+        "baseOffset": 0.7,
+        "cuts": []
+      },
+      {
+        "id": "16e7165e",
+        "storeyId": "1f665b0f",
+        "kind": "floor",
+        "outline": [
+          [
+            25.86,
+            14.75
+          ],
+          [
+            25.86,
+            2.92
+          ],
+          [
+            1.4000000000000001,
+            2.95
+          ],
+          [
+            1.4000000000000001,
+            9.67
+          ],
+          [
+            6.12,
+            9.67
+          ],
+          [
+            6.12,
+            4.75
+          ],
+          [
+            23.35,
+            4.75
+          ],
+          [
+            23.35,
+            14.75
+          ]
+        ],
+        "thickness": 0.3,
+        "baseOffset": 0.3,
+        "cuts": []
+      },
+      {
+        "id": "b4ea0d17",
+        "storeyId": "1f665b0f",
+        "kind": "floor",
+        "outline": [
+          [
+            25.85,
+            21.97
+          ],
+          [
+            31.84,
+            21.98
+          ],
+          [
+            31.88,
+            18.73
+          ],
+          [
+            25.86,
+            18.73
+          ]
+        ],
+        "thickness": 0.2,
+        "baseOffset": 0.1,
+        "cuts": []
+      }
+    ],
+    "openings": [],
+    "stairs": [
+      {
+        "id": "36171f6a",
+        "storeyId": "1f665b0f",
+        "x": 14.9,
+        "y": -0.05,
+        "rotDeg": 90,
+        "run": 3,
+        "rise": 0.6,
+        "width": 4,
+        "steps": 4
+      }
+    ],
+    "railings": [],
+    "ramps": [],
+    "items": [
+      {
+        "id": "af86fbf0",
+        "storeyId": "1f665b0f",
+        "assetId": "pool",
+        "name": "Swimming pool",
+        "x": 2.599999999999999,
+        "y": -4.75,
+        "rotDeg": 0,
+        "w": 18,
+        "d": 6,
+        "h": 1.4,
+        "elevation": -0.8
+      }
+    ],
+    "columns": [
+      {
+        "id": "bdc4e10d",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 6.28,
+        "y": 3.72,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 4,
+        "baseOffset": 0.3
+      },
+      {
+        "id": "6687b7b1",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 11.91,
+        "y": 3.72,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 4,
+        "baseOffset": 0.3
+      },
+      {
+        "id": "416bb3e2",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 17.56,
+        "y": 3.71,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 4,
+        "baseOffset": 0.3
+      },
+      {
+        "id": "fecb8dbd",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 23.18,
+        "y": 3.72,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 4,
+        "baseOffset": 0.3
+      },
+      {
+        "id": "66d1751d",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 25.69,
+        "y": 4.86,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 4,
+        "baseOffset": 0.3
+      },
+      {
+        "id": "87dbf191",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 25.69,
+        "y": 8.49,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 4,
+        "baseOffset": 0.3
+      },
+      {
+        "id": "4237fff9",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 25.68,
+        "y": 12.09,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 4,
+        "baseOffset": 0.3
+      },
+      {
+        "id": "ef67933e",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 27.78,
+        "y": 12.11,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "74dd1eaa",
+        "storeyId": "1f665b0f",
+        "shape": "rect",
+        "x": 31.67,
+        "y": 12.11,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      }
+    ],
+    "beams": [],
+    "finishes": [
+      {
+        "id": "9d3e3a0d",
+        "kind": "region",
+        "storeyId": "1f665b0f",
+        "outline": [
+          [
+            35.34,
+            5.74
+          ],
+          [
+            32.85,
+            5.75
+          ],
+          [
+            31.8,
+            4.55
+          ],
+          [
+            31.85,
+            2.5500000000000003
+          ],
+          [
+            26.62,
+            2.5500000000000003
+          ],
+          [
+            26.650000000000002,
+            14.780000000000001
+          ],
+          [
+            25.86,
+            14.780000000000001
+          ],
+          [
+            25.86,
+            18.73
+          ],
+          [
+            31.88,
+            18.73
+          ],
+          [
+            31.830000000000002,
+            10.96
+          ],
+          [
+            32.89,
+            9.76
+          ],
+          [
+            35.99,
+            9.76
+          ]
+        ],
+        "thickness": 0.012,
+        "material": "concrete",
+        "bulges": [
+          0,
+          -0.271,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -0.331,
+          0,
+          0
+        ],
+        "finish": {
+          "colorFace1": "#A5A5A5"
+        }
+      }
+    ],
+    "mepRuns": [],
+    "roofs": [],
+    "skylights": [],
+    "chimneys": [],
+    "solarArrays": [],
+    "pins": [],
+    "optionSets": [],
+    "furniture": []
+  }
+}

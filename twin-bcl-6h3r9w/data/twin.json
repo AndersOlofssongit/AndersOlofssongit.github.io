@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "Baan C&L",
+  "subtitle": "CM",
+  "models": [
+    {
+      "name": "Baan C&L BIM 2026-08-22",
+      "file": "models/Baan CL BIM 2026-08-22.ifc"
+    }
+  ],
+  "pins": [],
+  "gps": {
+    "lat": 18.7,
+    "lng": 98.9
+  },
+  "bim": {
+    "file": "bim.json"
+  }
+}
