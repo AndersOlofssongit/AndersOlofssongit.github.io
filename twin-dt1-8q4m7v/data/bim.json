@@ -1,0 +1,7571 @@
+{
+  "version": 1,
+  "model": {
+    "version": 1,
+    "projectName": "Plot 1148, Msaytbeh — Beirut",
+    "storeys": [
+      {
+        "id": "st-0dd9b07159",
+        "name": "Fourth basement",
+        "elevation": 65.9,
+        "height": 2.86,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-0f62878140",
+        "name": "Third basement",
+        "elevation": 68.76,
+        "height": 2.86,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-84f6b2b557",
+        "name": "Second basement",
+        "elevation": 71.62,
+        "height": 2.86,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-838a9ea5c3",
+        "name": "First basement",
+        "elevation": 74.48,
+        "height": 2.77,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-9079f4f6cd",
+        "name": "Ground floor",
+        "elevation": 77.25,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-8c44d51831",
+        "name": "Mezzanine",
+        "elevation": 80.3,
+        "height": 2.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-ba5d0571a9",
+        "name": "First floor",
+        "elevation": 82.35,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-59bb941775",
+        "name": "Second floor",
+        "elevation": 85.4,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-13be25e49b",
+        "name": "Third floor",
+        "elevation": 88.45,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-e5db0d5b45",
+        "name": "Fourth floor",
+        "elevation": 91.5,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-16479db1a5",
+        "name": "Fifth floor",
+        "elevation": 94.55,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-285f0275e8",
+        "name": "Sixth floor",
+        "elevation": 97.6,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-9a5a8ba1dc",
+        "name": "Seventh floor",
+        "elevation": 100.65,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-a35b561c6b",
+        "name": "Eighth floor",
+        "elevation": 103.7,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-86ddac4904",
+        "name": "Ninth floor",
+        "elevation": 106.75,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-2b2c309299",
+        "name": "Tenth floor",
+        "elevation": 109.8,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-bfdb0040a6",
+        "name": "Eleventh floor",
+        "elevation": 112.85,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-993278b8ac",
+        "name": "Twelfth floor",
+        "elevation": 115.9,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-44f35a5624",
+        "name": "Thirteenth floor",
+        "elevation": 118.95,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-5675d30129",
+        "name": "Fourteenth floor",
+        "elevation": 122,
+        "height": 3.05,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-248781625c",
+        "name": "Roof floor",
+        "elevation": 125.05,
+        "height": 3.6,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      },
+      {
+        "id": "st-ad4eef4be1",
+        "name": "Top roof",
+        "elevation": 128.65,
+        "height": 3.6,
+        "scans": [],
+        "images": [],
+        "vectorRefs": []
+      }
+    ],
+    "walls": [
+      {
+        "id": "w-c550c90b06",
+        "storeyId": "st-0dd9b07159",
+        "ax": -0.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-9a1a8d6a0a",
+        "storeyId": "st-0dd9b07159",
+        "ax": 31.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-d73cad41fb",
+        "storeyId": "st-0dd9b07159",
+        "ax": 31.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-4cc848c04c",
+        "storeyId": "st-0dd9b07159",
+        "ax": -0.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-effcecf8f7",
+        "storeyId": "st-0f62878140",
+        "ax": -0.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-f2850a9537",
+        "storeyId": "st-0f62878140",
+        "ax": 31.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-588586dddd",
+        "storeyId": "st-0f62878140",
+        "ax": 31.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-2f8f5acb14",
+        "storeyId": "st-0f62878140",
+        "ax": -0.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-f1d786a3a3",
+        "storeyId": "st-84f6b2b557",
+        "ax": -0.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-721237065d",
+        "storeyId": "st-84f6b2b557",
+        "ax": 31.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-bdb06f79f4",
+        "storeyId": "st-84f6b2b557",
+        "ax": 31.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-583210e379",
+        "storeyId": "st-84f6b2b557",
+        "ax": -0.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.61,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-ff5d1edd20",
+        "storeyId": "st-838a9ea5c3",
+        "ax": -0.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.52,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-d1d7fa4eff",
+        "storeyId": "st-838a9ea5c3",
+        "ax": 31.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.52,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0171e25c38",
+        "storeyId": "st-838a9ea5c3",
+        "ax": 31.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.52,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-50fa01f09f",
+        "storeyId": "st-838a9ea5c3",
+        "ax": -0.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.52,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-60a9a2d440",
+        "storeyId": "st-9079f4f6cd",
+        "ax": -0.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-9a34ff152f",
+        "storeyId": "st-9079f4f6cd",
+        "ax": 31.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0d341ccfe3",
+        "storeyId": "st-9079f4f6cd",
+        "ax": 31.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-8cfc4d574e",
+        "storeyId": "st-9079f4f6cd",
+        "ax": -0.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-ccf7857c6a",
+        "storeyId": "st-8c44d51831",
+        "ax": -0.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 1.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-25a707a1f0",
+        "storeyId": "st-8c44d51831",
+        "ax": 31.6,
+        "ay": 0.2,
+        "bx": 31.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 1.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-f90de2b6d7",
+        "storeyId": "st-8c44d51831",
+        "ax": 31.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 26.6,
+        "thickness": 0.25,
+        "height": 1.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-7ebd08b902",
+        "storeyId": "st-8c44d51831",
+        "ax": -0.6,
+        "ay": 26.6,
+        "bx": -0.6,
+        "by": 0.2,
+        "thickness": 0.25,
+        "height": 1.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-aeffe109a8",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-6ebd7d4b7b",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-308dca2f08",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-f561b7b423",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-69c2cd1797",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-892d8b1863",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-88be7f0757",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-683172e0a6",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-854a392875",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-747718f5f7",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-ab66807ab0",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-88c9eba833",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-9dd84c3a8a",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-5fc1d6787d",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-8833343c88",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-e79a4bf7e8",
+        "storeyId": "st-ba5d0571a9",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-d7e28f7350",
+        "storeyId": "st-59bb941775",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b915db5996",
+        "storeyId": "st-59bb941775",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-32c7032096",
+        "storeyId": "st-59bb941775",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0eadd07ca1",
+        "storeyId": "st-59bb941775",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-e715175d70",
+        "storeyId": "st-59bb941775",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-78d3ce77ba",
+        "storeyId": "st-59bb941775",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-51f3506dcd",
+        "storeyId": "st-59bb941775",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-c64678c3bd",
+        "storeyId": "st-59bb941775",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-ce21c115d1",
+        "storeyId": "st-59bb941775",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-2f41745090",
+        "storeyId": "st-59bb941775",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b1fd64e4f0",
+        "storeyId": "st-59bb941775",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-0c23eba776",
+        "storeyId": "st-59bb941775",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-3240fa5bb8",
+        "storeyId": "st-59bb941775",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-ee68167cf3",
+        "storeyId": "st-59bb941775",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-bd7d2f5a1c",
+        "storeyId": "st-59bb941775",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-abad179763",
+        "storeyId": "st-59bb941775",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b7c35f92fe",
+        "storeyId": "st-13be25e49b",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-7d975ff4d5",
+        "storeyId": "st-13be25e49b",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-cb83ff0ff7",
+        "storeyId": "st-13be25e49b",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-e39318cd8b",
+        "storeyId": "st-13be25e49b",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-32390d8004",
+        "storeyId": "st-13be25e49b",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-5d768bae5c",
+        "storeyId": "st-13be25e49b",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-951293f2be",
+        "storeyId": "st-13be25e49b",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-8dd4e9920b",
+        "storeyId": "st-13be25e49b",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-db7f415260",
+        "storeyId": "st-13be25e49b",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-3c35d31126",
+        "storeyId": "st-13be25e49b",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-67d6e605a0",
+        "storeyId": "st-13be25e49b",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-1a00290fc2",
+        "storeyId": "st-13be25e49b",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-fcf71a6592",
+        "storeyId": "st-13be25e49b",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-1498acae66",
+        "storeyId": "st-13be25e49b",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-e9d340c4e0",
+        "storeyId": "st-13be25e49b",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-0923ff1b0e",
+        "storeyId": "st-13be25e49b",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-582556e2fc",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-985df21bed",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-f82ce0f584",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0c5da2070c",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-fe85050678",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-275f7c712e",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-14338cfb96",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-31be71e447",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-b4401b0a63",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-13766da0fb",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-cc825b5123",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-8962222c13",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-0a160bc571",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b6a88ded80",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-e057a3ee40",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-1f5d0bcc48",
+        "storeyId": "st-e5db0d5b45",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-be3cda71ea",
+        "storeyId": "st-16479db1a5",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-d27fe7215a",
+        "storeyId": "st-16479db1a5",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-d722dddfff",
+        "storeyId": "st-16479db1a5",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-ca9c0eba7b",
+        "storeyId": "st-16479db1a5",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-7c13a8bbdf",
+        "storeyId": "st-16479db1a5",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-3495e1a745",
+        "storeyId": "st-16479db1a5",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-7860cec05c",
+        "storeyId": "st-16479db1a5",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-56aba367b8",
+        "storeyId": "st-16479db1a5",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-3b63b03056",
+        "storeyId": "st-16479db1a5",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-2b03d46b5e",
+        "storeyId": "st-16479db1a5",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-1caa8fd3f7",
+        "storeyId": "st-16479db1a5",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b84db09f7e",
+        "storeyId": "st-16479db1a5",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-ad0aeb15f9",
+        "storeyId": "st-16479db1a5",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b0f6b4f603",
+        "storeyId": "st-16479db1a5",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-70400a1054",
+        "storeyId": "st-16479db1a5",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-dea464a98e",
+        "storeyId": "st-16479db1a5",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-1786a74080",
+        "storeyId": "st-285f0275e8",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-596c6fbafc",
+        "storeyId": "st-285f0275e8",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-23e893ad2c",
+        "storeyId": "st-285f0275e8",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-95a7911585",
+        "storeyId": "st-285f0275e8",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-869afb292d",
+        "storeyId": "st-285f0275e8",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-8af11094d9",
+        "storeyId": "st-285f0275e8",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-a1984e2945",
+        "storeyId": "st-285f0275e8",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-4bfcf380bb",
+        "storeyId": "st-285f0275e8",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-07ad5c2669",
+        "storeyId": "st-285f0275e8",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-03ad9dd05c",
+        "storeyId": "st-285f0275e8",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-9515f3bae0",
+        "storeyId": "st-285f0275e8",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-bc2bfdec96",
+        "storeyId": "st-285f0275e8",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-d963c1e4d4",
+        "storeyId": "st-285f0275e8",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-6b6bf9e07b",
+        "storeyId": "st-285f0275e8",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-9423301258",
+        "storeyId": "st-285f0275e8",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-7941f1054a",
+        "storeyId": "st-285f0275e8",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-8cb12172cb",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-60729a3daa",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-7bc31b58bf",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-e76b2de761",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-68afe3a82e",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-60eb150e96",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-43c803c584",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-a20c095c6a",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0875e9fd59",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-0e3175fdae",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-6f7b18d2df",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-5d0f17ad39",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-74bcbcece5",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-97bf540616",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b79dd05655",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-2a9fbc88c1",
+        "storeyId": "st-9a5a8ba1dc",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-c384916bb7",
+        "storeyId": "st-a35b561c6b",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b205239638",
+        "storeyId": "st-a35b561c6b",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0b04d66a18",
+        "storeyId": "st-a35b561c6b",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-8d1aa7d635",
+        "storeyId": "st-a35b561c6b",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-052b72123a",
+        "storeyId": "st-a35b561c6b",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-77438adf73",
+        "storeyId": "st-a35b561c6b",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-4873bac80d",
+        "storeyId": "st-a35b561c6b",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-73f35132ff",
+        "storeyId": "st-a35b561c6b",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-8a99e4a0a8",
+        "storeyId": "st-a35b561c6b",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-dee044d6dc",
+        "storeyId": "st-a35b561c6b",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b01b8d0e4d",
+        "storeyId": "st-a35b561c6b",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-b31de2d3cf",
+        "storeyId": "st-a35b561c6b",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-4781e3c4a4",
+        "storeyId": "st-a35b561c6b",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-dce59236c9",
+        "storeyId": "st-a35b561c6b",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-9a606d7750",
+        "storeyId": "st-a35b561c6b",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-8200955ee9",
+        "storeyId": "st-a35b561c6b",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-398e36ed12",
+        "storeyId": "st-86ddac4904",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-7baaaa95ac",
+        "storeyId": "st-86ddac4904",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-7061be6231",
+        "storeyId": "st-86ddac4904",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-a10fd2ed50",
+        "storeyId": "st-86ddac4904",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-cfc565f8aa",
+        "storeyId": "st-86ddac4904",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-54e3e55a1f",
+        "storeyId": "st-86ddac4904",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0dda68dc88",
+        "storeyId": "st-86ddac4904",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-d85d9bfaec",
+        "storeyId": "st-86ddac4904",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-9d0cd28425",
+        "storeyId": "st-86ddac4904",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-4fe0daa763",
+        "storeyId": "st-86ddac4904",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-a037c636f1",
+        "storeyId": "st-86ddac4904",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-a0f30c1b81",
+        "storeyId": "st-86ddac4904",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-ff342e03da",
+        "storeyId": "st-86ddac4904",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-fd183b10a7",
+        "storeyId": "st-86ddac4904",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-53218d132b",
+        "storeyId": "st-86ddac4904",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-94341d72ad",
+        "storeyId": "st-86ddac4904",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-5664bb732f",
+        "storeyId": "st-2b2c309299",
+        "ax": 0.05,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-576e51cb59",
+        "storeyId": "st-2b2c309299",
+        "ax": 21.25,
+        "ay": 2.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-6aab841977",
+        "storeyId": "st-2b2c309299",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0533ea404d",
+        "storeyId": "st-2b2c309299",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 2.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-d50b3c1139",
+        "storeyId": "st-2b2c309299",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-0f19bbeb1b",
+        "storeyId": "st-2b2c309299",
+        "ax": 29.3,
+        "ay": 5.5,
+        "bx": 29.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-70fe35af87",
+        "storeyId": "st-2b2c309299",
+        "ax": 29.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-72ecf60528",
+        "storeyId": "st-2b2c309299",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-e368891a00",
+        "storeyId": "st-2b2c309299",
+        "ax": 0.55,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-fd73487aac",
+        "storeyId": "st-2b2c309299",
+        "ax": 20.75,
+        "ay": 0.72,
+        "bx": 20.75,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-4cfb1ac514",
+        "storeyId": "st-2b2c309299",
+        "ax": 20.75,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 2.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-a05840b5e7",
+        "storeyId": "st-2b2c309299",
+        "ax": 0.55,
+        "ay": 2.27,
+        "bx": 0.55,
+        "by": 0.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-9c15684cc0",
+        "storeyId": "st-2b2c309299",
+        "ax": 29.3,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-f6cb23a089",
+        "storeyId": "st-2b2c309299",
+        "ax": 31.15,
+        "ay": 10,
+        "bx": 31.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-4f7014a0da",
+        "storeyId": "st-2b2c309299",
+        "ax": 31.15,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-ff8fb955c6",
+        "storeyId": "st-2b2c309299",
+        "ax": 29.3,
+        "ay": 23.5,
+        "bx": 29.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-c063ffb370",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 0.05,
+        "ay": 3.27,
+        "bx": 21.25,
+        "by": 3.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-395739e34a",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 21.25,
+        "ay": 3.27,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-65a4921129",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-8a1aeae04b",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 3.27,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-6e6f59018c",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 28.3,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-f323d9dda4",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 28.3,
+        "ay": 5.5,
+        "bx": 28.3,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-2e156efe1e",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 28.3,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-5793966ec9",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-e4f3a19a02",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 0.55,
+        "ay": 1.72,
+        "bx": 20.75,
+        "by": 1.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-985c145691",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 20.75,
+        "ay": 1.72,
+        "bx": 20.75,
+        "by": 3.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-0b3d7d8bd2",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 20.75,
+        "ay": 3.27,
+        "bx": 0.55,
+        "by": 3.27,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-161334a2b3",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 0.55,
+        "ay": 3.27,
+        "bx": 0.55,
+        "by": 1.72,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-26f9a1d0f4",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 28.3,
+        "ay": 10,
+        "bx": 30.15,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-0bd187109b",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 30.15,
+        "ay": 10,
+        "bx": 30.15,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-038fa9b8c3",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 30.15,
+        "ay": 23.5,
+        "bx": 28.3,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-473d8427d4",
+        "storeyId": "st-bfdb0040a6",
+        "ax": 28.3,
+        "ay": 23.5,
+        "bx": 28.3,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-dcb15789fb",
+        "storeyId": "st-993278b8ac",
+        "ax": 0.05,
+        "ay": 4.52,
+        "bx": 21.25,
+        "by": 4.52,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-d57653ff9c",
+        "storeyId": "st-993278b8ac",
+        "ax": 21.25,
+        "ay": 4.52,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-3d0402b8bf",
+        "storeyId": "st-993278b8ac",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-c718a9a74c",
+        "storeyId": "st-993278b8ac",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 4.52,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-81780e3a09",
+        "storeyId": "st-993278b8ac",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 27.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-7c9e4c40ef",
+        "storeyId": "st-993278b8ac",
+        "ax": 27.05,
+        "ay": 5.5,
+        "bx": 27.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-5ce42804fe",
+        "storeyId": "st-993278b8ac",
+        "ax": 27.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-eaeadd1af2",
+        "storeyId": "st-993278b8ac",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-47a54dee34",
+        "storeyId": "st-993278b8ac",
+        "ax": 0.55,
+        "ay": 2.97,
+        "bx": 20.75,
+        "by": 2.97,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-ddacc82bfe",
+        "storeyId": "st-993278b8ac",
+        "ax": 20.75,
+        "ay": 2.97,
+        "bx": 20.75,
+        "by": 4.52,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-e6759e824d",
+        "storeyId": "st-993278b8ac",
+        "ax": 20.75,
+        "ay": 4.52,
+        "bx": 0.55,
+        "by": 4.52,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-906fecc627",
+        "storeyId": "st-993278b8ac",
+        "ax": 0.55,
+        "ay": 4.52,
+        "bx": 0.55,
+        "by": 2.97,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-bc56f415ab",
+        "storeyId": "st-993278b8ac",
+        "ax": 27.05,
+        "ay": 10,
+        "bx": 28.9,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-a427bdea54",
+        "storeyId": "st-993278b8ac",
+        "ax": 28.9,
+        "ay": 10,
+        "bx": 28.9,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-e33319d325",
+        "storeyId": "st-993278b8ac",
+        "ax": 28.9,
+        "ay": 23.5,
+        "bx": 27.05,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-4595a2f805",
+        "storeyId": "st-993278b8ac",
+        "ax": 27.05,
+        "ay": 23.5,
+        "bx": 27.05,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-5689286e6c",
+        "storeyId": "st-44f35a5624",
+        "ax": 0.05,
+        "ay": 5.57,
+        "bx": 21.25,
+        "by": 5.57,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-d12b4b13cf",
+        "storeyId": "st-44f35a5624",
+        "ax": 21.25,
+        "ay": 5.57,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-9a5fe5de5c",
+        "storeyId": "st-44f35a5624",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-706828381b",
+        "storeyId": "st-44f35a5624",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 5.57,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-d1bf14af75",
+        "storeyId": "st-44f35a5624",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 26,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-944619f0ba",
+        "storeyId": "st-44f35a5624",
+        "ax": 26,
+        "ay": 5.5,
+        "bx": 26,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-13b7ea9da0",
+        "storeyId": "st-44f35a5624",
+        "ax": 26,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-ac35f79b8a",
+        "storeyId": "st-44f35a5624",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-cc0b344922",
+        "storeyId": "st-44f35a5624",
+        "ax": 0.55,
+        "ay": 4.02,
+        "bx": 20.75,
+        "by": 4.02,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-22ec6b7500",
+        "storeyId": "st-44f35a5624",
+        "ax": 20.75,
+        "ay": 4.02,
+        "bx": 20.75,
+        "by": 5.57,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-997838866d",
+        "storeyId": "st-44f35a5624",
+        "ax": 20.75,
+        "ay": 5.57,
+        "bx": 0.55,
+        "by": 5.57,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-a363c02c75",
+        "storeyId": "st-44f35a5624",
+        "ax": 0.55,
+        "ay": 5.57,
+        "bx": 0.55,
+        "by": 4.02,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-49c50b64c2",
+        "storeyId": "st-44f35a5624",
+        "ax": 26,
+        "ay": 10,
+        "bx": 27.85,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-c5e5e40ed2",
+        "storeyId": "st-44f35a5624",
+        "ax": 27.85,
+        "ay": 10,
+        "bx": 27.85,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-23fcca3f35",
+        "storeyId": "st-44f35a5624",
+        "ax": 27.85,
+        "ay": 23.5,
+        "bx": 26,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-c84c9fcbf8",
+        "storeyId": "st-44f35a5624",
+        "ax": 26,
+        "ay": 23.5,
+        "bx": 26,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-1308268ecb",
+        "storeyId": "st-5675d30129",
+        "ax": 0.05,
+        "ay": 6.67,
+        "bx": 21.25,
+        "by": 6.67,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-2398b5150e",
+        "storeyId": "st-5675d30129",
+        "ax": 21.25,
+        "ay": 6.67,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-e8fbda6f0e",
+        "storeyId": "st-5675d30129",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-c016904d26",
+        "storeyId": "st-5675d30129",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 6.67,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-9976379997",
+        "storeyId": "st-5675d30129",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 24.9,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-10a8410be2",
+        "storeyId": "st-5675d30129",
+        "ax": 24.9,
+        "ay": 5.5,
+        "bx": 24.9,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-3954c9eb06",
+        "storeyId": "st-5675d30129",
+        "ax": 24.9,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-3293167f03",
+        "storeyId": "st-5675d30129",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 2.8,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-6668920766",
+        "storeyId": "st-5675d30129",
+        "ax": 0.55,
+        "ay": 5.12,
+        "bx": 20.75,
+        "by": 5.12,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-8a6c2b9594",
+        "storeyId": "st-5675d30129",
+        "ax": 20.75,
+        "ay": 5.12,
+        "bx": 20.75,
+        "by": 6.67,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-5ed912f790",
+        "storeyId": "st-5675d30129",
+        "ax": 20.75,
+        "ay": 6.67,
+        "bx": 0.55,
+        "by": 6.67,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-3cd4b32c66",
+        "storeyId": "st-5675d30129",
+        "ax": 0.55,
+        "ay": 6.67,
+        "bx": 0.55,
+        "by": 5.12,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-33b43af7e9",
+        "storeyId": "st-5675d30129",
+        "ax": 24.9,
+        "ay": 10,
+        "bx": 26.75,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-530f0f91a0",
+        "storeyId": "st-5675d30129",
+        "ax": 26.75,
+        "ay": 10,
+        "bx": 26.75,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-8f3036e8ab",
+        "storeyId": "st-5675d30129",
+        "ax": 26.75,
+        "ay": 23.5,
+        "bx": 24.9,
+        "by": 23.5,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-1d98f55321",
+        "storeyId": "st-5675d30129",
+        "ax": 24.9,
+        "ay": 23.5,
+        "bx": 24.9,
+        "by": 10,
+        "thickness": 0.15,
+        "height": 1,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-92a27236de",
+        "storeyId": "st-248781625c",
+        "ax": 0.05,
+        "ay": 6.67,
+        "bx": 21.25,
+        "by": 6.67,
+        "thickness": 0.25,
+        "height": 3.35,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-fc93c9acee",
+        "storeyId": "st-248781625c",
+        "ax": 21.25,
+        "ay": 6.67,
+        "bx": 21.25,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 3.35,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-5cf77da530",
+        "storeyId": "st-248781625c",
+        "ax": 21.25,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 10.94,
+        "thickness": 0.25,
+        "height": 3.35,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-1041473e68",
+        "storeyId": "st-248781625c",
+        "ax": 0.05,
+        "ay": 10.94,
+        "bx": 0.05,
+        "by": 6.67,
+        "thickness": 0.25,
+        "height": 3.35,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-2bc902b0d2",
+        "storeyId": "st-248781625c",
+        "ax": 20.05,
+        "ay": 5.5,
+        "bx": 24.9,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 3.35,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae",
+          "colorFace2": "#b9b6ae"
+        }
+      },
+      {
+        "id": "w-807f6463d7",
+        "storeyId": "st-248781625c",
+        "ax": 24.9,
+        "ay": 5.5,
+        "bx": 24.9,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 3.35,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-f2dc24ae59",
+        "storeyId": "st-248781625c",
+        "ax": 24.9,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 26,
+        "thickness": 0.25,
+        "height": 3.35,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-730a508d11",
+        "storeyId": "st-248781625c",
+        "ax": 20.05,
+        "ay": 26,
+        "bx": 20.05,
+        "by": 5.5,
+        "thickness": 0.25,
+        "height": 3.35,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-c27c3a9268",
+        "storeyId": "st-ad4eef4be1",
+        "ax": 3.2,
+        "ay": 6.4,
+        "bx": 8.8,
+        "by": 6.4,
+        "thickness": 0.2,
+        "height": 2.6,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-bcf103fc06",
+        "storeyId": "st-ad4eef4be1",
+        "ax": 8.8,
+        "ay": 6.4,
+        "bx": 8.8,
+        "by": 10.6,
+        "thickness": 0.2,
+        "height": 2.6,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-ae77c7efe4",
+        "storeyId": "st-ad4eef4be1",
+        "ax": 8.8,
+        "ay": 10.6,
+        "bx": 3.2,
+        "by": 10.6,
+        "thickness": 0.2,
+        "height": 2.6,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-a9cd916c9e",
+        "storeyId": "st-ad4eef4be1",
+        "ax": 3.2,
+        "ay": 10.6,
+        "bx": 3.2,
+        "by": 6.4,
+        "thickness": 0.2,
+        "height": 2.6,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-0ee4d9c365",
+        "storeyId": "st-ad4eef4be1",
+        "ax": 23,
+        "ay": 9.6,
+        "bx": 28.6,
+        "by": 9.6,
+        "thickness": 0.2,
+        "height": 2.6,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-ac6c8d14b2",
+        "storeyId": "st-ad4eef4be1",
+        "ax": 28.6,
+        "ay": 9.6,
+        "bx": 28.6,
+        "by": 13.8,
+        "thickness": 0.2,
+        "height": 2.6,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-c7aff63d18",
+        "storeyId": "st-ad4eef4be1",
+        "ax": 28.6,
+        "ay": 13.8,
+        "bx": 23,
+        "by": 13.8,
+        "thickness": 0.2,
+        "height": 2.6,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      },
+      {
+        "id": "w-540255844a",
+        "storeyId": "st-ad4eef4be1",
+        "ax": 23,
+        "ay": 13.8,
+        "bx": 23,
+        "by": 9.6,
+        "thickness": 0.2,
+        "height": 2.6,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#6f6f6f",
+          "colorFace2": "#6f6f6f"
+        }
+      }
+    ],
+    "wallJoins": [],
+    "slabs": [
+      {
+        "id": "sl-971f219904",
+        "storeyId": "st-0dd9b07159",
+        "kind": "floor",
+        "outline": [
+          [
+            -0.6,
+            0.2
+          ],
+          [
+            31.6,
+            0.2
+          ],
+          [
+            31.6,
+            26.6
+          ],
+          [
+            -0.6,
+            26.6
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-5927dd9a78",
+        "storeyId": "st-0f62878140",
+        "kind": "floor",
+        "outline": [
+          [
+            -0.6,
+            0.2
+          ],
+          [
+            31.6,
+            0.2
+          ],
+          [
+            31.6,
+            26.6
+          ],
+          [
+            -0.6,
+            26.6
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-5ac5b18a57",
+        "storeyId": "st-84f6b2b557",
+        "kind": "floor",
+        "outline": [
+          [
+            -0.6,
+            0.2
+          ],
+          [
+            31.6,
+            0.2
+          ],
+          [
+            31.6,
+            26.6
+          ],
+          [
+            -0.6,
+            26.6
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-167e994976",
+        "storeyId": "st-838a9ea5c3",
+        "kind": "floor",
+        "outline": [
+          [
+            -0.6,
+            0.2
+          ],
+          [
+            31.6,
+            0.2
+          ],
+          [
+            31.6,
+            26.6
+          ],
+          [
+            -0.6,
+            26.6
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-14e4b4bb69",
+        "storeyId": "st-9079f4f6cd",
+        "kind": "floor",
+        "outline": [
+          [
+            -0.6,
+            0.2
+          ],
+          [
+            31.6,
+            0.2
+          ],
+          [
+            31.6,
+            26.6
+          ],
+          [
+            -0.6,
+            26.6
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-6428d1ef6a",
+        "storeyId": "st-8c44d51831",
+        "kind": "floor",
+        "outline": [
+          [
+            -0.6,
+            0.2
+          ],
+          [
+            31.6,
+            0.2
+          ],
+          [
+            31.6,
+            26.6
+          ],
+          [
+            -0.6,
+            26.6
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-79ffb6ba70",
+        "storeyId": "st-ba5d0571a9",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-5b1cfaa7b6",
+        "storeyId": "st-ba5d0571a9",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-569d92b25d",
+        "storeyId": "st-ba5d0571a9",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-2ce5418852",
+        "storeyId": "st-ba5d0571a9",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-085a073215",
+        "storeyId": "st-59bb941775",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-79719b1fae",
+        "storeyId": "st-59bb941775",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-614655d207",
+        "storeyId": "st-59bb941775",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-a99aec5d06",
+        "storeyId": "st-59bb941775",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-ed85357d00",
+        "storeyId": "st-13be25e49b",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-b3997b83d5",
+        "storeyId": "st-13be25e49b",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-0f77114173",
+        "storeyId": "st-13be25e49b",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-d851b96699",
+        "storeyId": "st-13be25e49b",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-1467cc97fe",
+        "storeyId": "st-e5db0d5b45",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-e08844fb60",
+        "storeyId": "st-e5db0d5b45",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-41d3d3a94b",
+        "storeyId": "st-e5db0d5b45",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-780cb4a744",
+        "storeyId": "st-e5db0d5b45",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-5070a1c11b",
+        "storeyId": "st-16479db1a5",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-1a2b3d036c",
+        "storeyId": "st-16479db1a5",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-d0c3ab93d4",
+        "storeyId": "st-16479db1a5",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-543cb4216c",
+        "storeyId": "st-16479db1a5",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-d8e24aa340",
+        "storeyId": "st-285f0275e8",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-17ad76bc1f",
+        "storeyId": "st-285f0275e8",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-6897545a2e",
+        "storeyId": "st-285f0275e8",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-c19aecdf6f",
+        "storeyId": "st-285f0275e8",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-e651d32c4a",
+        "storeyId": "st-9a5a8ba1dc",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-9efb150ec2",
+        "storeyId": "st-9a5a8ba1dc",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-5beb550377",
+        "storeyId": "st-9a5a8ba1dc",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-5bdc3d0a86",
+        "storeyId": "st-9a5a8ba1dc",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-c4bd160f28",
+        "storeyId": "st-a35b561c6b",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-e4efc05f51",
+        "storeyId": "st-a35b561c6b",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-2d4473a83b",
+        "storeyId": "st-a35b561c6b",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-af2c18701b",
+        "storeyId": "st-a35b561c6b",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-92c71b6216",
+        "storeyId": "st-86ddac4904",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-6073aa657a",
+        "storeyId": "st-86ddac4904",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-70b6983e42",
+        "storeyId": "st-86ddac4904",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-51d503d1f3",
+        "storeyId": "st-86ddac4904",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-7ab732ed73",
+        "storeyId": "st-2b2c309299",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            2.27
+          ],
+          [
+            21.25,
+            2.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-e4cbb49201",
+        "storeyId": "st-2b2c309299",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            29.3,
+            5.5
+          ],
+          [
+            29.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-ce1674b2d7",
+        "storeyId": "st-2b2c309299",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            0.72
+          ],
+          [
+            20.75,
+            0.72
+          ],
+          [
+            20.75,
+            2.27
+          ],
+          [
+            0.55,
+            2.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-eb72dd6d9c",
+        "storeyId": "st-2b2c309299",
+        "kind": "floor",
+        "outline": [
+          [
+            29.3,
+            10
+          ],
+          [
+            31.15,
+            10
+          ],
+          [
+            31.15,
+            23.5
+          ],
+          [
+            29.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-b1e5ff0043",
+        "storeyId": "st-bfdb0040a6",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            3.27
+          ],
+          [
+            21.25,
+            3.27
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-5be07376aa",
+        "storeyId": "st-bfdb0040a6",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            28.3,
+            5.5
+          ],
+          [
+            28.3,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-cd4e59ad78",
+        "storeyId": "st-bfdb0040a6",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            1.72
+          ],
+          [
+            20.75,
+            1.72
+          ],
+          [
+            20.75,
+            3.27
+          ],
+          [
+            0.55,
+            3.27
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-5af1c9ceab",
+        "storeyId": "st-bfdb0040a6",
+        "kind": "floor",
+        "outline": [
+          [
+            28.3,
+            10
+          ],
+          [
+            30.15,
+            10
+          ],
+          [
+            30.15,
+            23.5
+          ],
+          [
+            28.3,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-e7c7ac8578",
+        "storeyId": "st-993278b8ac",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            4.52
+          ],
+          [
+            21.25,
+            4.52
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-e9d89b36db",
+        "storeyId": "st-993278b8ac",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            27.05,
+            5.5
+          ],
+          [
+            27.05,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-e59362da90",
+        "storeyId": "st-993278b8ac",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            2.97
+          ],
+          [
+            20.75,
+            2.97
+          ],
+          [
+            20.75,
+            4.52
+          ],
+          [
+            0.55,
+            4.52
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-8203fbd8c1",
+        "storeyId": "st-993278b8ac",
+        "kind": "floor",
+        "outline": [
+          [
+            27.05,
+            10
+          ],
+          [
+            28.9,
+            10
+          ],
+          [
+            28.9,
+            23.5
+          ],
+          [
+            27.05,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-27b144ee5c",
+        "storeyId": "st-44f35a5624",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            5.57
+          ],
+          [
+            21.25,
+            5.57
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-290efa614f",
+        "storeyId": "st-44f35a5624",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            26,
+            5.5
+          ],
+          [
+            26,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-15cc15aeb4",
+        "storeyId": "st-44f35a5624",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            4.02
+          ],
+          [
+            20.75,
+            4.02
+          ],
+          [
+            20.75,
+            5.57
+          ],
+          [
+            0.55,
+            5.57
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-0ad1c006d0",
+        "storeyId": "st-44f35a5624",
+        "kind": "floor",
+        "outline": [
+          [
+            26,
+            10
+          ],
+          [
+            27.85,
+            10
+          ],
+          [
+            27.85,
+            23.5
+          ],
+          [
+            26,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-d84d3f0054",
+        "storeyId": "st-5675d30129",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            6.67
+          ],
+          [
+            21.25,
+            6.67
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-238e83362d",
+        "storeyId": "st-5675d30129",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            24.9,
+            5.5
+          ],
+          [
+            24.9,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-56ffdf9eee",
+        "storeyId": "st-5675d30129",
+        "kind": "floor",
+        "outline": [
+          [
+            0.55,
+            5.12
+          ],
+          [
+            20.75,
+            5.12
+          ],
+          [
+            20.75,
+            6.67
+          ],
+          [
+            0.55,
+            6.67
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-449a6db42e",
+        "storeyId": "st-5675d30129",
+        "kind": "floor",
+        "outline": [
+          [
+            24.9,
+            10
+          ],
+          [
+            26.75,
+            10
+          ],
+          [
+            26.75,
+            23.5
+          ],
+          [
+            24.9,
+            23.5
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-62fac3c85b",
+        "storeyId": "st-248781625c",
+        "kind": "floor",
+        "outline": [
+          [
+            0.05,
+            6.67
+          ],
+          [
+            21.25,
+            6.67
+          ],
+          [
+            21.25,
+            10.94
+          ],
+          [
+            0.05,
+            10.94
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-54c5769504",
+        "storeyId": "st-248781625c",
+        "kind": "floor",
+        "outline": [
+          [
+            20.05,
+            5.5
+          ],
+          [
+            24.9,
+            5.5
+          ],
+          [
+            24.9,
+            26
+          ],
+          [
+            20.05,
+            26
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-c174e688e9",
+        "storeyId": "st-ad4eef4be1",
+        "kind": "floor",
+        "outline": [
+          [
+            3.2,
+            6.4
+          ],
+          [
+            8.8,
+            6.4
+          ],
+          [
+            8.8,
+            10.6
+          ],
+          [
+            3.2,
+            10.6
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      },
+      {
+        "id": "sl-e4b187877c",
+        "storeyId": "st-ad4eef4be1",
+        "kind": "floor",
+        "outline": [
+          [
+            23,
+            9.6
+          ],
+          [
+            28.6,
+            9.6
+          ],
+          [
+            28.6,
+            13.8
+          ],
+          [
+            23,
+            13.8
+          ]
+        ],
+        "thickness": 0.25,
+        "baseOffset": 0,
+        "material": "concrete",
+        "finish": {
+          "colorFace1": "#b9b6ae"
+        },
+        "cuts": []
+      }
+    ],
+    "openings": [
+      {
+        "id": "op-e9ab76eca5",
+        "wallId": "w-aeffe109a8",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-5bd4d85ed8",
+        "wallId": "w-aeffe109a8",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-499c05c3b1",
+        "wallId": "w-aeffe109a8",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-0304646747",
+        "wallId": "w-aeffe109a8",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-8709060484",
+        "wallId": "w-d7e28f7350",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-b7f5f2490e",
+        "wallId": "w-d7e28f7350",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-cf097038ff",
+        "wallId": "w-d7e28f7350",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-fb83c847a5",
+        "wallId": "w-d7e28f7350",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-e989c2e348",
+        "wallId": "w-b7c35f92fe",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-5a95d07b09",
+        "wallId": "w-b7c35f92fe",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-03b6664537",
+        "wallId": "w-b7c35f92fe",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-2a73bf1862",
+        "wallId": "w-b7c35f92fe",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-f49f0171ad",
+        "wallId": "w-582556e2fc",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-e7ac12641e",
+        "wallId": "w-582556e2fc",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-0218e41928",
+        "wallId": "w-582556e2fc",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-acf74d34e0",
+        "wallId": "w-582556e2fc",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-bb541b3a46",
+        "wallId": "w-be3cda71ea",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-deeea420c6",
+        "wallId": "w-be3cda71ea",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-ad6015652e",
+        "wallId": "w-be3cda71ea",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-7dbc55bda1",
+        "wallId": "w-be3cda71ea",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-c1f698e581",
+        "wallId": "w-1786a74080",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-847c779a3c",
+        "wallId": "w-1786a74080",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-067d1c2946",
+        "wallId": "w-1786a74080",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-861dd163bc",
+        "wallId": "w-1786a74080",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-f6d370a7c2",
+        "wallId": "w-8cb12172cb",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-5c4f5e7a1a",
+        "wallId": "w-8cb12172cb",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-062757f81a",
+        "wallId": "w-8cb12172cb",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-d73cccca3c",
+        "wallId": "w-8cb12172cb",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-f752aa2364",
+        "wallId": "w-c384916bb7",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-ef6bef3992",
+        "wallId": "w-c384916bb7",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-dda4faf4ce",
+        "wallId": "w-c384916bb7",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-fffa74da8f",
+        "wallId": "w-c384916bb7",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-1f861282a9",
+        "wallId": "w-398e36ed12",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-ecbb9083fe",
+        "wallId": "w-398e36ed12",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-b036a7af40",
+        "wallId": "w-398e36ed12",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-b608628a37",
+        "wallId": "w-398e36ed12",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-e39dc9e66f",
+        "wallId": "w-5664bb732f",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-270a980dc6",
+        "wallId": "w-5664bb732f",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-f534a85497",
+        "wallId": "w-5664bb732f",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-1ca889fbae",
+        "wallId": "w-5664bb732f",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-d9f9a261db",
+        "wallId": "w-c063ffb370",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-adfd8d4b7b",
+        "wallId": "w-c063ffb370",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-1773b6d4d8",
+        "wallId": "w-c063ffb370",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-80ed465354",
+        "wallId": "w-c063ffb370",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-1ef4ad56d1",
+        "wallId": "w-dcb15789fb",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-cc20780c1b",
+        "wallId": "w-dcb15789fb",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-2b196a961c",
+        "wallId": "w-dcb15789fb",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-1a2fb827c8",
+        "wallId": "w-dcb15789fb",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-c9ba5e66b2",
+        "wallId": "w-5689286e6c",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-84797cd475",
+        "wallId": "w-5689286e6c",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-d65a1824b2",
+        "wallId": "w-5689286e6c",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-61ccd030ef",
+        "wallId": "w-5689286e6c",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-57b3058444",
+        "wallId": "w-1308268ecb",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-a9b1df67da",
+        "wallId": "w-1308268ecb",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-0761d03604",
+        "wallId": "w-1308268ecb",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-5f8d0102e4",
+        "wallId": "w-1308268ecb",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-56ca2684d4",
+        "wallId": "w-92a27236de",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 5.5,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-185f3b5026",
+        "wallId": "w-92a27236de",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 8.6,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      },
+      {
+        "id": "op-0081df7a15",
+        "wallId": "w-92a27236de",
+        "kind": "door",
+        "doorType": "sliding-2",
+        "s": 12.2,
+        "width": 2.6,
+        "sill": 0,
+        "head": 2.4
+      },
+      {
+        "id": "op-a5f83f8027",
+        "wallId": "w-92a27236de",
+        "kind": "window",
+        "windowType": "fixed",
+        "s": 15.3,
+        "width": 1.8,
+        "sill": 0.9,
+        "head": 2.4
+      }
+    ],
+    "stairs": [
+      {
+        "id": "sr-d7cde592f1",
+        "storeyId": "st-9079f4f6cd",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-5d1a8727f1",
+        "storeyId": "st-9079f4f6cd",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-7918375118",
+        "storeyId": "st-8c44d51831",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 2.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-c0998e9780",
+        "storeyId": "st-8c44d51831",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 2.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-c89988f44c",
+        "storeyId": "st-ba5d0571a9",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-460856fd86",
+        "storeyId": "st-ba5d0571a9",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-e30023f71e",
+        "storeyId": "st-59bb941775",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-e50aa0c7eb",
+        "storeyId": "st-59bb941775",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-af646c907f",
+        "storeyId": "st-13be25e49b",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-871b2408f8",
+        "storeyId": "st-13be25e49b",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-736ea521c6",
+        "storeyId": "st-e5db0d5b45",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-d9dab7cfc7",
+        "storeyId": "st-e5db0d5b45",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-3f93af6729",
+        "storeyId": "st-16479db1a5",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-9bef704167",
+        "storeyId": "st-16479db1a5",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-cb75850c3b",
+        "storeyId": "st-285f0275e8",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-76c2530f00",
+        "storeyId": "st-285f0275e8",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-7c0abea06c",
+        "storeyId": "st-9a5a8ba1dc",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-4f6f103e28",
+        "storeyId": "st-9a5a8ba1dc",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-d617affba7",
+        "storeyId": "st-a35b561c6b",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-d699720036",
+        "storeyId": "st-a35b561c6b",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-c2983f1ce6",
+        "storeyId": "st-86ddac4904",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-16bbdcb397",
+        "storeyId": "st-86ddac4904",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-3605cd822e",
+        "storeyId": "st-2b2c309299",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-927a430459",
+        "storeyId": "st-2b2c309299",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-330debc80a",
+        "storeyId": "st-bfdb0040a6",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-c12482c3e1",
+        "storeyId": "st-bfdb0040a6",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-7bcaef706a",
+        "storeyId": "st-993278b8ac",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-ca6743d890",
+        "storeyId": "st-993278b8ac",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-0eccb95d14",
+        "storeyId": "st-44f35a5624",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-f4e7b0e887",
+        "storeyId": "st-44f35a5624",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-e91ef245c1",
+        "storeyId": "st-5675d30129",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-9f72dd316d",
+        "storeyId": "st-5675d30129",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.05,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-4d3c15ace5",
+        "storeyId": "st-248781625c",
+        "x": 17.6,
+        "y": 7.6,
+        "rotDeg": 0,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.6,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      },
+      {
+        "id": "sr-2e9c10eb4e",
+        "storeyId": "st-248781625c",
+        "x": 21.4,
+        "y": 12.4,
+        "rotDeg": 90,
+        "width": 1.1,
+        "run": 2.88,
+        "rise": 3.6,
+        "stairType": "u",
+        "gap": 0.1,
+        "turn": "right",
+        "material": "concrete"
+      }
+    ],
+    "railings": [],
+    "ramps": [],
+    "items": [
+      {
+        "id": "d9587003",
+        "storeyId": "st-0dd9b07159",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 28.25,
+        "y": 22.55,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.81
+      }
+    ],
+    "columns": [],
+    "beams": [],
+    "finishes": [],
+    "mepRuns": [],
+    "roofs": [],
+    "skylights": [],
+    "chimneys": [],
+    "solarArrays": [],
+    "pins": [],
+    "north": {
+      "x": -3,
+      "y": 13,
+      "dirDeg": -149.99999999999997
+    },
+    "optionSets": [],
+    "furniture": [
+      {
+        "id": "e8941272",
+        "assetId": "spotlight",
+        "label": "Spotlight",
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.81
+      },
+      {
+        "id": "bdad914d",
+        "assetId": "armchair",
+        "label": "Armchair",
+        "w": 0.9,
+        "d": 0.85,
+        "h": 0.8
+      },
+      {
+        "id": "fe5bd89b",
+        "assetId": "sofa",
+        "label": "Sofa",
+        "w": 2,
+        "d": 0.9,
+        "h": 0.8
+      },
+      {
+        "id": "d1ac545c",
+        "assetId": "table",
+        "label": "Table",
+        "w": 1.4,
+        "d": 0.8,
+        "h": 0.75
+      },
+      {
+        "id": "2fbd9ee2",
+        "assetId": "chair",
+        "label": "Chair",
+        "w": 0.45,
+        "d": 0.5,
+        "h": 0.9
+      }
+    ]
+  }
+}
