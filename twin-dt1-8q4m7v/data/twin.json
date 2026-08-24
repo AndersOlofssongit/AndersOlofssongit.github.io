@@ -1,20 +1,25 @@
 {
- "version": 1,
- "name": "Plot 1148 — Msaytbeh, Beirut",
- "subtitle": "Plot (عقار) No. 1148, Msaytbeh, Beirut, Lebanon",
- "models": [
-  {
-   "name": "Plot 1148 — Msaytbeh, Beirut BIM 2026-08-23",
-   "file": "models/Plot 1148 Msaytbeh Beirut BIM 2026-08-23.ifc"
+  "version": 1,
+  "name": "Plot 1148 — Msaytbeh, Beirut",
+  "subtitle": "Plot (عقار) No. 1148, Msaytbeh, Beirut, Lebanon",
+  "models": [
+    {
+      "name": "Plot 1148 — Msaytbeh, Beirut BIM 2026-08-23",
+      "file": "models/Plot 1148 Msaytbeh Beirut BIM 2026-08-23.ifc"
+    }
+  ],
+  "pins": [],
+  "gps": {
+    "lat": 33,
+    "lng": 35
+  },
+  "northDeg": -149.99999999999997,
+  "feedback": {
+    "url": "https://zvlengsphwrxviwbdlrr.supabase.co",
+    "anonKey": "sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw",
+    "boardKey": "-TXGMmX46ZXZZJIn34PVF7yQaFedKce9"
+  },
+  "bim": {
+    "file": "bim.json"
   }
- ],
- "pins": [],
- "gps": {
-  "lat": 33.8869722,
-  "lng": 35.4949722
- },
- "northDeg": -149.99999999999997,
- "bim": {
-  "file": "bim.json"
- }
 }
