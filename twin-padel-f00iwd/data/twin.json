@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "name": "Paddel of Thailand",
+  "subtitle": "Hua Hin",
+  "models": [
+    {
+      "name": "Paddelofthailand BIM 2026-08-28",
+      "file": "models/Paddelofthailand BIM 2026-08-28.ifc"
+    }
+  ],
+  "pins": [],
+  "gps": {
+    "lat": 12.533918,
+    "lng": 99.9351
+  },
+  "northDeg": 90,
+  "feedback": {
+    "url": "https://zvlengsphwrxviwbdlrr.supabase.co",
+    "anonKey": "sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw",
+    "boardKey": "VLvwE59YfU272-7C_ertx2dfbRwoX4EU"
+  },
+  "bim": {
+    "file": "bim.json",
+    "assets": [
+      {
+        "assetId": "custom:391ad479-4113-45af-9be2-3bf05d38401a",
+        "file": "bim-assets/391ad479-4113-45af-9be2-3bf05d38401a.glb",
+        "format": "glb"
+      }
+    ]
+  }
+}
