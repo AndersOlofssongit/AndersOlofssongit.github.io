@@ -1,0 +1,835 @@
+{
+  "version": 1,
+  "model": {
+    "version": 1,
+    "projectName": "1A - Falcon Hill",
+    "storeys": [
+      {
+        "id": "st1",
+        "name": "Ground floor",
+        "elevation": 0,
+        "height": 2.7,
+        "scans": [
+          {
+            "scanId": "e91b0024-d3d2-4f82-bed3-7e9eeb8329f8",
+            "alignment": {
+              "rotDeg": 0,
+              "tx": 0,
+              "ty": 0,
+              "tz": 0
+            }
+          }
+        ],
+        "images": [],
+        "vectorRefs": []
+      }
+    ],
+    "walls": [
+      {
+        "id": "w1",
+        "storeyId": "st1",
+        "ax": 0.076,
+        "ay": 0.11,
+        "bx": 0.076,
+        "by": 19.6,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w2",
+        "storeyId": "st1",
+        "ax": 0.005,
+        "ay": 19.527,
+        "bx": 10.47,
+        "by": 19.527,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w3",
+        "storeyId": "st1",
+        "ax": 10.399,
+        "ay": 4.905,
+        "bx": 10.399,
+        "by": 19.6,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w4",
+        "storeyId": "st1",
+        "ax": 0.005,
+        "ay": 3.677,
+        "bx": 4.77,
+        "by": 3.677,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w5",
+        "storeyId": "st1",
+        "ax": 4.625,
+        "ay": 4.977,
+        "bx": 10.47,
+        "by": 4.977,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w6",
+        "storeyId": "st1",
+        "ax": 4.674,
+        "ay": 3.605,
+        "bx": 4.674,
+        "by": 13.77,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w7",
+        "storeyId": "st1",
+        "ax": 0.005,
+        "ay": 8.402,
+        "bx": 4.72,
+        "by": 8.402,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w8",
+        "storeyId": "st1",
+        "ax": 0.005,
+        "ay": 10.802,
+        "bx": 4.72,
+        "by": 10.802,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w9",
+        "storeyId": "st1",
+        "ax": 0.005,
+        "ay": 13.202,
+        "bx": 4.72,
+        "by": 13.202,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w10",
+        "storeyId": "st1",
+        "ax": 0.005,
+        "ay": 15.202,
+        "bx": 4.72,
+        "by": 15.202,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w11",
+        "storeyId": "st1",
+        "ax": 3.247,
+        "ay": 13.155,
+        "bx": 3.247,
+        "by": 15.25,
+        "thickness": 0.098,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w12",
+        "storeyId": "st1",
+        "ax": 4.674,
+        "ay": 15.155,
+        "bx": 4.674,
+        "by": 17.06,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w13",
+        "storeyId": "st1",
+        "ax": 4.285,
+        "ay": 17.012,
+        "bx": 4.72,
+        "by": 17.012,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w14",
+        "storeyId": "st1",
+        "ax": 4.331,
+        "ay": 16.965,
+        "bx": 4.331,
+        "by": 19.6,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w15",
+        "storeyId": "st1",
+        "ax": 6.474,
+        "ay": 12.895,
+        "bx": 6.474,
+        "by": 19.6,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w16",
+        "storeyId": "st1",
+        "ax": 6.425,
+        "ay": 13.752,
+        "bx": 10.47,
+        "by": 13.752,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w17",
+        "storeyId": "st1",
+        "ax": 6.425,
+        "ay": 15.852,
+        "bx": 10.47,
+        "by": 15.852,
+        "thickness": 0.1,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w22",
+        "storeyId": "st1",
+        "ax": 13.899,
+        "ay": 14.455,
+        "bx": 13.899,
+        "by": 19.6,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "w23",
+        "storeyId": "st1",
+        "ax": 10.325,
+        "ay": 14.527,
+        "bx": 13.97,
+        "by": 14.527,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      }
+    ],
+    "wallJoins": [],
+    "slabs": [
+      {
+        "id": "s42",
+        "storeyId": "st1",
+        "kind": "floor",
+        "outline": [
+          [
+            0.001,
+            3.602
+          ],
+          [
+            4.774,
+            3.602
+          ],
+          [
+            4.774,
+            4.902
+          ],
+          [
+            10.474,
+            4.902
+          ],
+          [
+            10.474,
+            19.602
+          ],
+          [
+            0.001,
+            19.602
+          ]
+        ],
+        "thickness": 0.2,
+        "cuts": [],
+        "material": "tile",
+        "finish": {
+          "tileW": 0.6,
+          "tileH": 0.6,
+          "tileColor": "#FFFFFF"
+        }
+      },
+      {
+        "id": "2db6fe4b",
+        "storeyId": "st1",
+        "kind": "floor",
+        "outline": [
+          [
+            4.66,
+            4.91
+          ],
+          [
+            4.66,
+            3.65
+          ],
+          [
+            0.07,
+            3.66
+          ],
+          [
+            0.07,
+            0.03
+          ],
+          [
+            5.752,
+            0.054
+          ],
+          [
+            5.752,
+            1.154
+          ],
+          [
+            11.522,
+            1.154
+          ],
+          [
+            11.522,
+            5.75
+          ],
+          [
+            10.474,
+            5.75
+          ],
+          [
+            10.474,
+            4.902
+          ]
+        ],
+        "thickness": 0.2,
+        "cuts": []
+      }
+    ],
+    "openings": [
+      {
+        "id": "o29",
+        "wallId": "w6",
+        "kind": "door",
+        "doorType": "single_swing",
+        "s": 4.065,
+        "width": 0.85,
+        "sill": 0,
+        "head": 2.2,
+        "flipX": true,
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
+      },
+      {
+        "id": "o30",
+        "wallId": "w8",
+        "kind": "door",
+        "doorType": "single_swing",
+        "s": 2.26,
+        "width": 0.84,
+        "sill": 0,
+        "head": 2.2,
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
+      },
+      {
+        "id": "o31",
+        "wallId": "w11",
+        "kind": "door",
+        "doorType": "single_swing",
+        "s": 1.373,
+        "width": 0.825,
+        "sill": 0,
+        "head": 2.2,
+        "flipX": true,
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
+      },
+      {
+        "id": "o32",
+        "wallId": "w10",
+        "kind": "door",
+        "doorType": "single_swing",
+        "s": 3.933,
+        "width": 0.775,
+        "sill": 0,
+        "head": 2.2,
+        "flipX": true,
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
+      },
+      {
+        "id": "o33",
+        "wallId": "w15",
+        "kind": "door",
+        "doorType": "single_swing",
+        "s": 1.475,
+        "width": 0.86,
+        "sill": 0,
+        "head": 2.2,
+        "flipY": true,
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
+      },
+      {
+        "id": "o34",
+        "wallId": "w15",
+        "kind": "door",
+        "doorType": "single_swing",
+        "s": 3.593,
+        "width": 0.865,
+        "sill": 0,
+        "head": 2.2,
+        "flipY": true,
+        "doorMaterial": "wood",
+        "doorColor": "#FFFFFF"
+      },
+      {
+        "id": "o35",
+        "wallId": "w2",
+        "kind": "door",
+        "doorType": "single_swing",
+        "s": 5.638,
+        "width": 0.935,
+        "sill": 0,
+        "head": 2.2,
+        "doorMaterial": "wood",
+        "frosted": true,
+        "doorColor": "#FFFFFF"
+      },
+      {
+        "id": "o36",
+        "wallId": "w7",
+        "kind": "opening",
+        "s": 2.273,
+        "width": 1.205,
+        "sill": 0,
+        "head": 2.2
+      },
+      {
+        "id": "o37",
+        "wallId": "w4",
+        "kind": "door",
+        "doorType": "double_sliding",
+        "doorMaterial": "glass",
+        "s": 2.443,
+        "width": 3.935,
+        "sill": 0,
+        "head": 2.2
+      },
+      {
+        "id": "o38",
+        "wallId": "w5",
+        "kind": "door",
+        "doorType": "double_sliding",
+        "doorMaterial": "glass",
+        "s": 2.88,
+        "width": 4.04,
+        "sill": 0,
+        "head": 2.2
+      },
+      {
+        "id": "o39",
+        "wallId": "w2",
+        "kind": "window",
+        "windowType": "double_panel",
+        "s": 2.755,
+        "width": 1.44,
+        "sill": 0.9,
+        "head": 2.2
+      },
+      {
+        "id": "o40",
+        "wallId": "w2",
+        "kind": "window",
+        "windowType": "double_panel",
+        "s": 8.495,
+        "width": 1.44,
+        "sill": 0.9,
+        "head": 2.2
+      },
+      {
+        "id": "o41",
+        "wallId": "w3",
+        "kind": "window",
+        "windowType": "double_panel",
+        "s": 5.473,
+        "width": 1.385,
+        "sill": 0.9,
+        "head": 2.2
+      }
+    ],
+    "stairs": [],
+    "railings": [
+      {
+        "id": "061e7a85",
+        "storeyId": "st1",
+        "kind": "railing",
+        "ax": 10.474,
+        "ay": 5.75,
+        "bx": 11.522,
+        "by": 5.75,
+        "height": 1,
+        "baseOffset": 0
+      },
+      {
+        "id": "f97ef563",
+        "storeyId": "st1",
+        "kind": "railing",
+        "ax": 11.522,
+        "ay": 5.75,
+        "bx": 11.522,
+        "by": 1.1499999999999995,
+        "height": 1,
+        "baseOffset": 0
+      },
+      {
+        "id": "976bfed3",
+        "storeyId": "st1",
+        "kind": "railing",
+        "ax": 11.522,
+        "ay": 1.1499999999999995,
+        "bx": 5.752,
+        "by": 1.154,
+        "height": 1,
+        "baseOffset": 0
+      },
+      {
+        "id": "657db061",
+        "storeyId": "st1",
+        "kind": "railing",
+        "ax": 5.752,
+        "ay": 1.154,
+        "bx": 5.752,
+        "by": 0.054,
+        "height": 1,
+        "baseOffset": 0
+      },
+      {
+        "id": "ec198b31",
+        "storeyId": "st1",
+        "kind": "railing",
+        "ax": 5.752,
+        "ay": 0.054,
+        "bx": 0.07200000000000006,
+        "by": 0.05400000000000069,
+        "height": 1,
+        "baseOffset": 0
+      },
+      {
+        "id": "e6433eb0",
+        "storeyId": "st1",
+        "kind": "railing",
+        "ax": 0.07200000000000006,
+        "ay": 0.05400000000000069,
+        "bx": 0.07200000000000006,
+        "by": 0.1040000000000007,
+        "height": 1,
+        "baseOffset": 0
+      }
+    ],
+    "ramps": [],
+    "items": [
+      {
+        "id": "70ba22d4",
+        "storeyId": "st1",
+        "assetId": "bed_king",
+        "name": "Bed — king",
+        "x": 1.25,
+        "y": 6.1,
+        "rotDeg": 90,
+        "w": 1.8,
+        "d": 2,
+        "h": 1,
+        "elevation": 0
+      },
+      {
+        "id": "19606346",
+        "storeyId": "st1",
+        "assetId": "ac_ceiling",
+        "name": "Air conditioner (ceiling)",
+        "x": 7.900000000000001,
+        "y": 9.600000000000001,
+        "rotDeg": 0,
+        "w": 0.8,
+        "d": 0.8,
+        "h": 0.3,
+        "elevation": 2.4000000000000004
+      },
+      {
+        "id": "b95a461a",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 9.600000000000001,
+        "y": 5.9,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "22396270",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 5.4,
+        "y": 6.050000000000001,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "59728cbe",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 10.9,
+        "y": 2.35,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "a58c2eb1",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 4.7,
+        "y": 1.3,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      },
+      {
+        "id": "7a989988",
+        "storeyId": "st1",
+        "assetId": "spotlight",
+        "name": "Spotlight",
+        "x": 8.35,
+        "y": 17.7,
+        "rotDeg": 0,
+        "w": 0.1,
+        "d": 0.1,
+        "h": 0.05,
+        "elevation": 2.6500000000000004
+      }
+    ],
+    "columns": [
+      {
+        "id": "b4213f45",
+        "storeyId": "st1",
+        "shape": "round",
+        "x": 5.25,
+        "y": 0.6000000000000001,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "08947ea6",
+        "storeyId": "st1",
+        "shape": "round",
+        "x": 11,
+        "y": 1.6,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 2.7,
+        "baseOffset": 0
+      }
+    ],
+    "beams": [],
+    "finishes": [
+      {
+        "id": "0d09b064",
+        "kind": "band",
+        "wallId": "w3",
+        "face": 1,
+        "s0": 1.6,
+        "s1": 3.57,
+        "z0": 0,
+        "z1": 2.7,
+        "thickness": 0.008,
+        "material": "stone",
+        "finish": {
+          "tileStone": "quartzite",
+          "tileColor": "#5a4436",
+          "stoneType": "carrara",
+          "tilePattern": "grid",
+          "woodTone": "walnut"
+        }
+      }
+    ],
+    "mepRuns": [],
+    "roofs": [],
+    "skylights": [],
+    "chimneys": [],
+    "solarArrays": [],
+    "optionSets": [
+      {
+        "id": "f61d5a26",
+        "label": "Choices",
+        "targets": [
+          "finish:0d09b064"
+        ],
+        "choices": [
+          {
+            "id": "72b74c26",
+            "label": "Wood — Walnut",
+            "material": "wood",
+            "finish": {
+              "tileStone": "quartzite",
+              "tileColor": "#5a4436",
+              "stonePattern": "rubble",
+              "stoneType": "calacatta",
+              "tilePattern": "grid",
+              "woodTone": "walnut"
+            }
+          },
+          {
+            "id": "627cc601",
+            "label": "Stone — Carrara marble",
+            "material": "stone",
+            "finish": {
+              "tileStone": "quartzite",
+              "tileColor": "#5a4436",
+              "stoneType": "carrara",
+              "tilePattern": "grid",
+              "woodTone": "walnut"
+            }
+          }
+        ]
+      }
+    ],
+    "furniture": [
+      {
+        "id": "6b65f1a6",
+        "assetId": "bed_king",
+        "label": "Bed — king",
+        "w": 1.8,
+        "d": 2,
+        "h": 1
+      },
+      {
+        "id": "79c83677",
+        "assetId": "ac_ceiling",
+        "label": "Air conditioner (ceiling)",
+        "w": 0.8,
+        "d": 0.8,
+        "h": 0.3,
+        "elevation": 2.4000000000000004
+      }
+    ],
+    "north": {
+      "x": 14.15,
+      "y": 1,
+      "dirDeg": 0
+    },
+    "pins": [
+      {
+        "id": "d604eac0",
+        "storeyId": "st1",
+        "x": 2.4000000000000004,
+        "y": 12.05,
+        "z": 1.5,
+        "label": "Pin 1",
+        "createdAt": "2026-09-01T23:07:51.213Z",
+        "panoMediaId": "4a7849e3-96ab-4ef2-91cb-133c0f2a7681"
+      },
+      {
+        "id": "1a531a24",
+        "storeyId": "st1",
+        "x": 5.550000000000001,
+        "y": 17.2,
+        "z": 1.5,
+        "label": "Pin 2",
+        "createdAt": "2026-09-01T23:08:05.486Z",
+        "panoMediaId": "6d4dbd98-a4c2-42aa-847b-97466aa5b471"
+      },
+      {
+        "id": "eb577de5",
+        "storeyId": "st1",
+        "x": 5.800000000000001,
+        "y": 11.35,
+        "z": 1.5,
+        "label": "Pin 3",
+        "createdAt": "2026-09-01T23:08:40.046Z",
+        "panoMediaId": "c4d4670b-fb93-4b90-85eb-e5f481649844"
+      },
+      {
+        "id": "90b41f33",
+        "storeyId": "st1",
+        "x": 6.8,
+        "y": 8.4,
+        "z": 1.5,
+        "label": "Pin 4",
+        "createdAt": "2026-09-01T23:09:06.281Z",
+        "panoMediaId": "8250b5ec-f8d3-4788-9de2-c94a66f77a17"
+      },
+      {
+        "id": "ce265a44",
+        "storeyId": "st1",
+        "x": 10.55,
+        "y": -0.4,
+        "z": 1.5,
+        "label": "Pin 5",
+        "createdAt": "2026-09-01T23:09:46.352Z",
+        "panoMediaId": "2db3b85f-06e9-4792-a5e8-7ad39b47b58c"
+      }
+    ],
+    "annotations": {
+      "item:19606346": {
+        "tags": [
+          "This was built with a special thing at the special place"
+        ]
+      }
+    },
+    "skybox": {
+      "yawDeg": 240,
+      "pitchDeg": 0,
+      "intensity": 1,
+      "horizonFadeDeg": 12,
+      "lighting": false,
+      "mediaId": "d0855b59-6d56-4daf-a08a-8d79d7a928a8"
+    },
+    "kitchen": {
+      "fronts": {
+        "color": "#FFFFFF"
+      },
+      "worktop": {
+        "material": "laminate",
+        "color": "#0A0A0A"
+      }
+    }
+  }
+}

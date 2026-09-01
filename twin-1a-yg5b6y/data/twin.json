@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "name": "1A - Falcon Hill",
+  "subtitle": "Falcon Hill, Hua Hin",
+  "models": [
+    {
+      "name": "1A - Falcon Hill BIM 2026-09-01",
+      "file": "models/1A - Falcon Hill BIM 2026-09-01.ifc"
+    }
+  ],
+  "pins": [
+    {
+      "id": "d604eac0",
+      "label": "Pin 1",
+      "body": null,
+      "position": [
+        2.4000000000000004,
+        1.5,
+        -12.05
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-01T23:07:51.213Z",
+      "photo": null,
+      "panorama": "media/DJI_20260831125602_0090_D_1788303598333.jpg",
+      "replies": []
+    },
+    {
+      "id": "1a531a24",
+      "label": "Pin 2",
+      "body": null,
+      "position": [
+        5.550000000000001,
+        1.5,
+        -17.2
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-01T23:08:05.486Z",
+      "photo": null,
+      "panorama": "media/DJI_20260831125722_0091_D_1788303697266.jpg",
+      "replies": []
+    },
+    {
+      "id": "eb577de5",
+      "label": "Pin 3",
+      "body": null,
+      "position": [
+        5.800000000000001,
+        1.5,
+        -11.35
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-01T23:08:40.046Z",
+      "photo": null,
+      "panorama": "media/DJI_20260831125722_0091_D_1788303742374.jpg",
+      "replies": []
+    },
+    {
+      "id": "90b41f33",
+      "label": "Pin 4",
+      "body": null,
+      "position": [
+        6.8,
+        1.5,
+        -8.4
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-01T23:09:06.281Z",
+      "photo": null,
+      "panorama": "media/DJI_20260831125722_0091_D_1788303768935.jpg",
+      "replies": []
+    },
+    {
+      "id": "ce265a44",
+      "label": "Pin 5",
+      "body": null,
+      "position": [
+        10.55,
+        1.5,
+        0.4
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-01T23:09:46.352Z",
+      "photo": null,
+      "panorama": "media/DJI_20260831125722_0091_D_1788303815754.jpg",
+      "replies": []
+    }
+  ],
+  "gps": {
+    "lat": 12.5185,
+    "lng": 99.9455
+  },
+  "northDeg": 0,
+  "feedback": {
+    "url": "https://zvlengsphwrxviwbdlrr.supabase.co",
+    "anonKey": "sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw",
+    "boardKey": "AahapAWL_VEkM3bbMxbBLKCRvYPx-3HM"
+  },
+  "bim": {
+    "file": "bim.json"
+  },
+  "skybox": {
+    "file": "media/DJI_20260831125722_0091_D_1788303905620.jpg",
+    "yawDeg": 240,
+    "pitchDeg": 0,
+    "intensity": 1,
+    "horizonFadeDeg": 12,
+    "lighting": false
+  }
+}
