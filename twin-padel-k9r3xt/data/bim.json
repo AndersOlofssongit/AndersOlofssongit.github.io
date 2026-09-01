@@ -1,0 +1,1425 @@
+{
+  "version": 1,
+  "model": {
+    "version": 1,
+    "projectName": "Paddelofthailand",
+    "storeys": [
+      {
+        "id": "a544a8ed",
+        "name": "Ground floor",
+        "elevation": -0.15,
+        "height": 2.7,
+        "scans": [
+          {
+            "scanId": "882feb28-ee34-43ec-a652-c230003b7863",
+            "alignment": {
+              "rotDeg": 0,
+              "tx": -1.4018650524841973,
+              "ty": -4.722382468669636,
+              "tz": 0
+            }
+          }
+        ],
+        "images": [],
+        "vectorRefs": []
+      }
+    ],
+    "walls": [
+      {
+        "id": "76882b93",
+        "storeyId": "a544a8ed",
+        "ax": 0,
+        "ay": 20.9,
+        "bx": 0,
+        "by": -3.270000000000003,
+        "thickness": 0.15,
+        "height": 1.5,
+        "baseOffset": 0
+      },
+      {
+        "id": "4977d467",
+        "storeyId": "a544a8ed",
+        "ax": -0.7499999999999989,
+        "ay": -7.549999999999995,
+        "bx": -93.21453111928251,
+        "by": -10.111344352334696,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "aa42fd9e",
+        "storeyId": "a544a8ed",
+        "ax": -93.21453111928251,
+        "ay": -10.111344352334696,
+        "bx": -87,
+        "by": 21.47,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "42d13482",
+        "storeyId": "a544a8ed",
+        "ax": -87,
+        "ay": 21.47,
+        "bx": -0.0018582001091283773,
+        "by": 20.90138469411836,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "9d76f0f2",
+        "storeyId": "a544a8ed",
+        "ax": 5.551115123125783e-16,
+        "ay": -3.2600000000000016,
+        "bx": -0.7692495690885918,
+        "by": -7.5516028591258335,
+        "thickness": 0.15,
+        "height": 1.5,
+        "baseOffset": 0
+      },
+      {
+        "id": "6cda3edf",
+        "storeyId": "a544a8ed",
+        "ax": -84.45,
+        "ay": -5.6000000000000005,
+        "bx": -84.45,
+        "by": 18.6,
+        "thickness": 0.1,
+        "height": 8,
+        "baseOffset": 4,
+        "material": "steel",
+        "topB": 10,
+        "finish": {
+          "colorFace1": "#7A7B7A"
+        }
+      },
+      {
+        "id": "cf2d4c08",
+        "storeyId": "a544a8ed",
+        "ax": -34.400000000000006,
+        "ay": -5.7,
+        "bx": -34.300000000000004,
+        "by": 18.45,
+        "thickness": 0.1,
+        "height": 10,
+        "baseOffset": 4,
+        "material": "steel",
+        "topB": 10,
+        "finish": {
+          "colorFace1": "#7A7B7A",
+          "colorFace2": "#7A7B7A"
+        }
+      },
+      {
+        "id": "96353024",
+        "storeyId": "a544a8ed",
+        "ax": -34.400000000000006,
+        "ay": -5.7,
+        "bx": -84.45,
+        "by": -5.6000000000000005,
+        "thickness": 0.1,
+        "height": 8,
+        "baseOffset": 4,
+        "material": "steel",
+        "finish": {
+          "colorFace1": "#7A7B7A",
+          "colorFace2": "#7A7B7A"
+        }
+      },
+      {
+        "id": "092c5130",
+        "storeyId": "a544a8ed",
+        "ax": -34.300000000000004,
+        "ay": 18.45,
+        "bx": -84.45,
+        "by": 18.6,
+        "thickness": 0.1,
+        "height": 10,
+        "baseOffset": 4,
+        "material": "steel",
+        "topB": 10,
+        "finish": {
+          "colorFace2": "#7A7B7A",
+          "colorFace1": "#7A7B7A"
+        }
+      },
+      {
+        "id": "82f6d17d",
+        "storeyId": "a544a8ed",
+        "ax": -20.400000000000006,
+        "ay": 14.100000000000003,
+        "bx": -20.35,
+        "by": 1,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "621f24b1",
+        "storeyId": "a544a8ed",
+        "ax": -20.35,
+        "ay": 1,
+        "bx": -30.150000000000006,
+        "by": 0.9500000000000015,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "825595c1",
+        "storeyId": "a544a8ed",
+        "ax": -30.150000000000006,
+        "ay": 0.9500000000000015,
+        "bx": -30.150000000000006,
+        "by": 14.050000000000002,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "48aea732",
+        "storeyId": "a544a8ed",
+        "ax": -30.150000000000006,
+        "ay": 14.050000000000002,
+        "bx": -20.400000000000006,
+        "by": 14.100000000000003,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "3cd6b8bd",
+        "storeyId": "a544a8ed",
+        "ax": -30.25230766196389,
+        "ay": 15.199994082956945,
+        "bx": -20.50230766196389,
+        "by": 15.249994082956945,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "e165ec36",
+        "storeyId": "a544a8ed",
+        "ax": -30.254615323927773,
+        "ay": 17.949988165913886,
+        "bx": -20.504615323927773,
+        "by": 17.999988165913887,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "4a970ac4",
+        "storeyId": "a544a8ed",
+        "ax": -20.504615323927773,
+        "ay": 17.999988165913887,
+        "bx": -20.50230766196389,
+        "by": 15.249994082956945,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "9abf243d",
+        "storeyId": "a544a8ed",
+        "ax": -30.254615323927773,
+        "ay": 17.949988165913886,
+        "bx": -30.25230766196389,
+        "by": 15.199994082956945,
+        "thickness": 0.15,
+        "height": 2.7,
+        "baseOffset": 0
+      }
+    ],
+    "wallJoins": [
+      {
+        "id": "4a69008a",
+        "type": "mitre",
+        "throughWallId": "42d13482",
+        "endingWallId": "76882b93",
+        "endingEnd": "a"
+      },
+      {
+        "id": "91eeb470",
+        "type": "mitre",
+        "throughWallId": "42d13482",
+        "endingWallId": "aa42fd9e",
+        "endingEnd": "b"
+      },
+      {
+        "id": "5ed93048",
+        "type": "mitre",
+        "throughWallId": "9d76f0f2",
+        "endingWallId": "4977d467",
+        "endingEnd": "a"
+      }
+    ],
+    "slabs": [
+      {
+        "id": "e8181638",
+        "storeyId": "a544a8ed",
+        "kind": "ground",
+        "outline": [
+          [
+            -87,
+            21.47
+          ],
+          [
+            0,
+            20.9
+          ],
+          [
+            5.551115123125783e-16,
+            -3.2600000000000016
+          ],
+          [
+            -0.7692495690885918,
+            -7.5516028591258335
+          ],
+          [
+            -93.21453111928251,
+            -10.111344352334696
+          ]
+        ],
+        "thickness": 0.1,
+        "cuts": []
+      },
+      {
+        "id": "bd6bfb70",
+        "storeyId": "a544a8ed",
+        "kind": "ceiling",
+        "outline": [
+          [
+            -84.45,
+            18.61
+          ],
+          [
+            -34.95,
+            18.51
+          ],
+          [
+            -34.95,
+            -5.49
+          ],
+          [
+            -84.45,
+            -5.39
+          ]
+        ],
+        "thickness": 0.05,
+        "baseOffset": 9.2,
+        "slope": {
+          "dirDeg": 90,
+          "pitchDeg": 5
+        },
+        "cuts": []
+      },
+      {
+        "id": "7ed685c7",
+        "storeyId": "a544a8ed",
+        "kind": "floor",
+        "outline": [
+          [
+            -83.97,
+            -2.62
+          ],
+          [
+            -83.97,
+            17.38
+          ],
+          [
+            -73.97,
+            17.38
+          ],
+          [
+            -73.97,
+            -2.62
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#2271B3"
+        },
+        "baseOffset": 0.2,
+        "cuts": []
+      },
+      {
+        "id": "a78a9a08",
+        "storeyId": "a544a8ed",
+        "kind": "floor",
+        "outline": [
+          [
+            -70.97,
+            -2.62
+          ],
+          [
+            -70.97,
+            17.38
+          ],
+          [
+            -60.97,
+            17.38
+          ],
+          [
+            -60.97,
+            -2.62
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#2271B3"
+        },
+        "baseOffset": 0.2,
+        "cuts": []
+      },
+      {
+        "id": "01a27d3e",
+        "storeyId": "a544a8ed",
+        "kind": "floor",
+        "outline": [
+          [
+            -57.965,
+            -2.62
+          ],
+          [
+            -57.965,
+            17.38
+          ],
+          [
+            -47.965,
+            17.38
+          ],
+          [
+            -47.965,
+            -2.62
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#2271B3"
+        },
+        "baseOffset": 0.2,
+        "cuts": []
+      },
+      {
+        "id": "f92d863e",
+        "storeyId": "a544a8ed",
+        "kind": "floor",
+        "outline": [
+          [
+            -44.965,
+            -2.63
+          ],
+          [
+            -44.965,
+            17.37
+          ],
+          [
+            -34.965,
+            17.37
+          ],
+          [
+            -34.965,
+            -2.63
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#2271B3"
+        },
+        "baseOffset": 0.2,
+        "cuts": []
+      },
+      {
+        "id": "2d7779c1",
+        "storeyId": "a544a8ed",
+        "kind": "floor",
+        "outline": [
+          [
+            -84.45,
+            -5.6000000000000005
+          ],
+          [
+            -84.45,
+            18.6
+          ],
+          [
+            -34.300000000000004,
+            18.45
+          ],
+          [
+            -34.400000000000006,
+            -5.7
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#8A9597"
+        },
+        "baseOffset": 0.1,
+        "cuts": []
+      },
+      {
+        "id": "5a81ef07",
+        "storeyId": "a544a8ed",
+        "kind": "floor",
+        "outline": [
+          [
+            -32.35,
+            -1.6
+          ],
+          [
+            -32.35,
+            18.400000000000002
+          ],
+          [
+            -20.3,
+            18.400000000000002
+          ],
+          [
+            -20.29,
+            -1.61
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#8A9597"
+        },
+        "baseOffset": 0.5,
+        "cuts": []
+      },
+      {
+        "id": "968ec7ce",
+        "storeyId": "a544a8ed",
+        "kind": "floor",
+        "outline": [
+          [
+            -20.25,
+            13.11
+          ],
+          [
+            -20.1,
+            20.76
+          ],
+          [
+            -0.1,
+            20.81
+          ],
+          [
+            -0.2,
+            13.51
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#8A9597"
+        },
+        "baseOffset": 0.5,
+        "cuts": []
+      },
+      {
+        "id": "bf12b62e",
+        "storeyId": "a544a8ed",
+        "kind": "ground",
+        "outline": [
+          [
+            -0.15000000000000002,
+            12.5
+          ],
+          [
+            -17.8,
+            12.450000000000001
+          ],
+          [
+            -17.55,
+            -8
+          ],
+          [
+            -0.7499999999999989,
+            -7.549999999999995
+          ],
+          [
+            0,
+            -3.270000000000003
+          ]
+        ],
+        "thickness": 0.1,
+        "material": "gravel",
+        "baseOffset": 0.15,
+        "cuts": []
+      },
+      {
+        "id": "4a3cbd86",
+        "storeyId": "a544a8ed",
+        "kind": "floor",
+        "outline": [
+          [
+            -32.45,
+            -2.75
+          ],
+          [
+            -32.35,
+            -1.6
+          ],
+          [
+            -32.35,
+            -1.6
+          ],
+          [
+            -20.29,
+            -1.61
+          ],
+          [
+            -20.3,
+            18.400000000000002
+          ],
+          [
+            -17.6,
+            18.35
+          ],
+          [
+            -17.650000000000002,
+            -2.6
+          ]
+        ],
+        "thickness": 0.2,
+        "finish": {
+          "colorFace1": "#7A7B7A"
+        },
+        "baseOffset": 0.4,
+        "cuts": []
+      }
+    ],
+    "openings": [
+      {
+        "id": "d36cf127",
+        "wallId": "76882b93",
+        "kind": "opening",
+        "doorType": "single_swing",
+        "s": 19.470804161827413,
+        "width": 5,
+        "sill": 0,
+        "head": 2.1
+      },
+      {
+        "id": "7f49666b",
+        "wallId": "82f6d17d",
+        "kind": "window",
+        "doorType": "single_swing",
+        "windowType": "triple_panel",
+        "s": 11.568770031591175,
+        "width": 3,
+        "sill": 0,
+        "head": 2.7
+      },
+      {
+        "id": "6219d355",
+        "wallId": "82f6d17d",
+        "kind": "window",
+        "doorType": "single_swing",
+        "windowType": "triple_panel",
+        "s": 8.368770031591175,
+        "width": 3,
+        "sill": 0,
+        "head": 2.7
+      }
+    ],
+    "stairs": [],
+    "railings": [
+      {
+        "id": "ef7df31c",
+        "storeyId": "a544a8ed",
+        "kind": "railing",
+        "ax": 0,
+        "ay": -3.270000000000003,
+        "bx": -0.05,
+        "by": -1.1,
+        "height": 0.5,
+        "baseOffset": 1.5,
+        "infill": "vertical",
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "2c789dfd",
+        "storeyId": "a544a8ed",
+        "kind": "railing",
+        "ax": -0.7692495690885918,
+        "ay": -7.5516028591258335,
+        "bx": 5.551115123125783e-16,
+        "by": -3.2600000000000016,
+        "height": 0.5,
+        "baseOffset": 1.5,
+        "infill": "vertical",
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "edae2c71",
+        "storeyId": "a544a8ed",
+        "kind": "railing",
+        "ax": 0,
+        "ay": 4,
+        "bx": 0,
+        "by": 20.9,
+        "height": 0.5,
+        "baseOffset": 1.5,
+        "infill": "vertical",
+        "color": "#0A0A0A"
+      }
+    ],
+    "ramps": [],
+    "items": [
+      {
+        "id": "f651d783",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -17,
+        "y": 13.15,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "b1a85b52",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -15.65,
+        "y": 13.100000000000001,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "1e6b670a",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -14.350000000000001,
+        "y": 13.15,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "f3bf5854",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -13.05,
+        "y": 13.100000000000001,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "38d34500",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -12.050000000000002,
+        "y": 13.200000000000001,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "f0c3a994",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -10.100000000000001,
+        "y": 13.100000000000001,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "bbb51b76",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -8.8,
+        "y": 13.05,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "054461ae",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -7.550000000000001,
+        "y": 13.100000000000001,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "82127c38",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -6.3500000000000005,
+        "y": 13.100000000000001,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "611548fe",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -5.2,
+        "y": 13.100000000000001,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "3cb6b587",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -4,
+        "y": 13.15,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "44d6e8a9",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -2.9000000000000004,
+        "y": 13.05,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "7ed38d7d",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -1.75,
+        "y": 13.100000000000001,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "a91bfa18",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -0.75,
+        "y": 13.15,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "c05999a8",
+        "storeyId": "a544a8ed",
+        "assetId": "car_large",
+        "name": "Car — large (SUV / estate)",
+        "x": -14.700000000000001,
+        "y": 9.55,
+        "rotDeg": 0,
+        "w": 1.95,
+        "d": 4.85,
+        "h": 1.8,
+        "elevation": 0
+      },
+      {
+        "id": "9c32800f",
+        "storeyId": "a544a8ed",
+        "assetId": "car_small",
+        "name": "Car — small (hatchback)",
+        "x": -11.75,
+        "y": 10,
+        "rotDeg": 0,
+        "w": 1.78,
+        "d": 3.95,
+        "h": 1.48,
+        "elevation": 0
+      },
+      {
+        "id": "715cefe5",
+        "storeyId": "a544a8ed",
+        "assetId": "car_small",
+        "name": "Car — small (hatchback)",
+        "x": -9.15,
+        "y": 10,
+        "rotDeg": 0,
+        "w": 1.78,
+        "d": 3.95,
+        "h": 1.48,
+        "elevation": 0
+      },
+      {
+        "id": "e837f8d4",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -16.95,
+        "y": 11.9,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "c9824498",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -17.049999999999997,
+        "y": 10.7,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "fc32f871",
+        "storeyId": "a544a8ed",
+        "assetId": "bush",
+        "name": "Bush",
+        "x": -11.100000000000001,
+        "y": 13.1,
+        "rotDeg": 0,
+        "w": 1.2,
+        "d": 1.2,
+        "h": 0.8,
+        "elevation": 0
+      },
+      {
+        "id": "f3863e06",
+        "storeyId": "a544a8ed",
+        "assetId": "custom:391ad479-4113-45af-9be2-3bf05d38401a",
+        "name": "Padel of Thailand  painting 2x1m",
+        "x": -34.05,
+        "y": 6.75,
+        "rotDeg": 90,
+        "w": 10,
+        "d": 0.05,
+        "h": 5,
+        "elevation": 6
+      }
+    ],
+    "columns": [
+      {
+        "id": "c80b2439",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -40.100000000000016,
+        "y": -5.4,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "80124a22",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -30.099999999999998,
+        "y": 7.8,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "1f8355c5",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -29.750000000000004,
+        "y": 12.65,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "651caef4",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -30.25,
+        "y": 18,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "107daadb",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -24.95,
+        "y": 18.150000000000002,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "16b2655c",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -24.95,
+        "y": 12.600000000000001,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "3d1c7225",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -24.6,
+        "y": 7.9,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "c958dad1",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -20.8,
+        "y": 8,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "00bc23e3",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -20.55,
+        "y": 12.600000000000001,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "31747002",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -20.55,
+        "y": 18.05,
+        "rotDeg": 0,
+        "w": 0.3,
+        "d": 0.3,
+        "height": 2.7,
+        "baseOffset": 0
+      },
+      {
+        "id": "ba40175a",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -34.65000000000001,
+        "y": -5.3500000000000005,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "cbfd2b0f",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -53.05000000000002,
+        "y": -5.35,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "9720f03b",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -78.65000000000003,
+        "y": -5.450000000000001,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "6ede5d59",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -46.15000000000003,
+        "y": -5.3999999999999995,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "973f154a",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -65.40000000000003,
+        "y": -5.3999999999999995,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "7a7384b5",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -72.30000000000004,
+        "y": -5.3999999999999995,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "89dbf410",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -84.20000000000005,
+        "y": 6.950000000000002,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "9e3e9110",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -59.350000000000044,
+        "y": -5.449999999999999,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "a6136a88",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -84.20000000000003,
+        "y": -5.349999999999999,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "0322460f",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -84.25000000000004,
+        "y": 1.100000000000001,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "7748a91f",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -84.20000000000005,
+        "y": 13.200000000000003,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "3288e1f5",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -84.25000000000004,
+        "y": 18.200000000000003,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "b3401f60",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -34.60000000000003,
+        "y": 0.6000000000000003,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "515acfaf",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -79.40000000000003,
+        "y": 18.150000000000002,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "f466ad19",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -72.35000000000002,
+        "y": 18.200000000000003,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "afa89d93",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -65.45000000000003,
+        "y": 18.150000000000002,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "0e7136b7",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -59.400000000000034,
+        "y": 18.200000000000003,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "cb1d775f",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -53.30000000000003,
+        "y": 18.200000000000003,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "79eaef52",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -46.50000000000003,
+        "y": 18.2,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "33967a2a",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -41.65000000000003,
+        "y": 18.2,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "c877b026",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -34.700000000000024,
+        "y": 18.2,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 12,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "479f6246",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -34.60000000000003,
+        "y": 13.1,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      },
+      {
+        "id": "f6fa0850",
+        "storeyId": "a544a8ed",
+        "shape": "rect",
+        "x": -34.65000000000003,
+        "y": 7,
+        "rotDeg": 0,
+        "w": 0.4,
+        "d": 0.4,
+        "height": 10,
+        "baseOffset": 0,
+        "color": "#0A0A0A"
+      }
+    ],
+    "beams": [],
+    "finishes": [],
+    "mepRuns": [],
+    "roofs": [],
+    "skylights": [],
+    "chimneys": [],
+    "solarArrays": [],
+    "pins": [
+      {
+        "id": "0a1f6858",
+        "storeyId": "a544a8ed",
+        "x": -72.65,
+        "y": 7.4,
+        "z": 3,
+        "label": "Pin 1",
+        "createdAt": "2026-09-01T08:34:03.012Z",
+        "panoMediaId": "42e1b86f-f4cb-41fc-abc1-587c08e6fdd6"
+      },
+      {
+        "id": "e59852c2",
+        "storeyId": "a544a8ed",
+        "x": -71.5,
+        "y": 11.850000000000001,
+        "z": 1,
+        "label": "Pin 2",
+        "createdAt": "2026-09-01T08:35:54.260Z",
+        "photoMediaId": "947ebc66-f1a2-4144-a16e-eeb7b2c66f33"
+      },
+      {
+        "id": "e5f568df",
+        "storeyId": "a544a8ed",
+        "x": -55.1,
+        "y": 12.65,
+        "z": 1.5,
+        "label": "Pin 3",
+        "createdAt": "2026-09-01T08:36:19.882Z",
+        "photoMediaId": "f66b0fbb-3565-4b37-a8d9-c382dec80fc6"
+      }
+    ],
+    "annotations": {
+      "slab:e8181638": {
+        "tags": [
+          "Title deed"
+        ]
+      }
+    },
+    "optionSets": [],
+    "furniture": [],
+    "north": {
+      "x": 6.550000000000001,
+      "y": 24.450000000000003,
+      "dirDeg": 90
+    }
+  }
+}

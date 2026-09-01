@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "name": "Padel of Thailand",
+  "subtitle": "Hua Hin",
+  "models": [
+    {
+      "name": "Paddelofthailand BIM 2026-08-28",
+      "file": "models/Paddelofthailand BIM 2026-08-28.ifc"
+    }
+  ],
+  "pins": [
+    {
+      "id": "0a1f6858",
+      "label": "Pin 1",
+      "body": null,
+      "position": [
+        -72.65,
+        2.85,
+        -7.4
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-01T08:34:03.012Z",
+      "photo": null,
+      "panorama": "media/indoor_pot_pano.jpg",
+      "replies": []
+    },
+    {
+      "id": "e59852c2",
+      "label": "Pin 2",
+      "body": null,
+      "position": [
+        -71.5,
+        0.85,
+        -11.850000000000001
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-01T08:35:54.260Z",
+      "photo": "media/indoor_pot_wide.jpg",
+      "panorama": null,
+      "replies": []
+    },
+    {
+      "id": "e5f568df",
+      "label": "Pin 3",
+      "body": null,
+      "position": [
+        -55.1,
+        1.35,
+        -12.65
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-01T08:36:19.882Z",
+      "photo": "media/outdoor_pot_wide.jpg",
+      "panorama": null,
+      "replies": []
+    }
+  ],
+  "gps": {
+    "lat": 12.533918,
+    "lng": 99.9351
+  },
+  "northDeg": 90,
+  "bim": {
+    "file": "bim.json",
+    "assets": [
+      {
+        "assetId": "custom:391ad479-4113-45af-9be2-3bf05d38401a",
+        "file": "bim-assets/391ad479-4113-45af-9be2-3bf05d38401a.glb",
+        "format": "glb"
+      }
+    ]
+  },
+  "feedback": {
+    "url": "https://zvlengsphwrxviwbdlrr.supabase.co",
+    "anonKey": "sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw",
+    "boardKey": "VLvwE59YfU272-7C_ertx2dfbRwoX4EU"
+  }
+}
