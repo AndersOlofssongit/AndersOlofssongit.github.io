@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "name": "1A",
+  "models": [
+    {
+      "name": "1A BIM 2026-09-02",
+      "file": "models/1A BIM 2026-09-02.ifc"
+    }
+  ],
+  "pins": [
+    {
+      "id": "86482c8e",
+      "label": "Pin 1",
+      "body": "Add detailed information here",
+      "position": [
+        6.5600000000000005,
+        1.5,
+        -9.570000000000002
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-08-17T13:08:21.883Z",
+      "photo": "media/photo1.jpg",
+      "panorama": null,
+      "replies": []
+    },
+    {
+      "id": "703a1065",
+      "label": "Pin 2",
+      "body": "Upload any 360 image to a pin. \n\nUpdate it as time goes and as redesigns and changes occour.",
+      "position": [
+        6.089999999999999,
+        1.5,
+        -10.500000000000002
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-08-17T13:10:11.038Z",
+      "photo": "media/photo2.jpg",
+      "panorama": null,
+      "replies": []
+    },
+    {
+      "id": "99966fc6",
+      "label": "Pin 3",
+      "body": null,
+      "position": [
+        11.350000000000001,
+        2,
+        -0.2
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-02T11:54:07.296Z",
+      "photo": null,
+      "panorama": "media/night2.jpg",
+      "replies": []
+    },
+    {
+      "id": "8c73890a",
+      "label": "Pin 4",
+      "body": null,
+      "position": [
+        8.25,
+        2,
+        -3.5500000000000003
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-02T11:54:15.787Z",
+      "photo": null,
+      "panorama": "media/night1.jpg",
+      "replies": []
+    }
+  ],
+  "gps": {
+    "lat": 33,
+    "lng": 99
+  },
+  "northDeg": 14.999999999999998,
+  "feedback": {
+    "url": "https://zvlengsphwrxviwbdlrr.supabase.co",
+    "anonKey": "sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw",
+    "boardKey": "ZvGTNgIW0F6RuIt45Hzx3niTwy-cNP11"
+  },
+  "bim": {
+    "file": "bim.json",
+    "assets": [
+      {
+        "assetId": "custom:bf9f82c6-4066-43b3-9e3f-bc798ed92812",
+        "file": "bim-assets/bf9f82c6-4066-43b3-9e3f-bc798ed92812.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:59cfbd2f-4bfa-4cbc-ba4c-5a19b54cd359",
+        "file": "bim-assets/59cfbd2f-4bfa-4cbc-ba4c-5a19b54cd359.glb",
+        "format": "glb"
+      }
+    ]
+  }
+}
