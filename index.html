@@ -894,9 +894,9 @@
       </a>
       <a class="row" href="#course">
         <span class="who">People who want to sell this</span>
-        <span class="what">Surveyors, CAD-literate contractors, architecture students and
-        agents: learn the whole chain, then digitise buildings in your own market as a service.
-        One person with a phone and a browser delivers what used to need three companies.</span>
+        <span class="what">Working professionals: learn the whole chain, then digitise
+        buildings in your own market as a service — including how to put your own AI on an open
+        model format and run the output of a CAD department on your own. Screened intake.</span>
         <span class="arrow">The crash course →</span>
       </a>
       <a class="row" href="#access">
@@ -909,17 +909,15 @@
   </section>
 
   <section id="app">
-    <h2>The Skanna app</h2>
+    <h2>The Skanna iOS app — LiDAR 3D scanning, image and data capture</h2>
     <p class="section-lede">Built for one job: <strong>capturing the inside of
     buildings</strong>. It is the measuring tool already in your iPhone Pro or iPad Pro, taken
     seriously — <strong>we do not guess at the geometry and we do not invent the
-    images</strong>. It is a raw capture tool, not a beautifier: what you walk out with is what
-    was actually there, true to scale, ready to model from. Everything is captured, processed
-    and stored on the device. <strong>Free, no account, and completely private.</strong></p>
-    <div class="slot">
-      <span><strong>Media slot — field video</strong>Scanning a mansion under construction, in
-      Skanna kit. Drop the clip or still in here.</span>
-    </div>
+    images</strong>. Geometry, photographs, 360° panoramas and notes, all captured in one
+    walk-through and all positioned in space. It is a raw capture tool, not a beautifier: what
+    you walk out with is what was actually there, true to scale, ready to model from.
+    Everything is captured, processed and stored on the device. <strong>Free, no account, and
+    completely private.</strong></p>
     <p class="ifc-note">Requires a LiDAR sensor: iPhone&nbsp;12&nbsp;Pro or later Pro model, or
     iPad&nbsp;Pro 2020 or later. <strong>No Pro iPhone? Nothing else on this page needs
     one</strong> — see <a href="#how">the six ways in</a>.
@@ -1172,15 +1170,31 @@
     getting drawing sets out, publishing the twin, and how to sell the service.
     <strong>No other platform covers all of this in one place</strong> — which is exactly why it
     can be taught in days instead of years.</p>
-    <p class="section-lede">Course material is being produced now.
-    <strong>Leave your email and you get the syllabus, the start date and the enrolment link
-    first</strong>, before it opens generally.</p>
+    <p class="section-lede"><strong>This first intake is for professionals.</strong> People who
+    already work in this field today and already know what a correct drawing looks like —
+    surveyors, technical designers, CAD-literate contractors, architects and the people who
+    run them. It is not an introduction to buildings.</p>
+
+    <h3 class="sub-head">And the part nobody else can offer you: put your own AI on it</h3>
+    <p class="section-lede">A Skanna building model is <strong>documented, open JSON</strong>.
+    Not a proprietary binary, not a licensed API, not a plug-in you have to be approved for.
+    That means you can <strong>point your own AI at it and have it author the model
+    directly</strong> — and you never have to force an MCP into a closed-source CAD system
+    that was never going to let you in.</p>
+    <p class="section-lede">Done properly, one professional with their own agents can produce
+    the output of a whole CAD department: <strong>an army of drafters that costs what your
+    tokens cost.</strong> A serious part of this course is how to actually do that — the
+    format, the prompts, the checks that stop an agent inventing geometry, and where a human
+    still has to look. <strong>This is the reason the intake is screened</strong>, and it is
+    why it is worth what it costs.</p>
+
     <div class="doors">
       <div class="door primary solo">
-        <div class="for">Starts 1 November 2026</div>
-        <h4>Join the crash-course list</h4>
-        <p>Tell me what you do today and I will tell you honestly whether this is worth your
-        time and money before you spend either.</p>
+        <div class="for">Starts 1 November 2026 · places are screened</div>
+        <h4>Apply for a place</h4>
+        <p>Tell me what you do today. I read every application myself, and I come back with the
+        syllabus, the price, and an honest answer on whether this is worth it for you — before
+        you spend anything.</p>
         <form class="signup" id="courseForm" data-interest="course" data-source="site-course">
           <input type="email" name="email" required placeholder="you@company.com"
                  autocomplete="email" aria-label="Your email">
@@ -1188,13 +1202,13 @@
             <input type="text" name="name" placeholder="Name" autocomplete="name" aria-label="Your name">
             <input type="text" name="country" placeholder="Country" autocomplete="country-name" aria-label="Country">
           </div>
-          <input type="text" name="works_on" placeholder="What you do today — student, contractor, agent, designer…" aria-label="What you do today">
+          <input type="text" name="works_on" placeholder="What you do today — surveyor, designer, contractor, architect…" aria-label="What you do today">
           <!-- Bots fill every field they can see; people never see this one. -->
           <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
-          <button class="btn" type="submit">Join the course list</button>
+          <button class="btn" type="submit">Apply for a place</button>
           <p class="formnote" role="status" aria-live="polite">
-            No payment here. You get the syllabus and the enrolment link by email before
-            the course opens generally.
+            No payment here, and nothing to commit to. I screen every application and reply
+            personally with the syllabus, the price and the start date.
           </p>
         </form>
       </div>
@@ -1333,14 +1347,18 @@
             'the only route, and every stage after this one happens in a browser.</p>'
     },
     splat: {
-      tag: 'No LiDAR needed · drone or camera',
-      html: '<p><strong>Gaussian splat or photogrammetry.</strong> Fly it, or walk around it ' +
-            'with a camera, and bring the result in as a tracing reference — a PLY point ' +
-            'cloud, including a splat PLY, or a GLB mesh. Large clouds are decimated on ' +
-            'import so they stay workable in the browser.</p><p>One condition: <strong>scale ' +
-            'and orient it in the tool that produced it</strong> before importing. Skanna ' +
-            'takes the file as it comes. This is how the outside of a building, a roof or a ' +
-            'façade gets captured without a ladder.</p>'
+      tag: 'Any camera · no special hardware',
+      html: '<p><strong>Gaussian splat or photogrammetry.</strong> The advantage here is that ' +
+            '<strong>the hardware does not matter</strong> — any phone, any camera, any ' +
+            'drone. No LiDAR sensor, no survey rig, nothing to hire. Fly it or walk around ' +
+            'it, and bring the result in as a tracing reference: a PLY point cloud, including ' +
+            'a splat PLY, or a GLB mesh. Large clouds are decimated on import so they stay ' +
+            'workable in the browser.</p><p>The catch is <strong>scale</strong>. A ' +
+            'reconstruction built from photographs has no inherent real-world size, so it has ' +
+            'to be scaled and oriented in the tool that produced it — against GPS, a known ' +
+            'dimension or a scan — before it comes in. Skanna takes the file as it comes. Get ' +
+            'that right and this is how a roof, a façade or a whole site gets captured ' +
+            'without a ladder.</p>'
     },
     cad: {
       tag: 'From the architect or the engineer',
