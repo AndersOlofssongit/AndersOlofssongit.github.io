@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "Tag demo",
+  "subtitle": "IFC only — tags read back out of Skanna_Tags",
+  "models": [
+    {
+      "name": "BIM model",
+      "file": "models/model.ifc"
+    }
+  ],
+  "pins": []
+}

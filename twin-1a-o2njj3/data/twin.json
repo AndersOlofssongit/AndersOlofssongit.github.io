@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "name": "1A",
+  "models": [
+    {
+      "name": "1A BIM 2026-09-03",
+      "file": "models/1A BIM 2026-09-03.ifc"
+    }
+  ],
+  "pins": [
+    {
+      "id": "86482c8e",
+      "label": "Pin 1",
+      "body": "Add detailed information here",
+      "position": [
+        6.5600000000000005,
+        1.5,
+        -9.570000000000002
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-08-17T13:08:21.883Z",
+      "photo": "media/photo1.jpg",
+      "panorama": null,
+      "replies": []
+    },
+    {
+      "id": "703a1065",
+      "label": "Pin 2",
+      "body": "Upload any 360 image to a pin. \n\nUpdate it as time goes and as redesigns and changes occour.",
+      "position": [
+        6.089999999999999,
+        1.5,
+        -10.500000000000002
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-08-17T13:10:11.038Z",
+      "photo": "media/photo2.jpg",
+      "panorama": null,
+      "replies": []
+    },
+    {
+      "id": "99966fc6",
+      "label": "Pin 3",
+      "body": null,
+      "position": [
+        11.350000000000001,
+        2,
+        -0.2
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-02T11:54:07.296Z",
+      "photo": null,
+      "panorama": "media/night2.jpg",
+      "replies": []
+    },
+    {
+      "id": "8c73890a",
+      "label": "Pin 4",
+      "body": null,
+      "position": [
+        8.25,
+        2,
+        -3.5500000000000003
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-02T11:54:15.787Z",
+      "photo": null,
+      "panorama": "media/night1.jpg",
+      "replies": []
+    },
+    {
+      "id": "c477c657",
+      "label": "Pin 5",
+      "body": null,
+      "position": [
+        2.35,
+        1.5,
+        -12.100000000000001
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-02T23:59:33.567Z",
+      "photo": null,
+      "panorama": "media/masterbath.jpg",
+      "replies": []
+    },
+    {
+      "id": "a80e023c",
+      "label": "Pin 6",
+      "body": null,
+      "position": [
+        2.35,
+        1.5,
+        -9.700000000000001
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-02T23:59:42.395Z",
+      "photo": null,
+      "panorama": "media/masterwic.jpg",
+      "replies": []
+    },
+    {
+      "id": "113c8826",
+      "label": "Pin 7",
+      "body": null,
+      "position": [
+        1.25,
+        1.5,
+        -7.7
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-02T23:59:49.072Z",
+      "photo": null,
+      "panorama": "media/masterbed.jpg",
+      "replies": []
+    },
+    {
+      "id": "b223a0a7",
+      "label": "Pin 8",
+      "body": null,
+      "position": [
+        8.65,
+        1.5,
+        -12.15
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-02T23:59:58.972Z",
+      "photo": null,
+      "panorama": "media/kit.jpg",
+      "replies": []
+    },
+    {
+      "id": "e365e729",
+      "label": "Pin 9",
+      "body": null,
+      "position": [
+        8.4,
+        1.5,
+        -6.300000000000001
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-03T00:00:19.150Z",
+      "photo": null,
+      "panorama": "media/liv.jpg",
+      "replies": []
+    },
+    {
+      "id": "0e1474c4",
+      "label": "Pin 10",
+      "body": null,
+      "position": [
+        8.5,
+        1.5,
+        -17.05
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-03T00:08:16.232Z",
+      "photo": null,
+      "panorama": "media/office.jpg",
+      "replies": []
+    },
+    {
+      "id": "3a87c6a9",
+      "label": "Pin 11",
+      "body": null,
+      "position": [
+        2.25,
+        1.5,
+        -17
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-03T00:08:21.645Z",
+      "photo": null,
+      "panorama": "media/bed1.jpg",
+      "replies": []
+    },
+    {
+      "id": "7b83e645",
+      "label": "Pin 12",
+      "body": null,
+      "position": [
+        1.4000000000000001,
+        1.5,
+        -14.25
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-03T00:08:26.986Z",
+      "photo": null,
+      "panorama": "media/wc.jpg",
+      "replies": []
+    },
+    {
+      "id": "169b3ca5",
+      "label": "Pin 13",
+      "body": null,
+      "position": [
+        8,
+        1.5,
+        -14.950000000000001
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-03T00:10:07.112Z",
+      "photo": null,
+      "panorama": "media/laundry.jpg",
+      "replies": []
+    },
+    {
+      "id": "f6f20e1f",
+      "label": "Pin 14",
+      "body": null,
+      "position": [
+        5.550000000000001,
+        1.5,
+        -13.450000000000001
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "createdAt": "2026-09-03T00:12:18.100Z",
+      "photo": null,
+      "panorama": "media/hall.jpg",
+      "replies": []
+    }
+  ],
+  "gps": {
+    "lat": 33,
+    "lng": 99
+  },
+  "northDeg": 14.999999999999998,
+  "feedback": {
+    "url": "https://zvlengsphwrxviwbdlrr.supabase.co",
+    "anonKey": "sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw",
+    "boardKey": "ZvGTNgIW0F6RuIt45Hzx3niTwy-cNP11"
+  },
+  "scans": [
+    {
+      "name": "FH A1",
+      "file": "models/FH A1.glb",
+      "alignment": {
+        "rotDeg": 271.5,
+        "tx": 5.225885531898167,
+        "ty": 9.907261447375152,
+        "tz": 1.324
+      }
+    }
+  ],
+  "bim": {
+    "file": "bim.json",
+    "assets": [
+      {
+        "assetId": "custom:bf9f82c6-4066-43b3-9e3f-bc798ed92812",
+        "file": "bim-assets/bf9f82c6-4066-43b3-9e3f-bc798ed92812.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:1afac6ae-58c9-4c10-935d-ab8cf758c2fe",
+        "file": "bim-assets/1afac6ae-58c9-4c10-935d-ab8cf758c2fe.glb",
+        "format": "glb"
+      },
+      {
+        "assetId": "custom:eae182ce-2616-4fa8-9968-2a0fcdba0f2d",
+        "file": "bim-assets/eae182ce-2616-4fa8-9968-2a0fcdba0f2d.glb",
+        "format": "glb"
+      }
+    ]
+  },
+  "skybox": {
+    "file": "media/bg_hr.jpg",
+    "yawDeg": 220,
+    "pitchDeg": 0,
+    "intensity": 1,
+    "horizonFadeDeg": 12,
+    "lighting": false
+  }
+}
