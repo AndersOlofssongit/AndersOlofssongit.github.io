@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why buildings lose their information — Skanna</title>
+<meta name="description" content="Drawings go stale, as-builts never get made, renovations go unrecorded, and the visuals get thrown away. Why building information disappears, what it costs, and what one living twin per building produces instead.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Skanna">
+<meta property="og:title" content="Why buildings lose their information">
+<meta property="og:description" content="Drawings go stale, as-builts never get made, renovations go unrecorded, and the visuals get thrown away. Why building information disappears, what it costs, and what one living twin per building produces instead.">
+<meta property="og:image" content="https://skanna.site/assets/og-image.png">
+<meta property="og:url" content="https://skanna.site/why.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://skanna.site/assets/og-image.png">
+<style>
+  :root {
+    --bg: #0b0b12; --bg2: #0a0a0f;
+    --panel: rgba(255,255,255,0.05); --rule: rgba(255,255,255,0.10);
+    --text: #f2f2f7; --muted: rgba(255,255,255,0.60); --faint: rgba(255,255,255,0.38);
+    --accent: #a78bfa; --accent-deep: #7c5cf0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, #12121d 0%, var(--bg) 40%, var(--bg2) 100%);
+    color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .grid-bg {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.045) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(255,255,255,0.045) 0.5px, transparent 0.5px);
+    background-size: 38px 38px;
+    mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 60%, transparent);
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 60%, transparent);
+  }
+  main { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 0 24px 64px; }
+  nav.top { display: flex; align-items: center; gap: 12px; padding: 28px 0 0; }
+  nav.top .name { font-weight: 700; letter-spacing: 0.02em; }
+  nav.top .spacer { flex: 1; }
+  nav.top a.back { color: var(--muted); font-size: 0.88em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header.page { padding: 46px 0 8px; }
+  header.page .kicker {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72em; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
+  }
+  header.page h1 {
+    font-size: clamp(1.9em, 3.6vw, 2.5em); line-height: 1.1;
+    margin: 0 0 18px; font-weight: 800; letter-spacing: -0.025em; text-wrap: balance;
+  }
+  header.page p.lede { margin: 0; color: var(--muted); font-size: 1.06em; max-width: 60ch; }
+  header.page p.lede strong { color: var(--text); }
+  section { padding: 44px 0; border-top: 1px solid var(--rule); }
+  h2 {
+    font-size: 0.85em; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--faint); margin: 0 0 14px;
+  }
+  .section-lede { margin: 0 0 28px; color: var(--muted); font-size: 1em; max-width: 720px; }
+  .section-lede strong { color: var(--text); }
+  .features { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  .card { background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 20px 22px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.02em; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.92em; }
+  .card .glyph { color: var(--accent); font-size: 1.25em; margin-bottom: 10px; }
+  .box {
+    margin-top: 22px; background: var(--panel);
+    border: 1px solid rgba(167,139,250,0.35); border-radius: 14px;
+    padding: 18px 22px; color: var(--muted); font-size: 0.94em;
+  }
+  .box strong { color: var(--text); }
+  .box ul {
+    display: grid; gap: 10px 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin: 14px 0 0; padding: 0; list-style: none;
+  }
+  .box li { padding-left: 22px; position: relative; }
+  .box li::before {
+    content: "◆"; position: absolute; left: 0; top: 1px; color: var(--accent); font-size: 0.7em;
+  }
+  .note { margin: 22px 0 0; color: var(--muted); font-size: 0.96em; max-width: 720px; }
+  .note strong { color: var(--text); }
+  .outputs { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .output {
+    background: var(--panel); border: 1px solid var(--rule);
+    border-radius: 14px; overflow: hidden; display: flex; flex-direction: column;
+  }
+  .output > img { display: block; width: 100%; height: 170px; object-fit: cover; border-bottom: 1px solid var(--rule); }
+  .output .body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+  .output .num {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.7em; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 8px;
+  }
+  .output h3 { margin: 0 0 8px; font-size: 1.08em; }
+  .output p { margin: 0 0 14px; color: var(--muted); font-size: 0.91em; }
+  .output p strong { color: var(--text); }
+  .output .go { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+  .output.wide { grid-column: 1 / -1; display: grid; grid-template-columns: 320px 1fr; }
+  .output.wide > img { height: 100%; min-height: 200px; border-bottom: 0; border-right: 1px solid var(--rule); }
+  @media (max-width: 720px) {
+    .output.wide { grid-template-columns: 1fr; }
+    .output.wide > img { height: 170px; min-height: 0; border-right: 0; border-bottom: 1px solid var(--rule); }
+  }
+  .btn {
+    display: inline-block; padding: 12px 24px; border-radius: 999px;
+    font-weight: 650; font-size: 0.95em;
+    background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+    color: #0b0b12; border: 1px solid rgba(255,255,255,0.18);
+  }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  footer {
+    border-top: 1px solid var(--rule); padding: 28px 0 0; margin-top: 24px;
+    display: flex; flex-wrap: wrap; gap: 8px 24px;
+    justify-content: space-between; align-items: center;
+    color: var(--faint); font-size: 0.85em;
+  }
+  footer nav.links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<main>
+  <nav class="top">
+    <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path d="M50 2 L98 40 L50 98 L2 40 Z" stroke="#f2f2f7" stroke-width="4.5"/>
+      <path d="M50 2 L26 40 M50 2 L74 40 M26 40 L74 40 M26 40 L50 98 M74 40 L50 98 M2 40 L26 40 M74 40 L98 40"
+            stroke="#f2f2f7" stroke-opacity="0.55" stroke-width="3"/>
+    </svg>
+    <span class="name">Skanna</span>
+    <span class="spacer"></span>
+    <a class="back" href="/">← Back to skanna.site</a>
+  </nav>
+
+  <header class="page">
+    <div class="kicker">The long version</div>
+    <h1>Why buildings lose their information</h1>
+    <p class="lede">Buildings are the most valuable things we own, and almost none of them have
+    an accurate, current record of what they are. <strong>The way this has always been done
+    doesn't work.</strong> Information about a building gets produced in bursts — for a permit,
+    for a sale — and then it goes stale, gets contradicted on site, or simply disappears.
+    Everyone downstream pays for that, forever.</p>
+  </header>
+
+  <section id="failures">
+    <h2>The four failures</h2>
+    <div class="features">
+      <div class="card">
+        <div class="glyph">◷</div>
+        <h3>Drawings are incomplete and out of date</h3>
+        <p>A set is drawn for a purpose and a date. Half of what matters was never drawn at
+        all, and the day something changes on site the whole set is quietly wrong — but it
+        stays in the folder, and people keep building from it.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">⚠</div>
+        <h3>What gets built isn't what was drawn</h3>
+        <p>No building is executed 100% to the drawings. Routes move, dimensions shift,
+        details get solved on the spot. As-builts are the deliverable that most often never
+        arrives — so the gap between paper and reality is never closed.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">◱</div>
+        <h3>Renovations are rarely documented</h3>
+        <p>Walls come down, services get rerouted, a bathroom is rebuilt — and nothing is
+        recorded. Twenty years of changes leave no trace, so the next person to touch the
+        building starts by guessing, or by surveying it all over again.</p>
+      </div>
+      <div class="card">
+        <div class="glyph">◇</div>
+        <h3>The visuals are made to sell, then thrown away</h3>
+        <p>Floor plans, 3D visualisations, photorealistic renderings — commissioned around a
+        transaction, used for a few months of marketing, then gone. Real money spent on
+        assets that were never connected to the building and were never meant to last.</p>
+      </div>
+    </div>
+    <div class="box">
+      <strong>And the bill lands somewhere else entirely.</strong> Bad building information is
+      not an admin problem, it's a cost:
+      <ul>
+        <li>Site visits that exist only to measure something that should already be known</li>
+        <li>Something ordered, delivered and then found not to fit</li>
+        <li>Too much material bought and scrapped, or too little and the job stops</li>
+        <li>Surveys paid for twice because nobody kept the first one</li>
+        <li>Decisions made from a drawing that stopped being true years ago</li>
+      </ul>
+    </div>
+    <p class="note"><strong>Skanna is a different approach to the whole thing.</strong> One
+    accurate digital twin per building, made once from whatever you already have, kept current
+    as the building changes, and handed on with the property when it sells. Drawings, visuals,
+    quantities and operations all come out of that single model instead of being commissioned
+    separately and going out of date separately. <strong>That is how the waste
+    disappears</strong> — and it only works if the record is accurate, live, and in one place.</p>
+  </section>
+
+  <section id="outputs">
+    <h2>What comes out of it</h2>
+    <p class="section-lede">One model per building, and everything else generated from it.
+    Change the model once and the drawings, the visuals and the data all follow —
+    <strong>they're views of the same file, so they can't contradict each other.</strong> And
+    the model itself doesn't expire when the project ends: it lives online as the building's
+    permanent record.</p>
+    <div class="outputs">
+      <div class="output">
+        <img src="assets/twin-walk-interior.jpg" alt="First-person walk mode inside a digital twin, standing in the living space and looking out through full-height glazing to a terrace and the sea" loading="lazy">
+        <div class="body">
+          <div class="num">01</div>
+          <h3>Interactive experiences</h3>
+          <p>The finished building on a URL — no app, no login. Orbit it, walk through it,
+          click anything for its specification, measure any two points. A real sun study on
+          the site's own coordinates, light fixtures that switch on, and — from lists you
+          curate — finishes and furniture the viewer can choose for themselves.</p>
+          <a class="go" href="skanna-demo/">Open a live twin →</a>
+        </div>
+      </div>
+      <div class="output">
+        <img src="assets/web-drawing-plan.jpg" alt="An A3 floor plan sheet generated from the building model, with dimension strings, grid bubbles, room areas and a title block" loading="lazy">
+        <div class="body">
+          <div class="num">02</div>
+          <h3>Automatic drawings</h3>
+          <p>Plans, elevations and sections generated onto your own title block, with
+          dimensions, grid bubbles, room schedules and a legend. PDF, SVG or DXF at any
+          standard scale. A revision is a re-issue from the model — minutes, not a redraw.</p>
+          <a class="go" href="/#web">See the authoring tool →</a>
+        </div>
+      </div>
+      <div class="output">
+        <img src="assets/twin-hero-dollhouse.jpg" alt="A digital twin after dark seen from above with the roof off, the building's own light fixtures throwing warm pools of light across the rooms and the terrace" loading="lazy">
+        <div class="body">
+          <div class="num">03</div>
+          <h3>Visuals &amp; building data</h3>
+          <p>The render is the model — no separate visualisation pipeline and no render budget
+          per campaign. Every wall, opening, fixture and service run carries its real
+          specification, so areas, quantities, schedules and inventory come out of the same
+          file.</p>
+          <a class="go" href="/#twin">See what a twin knows →</a>
+        </div>
+      </div>
+      <div class="output wide">
+        <img src="assets/web-viewer.jpg" alt="The Skanna Web property portal: one building's page with folders of scans, photos and panoramas, a dated site log of everything added, and buttons for BIM Author, Drawings, Share Twin and Export Site" loading="lazy">
+        <div class="body">
+          <div class="num">04</div>
+          <h3>One place where all your buildings live — permanently</h3>
+          <p>Every property you own or manage in a single online portal, each with its twin,
+          its drawings, its documents, its media and a dated log of everything that has ever
+          been done to it. It is not a project folder that closes when the job does:
+          <strong>the twin keeps getting updated for as long as the building exists</strong>
+          — renovations, replacements, service history, new measurements — so the record never
+          goes stale again. Reach it from any browser, share exactly as much of it as you
+          choose, and <strong>hand the digital twin over with the physical property when you
+          sell it</strong>, the way keys and deeds change hands. The next owner inherits twenty
+          years of accurate building information instead of starting from a tape measure.</p>
+          <a class="go" href="/#how">How a building gets there →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="next">
+    <h2>Start one</h2>
+    <p class="section-lede">A twin can start from a scan, a splat, a CAD file, an old drawing,
+    a model you already own, or nothing but a tape measure — and it doesn't have to be finished
+    to be useful.</p>
+    <p><a class="btn" href="/#how">See the six ways in</a></p>
+  </section>
+
+  <footer>
+    <span>© 2026 Skanna OÜ · Registry code 17576052 · Jõe tn 3-313, 10151 Tallinn, Estonia</span>
+    <nav class="links">
+      <a href="/">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:anders@skanna.site">Support</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
