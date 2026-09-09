@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What goes wrong with 3D capture — Skanna</title>
+<meta name="description" content="LiDAR drift, photogrammetry scale problems, NeRFs vs Gaussian splats, what survey-grade laser scanning actually costs, and the software pipeline each route puts you through before you get a usable, scaled model.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Skanna">
+<meta property="og:title" content="What goes wrong with 3D capture">
+<meta property="og:description" content="LiDAR drift, photogrammetry scale problems, NeRFs vs Gaussian splats, what survey-grade laser scanning actually costs, and the pipeline each route puts you through before you get a usable model.">
+<meta property="og:image" content="https://skanna.site/assets/og-image.png">
+<meta property="og:url" content="https://skanna.site/capture-methods.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://skanna.site/assets/og-image.png">
+<style>
+  :root {
+    --bg: #0b0b12; --bg2: #0a0a0f;
+    --panel: rgba(255,255,255,0.05); --rule: rgba(255,255,255,0.10);
+    --text: #f2f2f7; --muted: rgba(255,255,255,0.60); --faint: rgba(255,255,255,0.38);
+    --accent: #a78bfa; --accent-deep: #7c5cf0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, #12121d 0%, var(--bg) 40%, var(--bg2) 100%);
+    color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .grid-bg {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.045) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(255,255,255,0.045) 0.5px, transparent 0.5px);
+    background-size: 38px 38px;
+    mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 60%, transparent);
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 60%, transparent);
+  }
+  main { position: relative; z-index: 1; max-width: 980px; margin: 0 auto; padding: 0 24px 64px; }
+  nav.top { display: flex; align-items: center; gap: 12px; padding: 28px 0 0; }
+  nav.top .name { font-weight: 700; letter-spacing: 0.02em; }
+  nav.top .spacer { flex: 1; }
+  nav.top a.back { color: var(--muted); font-size: 0.88em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header.page { padding: 46px 0 8px; }
+  header.page .kicker {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72em; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
+  }
+  header.page h1 {
+    font-size: clamp(1.9em, 3.6vw, 2.5em); line-height: 1.1;
+    margin: 0 0 18px; font-weight: 800; letter-spacing: -0.025em; text-wrap: balance;
+  }
+  header.page p.lede { margin: 0; color: var(--muted); font-size: 1.06em; max-width: 68ch; }
+  header.page p.lede strong { color: var(--text); }
+  section { padding: 44px 0; border-top: 1px solid var(--rule); }
+  h2 {
+    font-size: 0.85em; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--faint); margin: 0 0 14px;
+  }
+  h3.sub { font-size: 1.15em; font-weight: 700; margin: 0 0 12px; color: var(--text); }
+  .section-lede { margin: 0 0 28px; color: var(--muted); font-size: 1em; max-width: 760px; }
+  .section-lede strong { color: var(--text); }
+  .features { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .card { background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 20px 22px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.02em; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.92em; }
+  .card .glyph { color: var(--accent); font-size: 1.25em; margin-bottom: 10px; }
+  .card .price { display: inline-block; margin-top: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78em; color: var(--faint); }
+  .box {
+    margin-top: 22px; background: var(--panel);
+    border: 1px solid rgba(167,139,250,0.35); border-radius: 14px;
+    padding: 18px 22px; color: var(--muted); font-size: 0.94em;
+  }
+  .box strong { color: var(--text); }
+  .note { margin: 22px 0 0; color: var(--muted); font-size: 0.96em; max-width: 760px; }
+  .note strong { color: var(--text); }
+
+  /* ── Data tables (shared shape with the compare table) ───────── */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 14px; }
+  table.data {
+    width: 100%; min-width: 640px; border-collapse: collapse;
+    font-size: 0.88em; background: #0d0d16;
+  }
+  table.data th, table.data td {
+    padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  table.data thead th {
+    color: var(--faint); font-size: 0.82em; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  table.data tbody th { font-weight: 600; color: var(--text); font-size: 0.98em; white-space: nowrap; }
+  table.data td { color: var(--muted); }
+  table.data td.num { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.92em; color: var(--text); white-space: nowrap; }
+  table.data tbody tr:last-child th, table.data tbody tr:last-child td { border-bottom: 0; }
+
+  /* ── Comparison table (same shape as the homepage's) ─────────── */
+  .compare-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 14px; }
+  table.compare {
+    width: 100%; min-width: 780px; border-collapse: collapse;
+    table-layout: fixed; font-size: 0.88em; background: #0d0d16;
+  }
+  table.compare th, table.compare td {
+    padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  table.compare thead th {
+    color: var(--faint); font-size: 0.86em; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  table.compare thead th.us { color: var(--accent); }
+  table.compare tbody th { font-weight: 600; color: var(--text); font-size: 1.0em; }
+  table.compare thead th:first-child { width: 24%; }
+  table.compare thead th.us { width: 26%; }
+  table.compare thead th:nth-child(n+3) { width: 25%; }
+  table.compare td { color: var(--muted); }
+  table.compare td.us { background: rgba(167,139,250,0.07); color: var(--text); }
+  table.compare tbody tr:last-child th, table.compare tbody tr:last-child td { border-bottom: 0; }
+  .mark { font-weight: 700; margin-right: 6px; }
+  .mark.y { color: #7ee0a8; }
+  .mark.p { color: #e8c46a; }
+  .mark.n { color: rgba(255,255,255,0.34); }
+  .price-note { margin: 12px 0 0; color: var(--faint); font-size: 0.85em; }
+
+  .btn {
+    display: inline-block; padding: 12px 24px; border-radius: 999px;
+    font-weight: 650; font-size: 0.95em;
+    background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+    color: #0b0b12; border: 1px solid rgba(255,255,255,0.18);
+  }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  .btn-ghost {
+    display: inline-block; padding: 11px 22px; border-radius: 999px;
+    font-weight: 600; font-size: 0.95em; color: var(--text);
+    border: 1px solid var(--rule);
+  }
+  .btn-ghost:hover { text-decoration: none; border-color: rgba(255,255,255,0.3); }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 8px; }
+  footer {
+    border-top: 1px solid var(--rule); padding: 28px 0 0; margin-top: 24px;
+    display: flex; flex-wrap: wrap; gap: 8px 24px;
+    justify-content: space-between; align-items: center;
+    color: var(--faint); font-size: 0.85em;
+  }
+  footer nav.links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<main>
+  <nav class="top">
+    <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path d="M50 2 L98 40 L50 98 L2 40 Z" stroke="#f2f2f7" stroke-width="4.5"/>
+      <path d="M50 2 L26 40 M50 2 L74 40 M26 40 L74 40 M26 40 L50 98 M74 40 L50 98 M2 40 L26 40 M74 40 L98 40"
+            stroke="#f2f2f7" stroke-opacity="0.55" stroke-width="3"/>
+    </svg>
+    <span class="name">Skanna</span>
+    <span class="spacer"></span>
+    <a class="back" href="/">← Back to skanna.site</a>
+  </nav>
+
+  <header class="page">
+    <div class="kicker">Before you choose how to capture it</div>
+    <h1>Every capture method fails somewhere. Here's where, and what it costs to avoid it.</h1>
+    <p class="lede">There is no perfect way to capture a building. A phone, a drone, a
+    $50,000 laser scanner and a tape measure all produce real, useful data — and every one
+    of them can quietly produce something <strong>wrong</strong> if you don't know what to
+    watch for. This is an honest look at how each route actually fails, the software pipeline
+    it puts you through before you get a usable model, and what it costs at every tier —
+    <strong>measured against what happens when the same building goes through Skanna
+    instead.</strong></p>
+  </header>
+
+  <section id="methods">
+    <h2>Four ways in</h2>
+    <p class="section-lede">Everything below starts from one of these. What comes out of it —
+    a mesh, a point cloud, a splat, or just numbers on paper — depends on which one you pick,
+    and on the software you run it through afterwards.</p>
+    <div class="features">
+      <div class="card">
+        <div class="glyph">▭</div>
+        <h3>Tape &amp; laser distance meter</h3>
+        <p>The oldest method, and still the most honest one. A laser distance meter gives you
+        an accurate individual dimension in seconds — no scale problem, ever, because nothing
+        is being reconstructed. What it never gives you is geometry: no mesh, no point cloud,
+        nothing to walk through. Every wall, corner and opening still has to be drawn by hand
+        from the numbers.</p>
+        <span class="price">$20–$150</span>
+      </div>
+      <div class="card">
+        <div class="glyph">◈</div>
+        <h3>Photogrammetry</h3>
+        <p>Any camera, phone or drone. Walk or fly around the subject taking overlapping
+        photos, and structure-from-motion software works out the camera positions and
+        rebuilds the surface from parallax. No special hardware — which is also its main
+        weakness: the geometry it produces has no inherent size or orientation until you give
+        it one, by hand, afterwards.</p>
+        <span class="price">Camera or phone you likely own · software from free</span>
+      </div>
+      <div class="card">
+        <div class="glyph">◎</div>
+        <h3>Consumer LiDAR</h3>
+        <p>iPhone 12 Pro or later, iPad Pro 2020 or later. The built-in sensor measures actual
+        depth as you walk, so what comes out already carries real-world scale and a spatial
+        position for every point — no photo-matching guesswork. Range is short, a few metres,
+        and it struggles outdoors in bright sun. For interiors it's the fastest accurate route
+        there is.</p>
+        <span class="price">Device you likely already own · app free–$100/yr</span>
+      </div>
+      <div class="card">
+        <div class="glyph">◇</div>
+        <h3>Professional laser scanning &amp; surveying</h3>
+        <p>Terrestrial laser scanners, robotic total stations, and drone-mounted LiDAR.
+        Millimetre-grade accuracy over ranges consumer sensors can't touch, at the cost of
+        five to six figures in hardware and, for a total station, a trained operator to run
+        it. This is the tier legal surveys and boundary work are actually done at.</p>
+        <span class="price">$15,000–$90,000+</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="splats">
+    <h2>Where NeRFs and Gaussian splats fit</h2>
+    <p class="section-lede">They come up constantly and they aren't a fifth capture method —
+    they're two of the possible <strong>outputs</strong> of photogrammetry's own input: the
+    same walk-around photos or video, run through a different reconstruction algorithm.</p>
+    <div class="table-wrap">
+      <table class="data">
+        <thead>
+          <tr><th>Reconstruction</th><th>What it actually is</th><th>Best for</th><th>Falls apart when…</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Classical mesh</th>
+            <td>A triangulated surface with a photo-baked texture — the traditional
+            photogrammetry output.</td>
+            <td>Exporting to CAD/BIM, measuring, 3D printing.</td>
+            <td>Textureless or reflective surfaces; anything that moved during capture.</td>
+          </tr>
+          <tr>
+            <th scope="row">NeRF <span style="color:var(--faint); font-weight:400;">(Neural Radiance Field)</span></th>
+            <td>An implicit volumetric model — a trained function that predicts colour and
+            density from any viewpoint. There is no explicit shape to extract.</td>
+            <td>Photoreal fly-through video, view synthesis.</td>
+            <td>You need a clean, editable mesh; the scene is large or unbounded; you need it
+            to render in real time on an ordinary device.</td>
+          </tr>
+          <tr>
+            <th scope="row">Gaussian splat</th>
+            <td>An explicit cloud of coloured, oriented ellipsoids fitted to the same
+            photos — fast to render, not a solid.</td>
+            <td>Real-time photoreal viewing in a browser.</td>
+            <td>Anything that needs true geometry underneath: measuring, editing, or exporting
+            to BIM without a lossy mesh-extraction step first.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">All three can come from the exact same walkthrough video. The difference is
+    only which algorithm you run afterwards — and that choice trades photorealism for
+    usability. <strong>A splat looks the most impressive in a browser and is the least usable
+    the moment you need a real measurement</strong>, a wall you can move, or a file a
+    structural engineer can open.</p>
+  </section>
+
+  <section id="failures">
+    <h2>What actually goes wrong</h2>
+    <p class="section-lede">Not theoretical edge cases — the failure modes that show up on
+    real jobs, across every method above.</p>
+    <div class="features">
+      <div class="card">
+        <h3>Drift over a long walkthrough</h3>
+        <p>Every frame-by-frame capture — LiDAR or photogrammetry — accumulates a small
+        registration error as you move. Walk far enough, close a loop, and the last wall
+        doesn't quite meet the first one: a visible seam, a corridor that's slightly bowed, a
+        room a few centimetres out of square. Software can partially correct it — loop closure,
+        plane-snapping — but that's a workaround, not a cure. The longer and larger the
+        capture, the more it shows.
+        <!-- SCREENSHOT SLOT: side-by-side crop showing a visible drift seam at a loop closure in a long scan -->
+        </p>
+      </div>
+      <div class="card">
+        <h3>Scale and rotation are never free with photos</h3>
+        <p>A photogrammetry, NeRF or splat reconstruction has no idea how big it is or which
+        way is north until you tell it. Get the reference wrong — a mis-measured control
+        point, a GPS reading with a few metres of drift — and every downstream dimension
+        inherits that error, silently. A LiDAR capture doesn't have this problem: depth is
+        measured directly, not inferred from parallax.</p>
+      </div>
+      <div class="card">
+        <h3>Large sites get stitched, cropped and edited</h3>
+        <p>A property too big for one capture session gets assembled from several — and the
+        joins are where accuracy problems hide. On a large US plot, the finished export was
+        several separate captures stitched together, with edges cropped and touched up by
+        hand to hide the seams. That's normal for a job that size — it also means the file you
+        receive is partly an edit, not purely a measurement, and the person who stitched it
+        made judgment calls you can't see in the final render.
+        <!-- SCREENSHOT SLOT: the large-plot lake-house job — stitched/cropped point cloud, before-and-after the edit -->
+        </p>
+      </div>
+      <div class="card">
+        <h3>The output depends on more than the hardware</h3>
+        <p>Two people scanning the same building with the same phone can get meaningfully
+        different results — overlap between passes, walking speed, lighting consistency, and
+        which processing software (and which settings) turned the raw capture into a mesh all
+        move the number. An accuracy figure you read online is a best case from one dataset,
+        not a guarantee for yours.</p>
+      </div>
+      <div class="card">
+        <h3>Reflective, transparent and blank surfaces</h3>
+        <p>Photogrammetry needs texture and contrast to match points between photos — glass,
+        mirrors, gloss paint and blank white walls give it nothing to lock onto, so it either
+        fails outright or invents geometry that isn't there. LiDAR measures time-of-flight
+        instead of matching patterns, so it handles all of these; its own failure mode runs the
+        other way — very dark, light-absorbing surfaces can return too little signal.</p>
+      </div>
+      <div class="card">
+        <h3>Anything that moves during capture</h3>
+        <p>A person walking through frame, a car passing, curtains moving in the wind —
+        photogrammetry treats every photo as one fixed scene, so anything that moved between
+        frames shows up as a ghost, a blur, or a hole in the mesh. Frame-rate depth capture
+        (LiDAR) is far more tolerant of this: each frame is measured independently, in real
+        time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pipeline">
+    <h2>The pipeline behind each route</h2>
+    <p class="section-lede">For everything except a tape measure, capture is step one of
+    several before you have a usable, scaled, shareable model — and each step is usually a
+    <strong>different piece of software</strong>, with its own file format on the way out.</p>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th scope="col">Step</th>
+            <th scope="col">Photogrammetry / NeRF / splat</th>
+            <th scope="col">Survey-grade laser scanning</th>
+            <th scope="col" class="us">Skanna</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Capture</th>
+            <td>Photos or video, any camera or drone</td>
+            <td>Registered scan positions, a licensed operator</td>
+            <td class="us">Walk-through with the free iPhone app</td>
+          </tr>
+          <tr>
+            <th scope="row">Register &amp; process</th>
+            <td>Structure-from-motion in RealityCapture, Metashape, Luma AI or similar — often
+            hours on a GPU</td>
+            <td>Scan registration in the scanner's own software (Cyclone, SCENE)</td>
+            <td class="us">On-device, on the walk</td>
+          </tr>
+          <tr>
+            <th scope="row">Clean &amp; decimate</th>
+            <td>CloudCompare, MeshLab, or the capture tool itself — large clouds need
+            reducing to stay workable</td>
+            <td>Same tools, at a larger scale</td>
+            <td class="us">Automatic on import</td>
+          </tr>
+          <tr>
+            <th scope="row">Scale &amp; orient</th>
+            <td>Manual — place control points or a known dimension in the same software
+            before export</td>
+            <td>Inherent — the instrument measures real-world coordinates</td>
+            <td class="us">Not needed for LiDAR; a photogrammetry/splat reference brought in
+            must already be scaled elsewhere</td>
+          </tr>
+          <tr>
+            <th scope="row">View &amp; edit the point cloud</th>
+            <td>Potree, CloudCompare, or a paid viewer licence</td>
+            <td>Same, at a larger scale</td>
+            <td class="us">Trace it directly in the browser</td>
+          </tr>
+          <tr>
+            <th scope="row">Convert formats</th>
+            <td>PLY, E57, LAS/LAZ, OBJ, FBX, glTF — usually a different tool for each hop</td>
+            <td>Same, plus the scanner's own proprietary formats</td>
+            <td class="us">GLB throughout; PLY accepted directly as a reference</td>
+          </tr>
+          <tr>
+            <th scope="row">Model it into BIM/CAD</th>
+            <td>Redrawn or traced in a separate CAD/BIM seat</td>
+            <td>Redrawn or traced in a separate CAD/BIM seat</td>
+            <td class="us">Traced directly in BIM Author — the same file</td>
+          </tr>
+          <tr>
+            <th scope="row">Drawings, twin, exports</th>
+            <td>Commissioned or built separately, per deliverable</td>
+            <td>Commissioned or built separately, per deliverable</td>
+            <td class="us">Generated from the same model</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="pricing-gear">
+    <h2>What it costs</h2>
+    <p class="section-lede">Ballpark list prices in USD, current at the time of writing — they
+    move, so check the vendor before you budget against them.</p>
+    <div class="table-wrap">
+      <table class="data">
+        <thead>
+          <tr><th>Tier</th><th>Hardware</th><th>Software</th><th>Typical all-in</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Tape / laser distance meter</th>
+            <td>A meter</td><td>None</td><td class="num">$20–$150</td>
+          </tr>
+          <tr>
+            <th scope="row">Consumer LiDAR (phone)</th>
+            <td>iPhone 12 Pro+ / iPad Pro, $700–$1,300 if buying new</td>
+            <td>Free (Skanna, Scaniverse) to ~$100/yr (Polycam)</td>
+            <td class="num">$0 marginal if you already own the phone</td>
+          </tr>
+          <tr>
+            <th scope="row">Prosumer photogrammetry</th>
+            <td>Mirrorless camera or drone, $500–$3,000</td>
+            <td>Metashape Standard $179 / Professional $3,499 (perpetual); RealityCapture
+            (now RealityScan) pay-per-output or subscription</td>
+            <td class="num">$700–$6,500+</td>
+          </tr>
+          <tr>
+            <th scope="row">Handheld / SLAM 3D scanner</th>
+            <td>Matterport Pro3 ~$6,000, or handheld units (Revopoint, Einstar) $500–$2,000</td>
+            <td>Matterport subscription from ~$65/mo; handheld units bundle their own software</td>
+            <td class="num">$1,000–$7,000+ hardware, plus subscription</td>
+          </tr>
+          <tr>
+            <th scope="row">Terrestrial laser scanner</th>
+            <td>FARO Focus $15,000–$85,000 by model; Leica BLK $20,000–$50,000+</td>
+            <td>Vendor software (Cyclone, SCENE), often licensed per seat</td>
+            <td class="num">$20,000–$90,000+</td>
+          </tr>
+          <tr>
+            <th scope="row">Robotic total station</th>
+            <td>$15,000–$50,000</td>
+            <td>Vendor field/office software, often licensed per seat</td>
+            <td class="num">$15,000–$50,000, plus a trained operator</td>
+          </tr>
+          <tr>
+            <th scope="row">Drone LiDAR</th>
+            <td>DJI Zenmuse L2 payload ~$12,000–$14,000, on a Matrice 300/350 RTK airframe
+            ~$10,000–$20,000</td>
+            <td>DJI Terra or third-party processing, often subscription</td>
+            <td class="num">$25,000–$40,000+ system</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note">Sources checked at time of writing: manufacturer and reseller
+    list prices for Matterport, FARO, Leica, DJI, Agisoft and Epic Games (RealityCapture /
+    RealityScan). Used-market and rental prices run well below new-list for the professional
+    tiers.</p>
+  </section>
+
+  <section id="compare">
+    <h2>Where Skanna sits in all this</h2>
+    <p class="section-lede">Not a claim that Skanna is more accurate than a $50,000 laser
+    scanner — it isn't, at range. The claim is narrower: <strong>for the size of building most
+    people own, it collapses the whole pipeline above into one free app and one browser
+    tab.</strong></p>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th scope="col">Capability</th>
+            <th scope="col" class="us">Skanna</th>
+            <th scope="col">Photogrammetry / NeRF / splat</th>
+            <th scope="col">Survey-grade laser scanning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Real-world scale, no extra step</th>
+            <td class="us"><span class="mark y">✓</span>LiDAR measures depth directly</td>
+            <td><span class="mark n">✗</span>Needs a control point or known dimension, by hand</td>
+            <td><span class="mark y">✓</span>The instrument measures real coordinates</td>
+          </tr>
+          <tr>
+            <th scope="row">Handles reflective / blank surfaces</th>
+            <td class="us"><span class="mark y">✓</span>Time-of-flight, not pattern-matching</td>
+            <td><span class="mark n">✗</span>Needs texture and contrast to lock onto</td>
+            <td><span class="mark y">✓</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Cost to get started</th>
+            <td class="us"><span class="mark y">✓</span>Free app, a phone you likely own</td>
+            <td><span class="mark p">~</span>Camera/drone plus software, free tiers are limited</td>
+            <td><span class="mark n">✗</span>$15,000–$90,000+</td>
+          </tr>
+          <tr>
+            <th scope="row">View, trace and scale point clouds</th>
+            <td class="us"><span class="mark p">~</span>Pre-scaled PLY/splat accepted as a
+            tracing reference — no scale or levelling tools built in; fix that upstream first</td>
+            <td><span class="mark p">~</span>CloudCompare, Potree or a paid viewer — a
+            separate tool</td>
+            <td><span class="mark p">~</span>The vendor's own desktop software — a separate
+            tool</td>
+          </tr>
+          <tr>
+            <th scope="row">Convert between formats</th>
+            <td class="us"><span class="mark y">✓</span>GLB/PLY straight into the same file</td>
+            <td><span class="mark p">~</span>PLY, E57, LAS, OBJ, FBX — usually several tools</td>
+            <td><span class="mark p">~</span>Proprietary scanner formats, exported per job</td>
+          </tr>
+          <tr>
+            <th scope="row">Model it into a real BIM/IFC object</th>
+            <td class="us"><span class="mark y">✓</span>Traced directly in BIM Author</td>
+            <td><span class="mark n">✗</span>Redrawn separately, in a different tool</td>
+            <td><span class="mark n">✗</span>Redrawn separately, in a different tool</td>
+          </tr>
+          <tr>
+            <th scope="row">Drawings from the same file</th>
+            <td class="us"><span class="mark y">✓</span>Generated on your title block</td>
+            <td><span class="mark n">✗</span>Commissioned separately</td>
+            <td><span class="mark n">✗</span>Commissioned separately</td>
+          </tr>
+          <tr>
+            <th scope="row">Share it as an interactive twin</th>
+            <td class="us"><span class="mark y">✓</span>One link, no app</td>
+            <td><span class="mark p">~</span>If the platform you used supports it</td>
+            <td><span class="mark n">✗</span>Not what the instrument is for</td>
+          </tr>
+          <tr>
+            <th scope="row">Handles very large sites</th>
+            <td class="us"><span class="mark p">~</span>Stitch and align multiple scans in
+            BIM Author, floor by floor</td>
+            <td><span class="mark y">✓</span>This is where photogrammetry earns its keep — no
+            ladder, no walking every metre</td>
+            <td><span class="mark y">✓</span>This is where survey-grade earns its keep — one
+            instrument, many known points</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="next">
+    <h2>Pick the route that matches the job</h2>
+    <p class="section-lede">None of this means reach for the most expensive tool. It means
+    know what you're trading before you commit a building to it — and it's fine to mix routes
+    on the same site: LiDAR for the interiors, a drone photo pass for the roof and façade,
+    a tape measure for the one room you can't get a phone into.</p>
+    <div class="cta-row">
+      <a class="btn" href="/#how">See the six ways in</a>
+      <a class="btn-ghost" href="https://apps.apple.com/app/id6789603042">Download the free app</a>
+    </div>
+    <p class="note">For the wider argument — why buildings lose their information in the first
+    place, and what one accurate model produces instead of a pile of one-off deliverables —
+    see <a href="why.html">the long version</a>.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Skanna OÜ · Registry code 17576052 · Jõe tn 3-313, 10151 Tallinn, Estonia</span>
+    <nav class="links">
+      <a href="/">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:anders@skanna.site">Support</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
