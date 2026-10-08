@@ -4,47 +4,47 @@
   "subtitle": "Sweden",
   "models": [
     {
-      "name": "Skanna Demo BIM 2026-08-18",
-      "file": "models/Skanna Demo BIM 2026-08-18.ifc"
+      "name": "Skanna Demo BIM 2026-10-08",
+      "file": "models/Skanna Demo BIM 2026-10-08.ifc"
     }
   ],
   "pins": [
     {
-      "id": "86482c8e",
+      "id": "6b5be0b3",
       "label": "Pin 1",
-      "body": "Add detailed information here",
+      "body": null,
       "position": [
-        8.41,
-        1.5,
-        -15.620000000000001
+        16.150000000000002,
+        6.3,
+        -6.9
       ],
       "normal": [
         0,
         1,
         0
       ],
-      "createdAt": "2026-08-17T13:08:21.883Z",
-      "photo": "media/distb1.png",
-      "panorama": null,
+      "createdAt": "2026-09-11T03:06:55.981Z",
+      "photo": null,
+      "panorama": "media/skybox.jpg",
       "replies": []
     },
     {
-      "id": "703a1065",
+      "id": "21be5962",
       "label": "Pin 2",
-      "body": "Upload any 360 image to a pin. \n\nUpdate it as time goes and as redesigns and changes occour.",
+      "body": null,
       "position": [
-        8.35,
-        1.5,
-        -8.450000000000001
+        -17.8,
+        5.3,
+        -32.300000000000004
       ],
       "normal": [
         0,
         1,
         0
       ],
-      "createdAt": "2026-08-17T13:10:11.038Z",
-      "photo": null,
-      "panorama": "media/skybox.jpg",
+      "createdAt": "2026-09-11T03:08:47.081Z",
+      "photo": "media/site-before.jpg",
+      "panorama": null,
       "replies": []
     }
   ],
@@ -52,120 +52,55 @@
     "lat": 60,
     "lng": 18
   },
-  "northDeg": 164.99999999999997,
+  "northDeg": 8.31,
   "bim": {
     "file": "bim.json",
     "assets": [
       {
-        "assetId": "custom:44b30eaf-7df1-4df3-a8c4-5226099f7974",
-        "file": "bim-assets/44b30eaf-7df1-4df3-a8c4-5226099f7974.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:b905bf6a-969f-43fb-8a79-274362fd9752",
-        "file": "bim-assets/b905bf6a-969f-43fb-8a79-274362fd9752.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:bb269702-212d-4694-8608-857e5c1353f1",
-        "file": "bim-assets/bb269702-212d-4694-8608-857e5c1353f1.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:9104c125-32f8-46d2-9606-3d4002c3a18e",
-        "file": "bim-assets/9104c125-32f8-46d2-9606-3d4002c3a18e.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:13a7e17f-9e07-4c56-b050-b922005f3878",
-        "file": "bim-assets/13a7e17f-9e07-4c56-b050-b922005f3878.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:f5989977-4c9e-4baa-bf6c-a250cd803214",
-        "file": "bim-assets/f5989977-4c9e-4baa-bf6c-a250cd803214.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:924bb99f-3817-4996-9cd2-129c02007e9c",
-        "file": "bim-assets/924bb99f-3817-4996-9cd2-129c02007e9c.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:1d8ceccd-0d0e-4a46-8c34-c8ac3339d3cb",
-        "file": "bim-assets/1d8ceccd-0d0e-4a46-8c34-c8ac3339d3cb.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:c1db64b7-58d5-48a9-ad8c-afa280707f09",
-        "file": "bim-assets/c1db64b7-58d5-48a9-ad8c-afa280707f09.glb",
+        "assetId": "custom:7afb94ce-3cb9-45d0-92a7-d4be0a3d5f56",
+        "file": "bim-assets/7afb94ce-3cb9-45d0-92a7-d4be0a3d5f56.glb",
         "format": "glb"
       },
       {
-        "assetId": "custom:f3582f08-7a9a-4620-a492-fb1151aea276",
-        "file": "bim-assets/f3582f08-7a9a-4620-a492-fb1151aea276.glb",
+        "assetId": "custom:81ba1b75-e8d3-441e-b469-95066f961604",
+        "file": "bim-assets/81ba1b75-e8d3-441e-b469-95066f961604.glb",
         "format": "glb"
       },
       {
-        "assetId": "custom:f11d1f0e-b78d-481b-adfb-8535ce4255ae",
-        "file": "bim-assets/f11d1f0e-b78d-481b-adfb-8535ce4255ae.glb",
+        "assetId": "custom:682b3af6-16a3-4a90-ad4f-903c354a1f6f",
+        "file": "bim-assets/682b3af6-16a3-4a90-ad4f-903c354a1f6f.glb",
         "format": "glb"
       },
       {
-        "assetId": "custom:d300e80e-80e4-4369-964b-3555cc8bac83",
-        "file": "bim-assets/d300e80e-80e4-4369-964b-3555cc8bac83.glb",
+        "assetId": "custom:eb07892c-4a11-4f59-8e03-c206d8534be0",
+        "file": "bim-assets/eb07892c-4a11-4f59-8e03-c206d8534be0.glb",
         "format": "glb"
       },
       {
-        "assetId": "custom:b2a3e737-64d1-4f31-9bc4-572951e685df",
-        "file": "bim-assets/b2a3e737-64d1-4f31-9bc4-572951e685df.glb",
+        "assetId": "custom:3dd56110-72fc-4aaa-9943-d88aa41eb1a4",
+        "file": "bim-assets/3dd56110-72fc-4aaa-9943-d88aa41eb1a4.glb",
         "format": "glb"
       },
       {
-        "assetId": "custom:902491e5-4d61-4014-a04a-a47ea5a135e1",
-        "file": "bim-assets/902491e5-4d61-4014-a04a-a47ea5a135e1.glb",
+        "assetId": "custom:4c9c9ca6-11e0-4e27-b8bf-8cc3bb43df79",
+        "file": "bim-assets/4c9c9ca6-11e0-4e27-b8bf-8cc3bb43df79.glb",
         "format": "glb"
       },
       {
-        "assetId": "custom:e42c77e5-b0e0-424e-b9f6-7fe8d9429b80",
-        "file": "bim-assets/e42c77e5-b0e0-424e-b9f6-7fe8d9429b80.glb",
+        "assetId": "custom:6be8121b-c0dc-4239-a3c3-92bc30793264",
+        "file": "bim-assets/6be8121b-c0dc-4239-a3c3-92bc30793264.glb",
         "format": "glb"
       },
       {
-        "assetId": "custom:61bd0c35-9d22-453d-824b-d9847525a441",
-        "file": "bim-assets/61bd0c35-9d22-453d-824b-d9847525a441.glb",
+        "assetId": "custom:4d87c5a8-29ae-4efe-9aff-f74ab13f7a46",
+        "file": "bim-assets/4d87c5a8-29ae-4efe-9aff-f74ab13f7a46.glb",
         "format": "glb"
-      },
-      {
-        "assetId": "custom:9ae1fd19-d2e1-4ff4-9288-f0ab3e403ade",
-        "file": "bim-assets/9ae1fd19-d2e1-4ff4-9288-f0ab3e403ade.glb",
-        "format": "glb"
-      },
-      {
-        "assetId": "custom:8ffc55f6-1d8a-4856-bfe9-7d81b1729704",
-        "file": "bim-assets/8ffc55f6-1d8a-4856-bfe9-7d81b1729704.glb",
-        "format": "glb"
-      },
-      {
-        "assetId": "custom:10b1734a-9906-4a51-a386-f868ff621a86",
-        "file": "bim-assets/10b1734a-9906-4a51-a386-f868ff621a86.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:fb440ac2-db77-4c23-8c3a-1465a6a64139",
-        "file": "bim-assets/fb440ac2-db77-4c23-8c3a-1465a6a64139.ifc",
-        "format": "ifc"
-      },
-      {
-        "assetId": "custom:60ad2b91-d449-444b-93ad-f5bfa2c78335",
-        "file": "bim-assets/60ad2b91-d449-444b-93ad-f5bfa2c78335.ifc",
-        "format": "ifc"
       }
     ]
   },
   "skybox": {
     "file": "media/skybox.jpg",
-    "yawDeg": 220,
+    "yawDeg": 63.31,
     "pitchDeg": 0,
     "intensity": 1,
     "horizonFadeDeg": 12,
