@@ -362,6 +362,11 @@
     color: var(--muted); font-size: 0.9em;
   }
   .tier li { margin: 5px 0; }
+  .tier h3 { font-size: 1.45em; letter-spacing: -0.02em; margin-bottom: 2px; }
+  .tier p.tier-alt { color: var(--faint); font-size: 0.86em; margin: 0 0 14px; }
+  .tier ul { margin-bottom: 20px; }
+  .tier .tier-act { margin-top: auto; }
+  .pricing-note strong { color: var(--muted); }
   .pricing-note {
     margin: 22px 0 0; color: var(--faint); font-size: 0.88em; max-width: 720px;
   }
@@ -1038,6 +1043,57 @@
     difference is that <strong>you need all of those parts to keep a building documented</strong>,
     and buying them separately is where the money and the contradictions go.</p>
 
+    <div class="tiers">
+      <div class="tier highlight">
+        <div class="kicker">Private Property Owner</div>
+        <h3>€15 a month</h3>
+        <p class="tier-alt">or €150 a year — two months free</p>
+        <p>For your own home or buildings: keep the record, plan a renovation, make the
+        drawings, share the twin.</p>
+        <ul>
+          <li>Up to 3 buildings you own</li>
+          <li>Host them as digital twins on a plain link</li>
+          <li>Export drawings and models — PDF, DXF, IFC</li>
+          <li>For personal use — not for client work</li>
+        </ul>
+        <div class="tier-act"><a class="btn" href="https://app.skanna.site/?signup">Get started</a></div>
+      </div>
+      <div class="tier">
+        <div class="kicker">Company</div>
+        <h3>€99 per seat a month</h3>
+        <p class="tier-alt">or €990 per seat a year</p>
+        <p>For firms that use Skanna for their work and deliver it to their clients.</p>
+        <ul>
+          <li>Unlimited buildings</li>
+          <li>Hosted twins, share links and feedback boards</li>
+          <li>Commercial use: deliver models and drawings to clients</li>
+          <li>Set up with you personally — card or annual invoice</li>
+        </ul>
+        <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20Company%20plan&amp;body=We%27d%20like%20to%20set%20up%20a%20Company%20account.%0A%0ACompany%3A%0ACountry%3A%0ASeats%3A%0AWhat%20we%27d%20use%20it%20for%3A%0A">Set up a Company account</a></div>
+      </div>
+      <div class="tier">
+        <div class="kicker">Custom</div>
+        <h3>From €20,000</h3>
+        <p class="tier-alt">implementation, plus a platform fee</p>
+        <p>Skanna built for you and run under your name, typically a one- to three-month
+        project.</p>
+        <ul>
+          <li>Everything in Company</li>
+          <li>Your brand and your own domain</li>
+          <li>Your furniture and product catalogue in the model</li>
+          <li>Integrations with the systems you already run</li>
+        </ul>
+        <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20Custom&amp;body=We%27d%20like%20to%20talk%20about%20a%20custom%20Skanna%20build.%0A%0ACompany%3A%0AWhat%20we%27d%20want%20it%20to%20do%3A%0ATimeline%3A%0A">Talk about a build</a></div>
+      </div>
+    </div>
+    <p class="pricing-note">Prices in euros, including VAT where it applies. Paid by card
+    through Stripe. Paying in another currency adds a conversion fee, shown at checkout before
+    you pay. Cancel any time from Billing in the app
+    and keep access to the end of the period you paid for. <strong>The iOS app is free</strong>
+    and stays free.</p>
+
+    <h3 class="sub-head">How that compares</h3>
+
     <div class="compare-wrap">
       <table class="compare">
         <thead>
@@ -1122,7 +1178,7 @@
           </tr>
           <tr>
             <th scope="row">What it costs</th>
-            <td class="us"><span class="mark y">✓</span>App free. Platform is a low monthly subscription; a yearly licence covers delivering it to clients</td>
+            <td class="us"><span class="mark y">✓</span>App free. €15 a month for your own buildings, €99 per seat for client work</td>
             <td>Per-space subscription, plus hardware, plus per-deliverable fees</td>
             <td>Per-seat licences, typically thousands per year, each</td>
             <td>Free to modest — hosting only</td>
@@ -1133,8 +1189,7 @@
     <p class="pricing-note">Compared by capability, from public product information and our own
     use, correct to the best of our knowledge in September 2026. Categories rather than logos,
     because each of them contains several products that differ. If you think a row is unfair to
-    a tool you use, <a href="mailto:anders@skanna.site">tell me</a> and I will correct it.
-    Final Skanna pricing is announced at launch; the app stays free either way.</p>
+    a tool you use, <a href="mailto:anders@skanna.site">tell me</a> and I will correct it.</p>
 
     <div class="promise">
       <h3>Why it is priced like this</h3>
@@ -1246,17 +1301,16 @@
       browser BIM tool, the drawing generator and the published twin are producing the permit
       drawings, the models, the buyer walkthroughs and the operations system for a live
       100-unit development right now.</p>
-      <p><strong>Access is opening in stages</strong>, so the people already doing this work
-      get in first.</p>
+      <p><strong>Private property owners can start today.</strong> Company accounts and custom
+      builds are set up with me personally.</p>
     </div>
 
     <div class="offer">
-      <span class="count">First 10 partners<span class="taken">7 taken since the first post — 3 spots left</span></span>
-      <span class="terms">Seven days of the full platform, free.</span>
-      <span class="fine">BIM Author, drawing sets, hosting and a published twin — the whole
-      tool, not a trial version. Email me and if you are one of the last three, the week is
-      yours.
-      <a href="mailto:anders@skanna.site?subject=Skanna%20access%3A%20free%20week&amp;body=I%27d%20like%20one%20of%20the%20last%20free%20weeks.%0A%0AName%3A%0ACompany%3A%0ACountry%3A%0AWhat%20I%27d%20use%20it%20for%3A%0A">Email about access →</a></span>
+      <span class="count">Open now</span>
+      <span class="terms">Private Property Owner accounts are open — €15 a month.</span>
+      <span class="fine">Up to 3 buildings you own: host them as digital twins, export
+      drawings and models. Sign up and start today, cancel any time.
+      <a href="https://app.skanna.site/?signup">Get started →</a></span>
     </div>
 
     <div class="doors">
