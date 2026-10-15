@@ -272,31 +272,6 @@
   }
   .btn:hover { text-decoration: none; filter: brightness(1.08); }
 
-  /* Interest list form */
-  form.signup { display: grid; gap: 10px; margin: 4px 0 10px; position: relative; }
-  form.signup .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  @media (max-width: 560px) { form.signup .row2 { grid-template-columns: 1fr; } }
-  form.signup input {
-    width: 100%; padding: 11px 14px; border-radius: 10px;
-    background: rgba(255,255,255,0.04); border: 1px solid var(--rule);
-    color: var(--text); font: inherit; font-size: 0.95em;
-  }
-  form.signup input::placeholder { color: var(--faint); }
-  form.signup input:focus-visible {
-    outline: none; border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(167,139,250,0.18);
-  }
-  /* Hidden from people without shifting the layout — an off-canvas negative
-     offset would widen the page and make the body scroll sideways. */
-  form.signup input.hp {
-    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-  }
-  form.signup button.btn { cursor: pointer; font-family: inherit; justify-self: start; }
-  form.signup button.btn[disabled] { opacity: 0.55; cursor: default; }
-  .formnote { color: var(--faint); font-size: 0.86em; margin: 2px 0 0; line-height: 1.55; }
-  .formnote.ok { color: var(--accent); }
-  .formnote.bad { color: #ff8f88; }
   .offer .count .taken { display: block; font-size: 0.86em; color: var(--faint); font-weight: 400; letter-spacing: 0.04em; text-transform: none; margin-top: 4px; }
   .cta-row .aside { color: var(--faint); font-size: 0.85em; }
   .shot-grid {
@@ -565,18 +540,6 @@
   .cap h4 { margin: 0 0 4px; font-size: 0.97em; font-weight: 650; }
   .cap p { margin: 0; color: var(--muted); font-size: 0.86em; line-height: 1.45; }
 
-  /* Media slot — where a video or photo goes. Deliberately visible while empty
-     so nothing ships looking finished when it isn't. */
-  .slot {
-    border: 1px dashed rgba(167,139,250,0.4); border-radius: 14px;
-    background: rgba(167,139,250,0.04);
-    display: flex; align-items: center; justify-content: center;
-    text-align: center; padding: 34px 24px; margin: 22px 0 0;
-    color: var(--faint); font-size: 0.86em; min-height: 150px;
-  }
-  .slot span { max-width: 46ch; }
-  .slot strong { display: block; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
-
   /* ── Comparison table ─────────────────────────────────────── */
   .compare-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 14px; }
   table.compare {
@@ -609,21 +572,6 @@
   .mark.p { color: #e8c46a; }
   .mark.n { color: rgba(255,255,255,0.34); }
 
-  /* ── Founder promise ──────────────────────────────────────── */
-  .promise {
-    margin-top: 26px; padding: 26px 28px;
-    border: 1px solid rgba(167,139,250,0.45); border-radius: 14px;
-    background: rgba(167,139,250,0.07);
-  }
-  .promise h3 { margin: 0 0 12px; font-size: 1.2em; letter-spacing: -0.015em; }
-  .promise p { margin: 0 0 12px; color: var(--muted); font-size: 0.97em; max-width: 74ch; }
-  .promise p:last-child { margin-bottom: 0; }
-  .promise strong { color: var(--text); }
-  .promise .sig {
-    margin-top: 16px; color: var(--faint); font-size: 0.85em;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.04em;
-  }
-
   /* ── Independence / team ─────────────────────────────── */
   .stat-row {
     display: grid; gap: 1px; background: var(--rule);
@@ -637,6 +585,67 @@
     color: var(--text); margin-bottom: 2px;
   }
   .stat-row span.lbl { color: var(--muted); font-size: 0.86em; line-height: 1.45; display: block; }
+
+  /* ── In use today — real jobs, what each started from ───── */
+  .live-grid {
+    display: grid; gap: 14px; margin-top: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .live {
+    background: var(--panel); border: 1px solid var(--rule);
+    border-radius: 14px; padding: 20px 22px 22px;
+    display: flex; flex-direction: column;
+  }
+  .live.wide { grid-column: 1 / -1; padding: 0; overflow: hidden; }
+  .live .kicker {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.7em; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+  }
+  .live h3 { margin: 0 0 8px; font-size: 1.08em; letter-spacing: -0.01em; }
+  .live p { margin: 0 0 14px; color: var(--muted); font-size: 0.92em; }
+  .live-media {
+    display: grid; gap: 2px; background: var(--rule);
+    grid-template-columns: 1.15fr 1fr 1fr;
+  }
+  .live-media figure { margin: 0; position: relative; background: #0d0d16; }
+  .live-media img {
+    display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  }
+  .live-media figcaption {
+    position: absolute; left: 10px; bottom: 10px;
+    padding: 3px 9px; border-radius: 99px; font-size: 0.74em; font-weight: 600;
+    background: rgba(11,11,18,0.72); color: var(--text);
+  }
+  .live-body { padding: 22px 24px 24px; }
+  .live-body p { max-width: 78ch; }
+  .live-io {
+    margin: auto 0 0; display: grid; grid-template-columns: max-content 1fr;
+    gap: 4px 14px; font-size: 0.86em;
+    border-top: 1px solid var(--rule); padding-top: 12px;
+  }
+  .live-io dt { color: var(--faint); }
+  .live-io dd { margin: 0; color: var(--text); }
+  @media (max-width: 720px) {
+    .live-media { grid-template-columns: 1fr 1fr; }
+    .live-media figure:first-child { grid-column: 1 / -1; }
+  }
+
+  /* ── Requirements — the web app and the iOS app side by side ── */
+  .req-split {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .req-split div {
+    color: var(--muted); font-size: 0.95em;
+    border-left: 2px solid rgba(167,139,250,0.45); padding: 2px 0 2px 16px;
+  }
+  .req-split strong { display: block; color: var(--text); margin-bottom: 4px; }
+
+  .door code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.95em;
+    color: var(--muted); word-break: break-all;
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -681,8 +690,10 @@
       <a href="#who">Who it's for</a>
       <a href="#app">App</a>
       <a href="#web">BIM Author</a>
+      <a href="#ai">Your AI</a>
       <a href="#twin">The twin</a>
       <a href="#pricing">Pricing</a>
+      <a href="#live">In use</a>
       <a href="#course">Course</a>
       <a href="#access">Get access</a>
     </nav>
@@ -705,7 +716,7 @@
         </div>
         <p class="store-note">A live link, not a mock-up — the finished building opens in
         your browser, no account. <strong>The modelling tool needs nothing but a
-        browser</strong>, and it's opening to accounts shortly. The iPhone scanner is
+        browser</strong>, and accounts are open now. The iPhone scanner is
         <a href="https://apps.apple.com/app/id6789603042">free on the App&nbsp;Store now</a>,
         for anyone who wants to capture their own.</p>
       </div>
@@ -901,11 +912,11 @@
         <span class="arrow">BIM Author →</span>
       </a>
       <a class="row" href="#course">
-        <span class="who">People who want to sell this</span>
-        <span class="what">Working professionals: learn the whole chain, then digitise
-        buildings in your own market as a service — including how to put your own AI on an open
-        model format and run the output of a CAD department on your own. Screened intake.</span>
-        <span class="arrow">The crash course →</span>
+        <span class="who">People who want to learn it</span>
+        <span class="what">A self-paced online course: reality capture, modelling, and
+        connecting your own AI to Skanna — to set it up in your business, or to digitise your
+        own buildings.</span>
+        <span class="arrow">The course →</span>
       </a>
       <a class="row" href="#access">
         <span class="who">Teams paying for CAD seats</span>
@@ -950,6 +961,53 @@
     model, <strong>GLB</strong> for the geometry, <strong>DXF, SVG and PDF</strong> for the
     drawings. Take them to SketchUp, Revit, Blender or any other platform, or keep working here.
     Nothing is trapped.</p>
+  </section>
+
+  <section id="ai">
+    <h2>Digitise a building — with your own AI, or have it done for you</h2>
+    <p class="section-lede">A Skanna building model is <strong>documented, open JSON</strong>, not a
+    proprietary binary or a licensed API. So <strong>your own AI can author the model
+    directly</strong>, through a connector that is live today, and nobody has to force an
+    MCP into a closed CAD system that was never going to let it in. Done properly, one
+    professional with their own agents does the drafting of a whole CAD department:
+    <strong>an army of drafters that costs what your tokens cost.</strong></p>
+
+    <div class="doors">
+      <div class="door primary">
+        <div class="for">Connect your own AI · free to draft</div>
+        <h4>The Skanna MCP connector</h4>
+        <p>Add Skanna to ChatGPT, Claude or any AI that takes MCP connectors: one URL, no
+        login. Give it your drawings, scans or files and it drafts the model floor by floor,
+        checks it with the same code the app uses, and draws the plans and elevations for you
+        to compare against the source.</p>
+        <ul>
+          <li>Drafting is free. Open the claim link your AI gives you and the building moves
+          into your Skanna account, where hosting it counts against your plan.</li>
+          <li>Every draft is labelled <strong>AI-drafted</strong>: checked as sound, not verified
+          against the building. A person still compares it with the source.</li>
+        </ul>
+        <div class="act"><a class="btn" href="https://mcp.skanna.site/">Connect your AI</a></div>
+        <p class="after">Connector URL: <code>https://mcp.skanna.site/mcp</code></p>
+      </div>
+
+      <div class="door">
+        <div class="for">Done for you</div>
+        <h4>Have your building digitised</h4>
+        <p>Send me what you have — DWG or DXF, PDF drawings, scanned paper, LiDAR scans, photos
+        or a 3D model — and tell me what you want at the end. I model it with a person checking
+        every step against the source, and hand over the model, the drawing set and a published
+        twin.</p>
+        <ul>
+          <li>Quoted per building: it depends on what goes into the twin, what information you
+          already have, and whether you want to work in rounds.</li>
+          <li>Changes after a round are billed as an extra round, so every piece of work is
+          accounted for.</li>
+        </ul>
+        <div class="act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Digitise%20a%20building&amp;body=The%20building%3A%0AWhere%20it%20is%3A%0AWhat%20we%20have%20(DWG%2FDXF%2C%20PDFs%2C%20scans%2C%20photos%2C%20a%203D%20model)%3A%0AWhat%20we%20want%20at%20the%20end%3A%0A">Ask about your building</a></div>
+        <p class="after">Started a draft with your own AI already? Include its claim link and I'll
+        pick it up from there.</p>
+      </div>
+    </div>
   </section>
 
   <section id="twin">
@@ -1021,16 +1079,6 @@
         <p>Inventory, condition, service history and renovation progress recorded on the
         objects themselves.</p>
       </div>
-    </div>
-
-    <div class="slot">
-      <span><strong>Video slot — the walkthrough reel</strong>Sun study, lighting, x-ray,
-      drawings and the walk, each as a short clip. One per capability as they land.</span>
-    </div>
-
-    <div class="cta-row" style="margin-top:22px">
-      <a class="btn" href="skanna-demo/">Open a finished building</a>
-      <span class="aside">A live twin in your browser. No account, nothing to install.</span>
     </div>
   </section>
 
@@ -1191,31 +1239,13 @@
     use, correct to the best of our knowledge in September 2026. Categories rather than logos,
     because each of them contains several products that differ. If you think a row is unfair to
     a tool you use, <a href="mailto:anders@skanna.site">tell me</a> and I will correct it.</p>
-
-    <div class="promise">
-      <h3>Why it is priced like this</h3>
-      <p>This platform was built by <strong>one person</strong>, from a single idea: the
-      building industry throws away an enormous amount of material, money and work every day
-      for one stupid reason — <strong>nobody knows exactly what is already there</strong>.
-      Wrong measurements, stale drawings, surveys paid for twice, material ordered and scrapped.
-      That waste is measured in tonnes, daily, worldwide.</p>
-      <p><strong>Making money was never the point.</strong> It costs money to build this and to
-      keep it running, so it is priced to survive — not to extract. Everything is in open
-      formats and everything is shareable, because a record of a building that you cannot take
-      with you is not a record, it is a hostage.</p>
-      <p><strong>My personal promise:</strong> if this succeeds — if it grows into something
-      that genuinely covers what existing and future buildings need — <strong>it becomes free
-      for humanity</strong>. Not a free tier. Free.</p>
-      <p class="sig">— Anders Olofsson, founder</p>
-    </div>
   </section>
 
   <section id="independent">
     <h2>Who is behind it</h2>
-    <p class="section-lede"><strong>Fully independent.</strong> No investors, no acquirer, no
-    roadmap set by anyone else. The platform is shaped by a small team of professionals with
-    a <strong>combined 100+ years</strong> in CAD and in reality capture — people who build
-    both in the real world and digitally, and who tell me when something is wrong.</p>
+    <p class="section-lede"><strong>A new approach to digitising buildings.</strong> Fully
+    independent of legacy CAD. Shaped by teams of professionals with extensive experience in
+    reality capture, CAD and being on site.</p>
     <div class="stat-row">
       <div><span class="big">1</span><span class="lbl">person building the platform</span></div>
       <div><span class="big">100+</span><span class="lbl">combined years of CAD and reality-capture experience behind the platform</span></div>
@@ -1225,63 +1255,28 @@
   </section>
 
   <section id="course">
-    <h2>The crash course — starts 1 November</h2>
-    <p class="section-lede">The whole chain, end to end: <strong>walk into a building with a
-    phone, walk out with drawings, a digital twin, and a client who pays for it.</strong>
-    Scanning technique, working from drawings you already have, the browser modelling tool,
-    getting drawing sets out, publishing the twin, and how to sell the service.
-    <strong>No other platform covers all of this in one place</strong> — which is exactly why it
-    can be taught in days instead of years.</p>
-    <p class="section-lede"><strong>This first intake is for professionals.</strong> People who
-    already work in this field today and already know what a correct drawing looks like —
-    surveyors, technical designers, CAD-literate contractors, architects and the people who
-    run them. It is not an introduction to buildings.</p>
-
-    <h3 class="sub-head">And the part nobody else can offer you: put your own AI on it</h3>
-    <p class="section-lede">A Skanna building model is <strong>documented, open JSON</strong>.
-    Not a proprietary binary, not a licensed API, not a plug-in you have to be approved for.
-    That means you can <strong>point your own AI at it and have it author the model
-    directly</strong> — and you never have to force an MCP into a closed-source CAD system
-    that was never going to let you in.</p>
-    <p class="section-lede">Done properly, one professional with their own agents can produce
-    the output of a whole CAD department: <strong>an army of drafters that costs what your
-    tokens cost.</strong> A serious part of this course is how to actually do that — the
-    format, the prompts, the checks that stop an agent inventing geometry, and where a human
-    still has to look. <strong>This is the reason the intake is screened</strong>, and it is
-    why it is worth what it costs.</p>
-
-    <div class="doors">
-      <div class="door primary solo">
-        <div class="for">Starts 1 November 2026 · places are screened</div>
-        <h4>Apply for a place</h4>
-        <p>Tell me what you do today. I read every application myself, and I come back with the
-        syllabus, the price, and an honest answer on whether this is worth it for you — before
-        you spend anything.</p>
-        <form class="signup" id="courseForm" data-interest="course" data-source="site-course">
-          <input type="email" name="email" required placeholder="you@company.com"
-                 autocomplete="email" aria-label="Your email">
-          <div class="row2">
-            <input type="text" name="name" placeholder="Name" autocomplete="name" aria-label="Your name">
-            <input type="text" name="country" placeholder="Country" autocomplete="country-name" aria-label="Country">
-          </div>
-          <input type="text" name="works_on" placeholder="What you do today — surveyor, designer, contractor, architect…" aria-label="What you do today">
-          <!-- Bots fill every field they can see; people never see this one. -->
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
-          <button class="btn" type="submit">Apply for a place</button>
-          <p class="formnote" role="status" aria-live="polite">
-            No payment here, and nothing to commit to. I screen every application and reply
-            personally with the syllabus, the price and the start date.
-          </p>
-        </form>
-      </div>
+    <h2>The online course — at your own pace</h2>
+    <p class="section-lede">Short modules with screen recordings, taken online <strong>whenever
+    you like, at your own pace</strong>. Learn reality capture and modelling in Skanna, and how
+    to <strong>connect your own AI to Skanna</strong> through the MCP connector and set it up
+    in your business. Made for people in companies who are taking on reality capture, and
+    just as useful for property owners who want to digitise their own buildings with their
+    own AI.</p>
+    <div class="cta-row">
+      <a class="btn" href="mailto:anders@skanna.site?subject=Skanna%20online%20course&amp;body=I%27d%20like%20to%20sign%20up%20for%20the%20course.%0A%0AName%3A%0ACompany%20(if%20any)%3A%0AWhat%20I%20want%20to%20use%20Skanna%20for%3A%0A">Sign up by email</a>
+      <span class="aside">Email <a href="mailto:anders@skanna.site">anders@skanna.site</a> and I'll send you the details.</span>
     </div>
   </section>
 
   <section id="requirements">
     <h2>Requirements</h2>
-    <p class="section-lede"><strong>To model, publish and deliver — a browser.</strong> That is
-    the whole list. Scanning with your own phone is optional and needs a LiDAR sensor:
-    iPhone&nbsp;12&nbsp;Pro or later Pro model, or iPad&nbsp;Pro 2020 or later, on iOS 16+.</p>
+    <div class="req-split">
+      <div><strong>Skanna Web — a browser</strong>That is all you need to create work and
+      model your own buildings by hand. For the modelling itself, we recommend
+      <a href="#ai">connecting your own AI</a>.</div>
+      <div><strong>Skanna iOS app — optional, for scanning</strong>Needs LiDAR:
+      iPhone&nbsp;12&nbsp;Pro or later Pro model, or iPad&nbsp;Pro 2020 or later, on iOS&nbsp;16+.</div>
+    </div>
   </section>
 
   <section id="support">
@@ -1293,15 +1288,85 @@
     </div>
   </section>
 
+  <section id="live">
+    <h2>In use today</h2>
+    <div class="closer-head">
+      <h3>This is in production, not in beta.</h3>
+      <p>Every part of the chain on this page is doing real work on real buildings right now:
+      the scanner, the browser BIM tool, the drawing generator and the published twin. Here
+      are four of the jobs, and what each one started from.</p>
+    </div>
+
+    <div class="live-grid">
+      <article class="live wide">
+        <div class="live-media">
+          <figure>
+            <img src="assets/live-on-site.jpg" width="1400" height="1050" alt="On the roof deck of a villa under construction: a laser measure resting on a printed drawing, scaffolding and a rooftop pool behind, hills on the horizon" loading="lazy">
+            <figcaption>On site</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/web-drawing-plan.jpg" width="1600" height="958" alt="A generated floor-plan sheet on a title block, with dimensions, grid bubbles and room labels" loading="lazy">
+            <figcaption>The drawings</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/twin-hero-dollhouse.jpg" width="1800" height="756" alt="The published twin of one unit seen from above with the roof off, after dark" loading="lazy">
+            <figcaption>The twin</figcaption>
+          </figure>
+        </div>
+        <div class="live-body">
+          <div class="kicker">Housing development · Hua Hin, Thailand</div>
+          <h3>A 100-unit development, run from one set of models</h3>
+          <p>Permit and construction drawings, buyer walkthroughs of each unit, and the
+          operations and maintenance system for the finished estate, all off the same models.
+          Villas are measured on site while they are being built, so the model follows what
+          is actually there, not only what was drawn.</p>
+          <dl class="live-io">
+            <dt>Started from</dt><dd>The architect's DWG and PDF layouts, LiDAR scans and measurements on site</dd>
+            <dt>Delivered</dt><dd>IFC models, drawing sets, published twins, an operations system</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="live">
+        <div class="kicker">Restaurant fit-out · Bangkok</div>
+        <h3>A restaurant in a shopping mall</h3>
+        <p>An 83-page as-built drawing set turned into a full model: glazed shopfront, kitchen
+        line and service rooms, four ceiling heights under an exposed slab, and a published
+        twin.</p>
+        <dl class="live-io">
+          <dt>Started from</dt><dd>As-built PDF drawings</dd>
+          <dt>Delivered</dt><dd>IFC model, drawings, published twin</dd>
+        </dl>
+      </article>
+
+      <article class="live">
+        <div class="kicker">Sports centre · Bangkok</div>
+        <h3>A converted factory with no drawings at all</h3>
+        <p>Rink, training areas, gym, changing rooms and viewing platforms, captured with an
+        iPhone in eight LiDAR scans and modelled straight off them.</p>
+        <dl class="live-io">
+          <dt>Started from</dt><dd>iPhone LiDAR scans, nothing else</dd>
+          <dt>Delivered</dt><dd>Floor plan, model and twin</dd>
+        </dl>
+      </article>
+
+      <article class="live">
+        <div class="kicker">Mixed-use building</div>
+        <h3>Shops and apartments, from scanned paper permits</h3>
+        <p>Paper permit drawings, scanned and traced floor by floor from the basements up, with
+        the cores and the façade stacking exactly through every level.</p>
+        <dl class="live-io">
+          <dt>Started from</dt><dd>Scanned paper drawings</dd>
+          <dt>Delivered</dt><dd>The whole building, basements to roof</dd>
+        </dl>
+      </article>
+    </div>
+  </section>
+
   <section id="access">
     <span id="start" aria-hidden="true"></span>
     <h2>Get access</h2>
     <div class="closer-head">
-      <h3>This is in production, not in beta.</h3>
-      <p>Every part of the chain on this page exists and is being used: the scanner, the
-      browser BIM tool, the drawing generator and the published twin are producing the permit
-      drawings, the models, the buyer walkthroughs and the operations system for a live
-      100-unit development right now.</p>
       <p><strong>Private property owners can start today.</strong> Company accounts and custom
       builds are set up with me personally.</p>
     </div>
@@ -1316,41 +1381,38 @@
 
     <div class="doors">
       <div class="door primary">
-        <div class="for">If you'd rather talk first</div>
-        <h4>Join the interest list</h4>
-        <p>For anyone who owns, captures, draws or delivers property work today — owners,
-        surveyors, designers, architects, contractors, agents, developers, fit-out and
-        renovation teams. Leave your details and I'll get back to you about what Skanna can do
-        for your work, or about a Company account. You don't need to be in the trade, and you
-        don't need a scanner.</p>
-        <form class="signup" id="signupForm" data-interest="founding" data-source="site-interest-list" novalidate>
-          <input type="email" name="email" required placeholder="you@company.com"
-                 autocomplete="email" aria-label="Your email">
-          <div class="row2">
-            <input type="text" name="name" placeholder="Name" autocomplete="name" aria-label="Your name">
-            <input type="text" name="company" placeholder="Company" autocomplete="organization" aria-label="Your company">
-          </div>
-          <div class="row2">
-            <input type="text" name="country" placeholder="Country" autocomplete="country-name" aria-label="Country">
-            <input type="text" name="works_on" placeholder="What you work on" aria-label="What you work on">
-          </div>
-          <!-- Bots fill every field they can see; people never see this one. -->
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
-          <button class="btn" type="submit">Join the list</button>
-          <p class="formnote" role="status" aria-live="polite">
-            Email is the only thing required. The rest just helps me reply with what's
-            relevant to you.
-          </p>
-        </form>
-        <p class="after">No account, no card. You'll hear back from me directly.</p>
+        <div class="for">For companies</div>
+        <h4>Get started by email</h4>
+        <p>Surveyors, designers, architects, contractors, developers, agents, fit-out and
+        renovation teams: Company accounts are set up with me personally, and for now that
+        starts with an email. Tell me what you work on, roughly how many seats you need and
+        where you are, and I'll come back to you with how Skanna fits your work.</p>
+        <div class="act"><a class="btn" href="mailto:anders@skanna.site?subject=Skanna%20for%20our%20company&amp;body=Company%3A%0ACountry%3A%0AWhat%20we%20work%20on%3A%0ARoughly%20how%20many%20seats%3A%0A">Email anders@skanna.site</a></div>
+        <p class="after">Interest is high right now, so a reply can take a few days. You'll
+        hear back from me directly.</p>
       </div>
 
       <div class="door">
         <div class="for">If you make the products</div>
         <h4>Talk partnerships</h4>
-        <p>For manufacturers, suppliers and anyone who wants to build something on top of this
-        — a catalogue inside the model, a market of your own, a white-labelled tool. Bring the
-        idea and we'll talk it through.</p>
+        <p>For anyone who wants to build on top of Skanna and bring their own products and
+        data into the model. Your range goes in at real dimensions with its data attached, and
+        can then be placed in real buildings by hand in BIM Author, or by AI through the MCP
+        connector.</p>
+        <ul>
+          <li><strong>Material calculation</strong>: quantities and take-offs straight off the
+          walls, floors and finishes in the model</li>
+          <li><strong>Custom furniture and joinery</strong>: made to measure against geometry
+          that is actually correct</li>
+          <li><strong>Materials and fittings suppliers</strong>: your range as finishes and
+          fixtures a designer or buyer can pick</li>
+          <li><strong>Furniture and appliance brands</strong>: your library of models and
+          product data inside the model</li>
+          <li><strong>Interior design-and-build and renovation firms</strong>: design, quote
+          and build from one model, with your own catalogue in it</li>
+        </ul>
+        <p>Bring the idea — a catalogue inside the model, a market of your own, a
+        white-labelled tool — and we'll talk it through.</p>
         <div class="act">
           <a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20partnership&amp;body=We%27d%20like%20to%20talk%20about%20a%20partnership.%0A%0ACompany%3A%0AWhat%20we%20do%3A%0AMarkets%3A%0AWhat%20we%27d%20want%20out%20of%20it%3A%0A">Talk partnerships</a>
         </div>
@@ -1472,90 +1534,5 @@
 })();
 </script>
 
-<script>
-// Interest list and course sign-up. Both post straight to Supabase — the key
-// below is the publishable anon key, which is meant to be public; the table's
-// RLS allows INSERT only, so this cannot be used to read the list back. The two
-// forms differ only in the interest/source they record, taken off the markup.
-(function () {
-  var API = 'https://zvlengsphwrxviwbdlrr.supabase.co';
-  var KEY = 'sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw';
-
-  var DONE = {
-    founding: 'You’re on the list. I’ll be in touch directly.',
-    course: 'You’re signed up. I’ll email you the enrolment details and the start date.'
-  };
-
-  Array.prototype.forEach.call(document.querySelectorAll('form.signup'), wire);
-
-  function wire(form) {
-    var note = form.querySelector('.formnote');
-    var interest = form.getAttribute('data-interest') || 'founding';
-    var source = form.getAttribute('data-source') || 'site';
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var data = new FormData(form);
-
-      if (data.get('website')) { say('Thanks — you’re on the list.', 'ok'); return; }
-
-      var email = (data.get('email') || '').toString().trim();
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-        say('That email doesn’t look right — check it and try again.', 'bad');
-        return;
-      }
-
-      var btn = form.querySelector('button');
-      btn.disabled = true;
-      say('Adding you…', '');
-
-      fetch(API + '/rest/v1/signups', {
-        method: 'POST',
-        headers: {
-          apikey: KEY,
-          Authorization: 'Bearer ' + KEY,
-          'Content-Type': 'application/json',
-          Prefer: 'return=minimal'
-        },
-        body: JSON.stringify({
-          email: email,
-          name: str(data.get('name')),
-          company: str(data.get('company')),
-          country: str(data.get('country')),
-          works_on: str(data.get('works_on')),
-          interest: interest,
-          source: source
-        })
-      })
-        .then(function (r) {
-          // 409 means the address is already in the table. Saying so out loud
-          // would let anyone test whether a given person signed up, so a repeat
-          // submission looks exactly like a first one. It also means someone who
-          // joined the interest list and later signs up for the course lands in
-          // the same row — the follow-up email sorts that out by hand.
-          if (r.ok || r.status === 409) {
-            form.reset();
-            say(DONE[interest] || DONE.founding, 'ok');
-          } else {
-            say('That didn’t save. Email anders@skanna.site and I’ll add you by hand.', 'bad');
-            btn.disabled = false;
-          }
-        })
-        .catch(function () {
-          say('No connection. Email anders@skanna.site and I’ll add you by hand.', 'bad');
-          btn.disabled = false;
-        });
-    });
-
-    function say(msg, cls) {
-      if (!note) return;
-      note.textContent = msg;
-      note.className = 'formnote' + (cls ? ' ' + cls : '');
-    }
-  }
-
-  function str(v) { v = (v || '').toString().trim(); return v || null; }
-})();
-</script>
 </body>
 </html>
