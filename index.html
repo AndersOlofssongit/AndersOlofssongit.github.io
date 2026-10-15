@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skanna — Every building should have a digital twin. Here's how you make one.</title>
-<meta name="description" content="Buildings lose their information: drawings go stale, as-builts never get made, renovations go unrecorded. Skanna gives a building one living twin — from a phone scan, an old floor plan, a DXF, or nothing at all — with drawings, visuals and data that stay true for as long as it stands.">
+<title>Skanna · The browser-based BIM platform. Every building should have a digital twin.</title>
+<meta name="description" content="Skanna is a browser-based BIM platform. Model a building yourself, connect your own AI, or have it digitised for you, and get drawings, visuals and a digital twin that stay true for as long as the building stands.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Skanna">
-<meta property="og:title" content="Skanna — Every building should have a digital twin. Here's how you make one.">
-<meta property="og:description" content="Buildings lose their information: drawings go stale, as-builts never get made, renovations go unrecorded. Skanna gives a building one living twin — from a phone scan, an old floor plan, a DXF, or nothing at all — with drawings, visuals and data that stay true for as long as it stands.">
+<meta property="og:title" content="Skanna · The browser-based BIM platform. Every building should have a digital twin.">
+<meta property="og:description" content="Skanna is a browser-based BIM platform. Model a building yourself, connect your own AI, or have it digitised for you, and get drawings, visuals and a digital twin that stay true for as long as the building stands.">
 <meta property="og:image" content="https://skanna.site/assets/og-image.png">
 <meta property="og:url" content="https://skanna.site/">
 <meta name="twitter:card" content="summary_large_image">
@@ -664,6 +664,46 @@
     text-transform: uppercase; color: var(--accent); margin-bottom: 4px;
   }
   .start-also strong { display: block; color: var(--text); font-size: 1.05em; margin-bottom: 2px; }
+
+  /* ── iOS app, optional — icon, copy and Apple's own badge ─── */
+  .app-row { display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; }
+  .app-icon { width: 96px; height: 96px; border-radius: 22.37%; display: block;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.08); }
+  .app-row h3 { margin: 0 0 8px; font-size: 1.15em; letter-spacing: -0.01em; }
+  .app-badge { display: inline-block; margin: 4px 0 6px; }
+  .app-badge img { display: block; height: 50px; width: auto; }
+  @media (max-width: 560px) {
+    .app-row { grid-template-columns: 1fr; gap: 14px; }
+    .app-icon { width: 72px; height: 72px; }
+  }
+  footer .legal { flex-basis: 100%; font-size: 0.86em; }
+
+  /* ── How it compares — one collapsible row per kind of tool ── */
+  .cmp summary {
+    display: grid; grid-template-columns: 220px 1fr auto; gap: 20px; align-items: center;
+    background: #0d0d16; padding: 18px 22px; color: var(--text);
+    cursor: pointer; list-style: none;
+  }
+  .cmp summary::-webkit-details-marker { display: none; }
+  .cmp summary:hover { background: rgba(167,139,250,0.07); }
+  .cmp summary .arrow::after { content: ' ▾'; }
+  .cmp[open] summary .arrow::after { content: ' ▴'; }
+  .cmp-grid { background: #0d0d16; padding: 4px 22px 18px; font-size: 0.88em; }
+  .cmp-row {
+    display: grid; grid-template-columns: 220px 1fr 1fr; gap: 20px;
+    padding: 9px 0; border-top: 1px solid var(--rule); color: var(--muted);
+  }
+  .cmp-row .cap-name { color: var(--text); font-weight: 600; }
+  .cmp-row .us { color: var(--text); }
+  .cmp-head { border-top: 0; color: var(--faint); font-size: 0.86em;
+    font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  .cmp-head .us { color: var(--accent); }
+  @media (max-width: 720px) {
+    .cmp summary { grid-template-columns: 1fr; gap: 4px; }
+    .cmp-row { grid-template-columns: 1fr 1fr; gap: 4px 14px; }
+    .cmp-row .cap-name { grid-column: 1 / -1; }
+    .cmp-head span:first-child { display: none; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -705,11 +745,11 @@
     <span class="spacer"></span>
     <nav class="links">
       <a href="#start">Pricing</a>
-      <a href="#how">How it works</a>
-      <a href="#who">Who it's for</a>
-      <a href="#app">App</a>
       <a href="#web">BIM Author</a>
       <a href="#ai">Your AI</a>
+      <a href="#app">iOS app</a>
+      <a href="#how">How it works</a>
+      <a href="#who">Who it's for</a>
       <a href="#twin">The twin</a>
       <a href="#live">In use</a>
       <a href="#course">Course</a>
@@ -720,27 +760,25 @@
   <header class="hero">
     <div class="hero-grid">
       <div>
-        <div class="kicker">Start from anything · Model once · Keep it for life</div>
-        <h1>Every building should have a digital twin. Start yours today<span class="dot">.</span></h1>
-        <p class="lede">Scan it with an iPhone, trace the floor plan you already have,
-        upload a 3D model from any other tool, or draw it from scratch. Out come
-        <strong>dimensioned drawing sets</strong>, an <strong>interactive twin anyone can
-        open on a link</strong>, and <strong>data on every object</strong> — from one file
-        that can't disagree with itself, and that <strong>stays with the building for as
-        long as it stands</strong>.</p>
+        <div class="kicker">Browser-based BIM platform · Works with your own AI</div>
+        <h1>Every building should have a digital twin. Build yours in the browser<span class="dot">.</span></h1>
+        <p class="lede">Skanna is a <strong>BIM platform that runs entirely in your
+        browser</strong>. Model the building yourself, <strong>connect your own AI</strong> to
+        model it through the Skanna MCP connector, or pay <strong>a one-off price to have it
+        digitised for you</strong>. Out come dimensioned drawing sets, an interactive twin
+        anyone can open on a link, and data on every object, all from one model that stays
+        with the building for as long as it stands.</p>
         <div class="cta-row">
           <a class="btn" href="skanna-demo/">Open a finished building</a>
-          <a class="btn-ghost" href="#how">See how it works</a>
+          <a class="btn-ghost" href="#start">Prices and how to start</a>
         </div>
-        <p class="store-note">A live link, not a mock-up — the finished building opens in
-        your browser, no account. <strong>The modelling tool needs nothing but a
-        browser</strong>, and accounts are open now. The iPhone scanner is
-        <a href="https://apps.apple.com/app/id6789603042">free on the App&nbsp;Store now</a>,
-        for anyone who wants to capture their own.</p>
+        <p class="store-note">A live link, not a mock-up. The finished building opens in your
+        browser with no account. <strong>Nothing to install:</strong> the whole platform runs
+        in the browser, and accounts are open now.</p>
       </div>
 
       <figure class="hero-media shot-frame" style="margin:0">
-        <div class="chrome"><i></i><i></i><i></i><span>Scan · model · drawings · twin — in 30 seconds</span></div>
+        <div class="chrome"><i></i><i></i><i></i><span>Scan, model, drawings and twin in 30 seconds</span></div>
         <video autoplay muted loop playsinline preload="metadata"
                poster="assets/hero-poster.jpg"
                aria-label="Skanna end to end: scanning a room with an iPhone, tracing the model in the browser BIM tool, walking the finished twin, the sun study and night lighting, generated 2D drawing sheets, and rendered interiors">
@@ -750,17 +788,21 @@
     </div>
 
     <div class="proof-lead">
-      <strong>Running today</strong>Producing the drawings, the visualisations and the
-      internal operations and maintenance system for a 100-unit housing development — one
-      model behind all three. They are dropping the clunky CAD tools and the scattered
-      systems for booking, service and unit records, cutting the overall cost, and getting
-      software shaped around the way they actually work instead of the other way round.
+      <strong>Running today</strong>On site on multiple continents, making drawings and
+      digital twins. For a 100-unit housing development it produces the drawings, the
+      visualisations and the operations and maintenance system, all from one model. They are
+      dropping clunky CAD tools and scattered systems for booking, service and unit records,
+      cutting their overall cost, and getting software shaped around the way they actually
+      work.
     </div>
 
     <div class="proof">
-      <div><strong>No hardware to buy</strong>The modelling tool runs in any browser. No CAD seat, no scanner, no plug-ins.</div>
-      <div><strong>IFC · DXF · PDF out</strong>Open formats only. Everything you make is yours to take anywhere.</div>
-      <div><strong>Nothing is invented</strong>Geometry comes off a real measurement: your scan, your drawing, or your tape.</div>
+      <div><strong>Adaptable</strong>One house or a whole development. Drawings, sales
+      visuals, renovation, operations. Use it for what you need.</div>
+      <div><strong>Pay for what you use</strong>Fair pricing: a plan for your own buildings,
+      seats for companies, or a one-off price to have a building digitised.</div>
+      <div><strong>Open, web and AI friendly</strong>Runs in the browser. IFC, DXF, PDF and
+      GLB out, in a model format your own AI can read and write.</div>
     </div>
   </header>
 
@@ -775,14 +817,14 @@
       <div class="tier highlight">
         <div class="kicker">Private Property Owner</div>
         <h3>€15 a month</h3>
-        <p class="tier-alt">or €150 a year — two months free</p>
+        <p class="tier-alt">or €150 a year, two months free</p>
         <p>For your own home or buildings: keep the record, plan a renovation, make the
         drawings, share the twin.</p>
         <ul>
-          <li>Up to 3 buildings you own — <strong>up to 10 for €25 a month</strong> (€250 a year)</li>
+          <li>Up to 3 buildings you own, or <strong>up to 10 for €25 a month</strong> (€250 a year)</li>
           <li>Host them as digital twins on a plain link</li>
-          <li>Export drawings and models — PDF, DXF, IFC</li>
-          <li>For personal use — not for client work</li>
+          <li>Export drawings and models as PDF, DXF and IFC</li>
+          <li>For personal use, not client work</li>
         </ul>
         <div class="tier-act"><a class="btn" href="https://app.skanna.site/?signup">Get started</a></div>
       </div>
@@ -795,7 +837,7 @@
           <li>Unlimited buildings</li>
           <li>Hosted twins, share links and feedback boards</li>
           <li>Commercial use: deliver models and drawings to clients</li>
-          <li>Start today by email — card or annual invoice</li>
+          <li>Start today by email. Pay by card or annual invoice</li>
         </ul>
         <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20for%20our%20company&amp;body=Company%3A%0ACountry%3A%0AWhat%20we%20need%20from%20the%20platform%3A%0ARoughly%20how%20many%20seats%3A%0AQuestions%3A%0A">Start by email</a></div>
       </div>
@@ -815,9 +857,9 @@
       </div>
     </div>
     <div class="start-also">
-      <a href="https://apps.apple.com/app/id6789603042"><span class="k">Free</span><strong>The iPhone scanner</strong>Capture a building with LiDAR, photos and 360° panoramas.</a>
       <a href="#ai"><span class="k">Free to draft</span><strong>Connect your own AI</strong>Let it draft the model through the Skanna MCP connector.</a>
-      <a href="#ai"><span class="k">Quoted per building</span><strong>Have it done for you</strong>Send your drawings or scans and get the finished model back.</a>
+      <a href="#ai"><span class="k">One-off price per building</span><strong>Have it done for you</strong>Send your drawings or scans and get the finished model back.</a>
+      <a href="#app"><span class="k">Optional · free</span><strong>The iPhone scanner</strong>Capture a building with LiDAR, photos and 360° panoramas.</a>
     </div>
     <p class="pricing-note">Prices in euros, including VAT where it applies. Paid by card
     through Stripe. Paying in another currency adds a conversion fee, shown at checkout before
@@ -828,208 +870,8 @@
 
   </section>
 
-  <section id="how">
-    <h2>How it works</h2>
-    <p class="section-lede">Five stages, once per building. <strong>Click any stage to open
-    it</strong> — and in stage&nbsp;two, click the way in that matches what you already have.</p>
-
-    <div class="flow" id="flow">
-      <button class="stage" type="button" aria-expanded="false" aria-controls="p1" data-stage="1">
-        <span class="n">01</span>
-        <h3>There is a building</h3>
-        <p>Standing, under construction, or still an idea on paper.</p>
-        <span class="more">Open →</span>
-      </button>
-      <button class="stage" type="button" aria-expanded="true" aria-controls="p2" data-stage="2">
-        <span class="n">02</span>
-        <h3>Start from anything</h3>
-        <p>Scan, splat, CAD file, drawing, sketch — or nothing at all.</p>
-        <span class="more">6 ways in →</span>
-      </button>
-      <button class="stage" type="button" aria-expanded="false" aria-controls="p3" data-stage="3">
-        <span class="n">03</span>
-        <h3>Unify in BIM Author</h3>
-        <p>One model in the browser. Add what you need, from wherever you have it.</p>
-        <span class="more">Open →</span>
-      </button>
-      <button class="stage" type="button" aria-expanded="false" aria-controls="p4" data-stage="4">
-        <span class="n">04</span>
-        <h3>Use the twin instead</h3>
-        <p>Drawings, visuals, quantities, planning and design — all off one model.</p>
-        <span class="more">Open →</span>
-      </button>
-      <button class="stage" type="button" aria-expanded="false" aria-controls="p5" data-stage="5">
-        <span class="n">05</span>
-        <h3>It lives with the building</h3>
-        <p>Updated as the building changes, and handed on when it sells.</p>
-        <span class="more">Open →</span>
-      </button>
-    </div>
-
-    <div class="flow-panel" id="p1" hidden>
-      <h4>Any building, at any point in its life</h4>
-      <p>It does not matter whether the building is a hundred years old, half-built, or a
-      concept nobody has poured concrete for yet. <strong>The twin is not a project
-      deliverable — it is the building's record</strong>, and it can be started at any stage.</p>
-      <ul>
-        <li><strong>Existing</strong> — nobody has a current, correct set of information about
-        it. Capture it once and stop re-surveying it every time something needs doing.</li>
-        <li><strong>Under construction</strong> — the model tracks what is actually being
-        built, not what was drawn. What comes out at the end is a real as-built.</li>
-        <li><strong>Concept</strong> — draw it before it exists, sell from it, get the permit
-        drawings out of it, and keep the same file all the way through construction.</li>
-      </ul>
-    </div>
-
-    <div class="flow-panel" id="p2">
-      <h4>Six ways in — all of them end at the same model</h4>
-      <p>Only one of them needs a scanner. Everything after this stage happens in a browser
-      tab, and you can <strong>mix them freely</strong>: scan the ground floor, trace the
-      architect's DXF for the first, draw the loft from a tape measure. One model either way.</p>
-      <div class="routes" role="tablist" aria-label="Ways to start a model">
-        <button class="route-chip" type="button" role="tab" aria-selected="true" data-route="lidar">LiDAR scan</button>
-        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="splat">Gaussian splat / photos</button>
-        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="cad">CAD — DWG, DXF, IFC</button>
-        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="plan">Drawing, PDF or SVG</button>
-        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="model">A 3D model you own</button>
-        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="scratch">A napkin sketch</button>
-      </div>
-      <div class="route-detail" id="routeDetail">
-        <!-- filled by script; this copy is the no-JS fallback -->
-        <span class="tag">Fastest and most accurate</span>
-        <p><strong>LiDAR scan.</strong> Walk the building with an iPhone or iPad Pro and come
-        out with measured geometry, photos and 360° panoramas, all positioned in space. One
-        visit, everything collected at once.</p>
-      </div>
-    </div>
-
-    <div class="flow-panel" id="p3" hidden>
-      <h4>One place where it all comes together</h4>
-      <p>BIM Author is a browser tool. Whatever you brought in stage two goes underneath as a
-      reference, and you draw the real building on top of it: walls, openings, slabs, roofs,
-      stairs, railings, columns, beams, services and finishes — <strong>each object carrying
-      its real specification</strong>, floor by floor.</p>
-      <p>You are never locked to one source. Trace the scan where you have one, switch to the
-      architect's DXF for the floor you don't, and measure the rest by hand.
-      <strong>Nothing is invented</strong>: every dimension comes off a real measurement.
-      What comes out is a proper IFC model, not a picture of one.</p>
-    </div>
-
-    <div class="flow-panel" id="p4" hidden>
-      <h4>This is where the value actually arrives</h4>
-      <p>Once the model exists, the work you used to commission separately becomes an output
-      of it — generated in minutes, from a single file that <strong>cannot contradict
-      itself</strong>.</p>
-      <ul>
-        <li><strong>Drawings</strong> — plans, elevations and sections on your own title block,
-        with dimensions and schedules. PDF, SVG or DXF. A revision is a re-issue, not a redraw.</li>
-        <li><strong>Visualisation</strong> — the render is the model. No separate pipeline, no
-        render budget per campaign.</li>
-        <li><strong>Calculation</strong> — areas, quantities and schedules come out of the same
-        objects you drew.</li>
-        <li><strong>Planning and design</strong> — test a renovation, an extension or a
-        repurposing against geometry that is actually correct.</li>
-        <li><strong>Sharing</strong> — publish it to a link anyone opens in a browser, with no
-        app and no account.</li>
-      </ul>
-    </div>
-
-    <div class="flow-panel" id="p5" hidden>
-      <h4>The twin doesn't expire when the project does</h4>
-      <p>A drawing set is finished the day it is issued and starts going stale the day after.
-      A twin is the opposite: it is <strong>the same file for the life of the
-      building</strong>, and every change updates the record instead of starting a new one.</p>
-      <ul>
-        <li>Adjust measurements when something is rebuilt, rerouted or replaced</li>
-        <li>Log purchases, invoices, warranties and manuals against the object they belong to</li>
-        <li>Keep service history, condition and inspections on the equipment itself</li>
-        <li>Hand the twin over with the property when it sells — the next owner inherits
-        twenty years of accurate information instead of a tape measure</li>
-      </ul>
-    </div>
-
-    <p class="ifc-note">The long version — why buildings lose their information in the first
-    place, and everything a finished model produces — is on
-    <a href="why.html">a page of its own</a>. Picking which of the six ways in to use? See
-    <a href="capture-methods.html">what actually goes wrong with each capture method</a>.</p>
-  </section>
-
-  <section id="who">
-    <h2>Who this is for</h2>
-    <p class="section-lede">Everybody gets the same platform — <strong>the whole of it</strong>.
-    Scanning, browser modelling, drawing sets, the published twin, the property portal and the
-    operations side are one product, not tiers sold to different trades. The only difference
-    between the rows below is which part you reach for first.</p>
-    <div class="router">
-      <a class="row" href="#how">
-        <span class="who">Property owners</span>
-        <span class="what"><strong>The main one.</strong> You own the building, so you carry
-        every cost of not knowing what is in it: the survey paid for twice, the site visit
-        that existed only to measure something, the material ordered wrong, the contractor
-        quoting from a drawing that stopped being true years ago. One accurate twin ends
-        that — every trade, valuer, insurer and buyer after it starts from the model. You do
-        not need a scanner: an old floor plan is enough to start. And when you sell, the twin
-        goes with the property, the way keys and deeds do.</span>
-        <span class="arrow">Start your own →</span>
-      </a>
-      <a class="row" href="#twin">
-        <span class="who">Property developers</span>
-        <span class="what">Sell off-plan: a buyer explores their own unit, sees the morning
-        light in it and picks finishes months before there is anything to visit. Then keep the
-        same models for permit and construction drawings, handover documentation, and the
-        operations system for the finished estate.</span>
-        <span class="arrow">The twin →</span>
-      </a>
-      <a class="row" href="#twin">
-        <span class="who">Hotel &amp; property operators</span>
-        <span class="what">Know what you own. Every vent, riser, fixture and finish located and
-        specified, so a refurbishment starts without re-surveying and maintenance hangs off the
-        objects instead of a spreadsheet nobody trusts.</span>
-        <span class="arrow">Building data →</span>
-      </a>
-      <a class="row" href="#web">
-        <span class="who">Designers &amp; fit-out teams</span>
-        <span class="what">Author and share in a browser — no CAD seat, no scanning device, no
-        render budget, and drawings that come out of the model instead of being redrawn.</span>
-        <span class="arrow">BIM Author →</span>
-      </a>
-      <a class="row" href="#course">
-        <span class="who">People who want to learn it</span>
-        <span class="what">A self-paced online course: reality capture, modelling, and
-        connecting your own AI to Skanna — to set it up in your business, or to digitise your
-        own buildings.</span>
-        <span class="arrow">The course →</span>
-      </a>
-      <a class="row" href="#access">
-        <span class="who">Teams paying for CAD seats</span>
-        <span class="what">Cut the licence, survey and drawing-production lines — and the
-        separate booking, service and document systems alongside them.</span>
-        <span class="arrow">Talk it through →</span>
-      </a>
-    </div>
-  </section>
-
-  <section id="app">
-    <h2>The Skanna iOS app — LiDAR 3D scanning, image and data capture</h2>
-    <p class="section-lede">Built for one job: <strong>capturing the inside of
-    buildings</strong>. It is the measuring tool already in your iPhone Pro or iPad Pro, taken
-    seriously — <strong>we do not guess at the geometry and we do not invent the
-    images</strong>. Geometry, photographs, 360° panoramas and notes, all captured in one
-    walk-through and all positioned in space. It is a raw capture tool, not a beautifier: what
-    you walk out with is what was actually there, true to scale, ready to model from.
-    Everything is captured, processed and stored on the device. <strong>Free, no account, and
-    completely private.</strong></p>
-    <div class="cta-row">
-      <a class="btn" href="https://apps.apple.com/app/id6789603042">Download on the App Store — free</a>
-    </div>
-    <p class="ifc-note">Requires a LiDAR sensor: iPhone&nbsp;12&nbsp;Pro or later Pro model, or
-    iPad&nbsp;Pro 2020 or later. <strong>No Pro iPhone? Nothing else on this page needs
-    one</strong> — see <a href="#how">the six ways in</a>.
-    <a href="privacy.html">Privacy policy</a>.</p>
-  </section>
-
   <section id="web">
-    <h2>BIM Author</h2>
+    <h2>Skanna Web · BIM Author</h2>
     <p class="section-lede">The modelling tool, <strong>entirely in the browser</strong>, built
     so <strong>an AI can use it, and just as usable by hand</strong>. Connect your own AI and it
     drafts the model through the <a href="#ai">Skanna MCP connector</a>. Or do it yourself:
@@ -1039,17 +881,17 @@
     from the AI at any point. No CAD seat, no plug-ins, no workstation.
     <strong>Most people are productive in it in a day.</strong></p>
     <div class="shot-frame">
-      <div class="chrome"><i></i><i></i><i></i><span>Skanna Web — BIM Author</span></div>
+      <div class="chrome"><i></i><i></i><i></i><span>Skanna Web · BIM Author</span></div>
       <img src="assets/bim-author.jpg" alt="Skanna Web BIM Author: the 2D plan editor with wall, door, window, slab, roof, stair, ramp, railing, column, beam, item, finish and MEP tools, the 3D model alongside it, and the inspector showing the selected slab's material and surface colour" loading="lazy">
     </div>
-    <p class="ifc-note">Everything comes back out in open formats — <strong>IFC</strong> for the
+    <p class="ifc-note">Everything comes back out in open formats: <strong>IFC</strong> for the
     model, <strong>GLB</strong> for the geometry, <strong>DXF, SVG and PDF</strong> for the
     drawings. Take them to SketchUp, Revit, Blender or any other platform, or keep working here.
     Nothing is trapped.</p>
   </section>
 
   <section id="ai">
-    <h2>Digitise a building — with your own AI, or have it done for you</h2>
+    <h2>Digitise a building with your own AI, or have it done for you</h2>
     <p class="section-lede">A Skanna building model is <strong>documented, open JSON</strong>, not a
     proprietary binary or a licensed API. So <strong>your own AI can author the model
     directly</strong>, through a connector that is live today, and nobody has to force an
@@ -1076,14 +918,14 @@
       </div>
 
       <div class="door">
-        <div class="for">Done for you</div>
+        <div class="for">Done for you · one-off price per building</div>
         <h4>Have your building digitised</h4>
-        <p>Send me what you have — DWG or DXF, PDF drawings, scanned paper, LiDAR scans, photos
-        or a 3D model — and tell me what you want at the end. I model it with a person checking
+        <p>Send me what you have: DWG or DXF, PDF drawings, scanned paper, LiDAR scans, photos
+        or a 3D model. Tell me what you want at the end. I model it with a person checking
         every step against the source, and hand over the model, the drawing set and a published
         twin.</p>
         <ul>
-          <li>Quoted per building: it depends on what goes into the twin, what information you
+          <li>One price per building, quoted up front. It depends on what goes into the twin, what information you
           already have, and whether you want to work in rounds.</li>
           <li>Changes after a round are billed as an extra round, so every piece of work is
           accounted for.</li>
@@ -1095,14 +937,215 @@
     </div>
   </section>
 
+  <section id="app">
+    <h2>Optional: the Skanna iOS app</h2>
+    <div class="app-row">
+      <img class="app-icon" src="assets/app-icon.png" width="96" height="96" alt="The Skanna app icon">
+      <div>
+        <h3>Scan a building with your iPhone or iPad Pro</h3>
+        <p class="section-lede">You don't need it to use Skanna. If you have a LiDAR iPhone
+        or iPad Pro, it captures geometry, photos, 360° panoramas and notes in one walk-through,
+        all positioned in space and true to scale, ready to model from. <strong>We don't guess
+        at the geometry and we don't invent the images.</strong> Everything is captured,
+        processed and stored on the device. <strong>Free, no account, and completely
+        private.</strong></p>
+        <a class="app-badge" href="https://apps.apple.com/app/id6789603042"><img src="assets/app-store-badge.svg" width="150" height="50" alt="Download on the App Store"></a>
+        <p class="ifc-note">Needs a LiDAR sensor: iPhone&nbsp;12&nbsp;Pro or later Pro model,
+        or iPad&nbsp;Pro 2020 or later. No Pro iPhone? Nothing else on this page needs one.
+        See <a href="#how">the six ways in</a>. <a href="privacy.html">Privacy policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <p class="section-lede">Five stages, once per building. <strong>Click any stage to open
+    it</strong>. In stage&nbsp;two, click the way in that matches what you already have.</p>
+
+    <div class="flow" id="flow">
+      <button class="stage" type="button" aria-expanded="false" aria-controls="p1" data-stage="1">
+        <span class="n">01</span>
+        <h3>There is a building</h3>
+        <p>Standing, under construction, or still an idea on paper.</p>
+        <span class="more">Open →</span>
+      </button>
+      <button class="stage" type="button" aria-expanded="true" aria-controls="p2" data-stage="2">
+        <span class="n">02</span>
+        <h3>Start from anything</h3>
+        <p>Scan, splat, CAD file, drawing, sketch, or nothing at all.</p>
+        <span class="more">6 ways in →</span>
+      </button>
+      <button class="stage" type="button" aria-expanded="false" aria-controls="p3" data-stage="3">
+        <span class="n">03</span>
+        <h3>Unify in BIM Author</h3>
+        <p>One model in the browser. Add what you need, from wherever you have it.</p>
+        <span class="more">Open →</span>
+      </button>
+      <button class="stage" type="button" aria-expanded="false" aria-controls="p4" data-stage="4">
+        <span class="n">04</span>
+        <h3>Use the twin instead</h3>
+        <p>Drawings, visuals, quantities, planning and design, all off one model.</p>
+        <span class="more">Open →</span>
+      </button>
+      <button class="stage" type="button" aria-expanded="false" aria-controls="p5" data-stage="5">
+        <span class="n">05</span>
+        <h3>It lives with the building</h3>
+        <p>Updated as the building changes, and handed on when it sells.</p>
+        <span class="more">Open →</span>
+      </button>
+    </div>
+
+    <div class="flow-panel" id="p1" hidden>
+      <h4>Any building, at any point in its life</h4>
+      <p>It does not matter whether the building is a hundred years old, half-built, or a
+      concept nobody has poured concrete for yet. <strong>The twin is not a project
+      deliverable. It is the building's record</strong>, and it can be started at any stage.</p>
+      <ul>
+        <li><strong>Existing:</strong> nobody has a current, correct set of information about
+        it. Capture it once and stop re-surveying it every time something needs doing.</li>
+        <li><strong>Under construction:</strong> the model tracks what is actually being
+        built, not what was drawn. What comes out at the end is a real as-built.</li>
+        <li><strong>Concept:</strong> draw it before it exists, sell from it, get the permit
+        drawings out of it, and keep the same file all the way through construction.</li>
+      </ul>
+    </div>
+
+    <div class="flow-panel" id="p2">
+      <h4>Six ways in, and all of them end at the same model</h4>
+      <p>Only one of them needs a scanner. Everything after this stage happens in a browser
+      tab, and you can <strong>mix them freely</strong>: scan the ground floor, trace the
+      architect's DXF for the first, draw the loft from a tape measure. One model either way.</p>
+      <div class="routes" role="tablist" aria-label="Ways to start a model">
+        <button class="route-chip" type="button" role="tab" aria-selected="true" data-route="lidar">LiDAR scan</button>
+        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="splat">Gaussian splat / photos</button>
+        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="cad">CAD: DWG, DXF, IFC</button>
+        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="plan">Drawing, PDF or SVG</button>
+        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="model">A 3D model you own</button>
+        <button class="route-chip" type="button" role="tab" aria-selected="false" data-route="scratch">A napkin sketch</button>
+      </div>
+      <div class="route-detail" id="routeDetail">
+        <!-- filled by script; this copy is the no-JS fallback -->
+        <span class="tag">Fastest and most accurate</span>
+        <p><strong>LiDAR scan.</strong> Walk the building with an iPhone or iPad Pro and come
+        out with measured geometry, photos and 360° panoramas, all positioned in space. One
+        visit, everything collected at once.</p>
+      </div>
+    </div>
+
+    <div class="flow-panel" id="p3" hidden>
+      <h4>One place where it all comes together</h4>
+      <p>BIM Author is a browser tool. Whatever you brought in stage two goes underneath as a
+      reference, and you draw the real building on top of it: walls, openings, slabs, roofs,
+      stairs, railings, columns, beams, services and finishes, with <strong>each object carrying
+      its real specification</strong>, floor by floor.</p>
+      <p>You are never locked to one source. Trace the scan where you have one, switch to the
+      architect's DXF for the floor you don't, and measure the rest by hand.
+      <strong>Nothing is invented</strong>: every dimension comes off a real measurement.
+      What comes out is a proper IFC model, not a picture of one.</p>
+    </div>
+
+    <div class="flow-panel" id="p4" hidden>
+      <h4>This is where the value actually arrives</h4>
+      <p>Once the model exists, the work you used to commission separately becomes an output
+      of it, generated in minutes from a single file that <strong>cannot contradict
+      itself</strong>.</p>
+      <ul>
+        <li><strong>Drawings:</strong> plans, elevations and sections on your own title block,
+        with dimensions and schedules. PDF, SVG or DXF. A revision is a re-issue, not a redraw.</li>
+        <li><strong>Visualisation:</strong> the render is the model. No separate pipeline, no
+        render budget per campaign.</li>
+        <li><strong>Calculation:</strong> areas, quantities and schedules come out of the same
+        objects you drew.</li>
+        <li><strong>Planning and design:</strong> test a renovation, an extension or a
+        repurposing against geometry that is actually correct.</li>
+        <li><strong>Sharing:</strong> publish it to a link anyone opens in a browser, with no
+        app and no account.</li>
+      </ul>
+    </div>
+
+    <div class="flow-panel" id="p5" hidden>
+      <h4>The twin doesn't expire when the project does</h4>
+      <p>A drawing set is finished the day it is issued and starts going stale the day after.
+      A twin is the opposite: it is <strong>the same file for the life of the
+      building</strong>, and every change updates the record instead of starting a new one.</p>
+      <ul>
+        <li>Adjust measurements when something is rebuilt, rerouted or replaced</li>
+        <li>Log purchases, invoices, warranties and manuals against the object they belong to</li>
+        <li>Keep service history, condition and inspections on the equipment itself</li>
+        <li>Hand the twin over with the property when it sells. The next owner inherits
+        twenty years of accurate information instead of a tape measure</li>
+      </ul>
+    </div>
+
+    <p class="ifc-note">The long version, on why buildings lose their information in the first
+    place and everything a finished model produces, is on
+    <a href="why.html">a page of its own</a>. Picking which of the six ways in to use? See
+    <a href="capture-methods.html">what actually goes wrong with each capture method</a>.</p>
+  </section>
+
+  <section id="who">
+    <h2>Who this is for</h2>
+    <p class="section-lede">Everybody gets the same platform, <strong>the whole of it</strong>.
+    Scanning, browser modelling, drawing sets, the published twin, the property portal and the
+    operations side are one product, not tiers sold to different trades. The only difference
+    between the rows below is which part you reach for first.</p>
+    <div class="router">
+      <a class="row" href="#how">
+        <span class="who">Property owners</span>
+        <span class="what"><strong>The main one.</strong> You own the building, so you carry
+        every cost of not knowing what is in it: the survey paid for twice, the site visit
+        that existed only to measure something, the material ordered wrong, the contractor
+        quoting from a drawing that stopped being true years ago. One accurate twin ends
+        that. Every trade, valuer, insurer and buyer after it starts from the model. You do
+        not need a scanner: an old floor plan is enough to start. And when you sell, the twin
+        goes with the property, the way keys and deeds do.</span>
+        <span class="arrow">Start your own →</span>
+      </a>
+      <a class="row" href="#twin">
+        <span class="who">Property developers</span>
+        <span class="what">Sell off-plan: a buyer explores their own unit, sees the morning
+        light in it and picks finishes months before there is anything to visit. Then keep the
+        same models for permit and construction drawings, handover documentation, and the
+        operations system for the finished estate.</span>
+        <span class="arrow">The twin →</span>
+      </a>
+      <a class="row" href="#twin">
+        <span class="who">Hotel &amp; property operators</span>
+        <span class="what">Know what you own. Every vent, riser, fixture and finish located and
+        specified, so a refurbishment starts without re-surveying and maintenance hangs off the
+        objects instead of a spreadsheet nobody trusts.</span>
+        <span class="arrow">Building data →</span>
+      </a>
+      <a class="row" href="#web">
+        <span class="who">Designers &amp; fit-out teams</span>
+        <span class="what">Author and share in a browser. No CAD seat, no scanning device, no
+        render budget, and drawings that come out of the model instead of being redrawn.</span>
+        <span class="arrow">BIM Author →</span>
+      </a>
+      <a class="row" href="#course">
+        <span class="who">People who want to learn it</span>
+        <span class="what">A self-paced online course: reality capture, modelling, and
+        connecting your own AI to Skanna, to set it up in your business or to digitise your
+        own buildings.</span>
+        <span class="arrow">The course →</span>
+      </a>
+      <a class="row" href="#access">
+        <span class="who">Teams paying for CAD seats</span>
+        <span class="what">Cut the licence, survey and drawing-production lines, and the
+        separate booking, service and document systems alongside them.</span>
+        <span class="arrow">Talk it through →</span>
+      </a>
+    </div>
+  </section>
+
   <section id="twin">
     <h2>What the model gives you</h2>
     <p class="section-lede">Publish the finished model to a link. Anyone you send it to opens a
-    fully rendered building in their browser — <strong>no software, no account, no
-    download</strong> — and everything below is already in it.</p>
+    fully rendered building in their browser, with <strong>no software, no account and no
+    download</strong>, and everything below is already in it.</p>
 
     <div class="shot-frame shot-wide">
-      <div class="chrome"><i></i><i></i><i></i><span>Digital twin — dollhouse view, after dark</span></div>
+      <div class="chrome"><i></i><i></i><i></i><span>Digital twin · dollhouse view, after dark</span></div>
       <img src="assets/twin-hero-dollhouse.jpg" width="1800" height="756" alt="A digital twin of a two-bedroom apartment seen from above with the roof off, after dark: rendered walls, tiled floors, a fitted kitchen, a stone feature wall, and a furnished terrace with a pool, all lit by the building's own fixtures" loading="lazy">
     </div>
 
@@ -1127,7 +1170,7 @@
       </div>
       <div class="cap">
         <h4>Measure anything</h4>
-        <p>Two points, a real dimension — off the same geometry the drawings come from.</p>
+        <p>Two points, a real dimension, off the same geometry the drawings come from.</p>
       </div>
       <div class="cap">
         <h4>Click for the data</h4>
@@ -1152,7 +1195,7 @@
       <div class="cap">
         <h4>Pins</h4>
         <p>A photo of how it was actually wired, a 360° panorama of the room as built, a note
-        for whoever comes next — pinned to the surface it describes.</p>
+        for whoever comes next, pinned to the surface it describes.</p>
       </div>
       <div class="cap">
         <h4>Property portal</h4>
@@ -1169,102 +1212,63 @@
 
   <section id="compare">
     <h2>How it compares</h2>
-    <p class="section-lede">Skanna costs a fraction of a traditional CAD seat.
-    <strong>The comparison below is about scope, not quality</strong> — every tool in it is good at the part it was built for. The
-    difference is that <strong>you need all of those parts to keep a building documented</strong>,
-    and buying them separately is where the money and the contradictions go.</p>
-
-    <div class="compare-wrap">
-      <table class="compare">
-        <thead>
-          <tr>
-            <th scope="col">Capability</th>
-            <th scope="col" class="us">Skanna</th>
-            <th scope="col">Reality-capture platforms</th>
-            <th scope="col">Desktop CAD / BIM suites</th>
-            <th scope="col">3D hosting &amp; viewers</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Capture the real building</th>
-            <td class="us"><span class="mark y">✓</span>Free LiDAR app, or bring photos, a splat or a scan</td>
-            <td><span class="mark y">✓</span>Their own camera or phone app</td>
-            <td><span class="mark n">✗</span>Separate hardware and software</td>
-            <td><span class="mark n">✗</span>Not a capture tool</td>
-          </tr>
-          <tr>
-            <th scope="row">Author a structured BIM model</th>
-            <td class="us"><span class="mark y">✓</span>In the browser, floor by floor</td>
-            <td><span class="mark p">~</span>Usually a paid drafting service</td>
-            <td><span class="mark y">✓</span>The thing they are built for</td>
-            <td><span class="mark n">✗</span></td>
-          </tr>
-          <tr>
-            <th scope="row">Permit-grade 2D drawings</th>
-            <td class="us"><span class="mark y">✓</span>Generated on your title block, PDF · SVG · DXF</td>
-            <td><span class="mark p">~</span>Ordered as a deliverable</td>
-            <td><span class="mark y">✓</span>Drawn and maintained by hand</td>
-            <td><span class="mark n">✗</span></td>
-          </tr>
-          <tr>
-            <th scope="row">Photoreal visuals</th>
-            <td class="us"><span class="mark y">✓</span>The render is the model — no separate pipeline</td>
-            <td><span class="mark p">~</span>The capture is the visual</td>
-            <td><span class="mark p">~</span>Extra tools, extra licences, extra time</td>
-            <td><span class="mark p">~</span>Whatever you upload</td>
-          </tr>
-          <tr>
-            <th scope="row">Shareable on a plain link</th>
-            <td class="us"><span class="mark y">✓</span>No app, no account, no download</td>
-            <td><span class="mark y">✓</span></td>
-            <td><span class="mark p">~</span>Usually a viewer plus accounts</td>
-            <td><span class="mark y">✓</span></td>
-          </tr>
-          <tr>
-            <th scope="row">Sun study, lighting, services</th>
-            <td class="us"><span class="mark y">✓</span>In the shared twin, for the viewer</td>
-            <td><span class="mark n">✗</span></td>
-            <td><span class="mark y">✓</span>For the author, on the desktop</td>
-            <td><span class="mark p">~</span>Lighting only</td>
-          </tr>
-          <tr>
-            <th scope="row">Data on every object</th>
-            <td class="us"><span class="mark y">✓</span>Specification, quantities, schedules, service history</td>
-            <td><span class="mark p">~</span>Tags and annotations</td>
-            <td><span class="mark y">✓</span></td>
-            <td><span class="mark p">~</span>Annotations</td>
-          </tr>
-          <tr>
-            <th scope="row">Open formats out</th>
-            <td class="us"><span class="mark y">✓</span>IFC · GLB · DXF · SVG · PDF, always</td>
-            <td><span class="mark p">~</span>Often tier-gated</td>
-            <td><span class="mark y">✓</span>IFC and DWG</td>
-            <td><span class="mark y">✓</span>glTF</td>
-          </tr>
-          <tr>
-            <th scope="row">Lives with the building afterwards</th>
-            <td class="us"><span class="mark y">✓</span>Updated for life, handed on when it sells</td>
-            <td><span class="mark p">~</span>A dated capture of one day</td>
-            <td><span class="mark p">~</span>A project file that closes</td>
-            <td><span class="mark n">✗</span>A published asset</td>
-          </tr>
-          <tr>
-            <th scope="row">What it runs on</th>
-            <td class="us"><span class="mark y">✓</span>Any browser. Nothing to install</td>
-            <td><span class="mark y">✓</span>Browser, plus capture hardware</td>
-            <td><span class="mark n">✗</span>Workstation, per-seat licence</td>
-            <td><span class="mark y">✓</span>Browser</td>
-          </tr>
-          <tr>
-            <th scope="row">What it costs</th>
-            <td class="us"><span class="mark y">✓</span>App free. €15 a month for your own buildings, €99 per seat for client work</td>
-            <td>Per-space subscription, plus hardware, plus per-deliverable fees</td>
-            <td>Per-seat licences, typically thousands per year, each</td>
-            <td>Free to modest — hosting only</td>
-          </tr>
-        </tbody>
-      </table>
+    <p class="section-lede">Skanna costs a fraction of a traditional CAD seat. This is about
+    <strong>scope, not quality</strong>: every tool here is good at the part it was built for.
+    The difference is that <strong>you need all of those parts to keep a building
+    documented</strong>, and buying them separately is where the money and the contradictions
+    go. Open a row to compare.</p>
+    <div class="router cmp-list">
+      <details class="cmp">
+        <summary><span class="who">Reality-capture platforms</span><span class="what">Good at capturing a building. The model, the drawings and the life of the building happen somewhere else.</span><span class="arrow">Compare</span></summary>
+        <div class="cmp-grid">
+          <div class="cmp-row cmp-head"><span></span><span class="us">Skanna</span><span>Reality-capture platforms</span></div>
+          <div class="cmp-row"><span class="cap-name">Capture the real building</span><span class="us"><span class="mark y">✓</span>Free LiDAR app, or bring photos, a splat or a scan</span><span><span class="mark y">✓</span>Their own camera or phone app</span></div>
+          <div class="cmp-row"><span class="cap-name">Author a structured BIM model</span><span class="us"><span class="mark y">✓</span>In the browser, floor by floor</span><span><span class="mark p">~</span>Usually a paid drafting service</span></div>
+          <div class="cmp-row"><span class="cap-name">Permit-grade 2D drawings</span><span class="us"><span class="mark y">✓</span>Generated on your title block, PDF · SVG · DXF</span><span><span class="mark p">~</span>Ordered as a deliverable</span></div>
+          <div class="cmp-row"><span class="cap-name">Photoreal visuals</span><span class="us"><span class="mark y">✓</span>The render is the model, no separate pipeline</span><span><span class="mark p">~</span>The capture is the visual</span></div>
+          <div class="cmp-row"><span class="cap-name">Shareable on a plain link</span><span class="us"><span class="mark y">✓</span>No app, no account, no download</span><span><span class="mark y">✓</span></span></div>
+          <div class="cmp-row"><span class="cap-name">Sun study, lighting, services</span><span class="us"><span class="mark y">✓</span>In the shared twin, for the viewer</span><span><span class="mark n">✗</span></span></div>
+          <div class="cmp-row"><span class="cap-name">Data on every object</span><span class="us"><span class="mark y">✓</span>Specification, quantities, schedules, service history</span><span><span class="mark p">~</span>Tags and annotations</span></div>
+          <div class="cmp-row"><span class="cap-name">Open formats out</span><span class="us"><span class="mark y">✓</span>IFC · GLB · DXF · SVG · PDF, always</span><span><span class="mark p">~</span>Often tier-gated</span></div>
+          <div class="cmp-row"><span class="cap-name">Lives with the building afterwards</span><span class="us"><span class="mark y">✓</span>Updated for life, handed on when it sells</span><span><span class="mark p">~</span>A dated capture of one day</span></div>
+          <div class="cmp-row"><span class="cap-name">What it runs on</span><span class="us"><span class="mark y">✓</span>Any browser. Nothing to install</span><span><span class="mark y">✓</span>Browser, plus capture hardware</span></div>
+          <div class="cmp-row"><span class="cap-name">What it costs</span><span class="us"><span class="mark y">✓</span>App free. €15 a month for your own buildings, €99 per seat for client work</span><span>Per-space subscription, plus hardware, plus per-deliverable fees</span></div>
+        </div>
+      </details>
+      <details class="cmp">
+        <summary><span class="who">Desktop CAD and BIM suites</span><span class="what">Built for authoring, on a workstation with a per-seat licence. No capture, and the file closes with the project.</span><span class="arrow">Compare</span></summary>
+        <div class="cmp-grid">
+          <div class="cmp-row cmp-head"><span></span><span class="us">Skanna</span><span>Desktop CAD and BIM suites</span></div>
+          <div class="cmp-row"><span class="cap-name">Capture the real building</span><span class="us"><span class="mark y">✓</span>Free LiDAR app, or bring photos, a splat or a scan</span><span><span class="mark n">✗</span>Separate hardware and software</span></div>
+          <div class="cmp-row"><span class="cap-name">Author a structured BIM model</span><span class="us"><span class="mark y">✓</span>In the browser, floor by floor</span><span><span class="mark y">✓</span>The thing they are built for</span></div>
+          <div class="cmp-row"><span class="cap-name">Permit-grade 2D drawings</span><span class="us"><span class="mark y">✓</span>Generated on your title block, PDF · SVG · DXF</span><span><span class="mark y">✓</span>Drawn and maintained by hand</span></div>
+          <div class="cmp-row"><span class="cap-name">Photoreal visuals</span><span class="us"><span class="mark y">✓</span>The render is the model, no separate pipeline</span><span><span class="mark p">~</span>Extra tools, extra licences, extra time</span></div>
+          <div class="cmp-row"><span class="cap-name">Shareable on a plain link</span><span class="us"><span class="mark y">✓</span>No app, no account, no download</span><span><span class="mark p">~</span>Usually a viewer plus accounts</span></div>
+          <div class="cmp-row"><span class="cap-name">Sun study, lighting, services</span><span class="us"><span class="mark y">✓</span>In the shared twin, for the viewer</span><span><span class="mark y">✓</span>For the author, on the desktop</span></div>
+          <div class="cmp-row"><span class="cap-name">Data on every object</span><span class="us"><span class="mark y">✓</span>Specification, quantities, schedules, service history</span><span><span class="mark y">✓</span></span></div>
+          <div class="cmp-row"><span class="cap-name">Open formats out</span><span class="us"><span class="mark y">✓</span>IFC · GLB · DXF · SVG · PDF, always</span><span><span class="mark y">✓</span>IFC and DWG</span></div>
+          <div class="cmp-row"><span class="cap-name">Lives with the building afterwards</span><span class="us"><span class="mark y">✓</span>Updated for life, handed on when it sells</span><span><span class="mark p">~</span>A project file that closes</span></div>
+          <div class="cmp-row"><span class="cap-name">What it runs on</span><span class="us"><span class="mark y">✓</span>Any browser. Nothing to install</span><span><span class="mark n">✗</span>Workstation, per-seat licence</span></div>
+          <div class="cmp-row"><span class="cap-name">What it costs</span><span class="us"><span class="mark y">✓</span>App free. €15 a month for your own buildings, €99 per seat for client work</span><span>Per-seat licences, typically thousands per year, each</span></div>
+        </div>
+      </details>
+      <details class="cmp">
+        <summary><span class="who">3D hosting and viewers</span><span class="what">Good at showing a model. Not a capture tool, and not an authoring tool.</span><span class="arrow">Compare</span></summary>
+        <div class="cmp-grid">
+          <div class="cmp-row cmp-head"><span></span><span class="us">Skanna</span><span>3D hosting and viewers</span></div>
+          <div class="cmp-row"><span class="cap-name">Capture the real building</span><span class="us"><span class="mark y">✓</span>Free LiDAR app, or bring photos, a splat or a scan</span><span><span class="mark n">✗</span>Not a capture tool</span></div>
+          <div class="cmp-row"><span class="cap-name">Author a structured BIM model</span><span class="us"><span class="mark y">✓</span>In the browser, floor by floor</span><span><span class="mark n">✗</span></span></div>
+          <div class="cmp-row"><span class="cap-name">Permit-grade 2D drawings</span><span class="us"><span class="mark y">✓</span>Generated on your title block, PDF · SVG · DXF</span><span><span class="mark n">✗</span></span></div>
+          <div class="cmp-row"><span class="cap-name">Photoreal visuals</span><span class="us"><span class="mark y">✓</span>The render is the model, no separate pipeline</span><span><span class="mark p">~</span>Whatever you upload</span></div>
+          <div class="cmp-row"><span class="cap-name">Shareable on a plain link</span><span class="us"><span class="mark y">✓</span>No app, no account, no download</span><span><span class="mark y">✓</span></span></div>
+          <div class="cmp-row"><span class="cap-name">Sun study, lighting, services</span><span class="us"><span class="mark y">✓</span>In the shared twin, for the viewer</span><span><span class="mark p">~</span>Lighting only</span></div>
+          <div class="cmp-row"><span class="cap-name">Data on every object</span><span class="us"><span class="mark y">✓</span>Specification, quantities, schedules, service history</span><span><span class="mark p">~</span>Annotations</span></div>
+          <div class="cmp-row"><span class="cap-name">Open formats out</span><span class="us"><span class="mark y">✓</span>IFC · GLB · DXF · SVG · PDF, always</span><span><span class="mark y">✓</span>glTF</span></div>
+          <div class="cmp-row"><span class="cap-name">Lives with the building afterwards</span><span class="us"><span class="mark y">✓</span>Updated for life, handed on when it sells</span><span><span class="mark n">✗</span>A published asset</span></div>
+          <div class="cmp-row"><span class="cap-name">What it runs on</span><span class="us"><span class="mark y">✓</span>Any browser. Nothing to install</span><span><span class="mark y">✓</span>Browser</span></div>
+          <div class="cmp-row"><span class="cap-name">What it costs</span><span class="us"><span class="mark y">✓</span>App free. €15 a month for your own buildings, €99 per seat for client work</span><span>Free to modest, hosting only</span></div>
+        </div>
+      </details>
     </div>
     <p class="pricing-note">Compared by capability, from public product information and our own
     use, correct to the best of our knowledge in September 2026. Categories rather than logos,
@@ -1280,13 +1284,13 @@
     <div class="stat-row">
       <div><span class="big">1</span><span class="lbl">person building the platform</span></div>
       <div><span class="big">100+</span><span class="lbl">combined years of CAD and reality-capture experience behind the platform</span></div>
-      <div><span class="big">0</span><span class="lbl">outside investors — nobody to answer to but the people using it</span></div>
+      <div><span class="big">0</span><span class="lbl">outside investors. Nobody to answer to but the people using it</span></div>
       <div><span class="big">100</span><span class="lbl">unit development running on it today: drawings, visuals and operations from one model</span></div>
     </div>
   </section>
 
   <section id="course">
-    <h2>The online course — at your own pace</h2>
+    <h2>The online course, at your own pace</h2>
     <p class="section-lede">Short modules with screen recordings, taken online <strong>whenever
     you like, at your own pace</strong>. Learn reality capture and modelling in Skanna, and how
     to <strong>connect your own AI to Skanna</strong> through the MCP connector and set it up
@@ -1302,10 +1306,10 @@
   <section id="requirements">
     <h2>Requirements</h2>
     <div class="req-split">
-      <div><strong>Skanna Web — a browser</strong>That is all you need to create work and
+      <div><strong>Skanna Web: a browser</strong>That is all you need to create work and
       model your own buildings by hand. For the modelling itself, we recommend
       <a href="#ai">connecting your own AI</a>.</div>
-      <div><strong>Skanna iOS app — optional, for scanning</strong>Needs LiDAR:
+      <div><strong>Skanna iOS app: optional, for scanning</strong>Needs LiDAR:
       iPhone&nbsp;12&nbsp;Pro or later Pro model, or iPad&nbsp;Pro 2020 or later, on iOS&nbsp;16+.</div>
     </div>
   </section>
@@ -1406,7 +1410,7 @@
 
     <div class="offer">
       <span class="count">Open now</span>
-      <span class="terms">Private Property Owner accounts are open — €15 a month.</span>
+      <span class="terms">Private Property Owner accounts are open now, from €15 a month.</span>
       <span class="fine">Up to 3 buildings you own: host them as digital twins, export
       drawings and models. Sign up and start today, cancel any time.
       <a href="https://app.skanna.site/?signup">Get started →</a></span>
@@ -1443,8 +1447,8 @@
           <li><strong>Interior design-and-build and renovation firms</strong>: design, quote
           and build from one model, with your own catalogue in it</li>
         </ul>
-        <p>Bring the idea — a catalogue inside the model, a market of your own, a
-        white-labelled tool — and we'll talk it through.</p>
+        <p>Bring the idea, whether it's a catalogue inside the model, a market of your own or a
+        white-labelled tool, and we'll talk it through.</p>
         <div class="act">
           <a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20partnership&amp;body=We%27d%20like%20to%20talk%20about%20a%20partnership.%0A%0ACompany%3A%0AWhat%20we%20do%3A%0AMarkets%3A%0AWhat%20we%27d%20want%20out%20of%20it%3A%0A">Talk partnerships</a>
         </div>
@@ -1455,6 +1459,7 @@
 
   <footer>
     <span>© 2026 Skanna OÜ · Registry code 17576052 · Jõe tn 3-313, 10151 Tallinn, Estonia</span>
+    <span class="legal">Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</span>
     <nav class="links">
       <a href="https://www.linkedin.com/company/skannabim/">LinkedIn</a>
       <a href="https://www.instagram.com/skannabim/">Instagram</a>
@@ -1499,30 +1504,30 @@
       tag: 'Fastest and most accurate',
       html: '<p><strong>LiDAR scan.</strong> Walk the building with an iPhone or iPad Pro and ' +
             'come out with measured geometry, photos and 360° panoramas, all positioned in ' +
-            'space. One visit, everything collected at once — and the app that does it is ' +
+            'space. One visit, everything collected at once, and the app that does it is ' +
             'free.</p><p>This is the route we recommend when the hardware is there. It is not ' +
             'the only route, and every stage after this one happens in a browser.</p>'
     },
     splat: {
       tag: 'Any camera · no special hardware',
       html: '<p><strong>Gaussian splat or photogrammetry.</strong> The advantage here is that ' +
-            '<strong>the hardware does not matter</strong> — any phone, any camera, any ' +
+            '<strong>the hardware does not matter</strong>: any phone, any camera, any ' +
             'drone. No LiDAR sensor, no survey rig, nothing to hire. Fly it or walk around ' +
             'it, and bring the result in as a tracing reference: a PLY point cloud, including ' +
             'a splat PLY, or a GLB mesh. Large clouds are decimated on import so they stay ' +
             'workable in the browser.</p><p>The catch is <strong>scale</strong>. A ' +
             'reconstruction built from photographs has no inherent real-world size, so it has ' +
-            'to be scaled and oriented in the tool that produced it — against GPS, a known ' +
-            'dimension or a scan — before it comes in. Skanna takes the file as it comes. Get ' +
+            'to be scaled and oriented in the tool that produced it, against GPS, a known ' +
+            'dimension or a scan, before it comes in. Skanna takes the file as it comes. Get ' +
             'that right and this is how a roof, a façade or a whole site gets captured ' +
             'without a ladder.</p><p class="ifc-note" style="margin-top:14px">Scale isn\'t the ' +
-            'only catch — see <a href="capture-methods.html">what actually goes wrong with ' +
+            'only catch. See <a href="capture-methods.html">what actually goes wrong with ' +
             'photogrammetry, NeRFs, Gaussian splats and LiDAR</a>, and what each route costs.</p>'
     },
     cad: {
       tag: 'From the architect or the engineer',
       html: '<p><strong>CAD you were given.</strong> A DXF drops straight in at its own ' +
-            'real-world scale — no scaling step at all. An existing IFC model opens alongside ' +
+            'real-world scale, with no scaling step at all. An existing IFC model opens alongside ' +
             'it, so anything already modelled stays modelled.</p><p>A DWG converts to DXF in ' +
             'any CAD tool in one export. If you would rather not, send it over and I will ' +
             'convert it for you.</p>'
@@ -1533,12 +1538,12 @@
             'plan taped to a wall, a page out of a 1970s permit binder, a scanned blueprint. ' +
             'Drop it in as a tracing underlay, set the scale once against a dimension you ' +
             'know, and build the real building on top of it.</p><p>No scanner, no CAD, no ' +
-            'site visit — most owners already have something that qualifies in a drawer.</p>'
+            'site visit. Most owners already have something that qualifies in a drawer.</p>'
     },
     model: {
       tag: 'Bring what you already own',
-      html: '<p><strong>A 3D model you already have.</strong> Any GLB in metres — from ' +
-            'SketchUp, Blender, Revit, a drone survey or another scanning app — loads as a ' +
+      html: '<p><strong>A 3D model you already have.</strong> Any GLB in metres, from ' +
+            'SketchUp, Blender, Revit, a drone survey or another scanning app, loads as a ' +
             'reference to trace. Nothing needs converting first, and nothing needs a ' +
             'plug-in.</p><p>It stays a reference: you trace a real, structured model on top ' +
             'of it, so the output is proper IFC rather than a mesh with a nice texture.</p>'
@@ -1547,7 +1552,7 @@
       tag: 'Nothing but a tape measure',
       html: '<p><strong>Draw it from nothing.</strong> Walls, openings, slabs, roofs, stairs, ' +
             'railings, services and finishes, straight into the plan editor. No reference of ' +
-            'any kind required.</p><p>Plenty of buildings get modelled exactly this way — and ' +
+            'any kind required.</p><p>Plenty of buildings get modelled exactly this way, and ' +
             'a model does not have to be finished to be useful. Start with the floor you care ' +
             'about and add the rest as you go.</p>'
     }
