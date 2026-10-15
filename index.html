@@ -646,6 +646,24 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.95em;
     color: var(--muted); word-break: break-all;
   }
+
+  /* ── Start here — the other ways in, under the price cards ── */
+  .start-also {
+    display: grid; gap: 12px; margin-top: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+  .start-also a {
+    display: block; color: var(--muted); font-size: 0.88em; line-height: 1.45;
+    background: var(--panel); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 14px 16px;
+  }
+  .start-also a:hover { text-decoration: none; border-color: rgba(167,139,250,0.45); }
+  .start-also .k {
+    display: block; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.78em; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 4px;
+  }
+  .start-also strong { display: block; color: var(--text); font-size: 1.05em; margin-bottom: 2px; }
 </style>
 <script type="application/ld+json">
 {
@@ -686,13 +704,13 @@
     <span class="name">Skanna</span>
     <span class="spacer"></span>
     <nav class="links">
+      <a href="#start">Pricing</a>
       <a href="#how">How it works</a>
       <a href="#who">Who it's for</a>
       <a href="#app">App</a>
       <a href="#web">BIM Author</a>
       <a href="#ai">Your AI</a>
       <a href="#twin">The twin</a>
-      <a href="#pricing">Pricing</a>
       <a href="#live">In use</a>
       <a href="#course">Course</a>
       <a href="#access">Get access</a>
@@ -745,6 +763,70 @@
       <div><strong>Nothing is invented</strong>Geometry comes off a real measurement: your scan, your drawing, or your tape.</div>
     </div>
   </header>
+
+  <section id="start">
+    <h2>What it is, what it costs, how to start</h2>
+    <p class="section-lede"><strong>Skanna gives a building one living model.</strong> Start
+    from a scan, a drawing, a CAD file or your own AI, and get dimensioned drawings, rendered
+    visuals and a twin anyone can open on a link. The iPhone scanner is free, and the modelling
+    tool runs in your browser.</p>
+
+    <div class="tiers">
+      <div class="tier highlight">
+        <div class="kicker">Private Property Owner</div>
+        <h3>€15 a month</h3>
+        <p class="tier-alt">or €150 a year — two months free</p>
+        <p>For your own home or buildings: keep the record, plan a renovation, make the
+        drawings, share the twin.</p>
+        <ul>
+          <li>Up to 3 buildings you own — <strong>up to 10 for €25 a month</strong> (€250 a year)</li>
+          <li>Host them as digital twins on a plain link</li>
+          <li>Export drawings and models — PDF, DXF, IFC</li>
+          <li>For personal use — not for client work</li>
+        </ul>
+        <div class="tier-act"><a class="btn" href="https://app.skanna.site/?signup">Get started</a></div>
+      </div>
+      <div class="tier">
+        <div class="kicker">Company</div>
+        <h3>€99 per seat a month</h3>
+        <p class="tier-alt">or €990 per seat a year</p>
+        <p>For firms that use Skanna for their work and deliver it to their clients.</p>
+        <ul>
+          <li>Unlimited buildings</li>
+          <li>Hosted twins, share links and feedback boards</li>
+          <li>Commercial use: deliver models and drawings to clients</li>
+          <li>Set up with you personally — card or annual invoice</li>
+        </ul>
+        <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20Company%20plan&amp;body=We%27d%20like%20to%20set%20up%20a%20Company%20account.%0A%0ACompany%3A%0ACountry%3A%0ASeats%3A%0AWhat%20we%27d%20use%20it%20for%3A%0A">Set up a Company account</a></div>
+      </div>
+      <div class="tier">
+        <div class="kicker">Custom</div>
+        <h3>From €20,000</h3>
+        <p class="tier-alt">implementation, plus a platform fee</p>
+        <p>Skanna built for you and run under your name, typically a one- to three-month
+        project.</p>
+        <ul>
+          <li>Everything in Company</li>
+          <li>Your brand and your own domain</li>
+          <li>Your furniture and product catalogue in the model</li>
+          <li>Integrations with the systems you already run</li>
+        </ul>
+        <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20Custom&amp;body=We%27d%20like%20to%20talk%20about%20a%20custom%20Skanna%20build.%0A%0ACompany%3A%0AWhat%20we%27d%20want%20it%20to%20do%3A%0ATimeline%3A%0A">Talk about a build</a></div>
+      </div>
+    </div>
+    <div class="start-also">
+      <a href="https://apps.apple.com/app/id6789603042"><span class="k">Free</span><strong>The iPhone scanner</strong>Capture a building with LiDAR, photos and 360° panoramas.</a>
+      <a href="#ai"><span class="k">Free to draft</span><strong>Connect your own AI</strong>Let it draft the model through the Skanna MCP connector.</a>
+      <a href="#ai"><span class="k">Quoted per building</span><strong>Have it done for you</strong>Send your drawings or scans and get the finished model back.</a>
+    </div>
+    <p class="pricing-note">Prices in euros, including VAT where it applies. Paid by card
+    through Stripe. Paying in another currency adds a conversion fee, shown at checkout before
+    you pay. Cancel any time from Billing in the app
+    and keep access to the end of the period you paid for. Very large uploads, such as many
+    full-resolution scans, may cost extra; we contact you before anything is charged.
+    <strong>The iOS app is free</strong> and stays free.</p>
+
+  </section>
 
   <section id="how">
     <h2>How it works</h2>
@@ -1082,66 +1164,12 @@
     </div>
   </section>
 
-  <section id="pricing">
-    <h2>Pricing &amp; where we stand</h2>
-    <p class="section-lede">The app is free — capture, measure and export, nothing held back
-    and nothing to buy. You pay only when the platform starts doing real work for you, and it
-    costs a fraction of a traditional CAD seat. <strong>The comparison below is about scope,
-    not quality</strong> — every tool in it is good at the part it was built for. The
+  <section id="compare">
+    <h2>How it compares</h2>
+    <p class="section-lede">Skanna costs a fraction of a traditional CAD seat.
+    <strong>The comparison below is about scope, not quality</strong> — every tool in it is good at the part it was built for. The
     difference is that <strong>you need all of those parts to keep a building documented</strong>,
     and buying them separately is where the money and the contradictions go.</p>
-
-    <div class="tiers">
-      <div class="tier highlight">
-        <div class="kicker">Private Property Owner</div>
-        <h3>€15 a month</h3>
-        <p class="tier-alt">or €150 a year — two months free</p>
-        <p>For your own home or buildings: keep the record, plan a renovation, make the
-        drawings, share the twin.</p>
-        <ul>
-          <li>Up to 3 buildings you own — <strong>up to 10 for €25 a month</strong> (€250 a year)</li>
-          <li>Host them as digital twins on a plain link</li>
-          <li>Export drawings and models — PDF, DXF, IFC</li>
-          <li>For personal use — not for client work</li>
-        </ul>
-        <div class="tier-act"><a class="btn" href="https://app.skanna.site/?signup">Get started</a></div>
-      </div>
-      <div class="tier">
-        <div class="kicker">Company</div>
-        <h3>€99 per seat a month</h3>
-        <p class="tier-alt">or €990 per seat a year</p>
-        <p>For firms that use Skanna for their work and deliver it to their clients.</p>
-        <ul>
-          <li>Unlimited buildings</li>
-          <li>Hosted twins, share links and feedback boards</li>
-          <li>Commercial use: deliver models and drawings to clients</li>
-          <li>Set up with you personally — card or annual invoice</li>
-        </ul>
-        <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20Company%20plan&amp;body=We%27d%20like%20to%20set%20up%20a%20Company%20account.%0A%0ACompany%3A%0ACountry%3A%0ASeats%3A%0AWhat%20we%27d%20use%20it%20for%3A%0A">Set up a Company account</a></div>
-      </div>
-      <div class="tier">
-        <div class="kicker">Custom</div>
-        <h3>From €20,000</h3>
-        <p class="tier-alt">implementation, plus a platform fee</p>
-        <p>Skanna built for you and run under your name, typically a one- to three-month
-        project.</p>
-        <ul>
-          <li>Everything in Company</li>
-          <li>Your brand and your own domain</li>
-          <li>Your furniture and product catalogue in the model</li>
-          <li>Integrations with the systems you already run</li>
-        </ul>
-        <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20Custom&amp;body=We%27d%20like%20to%20talk%20about%20a%20custom%20Skanna%20build.%0A%0ACompany%3A%0AWhat%20we%27d%20want%20it%20to%20do%3A%0ATimeline%3A%0A">Talk about a build</a></div>
-      </div>
-    </div>
-    <p class="pricing-note">Prices in euros, including VAT where it applies. Paid by card
-    through Stripe. Paying in another currency adds a conversion fee, shown at checkout before
-    you pay. Cancel any time from Billing in the app
-    and keep access to the end of the period you paid for. Very large uploads, such as many
-    full-resolution scans, may cost extra; we contact you before anything is charged.
-    <strong>The iOS app is free</strong> and stays free.</p>
-
-    <h3 class="sub-head">How that compares</h3>
 
     <div class="compare-wrap">
       <table class="compare">
@@ -1301,7 +1329,7 @@
       <article class="live wide">
         <div class="live-media">
           <figure>
-            <img src="assets/live-on-site.jpg" width="1400" height="1050" alt="On the roof deck of a villa under construction: a laser measure resting on a printed drawing, scaffolding and a rooftop pool behind, hills on the horizon" loading="lazy">
+            <img src="assets/live-site-sunrise.jpg" width="1400" height="1050" alt="On the roof of a villa at sunrise, looking out over the development, with a printed drawing set and a pen on the parapet" loading="lazy">
             <figcaption>On site</figcaption>
           </figure>
           <figure>
@@ -1364,7 +1392,6 @@
   </section>
 
   <section id="access">
-    <span id="start" aria-hidden="true"></span>
     <h2>Get access</h2>
     <div class="closer-head">
       <p><strong>Private property owners can start today.</strong> Company accounts and custom
