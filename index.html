@@ -751,6 +751,26 @@
     .live-media figure.reel img { animation: none; }
     .live-media figure.reel img:first-child { opacity: 1; }
   }
+  /* ── Hero background video — full width, behind the nav and the hero text ── */
+  .hero-bg {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 0;
+    height: min(100vh, 860px); min-height: 640px; overflow: hidden; pointer-events: none;
+  }
+  .hero-bg video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg, rgba(11,11,18,0.94) 0%, rgba(11,11,18,0.82) 34%, rgba(11,11,18,0.35) 66%, rgba(11,11,18,0.30) 100%),
+      linear-gradient(180deg, rgba(11,11,18,0.55) 0%, rgba(11,11,18,0) 22%, rgba(11,11,18,0) 62%, #0b0b12 100%);
+  }
+  .hero-grid { grid-template-columns: minmax(0, 640px); min-height: 520px; }
+  @media (max-width: 720px) {
+    .hero-bg { height: 100vh; min-height: 560px; }
+    .hero-bg::after {
+      background: linear-gradient(180deg, rgba(11,11,18,0.72) 0%, rgba(11,11,18,0.82) 60%, #0b0b12 100%);
+    }
+    .hero-grid { min-height: 0; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -781,6 +801,11 @@
 </head>
 <body>
 <div class="grid-bg"></div>
+<div class="hero-bg" aria-hidden="true">
+  <video autoplay muted loop playsinline preload="auto" poster="assets/hero-bg-poster.jpg">
+    <source src="assets/hero-bg.mp4" type="video/mp4">
+  </video>
+</div>
 <main>
   <nav class="top">
     <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
@@ -823,15 +848,6 @@
         browser with no account. <strong>Nothing to install:</strong> the whole platform runs
         in the browser, and accounts are open now.</p>
       </div>
-
-      <figure class="hero-media shot-frame" style="margin:0">
-        <div class="chrome"><i></i><i></i><i></i><span>Scan, model, drawings and twin in 30 seconds</span></div>
-        <video autoplay muted loop playsinline preload="metadata"
-               poster="assets/hero-poster.jpg"
-               aria-label="Skanna end to end: scanning a room with an iPhone, tracing the model in the browser BIM tool, walking the finished twin, the sun study and night lighting, generated 2D drawing sheets, and rendered interiors">
-          <source src="assets/hero-loop.mp4" type="video/mp4">
-        </video>
-      </figure>
     </div>
 
     <div class="proof-lead">
@@ -1656,6 +1672,15 @@
 })();
 </script>
 
+<script>
+// The hero background holds on its first frame for people who turned motion off.
+(function () {
+  var v = document.querySelector('.hero-bg video');
+  if (v && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    v.removeAttribute('autoplay'); v.pause();
+  }
+})();
+</script>
 <script>
 // Clips further down the page play only while they are on screen, so they
 // don't download with the page and don't run while nobody is looking.
