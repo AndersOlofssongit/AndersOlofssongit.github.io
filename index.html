@@ -709,6 +709,8 @@
   .shot-fig { margin: 0 0 22px; }
   .shot-cap { margin: 8px 2px 0; color: var(--faint); font-size: 0.84em; }
   .shot-cap strong { color: var(--muted); font-weight: 600; }
+  /* A full app screenshot shows whole, not cropped to fill the slot. */
+  .live-media img.fit-whole { object-fit: contain; background: #16161b; }
 </style>
 <script type="application/ld+json">
 {
@@ -1365,7 +1367,7 @@
             <figcaption>On site</figcaption>
           </figure>
           <figure>
-            <img src="assets/live-drawings.jpg" width="1600" height="1074" alt="A floor plan generated in Skanna on an A3 title block, with grid lines, dimensions, room names and areas, an area schedule and a legend" loading="lazy">
+            <img class="fit-whole" src="assets/live-drawings.jpg" width="1600" height="887" alt="The Drawings view in Skanna: the sheet settings and layers on the left, and a floor plan on an A3 title block, with grid lines, dimensions, room names and areas, an area schedule and a legend" loading="lazy">
             <figcaption>The drawings</figcaption>
           </figure>
           <figure>
