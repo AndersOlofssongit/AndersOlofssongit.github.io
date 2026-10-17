@@ -711,6 +711,16 @@
   .shot-cap strong { color: var(--muted); font-weight: 600; }
   /* A full app screenshot shows whole, not cropped to fill the slot. */
   .live-media img.fit-whole { object-fit: contain; background: #16161b; }
+  /* The many uses of one model, under the development card's text. */
+  .live-uses {
+    list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 12px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .live-uses li {
+    color: var(--muted); font-size: 0.88em; line-height: 1.45;
+    border-left: 2px solid rgba(167,139,250,0.45); padding-left: 12px;
+  }
+  .live-uses strong { display: block; color: var(--text); font-weight: 600; margin-bottom: 2px; }
 </style>
 <script type="application/ld+json">
 {
@@ -1376,15 +1386,26 @@
           </figure>
         </div>
         <div class="live-body">
-          <div class="kicker">Housing development</div>
-          <h3>A 100-unit development, run from one set of models</h3>
-          <p>Permit and construction drawings, buyer walkthroughs of each unit, and the
-          operations and maintenance system for the finished estate, all off the same models.
-          Villas are measured on site while they are being built, so the model follows what
-          is actually there, not only what was drawn.</p>
+          <div class="kicker">One model, many jobs</div>
+          <h3>A 100-unit development, and everything else the model can do</h3>
+          <p>On a 100-unit development the same models give the permit and construction
+          drawings, a buyer walkthrough of each unit, and the operations and maintenance system
+          for the finished estate. Villas are measured on site while they are being built, so
+          the model follows what is actually there. And the same model does the work you would
+          otherwise buy from several other places:</p>
+          <ul class="live-uses">
+            <li><strong>Virtual tours</strong>Walk the building on a link, with 360° panoramas
+            pinned where they were taken.</li>
+            <li><strong>Photoreal renderings</strong>The images an image studio would make,
+            rendered from the model.</li>
+            <li><strong>MEP</strong>Ventilation, electrical, water and drainage as real objects,
+            for the companies that design and install them.</li>
+            <li><strong>Operations and maintenance</strong>Inventory, condition and service
+            history kept on the objects themselves.</li>
+          </ul>
           <dl class="live-io">
             <dt>Started from</dt><dd>The architect's DWG and PDF layouts, LiDAR scans and measurements on site</dd>
-            <dt>Delivered</dt><dd>IFC models, drawing sets, published twins, an operations system</dd>
+            <dt>Delivered</dt><dd>IFC models, drawing sets, published twins, renderings, an operations system</dd>
           </dl>
         </div>
       </article>
