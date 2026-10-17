@@ -295,7 +295,7 @@
     margin-left: 10px; color: var(--faint); font-size: 0.75em;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
-  .shot-frame img { display: block; width: 100%; height: auto; }
+  .shot-frame img, .shot-frame video { display: block; width: 100%; height: auto; }
   .shot-wide { margin-top: 14px; }
   .ifc-note {
     margin: 22px 0 0; color: var(--muted); font-size: 0.96em;
@@ -914,6 +914,14 @@
     professional with their own agents does the drafting of a whole CAD department:
     <strong>an army of drafters that costs what your tokens cost.</strong></p>
 
+    <figure class="shot-fig">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Your own AI, modelling in Skanna</span></div>
+        <video muted loop playsinline preload="none" data-autoplay width="1280" height="720" poster="assets/ai-modelling-poster.jpg" aria-label="A restaurant fit-out modelled by AI in Skanna: the plan with every object labelled, then the 3D model with its kitchen, seating and ceiling services, and a walk through it"><source src="assets/ai-modelling.mp4" type="video/mp4"></video>
+      </div>
+      <figcaption class="shot-cap"><strong>Modelled by AI:</strong> a restaurant fit-out, drafted in Skanna from its as-built drawings, with the kitchen, seating and services in place.</figcaption>
+    </figure>
+
     <div class="doors">
       <div class="door primary">
         <div class="for">Connect your own AI · free to draft</div>
@@ -1353,11 +1361,11 @@
       <article class="live wide">
         <div class="live-media">
           <figure>
-            <video autoplay muted loop playsinline preload="metadata" width="1280" height="720" poster="assets/live-onsite-poster.jpg" aria-label="Scanning a villa under construction with an iPhone, on site"><source src="assets/live-onsite.mp4" type="video/mp4"></video>
+            <video muted loop playsinline preload="none" data-autoplay width="1280" height="720" poster="assets/live-onsite-poster.jpg" aria-label="Scanning a villa under construction with an iPhone, on site"><source src="assets/live-onsite.mp4" type="video/mp4"></video>
             <figcaption>On site</figcaption>
           </figure>
           <figure>
-            <img src="assets/web-drawing-plan.jpg" width="1600" height="958" alt="A generated floor-plan sheet on a title block, with dimensions, grid bubbles and room labels" loading="lazy">
+            <img src="assets/live-drawings.jpg" width="1600" height="1074" alt="A floor plan generated in Skanna on an A3 title block, with grid lines, dimensions, room names and areas, an area schedule and a legend" loading="lazy">
             <figcaption>The drawings</figcaption>
           </figure>
           <figure>
@@ -1586,5 +1594,18 @@
 })();
 </script>
 
+<script>
+// Clips further down the page play only while they are on screen, so they
+// don't download with the page and don't run while nobody is looking.
+(function () {
+  var vids = document.querySelectorAll('video[data-autoplay]');
+  function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  if (!('IntersectionObserver' in window)) { Array.prototype.forEach.call(vids, play); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) play(e.target); else e.target.pause(); });
+  }, { threshold: 0.25 });
+  Array.prototype.forEach.call(vids, function (v) { io.observe(v); });
+})();
+</script>
 </body>
 </html>
