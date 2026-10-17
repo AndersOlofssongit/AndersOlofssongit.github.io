@@ -631,16 +631,34 @@
     .live-media figure:first-child { grid-column: 1 / -1; }
   }
 
-  /* ── Requirements — the web app and the iOS app side by side ── */
-  .req-split {
-    display: grid; gap: 14px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* ── Requirements — one card per app, drawn background on the right ── */
+  .req-cards { display: grid; gap: 14px; }
+  .req-card {
+    min-height: 290px; display: flex; align-items: center;
+    border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
+    background-color: #0d0d16; background-repeat: no-repeat;
   }
-  .req-split div {
-    color: var(--muted); font-size: 0.95em;
-    border-left: 2px solid rgba(167,139,250,0.45); padding: 2px 0 2px 16px;
+  .req-web {
+    background-image: linear-gradient(90deg, #0d0d16 36%, rgba(13,13,22,0.6) 52%, rgba(13,13,22,0) 70%),
+      url(assets/req-browsers.svg);
+    background-size: auto, auto 112%; background-position: 0 0, right -20px center;
   }
-  .req-split strong { display: block; color: var(--text); margin-bottom: 4px; }
+  .req-ios {
+    background-image: linear-gradient(90deg, #0d0d16 36%, rgba(13,13,22,0) 43%),
+      url(assets/req-lidar-cameras.svg);
+    background-size: auto, auto 92%; background-position: 0 0, right 10px center;
+  }
+  .req-text { max-width: 390px; padding: 26px 28px; color: var(--muted); font-size: 0.95em; }
+  .req-text strong { display: block; color: var(--text); font-size: 1.15em; margin-bottom: 6px; }
+  @media (max-width: 720px) {
+    .req-card { display: block; min-height: 0; padding-top: 190px; }
+    .req-web, .req-ios { background-size: auto, 100% auto; }
+    .req-web { background-image: linear-gradient(0deg, #0d0d16 32%, rgba(13,13,22,0) 62%), url(assets/req-browsers.svg);
+      background-position: 0 0, center -10px; }
+    .req-ios { background-image: linear-gradient(0deg, #0d0d16 32%, rgba(13,13,22,0) 62%), url(assets/req-lidar-cameras.svg);
+      background-position: 0 0, center 6px; }
+    .req-text { padding: 0 20px 22px; }
+  }
 
   .door code {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.95em;
@@ -721,6 +739,18 @@
     border-left: 2px solid rgba(167,139,250,0.45); padding-left: 12px;
   }
   .live-uses strong { display: block; color: var(--text); font-weight: 600; margin-bottom: 2px; }
+  /* "The drawings" cycles through a set of sheets, each shown whole. */
+  .live-media figure.reel img { position: absolute; inset: 0; opacity: 0; animation: reel 16s infinite; }
+  .live-media figure.reel img:first-child { position: relative; }
+  .live-media figure.reel img:nth-child(2) { animation-delay: 4s; }
+  .live-media figure.reel img:nth-child(3) { animation-delay: 8s; }
+  .live-media figure.reel img:nth-child(4) { animation-delay: 12s; }
+  .live-media figure.reel img.paper { background: #ffffff; }
+  @keyframes reel { 0% { opacity: 0; } 5% { opacity: 1; } 25% { opacity: 1; } 30% { opacity: 0; } 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .live-media figure.reel img { animation: none; }
+    .live-media figure.reel img:first-child { opacity: 1; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -1340,12 +1370,18 @@
 
   <section id="requirements">
     <h2>Requirements</h2>
-    <div class="req-split">
-      <div><strong>Skanna Web: a browser</strong>That is all you need to create work and
-      model your own buildings by hand. For the modelling itself, we recommend
-      <a href="#ai">connecting your own AI</a>.</div>
-      <div><strong>Skanna iOS app: optional, for scanning</strong>Needs LiDAR:
-      iPhone&nbsp;12&nbsp;Pro or later Pro model, or iPad&nbsp;Pro 2020 or later, on iOS&nbsp;16+.</div>
+    <div class="req-cards">
+      <div class="req-card req-web">
+        <div class="req-text"><strong>Skanna Web: a browser</strong>Safari, Chrome, Edge,
+        Firefox or any other modern browser. That is all you need to create work and model your
+        own buildings by hand. For the modelling itself, we recommend
+        <a href="#ai">connecting your own AI</a>.</div>
+      </div>
+      <div class="req-card req-ios">
+        <div class="req-text"><strong>Skanna iOS app: only needs LiDAR</strong>Any iPhone or
+        iPad with LiDAR: iPhone&nbsp;12&nbsp;Pro or any later Pro, or iPad&nbsp;Pro 2020 or
+        later, on iOS&nbsp;16+. Optional, for scanning.</div>
+      </div>
     </div>
   </section>
 
@@ -1376,8 +1412,11 @@
             <video muted loop playsinline preload="none" data-autoplay width="1280" height="720" poster="assets/live-onsite-poster.jpg" aria-label="Scanning a villa under construction with an iPhone, on site"><source src="assets/live-onsite.mp4" type="video/mp4"></video>
             <figcaption>On site</figcaption>
           </figure>
-          <figure>
-            <img class="fit-whole" src="assets/live-drawings.jpg" width="1600" height="887" alt="The Drawings view in Skanna: the sheet settings and layers on the left, and a floor plan on an A3 title block, with grid lines, dimensions, room names and areas, an area schedule and a legend" loading="lazy">
+          <figure class="reel">
+            <img class="fit-whole" src="assets/reel-drawings-1.jpg" width="1400" height="784" alt="The Drawings view in Skanna: a ground-floor plan with grid lines, dimensions, room names and areas, a room schedule and a legend on an A3 title block, with the sheet settings on the left" loading="lazy">
+            <img class="fit-whole paper" src="assets/reel-drawings-2.jpg" width="1400" height="501" alt="Section A-A through a four-storey building, with its floor levels" loading="lazy">
+            <img class="fit-whole paper" src="assets/reel-drawings-3.jpg" width="1400" height="431" alt="The south elevation of the same building" loading="lazy">
+            <img class="fit-whole paper" src="assets/reel-drawings-4.jpg" width="1400" height="584" alt="The west elevation of the same building" loading="lazy">
             <figcaption>The drawings</figcaption>
           </figure>
           <figure>
