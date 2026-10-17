@@ -704,6 +704,11 @@
     .cmp-row .cap-name { grid-column: 1 / -1; }
     .cmp-head span:first-child { display: none; }
   }
+
+  /* ── Screenshots with a small label under each ─────────────── */
+  .shot-fig { margin: 0 0 22px; }
+  .shot-cap { margin: 8px 2px 0; color: var(--faint); font-size: 0.84em; }
+  .shot-cap strong { color: var(--muted); font-weight: 600; }
 </style>
 <script type="application/ld+json">
 {
@@ -880,10 +885,20 @@
     carrying its real specification. Either way it is the same model, and you can take over
     from the AI at any point. No CAD seat, no plug-ins, no workstation.
     <strong>Most people are productive in it in a day.</strong></p>
-    <div class="shot-frame">
-      <div class="chrome"><i></i><i></i><i></i><span>Skanna Web · BIM Author</span></div>
-      <img src="assets/bim-author-trace.jpg" width="1800" height="954" alt="Skanna Web BIM Author: a building's colour LiDAR scan in 3D on the left, its ground floor as scan slices in the 2D plan, ready to trace, and the storey settings on the right" loading="lazy">
-    </div>
+    <figure class="shot-fig">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web · BIM Author</span></div>
+        <img src="assets/bim-author-plans.jpg" width="1800" height="947" alt="Skanna Web BIM Author: a villa traced over the architect's layout drawing, with the 3D model on the left, the plan with walls, rooms, furniture and the pool over the drawing in the middle, and the storey and backdrop settings on the right" loading="lazy">
+      </div>
+      <figcaption class="shot-cap"><strong>Based on plans:</strong> a villa traced over the architect's layout drawing.</figcaption>
+    </figure>
+    <figure class="shot-fig">
+      <div class="shot-frame">
+        <div class="chrome"><i></i><i></i><i></i><span>Skanna Web · BIM Author</span></div>
+        <img src="assets/bim-author-trace.jpg" width="1800" height="954" alt="Skanna Web BIM Author: a building's colour LiDAR scan in 3D on the left, its ground floor as scan slices in the 2D plan, ready to trace, and the storey settings on the right" loading="lazy">
+      </div>
+      <figcaption class="shot-cap"><strong>Based on scans:</strong> a LiDAR scan in 3D, with its floor ready to trace.</figcaption>
+    </figure>
     <p class="ifc-note">Everything comes back out in open formats: <strong>IFC</strong> for the
     model, <strong>GLB</strong> for the geometry, <strong>DXF, SVG and PDF</strong> for the
     drawings. Take them to SketchUp, Revit, Blender or any other platform, or keep working here.
