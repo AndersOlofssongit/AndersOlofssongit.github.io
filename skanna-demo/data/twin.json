@@ -53,6 +53,11 @@
     "lng": 18
   },
   "northDeg": 8.31,
+  "feedback": {
+    "url": "https://zvlengsphwrxviwbdlrr.supabase.co",
+    "anonKey": "sb_publishable_fRujIdhHdFBQkiuBuXnmWQ_uDRhJHQw",
+    "boardKey": "vJuN7vFjQdDGuBKWAE9wxWC2AYJuw_Bz"
+  },
   "bim": {
     "file": "bim.json",
     "assets": [
@@ -90,11 +95,6 @@
         "assetId": "custom:6be8121b-c0dc-4239-a3c3-92bc30793264",
         "file": "bim-assets/6be8121b-c0dc-4239-a3c3-92bc30793264.glb",
         "format": "glb"
-      },
-      {
-        "assetId": "custom:4d87c5a8-29ae-4efe-9aff-f74ab13f7a46",
-        "file": "bim-assets/4d87c5a8-29ae-4efe-9aff-f74ab13f7a46.glb",
-        "format": "glb"
       }
     ]
   },
@@ -105,5 +105,29 @@
     "intensity": 1,
     "horizonFadeDeg": 12,
     "lighting": false
+  },
+  "drawings": {
+    "style": {
+      "size": "A3",
+      "convention": "centreline",
+      "cutHeight": 1.2,
+      "cutAlong": "x",
+      "cutFrac": 0.5,
+      "manualDenom": null,
+      "layers": {},
+      "fields": {
+        "project.name": "DEVELOPMENT NAME",
+        "project.location": "SITE / PHASE NAME",
+        "project.subtitle": "PROJECT NAME",
+        "project.addr1": "Project address line 1",
+        "project.addr2": "City, Postcode, Country",
+        "owner.name": "OWNER / DEVELOPER NAME",
+        "owner.addr1": "Owner address line 1",
+        "owner.addr2": "City, Postcode, Country"
+      },
+      "showBlocks": true,
+      "showLegend": true
+    },
+    "layerSwitch": true
   }
 }

@@ -14,7 +14,7 @@
           {
             "id": "img-24add429e2",
             "name": "Site plan (underlay)",
-            "mediaId": "368b43ee-fc0a-44eb-953e-bda770d9a6bc",
+            "mediaId": "b4dd72ab-2c04-4801-821f-fc600a59acd0",
             "x": 6.5677,
             "y": 0.4829,
             "w": 73.5185,
@@ -8703,7 +8703,7 @@
         "z": 6,
         "label": "Pin 1",
         "createdAt": "2026-09-11T03:06:55.981Z",
-        "panoMediaId": "79b98d70-dc0b-4981-b8da-dd1374a6d6e0"
+        "panoMediaId": "8d8e837e-0695-41d3-8746-a7dea70b19c9"
       },
       {
         "id": "21be5962",
@@ -8713,7 +8713,7 @@
         "z": 5,
         "label": "Pin 2",
         "createdAt": "2026-09-11T03:08:47.081Z",
-        "photoMediaId": "8b3bb742-86ca-406f-824e-5cc5bedbbc56"
+        "photoMediaId": "3fcbf512-8316-4005-9d2a-9598a2c7d4f9"
       }
     ],
     "optionSets": [],
@@ -9125,7 +9125,7 @@
       "intensity": 1,
       "horizonFadeDeg": 12,
       "lighting": false,
-      "mediaId": "79b98d70-dc0b-4981-b8da-dd1374a6d6e0"
+      "mediaId": "8d8e837e-0695-41d3-8746-a7dea70b19c9"
     },
     "rooms": []
   }
