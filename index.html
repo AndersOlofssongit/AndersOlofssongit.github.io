@@ -772,7 +772,8 @@
     .hero-grid { min-height: 0; }
   }
   /* One slot for the drawings and the twin: a phone recording, shown as the phone screen it is. */
-  .live-media.two { grid-template-columns: 1.6fr 1fr; }
+  .live-media.two { grid-template-columns: 1fr 1.333fr; }
+  .live-media figure.screen video { aspect-ratio: 16 / 9; object-fit: cover; }
   .live-media figure.phone { display: flex; justify-content: center; background: #0d0d16; }
   .live-media figure.phone video {
     position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
@@ -1439,8 +1440,8 @@
             <video muted loop playsinline preload="none" data-autoplay width="1280" height="720" poster="assets/live-onsite-poster.jpg?v=2" aria-label="Scanning a villa under construction with an iPhone, on site"><source src="assets/live-onsite.mp4?v=2" type="video/mp4"></video>
             <figcaption>On site</figcaption>
           </figure>
-          <figure class="phone">
-            <video muted loop playsinline preload="none" data-autoplay width="576" height="1252" poster="assets/live-twin-2d3d-poster.jpg" aria-label="A published twin on a phone, switching between the 3D twin and its 2D drawings: plan, elevations and sections"><source src="assets/live-twin-2d3d.mp4" type="video/mp4"></video>
+          <figure class="screen">
+            <video muted loop playsinline preload="none" data-autoplay width="1280" height="718" poster="assets/live-twin-2d3d-wide-poster.jpg" aria-label="A published twin in the browser, switching between the 3D twin and its 2D drawings: plan, elevations and a section on a title block"><source src="assets/live-twin-2d3d-wide.mp4" type="video/mp4"></video>
             <figcaption>The drawings and the twin</figcaption>
           </figure>
         </div>
