@@ -810,14 +810,150 @@
   ]
 }
 </script>
+<!--globe:css-->
+<style>
+/* ---------- Skanna World globe in the hero (draft) ---------- */
+:root{
+  --surface:#11101b;--line:#1c1b2a;--hatch:#2e2c43;--chip-line:#3a3852;--coast:#8d8aa6;--water:#60a5fa;
+  --chip:#15141f;--archive:#8f8ca8;--ok:#34d399;--part:#f59e0b;
+  --g-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+body{overflow-x:clip}
+/* the globe sits behind the nav and the hero text, where the video was; the page's
+   empty space lets the pointer through to it, its text and links do not */
+.g-stage{position:absolute;left:0;right:0;top:0;height:640px;z-index:0;overflow:hidden;isolation:isolate}
+.g-stage::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;transition:opacity .45s ease;
+  background:linear-gradient(90deg,var(--bg) 0,rgba(11,11,18,.80) calc(var(--text-right,0px) * .62),rgba(11,11,18,0) calc(var(--text-right,0px) + 24px))}
+html.g-exploring .g-stage::before{opacity:0}
+main{pointer-events:none}
+main>:not(nav.top):not(header.hero){pointer-events:auto}
+nav.top>:not(.spacer){pointer-events:auto}
+header.hero>:not(.hero-grid){pointer-events:auto}
+.hero-grid>*{pointer-events:auto;transition:opacity .45s ease,transform .45s ease}
+html.g-exploring .hero-grid>*{opacity:0;transform:translateX(-28px);pointer-events:none}
+
+#g-gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab;outline:none}
+.g-stage.g-active #g-gl{touch-action:none}
+#g-gl.g-drag{cursor:grabbing}
+#g-gl:focus-visible{box-shadow:inset 0 0 0 2px var(--accent)}
+
+.g-tags{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.g-lbl{position:absolute;left:0;top:0;width:0;height:0;padding:0;border:0;background:none;color:inherit;font:inherit;pointer-events:auto;cursor:pointer;z-index:2}
+.g-lbl[hidden]{display:none}
+.g-lbl.g-dia{z-index:1} .g-lbl.g-sel{z-index:3}
+.g-lbl::after{content:"";position:absolute;left:-4px;top:-4px;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 2px var(--bg),0 0 10px rgba(167,139,250,.7)}
+.g-lbl .g-t{position:absolute;left:0;bottom:10px;transform:translateX(-50%);white-space:nowrap;background:var(--chip);border:1px solid var(--chip-line);
+  color:var(--text);font:600 12px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:6px 8px;border-radius:7px;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.g-lbl.g-dia .g-t{display:none}
+.g-lbl.g-dia::after{left:-3px;top:-3px;width:6px;height:6px;border-radius:1px;transform:rotate(45deg);box-shadow:0 0 0 2px var(--bg)}
+.g-lbl.g-twin .g-t{border-color:var(--accent)}
+.g-lbl.g-archive::after{background:var(--archive);box-shadow:0 0 0 2px var(--bg)}
+.g-lbl.g-pres::after{background:var(--ok);box-shadow:0 0 0 2px var(--bg),0 0 10px rgba(52,211,153,.6)}
+.g-lbl.g-sel .g-t{background:var(--accent);border-color:var(--accent);color:#0b0b12}
+.g-lbl:focus-visible .g-t{outline:2px solid var(--accent);outline-offset:2px}
+.g-lbl.g-plot{pointer-events:none;cursor:default;z-index:0}
+.g-lbl.g-plot::after{display:none}
+.g-lbl.g-plot .g-t{bottom:auto;top:-6px;background:none;border:0;box-shadow:none;padding:0;color:var(--muted);font:600 10.5px/1 var(--g-mono);text-shadow:0 0 3px var(--bg),0 0 3px var(--bg)}
+
+.g-float{position:absolute;z-index:4;background:rgba(19,19,28,.92);border:1px solid var(--rule);border-radius:12px;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 8px 28px rgba(0,0,0,.4)}
+.g-ctl{right:12px;top:calc(var(--top-inset,0px) + 12px);display:flex;gap:6px;padding:6px}
+.g-ib{width:34px;height:34px;border-radius:8px;border:1px solid var(--rule);background:rgba(255,255,255,.04);color:var(--text);
+  font:600 17px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;cursor:pointer;display:grid;place-items:center;padding:0}
+.g-ib:hover{border-color:rgba(167,139,250,.5)}
+.g-ib.g-wide{width:auto;padding:0 12px;font-size:13px;gap:6px;display:inline-flex;align-items:center}
+.g-ctl .g-back{display:none}
+html.g-exploring .g-ctl .g-back,.g-stage.g-active .g-ctl .g-back{display:inline-flex}
+
+/* Fly to a building: under the globe */
+.g-fly{position:absolute;z-index:4;left:var(--cx,50%);bottom:14px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;
+  padding:11px 20px;border-radius:999px;cursor:pointer;font:650 .92em/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--accent),var(--accent-deep));color:#0b0b12;border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 6px 24px rgba(124,92,240,.35);transition:opacity .3s ease}
+.g-fly:hover{filter:brightness(1.08)}
+.g-fly svg{width:16px;height:16px}
+html.g-touring .g-fly,html.g-carded .g-fly{opacity:0;pointer-events:none}
+/* the button waits for the globe; with no WebGL or no data the globe steps aside and the hero is as before */
+.g-stage:not(.g-ready) .g-fly{visibility:hidden}
+html.g-off .g-stage{display:none}
+
+.g-hint{position:absolute;z-index:4;left:var(--cx,50%);top:50%;transform:translate(-50%,-50%);padding:9px 14px;border-radius:999px;
+  background:rgba(19,19,28,.92);border:1px solid var(--rule);color:var(--text);font-size:13.5px;pointer-events:none;opacity:0;transition:opacity .25s}
+.g-hint.g-on{opacity:1}
+
+.g-eyebrow{font:700 11px/1 var(--g-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.g-cap{left:14px;bottom:14px;width:min(400px,calc(100% - 28px));padding:14px 16px 12px}
+.g-cap .g-h{margin:7px 0 4px;font-size:19px;font-weight:700;line-height:1.2;letter-spacing:-.01em;color:var(--text)}
+.g-cap .g-p{margin:0 0 10px;color:var(--muted);font-size:14.5px;line-height:1.5}
+.g-row{display:flex;align-items:center;gap:10px}
+.g-dots{display:flex;gap:5px;flex:1}
+.g-dots i{width:7px;height:7px;border-radius:50%;background:var(--rule)}
+.g-dots i.g-on{background:var(--accent)}
+.g-linkbtn{background:none;border:0;color:var(--muted);font:600 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;cursor:pointer;padding:6px 2px}
+.g-linkbtn:hover{color:var(--text)}
+
+.g-card{right:14px;bottom:14px;width:320px;max-height:calc(100% - var(--top-inset,0px) - 80px);overflow:auto;padding:14px 16px 16px}
+.g-ctop{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.g-card .g-h{margin:8px 0 2px;font-size:18px;font-weight:700;line-height:1.25;letter-spacing:-.01em;color:var(--text)}
+.g-where{color:var(--muted);margin:0 0 10px;font-size:13px}
+.g-card .g-p{color:var(--muted);margin:0 0 12px;font-size:14px;line-height:1.5}
+.g-x{background:none;border:0;color:var(--muted);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+.g-stages{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 12px}
+.g-st{font:600 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:5px 7px;border-radius:6px;border:1px solid var(--rule);color:var(--faint)}
+.g-st.done{color:var(--ok);border-color:rgba(52,211,153,.45)}
+.g-st.part{color:var(--part);border-color:rgba(245,158,11,.45)}
+.g-btn{display:inline-block;padding:10px 16px;border-radius:999px;font-weight:650;font-size:.88em;
+  background:linear-gradient(180deg,var(--accent),var(--accent-deep));color:#0b0b12;border:1px solid rgba(255,255,255,.18)}
+.g-btn:hover{text-decoration:none;filter:brightness(1.08)}
+
+.g-credits{position:absolute;z-index:3;right:14px;bottom:10px;max-width:min(560px,40%);color:var(--faint);font-size:10.5px;line-height:1.35;text-align:right;pointer-events:none}
+html.g-carded .g-credits,html.g-touring .g-credits{display:none}
+
+/* the banner video, moved down behind "In use today" */
+.g-banner{position:relative;isolation:isolate;margin-top:-44px;padding:96px 0 72px;min-height:min(56vw,600px);display:flex;flex-direction:column;justify-content:flex-end}
+.g-banner-bg{position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);overflow:hidden;pointer-events:none}
+.g-banner-bg video{width:100%;height:100%;object-fit:cover;display:block}
+.g-banner-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(11,11,18,.94) 0%,rgba(11,11,18,.80) 34%,rgba(11,11,18,.32) 66%,rgba(11,11,18,.26) 100%),
+  linear-gradient(180deg,#0b0b12 0%,rgba(11,11,18,0) 20%,rgba(11,11,18,0) 62%,#0b0b12 100%)}
+
+@media (max-width:859px){
+  /* on a phone the globe comes first, so it is in the first screen, and the hero text follows;
+     its room is kept from the first paint, so the text does not jump when the globe arrives */
+  html:not(.g-off) header.hero{padding-top:calc(clamp(340px,56vh,500px) + 30px);padding-top:calc(clamp(340px,56svh,500px) + 30px)}
+  .g-stage::before{display:none}
+  html.g-exploring .hero-grid>*{opacity:1;transform:none;pointer-events:auto}
+  .g-card{left:10px;right:10px;bottom:10px;width:auto;max-height:62%}
+  .g-cap{left:10px;bottom:10px;width:calc(100% - 20px)}
+  html.g-carded .g-cap{display:none}
+  .g-credits{top:10px;bottom:auto;left:12px;right:auto;max-width:60%;text-align:left}
+}
+@media (max-width:720px){
+  .g-banner{min-height:0;padding:72px 0 40px}
+  .g-banner-bg::after{background:linear-gradient(180deg,#0b0b12 0%,rgba(11,11,18,.72) 22%,rgba(11,11,18,.84) 62%,#0b0b12 100%)}
+}
+@media (prefers-reduced-motion:reduce){.hero-grid>*,.g-stage::before,.g-hint,.g-fly{transition:none}}
+</style>
+<!--/globe:css-->
 </head>
 <body>
 <div class="grid-bg"></div>
-<div class="hero-bg" aria-hidden="true">
-  <video autoplay muted loop playsinline preload="auto" poster="assets/hero-bg-poster.jpg?v=5">
-    <source src="assets/hero-bg.mp4?v=5" type="video/mp4">
-  </video>
+<!--globe:stage-->
+<div class="g-stage" id="g-stage">
+  <canvas id="g-gl" tabindex="0" aria-label="The Skanna globe. Drag to turn it. Click it, then scroll or pinch to zoom. Arrow keys and plus and minus work too."></canvas>
+  <div class="g-tags" id="g-tags"></div>
+  <div class="g-float g-ctl">
+    <button class="g-ib g-wide g-back" id="g-back" aria-label="Back to the whole globe">&#8592; Whole globe</button>
+    <button class="g-ib" id="g-zin" aria-label="Zoom in">+</button>
+    <button class="g-ib" id="g-zout" aria-label="Zoom out">&#8722;</button>
+  </div>
+  <button class="g-fly" id="g-tour"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 6.5v7M6.5 10h7"/></svg>Fly to a building</button>
+  <div class="g-hint" id="g-hint" aria-hidden="true"></div>
+  <div class="g-float g-cap" id="g-cap" hidden aria-live="polite"></div>
+  <div class="g-float g-card" id="g-card" hidden aria-live="polite"></div>
+  <div class="g-credits" id="g-credits"></div>
 </div>
+<!--/globe:stage-->
 <main>
   <nav class="top">
     <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
@@ -1423,6 +1559,12 @@
   </section>
 
   <section id="live">
+    <div class="g-banner">
+<!--globe:banner-->
+<div class="g-banner-bg" aria-hidden="true">
+  <video id="g-banner-video" muted loop playsinline preload="none" poster="assets/hero-bg-poster.jpg?v=5"><source src="assets/hero-bg.mp4?v=5" type="video/mp4"></video>
+</div>
+<!--/globe:banner-->
     <h2>In use today</h2>
     <div class="closer-head">
       <h3>This is in production, not in beta.</h3>
@@ -1431,6 +1573,7 @@
       mixed-use buildings. <strong>We are making a difference from the ground up</strong>,
       in developing markets as much as anywhere, with solutions that work on real
       buildings. Here are four of the jobs, and what each one started from.</p>
+    </div>
     </div>
 
     <div class="live-grid">
@@ -1699,5 +1842,466 @@
   Array.prototype.forEach.call(vids, function (v) { io.observe(v); });
 })();
 </script>
+<!--globe:script-->
+<script type="importmap">{"imports":{"three":"./assets/globe/three-0.185.1/three.module.min.js"}}</script>
+<script src="assets/globe/topojson-3.0.2.min.js"></script>
+<script>window.G_DATA = Promise.all(['assets/globe/countries-50m.json?v=d5293ac307', 'assets/globe/world-public.json?v=e77b75d177'].map(u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); })));</script>
+<script type="module">
+import * as THREE from 'three';
+let WORLD, DATA;
+try { [WORLD, DATA] = await window.G_DATA; } catch (e) {
+  document.documentElement.classList.add('g-off'); throw e;
+}
+
+const V = DATA.view;
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = id => document.getElementById(id);
+const root = document.documentElement;
+const stage = $('g-stage'), canvas = $('g-gl'), tagsEl = $('g-tags'), card = $('g-card'), cap = $('g-cap'), hint = $('g-hint');
+const navEl = document.querySelector('nav.top'), heroEl = document.querySelector('header.hero');
+const gridEl = heroEl.querySelector('.hero-grid'), textEl = gridEl.firstElementChild;
+
+/* ---------- the banner video further down: plays only while on screen, holds still for reduced motion ---------- */
+const STILL = matchMedia('(prefers-reduced-motion: reduce)');
+{
+  const v = $('g-banner-video');
+  if (v && 'IntersectionObserver' in window) new IntersectionObserver(es => {
+    for (const e of es) { if (e.isIntersecting && !STILL.matches) { const p = v.play(); if (p && p.catch) p.catch(() => {}); } else v.pause(); }
+  }, { threshold: 0.2 }).observe(v);
+}
+
+/* ---------- WGS 84: zero is the Earth's centre; scene units are equatorial radii, scene = ECEF (Y, Z, X) ---------- */
+const A = 6378137, F = 1 / 298.257223563, E2 = F * (2 - F), BA = 1 - F;
+const rad = d => d * Math.PI / 180;
+function toScene(lat, lng, h = 0, out = new THREE.Vector3()) {
+  const p = rad(lat), l = rad(lng), sp = Math.sin(p), cp = Math.cos(p), N = A / Math.sqrt(1 - E2 * sp * sp);
+  return out.set((N + h) * cp * Math.sin(l) / A, (N * (1 - E2) + h) * sp / A, (N + h) * cp * Math.cos(l) / A);
+}
+const normalAt = (lat, lng, out = new THREE.Vector3()) => out.set(Math.cos(rad(lat)) * Math.sin(rad(lng)), Math.sin(rad(lat)), Math.cos(rad(lat)) * Math.cos(rad(lng)));
+const northAt = (lat, lng, out = new THREE.Vector3()) => out.set(-Math.sin(rad(lat)) * Math.sin(rad(lng)), Math.cos(rad(lat)), -Math.sin(rad(lat)) * Math.cos(rad(lng)));
+
+const css = {}, mats = new Map();
+const cs = getComputedStyle(root);
+for (const k of ['bg', 'surface', 'line', 'hatch', 'chip-line', 'coast', 'accent', 'water']) css[k] = new THREE.Color(cs.getPropertyValue('--' + k).trim());
+const lineMaterial = token => { if (!mats.has(token)) mats.set(token, new THREE.LineBasicMaterial({ color: css[token] })); return mats.get(token); };
+
+const renderer = (() => {
+  try { return new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); }
+  catch (e) { root.classList.add('g-off'); throw e; }  // no WebGL: the hero stays as it was
+})();
+renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+renderer.setClearColor(0x000000, 0);
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(35, 1, 1e-6, 10);
+const body = new THREE.Mesh(new THREE.SphereGeometry(1, 192, 96), new THREE.MeshBasicMaterial({ color: css.surface }));
+body.scale.set(1, BA, 1).multiplyScalar(1 - 2.5e-4);
+scene.add(body);
+{ // a soft rim of light round the Earth: a camera-facing disc the body hides except at the edge
+  const c = document.createElement('canvas'); c.width = c.height = 256;
+  const g = c.getContext('2d'), gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);
+  gr.addColorStop(0.0, 'rgba(167,139,250,0)'); gr.addColorStop(0.66, 'rgba(167,139,250,0)');
+  gr.addColorStop(0.71, 'rgba(167,139,250,0.26)'); gr.addColorStop(0.8, 'rgba(124,92,240,0.08)'); gr.addColorStop(1, 'rgba(124,92,240,0)');
+  g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
+  const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false }));
+  halo.scale.setScalar(3);
+  halo.renderOrder = -1;
+  scene.add(halo);
+}
+
+function onEllipsoid(lines, step = 1, seams = false) {
+  const pos = [], a = new THREE.Vector3(), b = new THREE.Vector3();
+  for (const line of lines) for (let i = 1; i < line.length; i++) {
+    const [x0, y0] = line[i - 1], [x1, y1] = line[i];
+    if (Math.abs(x1 - x0) > 180) continue;
+    if (seams && ((Math.abs(x0) > 179.9 && Math.abs(x1) > 179.9) || (y0 < -89.9 && y1 < -89.9))) continue;
+    const n = Math.max(1, Math.ceil(Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0)) / step));
+    for (let k = 0; k < n; k++) {
+      toScene(y0 + (y1 - y0) * k / n, x0 + (x1 - x0) * k / n, 0, a);
+      toScene(y0 + (y1 - y0) * (k + 1) / n, x0 + (x1 - x0) * (k + 1) / n, 0, b);
+      pos.push(a.x, a.y, a.z, b.x, b.y, b.z);
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  return g;
+}
+
+/* ---------- the same layers as the globe page ---------- */
+const KIND = {villa:'Villa','townhouse-block':'Terrace block',house:'House',restaurant:'Restaurant',sports:'Sports',hotel:'Hotel',tower:'Tower',
+  office:'Office',factory:'Factory',element:'Building element','estate-plan':'Housing estate',portfolio:'Portfolio',unknown:'Building',
+  mansion:'Mansion',condo:'Condo',apartment:'Apartment',studio:'Music studio'};
+const BUILT = {'built':'Built','under-construction':'Under construction','planned':'Not built yet','unknown':''};
+const PKIND = {office:'Office', partner:'Partner', pipeline:'Pipeline', beta:'Beta testing'};
+const STAGES = [['drawings','Drawings'],['capture','Site capture'],['model','BIM model'],['checked','Checked on site'],['twin','Digital twin']];
+const CLOSE = {exact:1800, building:1800, plot:1800, street:3000, estate:7000, district:15000, city:45000, region:450000, country:1800000};
+const LAYERS = [
+  { id: 'graticule', source: '', zoom: [0, Infinity], build({ group }) {
+      const lines = [];
+      for (let lng = -180; lng < 180; lng += 15) lines.push([[lng, -80], [lng, 80]]);
+      for (let lat = -75; lat <= 75; lat += 15) lines.push([[-180, lat], [-90, lat], [0, lat], [90, lat], [180, lat]]);
+      group.add(new THREE.LineSegments(onEllipsoid(lines, 1), lineMaterial('line')));
+  } },
+  { id: 'outlines', source: 'Natural Earth, public domain', zoom: [60000, Infinity], build({ group }) {
+      group.add(new THREE.LineSegments(onEllipsoid(topojson.mesh(WORLD, WORLD.objects.countries, (a, b) => a !== b).coordinates, 0.5, true), lineMaterial('chip-line')));
+      group.add(new THREE.LineSegments(onEllipsoid(topojson.mesh(WORLD, WORLD.objects.land).coordinates, 0.5, true), lineMaterial('coast')));
+  } },
+  { id: 'estates', source: 'OpenStreetMap contributors (ODbL), Google Open Buildings (CC BY 4.0), developer master plans, Skanna drone photos', zoom: [0, 25000],
+    build({ group, label }) {
+      for (const L of Object.values(DATA.layers || {})) {
+        const [x0, y0, x1, y1] = L.bbox, lat0 = (y0 + y1) / 2, lng0 = (x0 + x1) / 2;
+        const sp = Math.sin(rad(lat0)), w = 1 - E2 * sp * sp;
+        const mE = A / Math.sqrt(w) * Math.cos(rad(lat0)) * Math.PI / 180, mN = A * (1 - E2) / Math.pow(w, 1.5) * Math.PI / 180;
+        const g = new THREE.Group(), up = normalAt(lat0, lng0), north = northAt(lat0, lng0), east = new THREE.Vector3().crossVectors(north, up);
+        g.matrix.makeBasis(east, north, up).scale(new THREE.Vector3(1 / A, 1 / A, 1 / A)).setPosition(toScene(lat0, lng0, 0));
+        g.matrixAutoUpdate = false;
+        const draw = (rings, token, closed = true, z = 0) => {
+          const pos = [];
+          for (const r of rings) {
+            const n = r.length - (closed && r.length > 1 && r[0][0] === r[r.length - 1][0] && r[0][1] === r[r.length - 1][1] ? 1 : 0);
+            for (let i = 0; i < (closed ? n : n - 1); i++) {
+              const a = r[i], b = r[(i + 1) % n];
+              pos.push((a[0] - lng0) * mE, (a[1] - lat0) * mN, z, (b[0] - lng0) * mE, (b[1] - lat0) * mN, z);
+            }
+          }
+          if (!pos.length) return;
+          const geo = new THREE.BufferGeometry();
+          geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+          g.add(new THREE.LineSegments(geo, lineMaterial(token)));
+        };
+        draw((L.roads || []).map(r => r.pts), 'hatch', false);
+        draw(L.paths || [], 'line');
+        draw((L.plot_polys || []).map(p => p.poly), 'chip-line', true, 0.2);
+        draw(L.buildings || [], 'coast', true, 0.4);
+        draw([...(L.water || []), ...(L.pools || [])], 'water', true, 0.4);
+        draw([L.outline], 'accent', true, 0.6);
+        group.add(g);
+        for (const p of L.plots || []) {
+          if (p.kind === 'club') continue;
+          label({ lat: p.lat, lng: p.lon, text: p.kind === 'terrace' ? String(p.num).replace(/^FHT/, 'T') : String(p.num), kind: 'plot', priority: -1, passive: true, maxAlt: 2600 });
+        }
+      }
+  } },
+  { id: 'sites', source: '', zoom: [0, Infinity], build({ label }) {
+      for (const s of V.sites) {
+        if (!s.pos) continue;
+        label({ lat: s.pos[0], lng: s.pos[1], text: s.name, site: s, close: CLOSE[s.shown] ?? 45000, floor: s.indicative ? 30000 : 0, open: () => siteCard(s),
+          kind: s.twin ? 'twin' : s.era === 'archive' ? 'archive' : 'site', priority: s.twin ? 3 : s.era === 'archive' ? 0 : 2 });
+      }
+      for (const p of V.presence || []) {
+        if (p.lat == null) continue;
+        label({ lat: p.lat, lng: p.lon, text: p.name, kind: 'pres', priority: 1, close: 6000, open: () => presenceCard(p) });
+      }
+  } },
+];
+
+/* ---------- labels ---------- */
+const labels = [];
+function addLabel(layer, o) {
+  const el = document.createElement(o.passive ? 'span' : 'button');
+  el.className = 'g-lbl g-' + o.kind;
+  el.innerHTML = `<span class="g-t">${esc(o.text)}</span>`;
+  if (o.passive) el.setAttribute('aria-hidden', 'true'); else el.setAttribute('aria-label', o.text);
+  const lb = { ...o, layer, el, p: toScene(o.lat, o.lng, 0), n: normalAt(o.lat, o.lng), w: 0, mode: 'x', order: labels.length };
+  if (!o.passive) el.addEventListener('click', () => { stopTour(); openLabel(lb); });
+  tagsEl.append(el);
+  labels.push(lb);
+}
+function openLabel(lb, ms) {
+  select(lb); lb.open();
+  const alt = Math.max(lb.floor || 0, Math.min(st.alt, lb.close));
+  // on a phone the card covers the lower part of the globe, so the site goes to the upper third
+  const lift = !wide() ? 0.22 * Math.min(2 * alt * Math.tan(rad(cam.fov / 2)) / 111320, 150) : 0;
+  return fly(clampLat(lb.lat - lift), lb.lng, alt, ms);
+}
+function setMode(lb, m) { if (lb.mode === m) return; lb.mode = m; lb.el.hidden = !m; lb.el.classList.toggle('g-dia', m === 'dia'); }
+let selected = null;
+function select(lb) { if (selected) selected.el.classList.remove('g-sel'); selected = lb; if (lb) lb.el.classList.add('g-sel'); dirty = true; }
+const pv = new THREE.Vector3(), tc = new THREE.Vector3();
+function updateLabels() {
+  const cands = [];
+  for (const lb of labels) {
+    let ok = lb.layer.visible && !(lb.maxAlt && st.alt > lb.maxAlt);
+    if (ok) ok = tc.subVectors(cam.position, lb.p).dot(lb.n) > 0;
+    if (ok) { pv.copy(lb.p).project(cam); ok = pv.z < 1 && Math.abs(pv.x) < 1.05 && Math.abs(pv.y) < 1.05; }
+    if (!ok) { setMode(lb, ''); continue; }
+    lb.sx = (pv.x + 1) / 2 * W; lb.sy = (1 - pv.y) / 2 * H;
+    cands.push(lb);
+  }
+  // on the whole globe only the twins and current work carry names; the rest are dots until you zoom in
+  const far = st.alt > 9e6;
+  cands.sort((a, b) => (b === selected) - (a === selected) || b.priority - a.priority || a.order - b.order);
+  const boxes = [];
+  // nothing is named under the nav bar or behind the hero text
+  const topCut = topInset + 6, leftCut = exploring ? -1 : textRight;
+  for (const lb of cands) {
+    const bx = lb.passive ? [lb.sx - lb.w / 2 - 2, lb.sx + lb.w / 2 + 2, lb.sy - 7, lb.sy + 7] : [lb.sx - lb.w / 2 - 3, lb.sx + lb.w / 2 + 3, lb.sy - 36, lb.sy + 5];
+    const clear = bx[2] > topCut && bx[0] > leftCut;
+    const free = clear && !(far && lb.priority < 2 && lb !== selected) && !boxes.some(b => b[0] < bx[1] && bx[0] < b[1] && b[2] < bx[3] && bx[2] < b[3]);
+    if (free) boxes.push(bx);
+    setMode(lb, free ? 'tag' : lb.passive || (!clear && lb.sx < leftCut) ? '' : 'dia');
+    lb.el.style.transform = `translate(${lb.sx.toFixed(1)}px,${lb.sy.toFixed(1)}px)`;
+  }
+}
+
+const active = LAYERS;
+for (const L of active) {
+  L.visible = true; L.group = new THREE.Group(); scene.add(L.group);
+  L.build({ group: L.group, label: o => addLabel(L, o) });
+}
+for (const lb of labels) lb.w = lb.el.firstChild.offsetWidth;
+for (const lb of labels) setMode(lb, '');
+
+/* ---------- where the globe sits: behind the nav and the hero on wide screens, above the hero text on a phone ---------- */
+const st = { lat: 22, lng: 70, alt: 2e7 };
+const MIN_ALT = 150, MAX_ALT = 4.5e7;
+const clampAlt = a => Math.min(MAX_ALT, Math.max(MIN_ALT, a));
+const clampLat = l => Math.min(85, Math.max(-85, l));
+const wrap = l => ((l + 540) % 360) - 180;
+let W = 1, H = 1, shift = 0, shiftGoal = 0, dirty = true, textRight = 0, topInset = 0, exploring = false;
+const wide = () => innerWidth >= 860;
+function layout() {
+  const sy = scrollY, navBottom = navEl.getBoundingClientRect().bottom + sy;
+  if (wide()) {
+    heroEl.style.paddingTop = '';
+    stage.style.top = '0px';
+    stage.style.height = Math.round(gridEl.getBoundingClientRect().bottom + sy + 8) + 'px';
+    textRight = Math.round(textEl.getBoundingClientRect().right);
+    topInset = Math.round(navBottom);
+  } else {
+    const gh = Math.round(Math.min(500, Math.max(340, innerHeight * 0.56)));
+    stage.style.top = Math.round(navBottom + 12) + 'px';
+    stage.style.height = gh + 'px';
+    heroEl.style.paddingTop = (gh + 30) + 'px';
+    textRight = 0; topInset = 0;
+  }
+  stage.style.setProperty('--text-right', textRight + 'px');
+  stage.style.setProperty('--top-inset', topInset + 'px');
+  resize();
+}
+// the globe's radius on screen and its centre: in the free space right of the hero text
+function frameGoal() {
+  if (!wide()) return { R: 0.44 * Math.min(W, H), cx: W / 2 };
+  const free = W - textRight;
+  const R = Math.max(150, Math.min(0.40 * H, free / 2 - 10));
+  const cx = Math.min(W - R - 28, Math.max(textRight + R * 0.65, textRight + free / 2));
+  return { R, cx };
+}
+function wholeAlt() {
+  const { R } = frameGoal();
+  const th = Math.atan(R / (H / 2) * Math.tan(rad(cam.fov) / 2));
+  return clampAlt((1 / Math.sin(th) - 1) * A);
+}
+const ground = new THREE.Vector3();
+function placeCamera() {
+  toScene(st.lat, st.lng, st.alt, cam.position);
+  toScene(st.lat, st.lng, 0, ground);
+  northAt(st.lat, st.lng, cam.up);
+  cam.lookAt(ground);
+  const a = st.alt / A;
+  cam.near = Math.max(a * 0.25, 1e-8); cam.far = a + 2.5;
+  if (Math.abs(shift) > 0.5) cam.setViewOffset(W, H, -shift, 0, W, H); else cam.clearViewOffset();
+  cam.updateProjectionMatrix();
+}
+function resize() {
+  W = stage.clientWidth || 1; H = stage.clientHeight || 1;
+  renderer.setSize(W, H, false);
+  cam.aspect = W / H;
+  dirty = true;
+}
+const degPerPx = () => Math.min(2 * st.alt * Math.tan(rad(cam.fov / 2)) / 111320, 150) / Math.max(1, H);
+const lngScale = () => 1 / Math.max(0.15, Math.cos(rad(st.lat)));
+function pan(dx, dy) { const k = degPerPx(); st.lat = clampLat(st.lat + dy * k); st.lng = wrap(st.lng - dx * k * lngScale()); dirty = true; }
+function zoomAt(s, x, y) {
+  const before = st.alt, after = clampAlt(before * s), r = after / before;
+  if (x != null && before < 3e6) {
+    const k = degPerPx(), ox = x - (W / 2 + shift), oy = y - H / 2;
+    st.lat = clampLat(st.lat - oy * k * (1 - r)); st.lng = wrap(st.lng + ox * k * lngScale() * (1 - r));
+  }
+  st.alt = after; dirty = true;
+}
+
+let flight = null;
+function fly(lat, lng, alt, ms = 1700) {
+  if (STILL.matches) ms = 1;
+  if (flight && flight.done) flight.done();
+  const from = { ...st };
+  let dl = lng - from.lng; if (dl > 180) dl -= 360; if (dl < -180) dl += 360;
+  const km = 111.32 * Math.hypot(lat - from.lat, dl * Math.cos(rad((lat + from.lat) / 2)));
+  const peak = Math.max(from.alt, alt, Math.min(km * 1000 * 1.1, 2.2e7));
+  return new Promise(done => { flight = { from, to: { lat, lng: from.lng + dl, alt: clampAlt(alt) }, peak, t0: performance.now(), ms, done }; dirty = true; });
+}
+function endFlight() { if (flight) { const d = flight.done; flight = null; d && d(); } }
+function stepFlight(now) {
+  const f = flight, t = Math.min(1, (now - f.t0) / f.ms), e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  st.lat = f.from.lat + (f.to.lat - f.from.lat) * e;
+  st.lng = wrap(f.from.lng + (f.to.lng - f.from.lng) * e);
+  const la = Math.log(f.from.alt), lb = Math.log(f.to.alt), lp = Math.log(f.peak);
+  if (lp <= Math.max(la, lb) + 0.05) st.alt = Math.exp(la + (lb - la) * e);
+  else { const c = 2 * lp - (la + lb) / 2; st.alt = Math.exp((1 - e) * (1 - e) * la + 2 * e * (1 - e) * c + e * e * lb); }
+  dirty = true;
+  if (t >= 1) endFlight();
+}
+
+/* ---------- input. The page keeps its scroll: the wheel zooms only once the globe was clicked ---------- */
+let engaged = false, touched = false;
+function engage(on) { engaged = on; stage.classList.toggle('g-active', on); }
+let hintTimer = 0;
+function flashHint(text) { hint.textContent = text; hint.classList.add('g-on'); clearTimeout(hintTimer); hintTimer = setTimeout(() => hint.classList.remove('g-on'), 1400); }
+const ptrs = new Map();
+let pinch = null, downAt = null;
+const spread = () => { const [a, b] = [...ptrs.values()]; return Math.hypot(a.x - b.x, a.y - b.y) || 1; };
+canvas.addEventListener('pointerdown', e => {
+  canvas.setPointerCapture(e.pointerId);
+  ptrs.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  downAt = { x: e.clientX, y: e.clientY };
+  touched = true; stopTour(); endFlight();
+  canvas.classList.add('g-drag');
+  if (ptrs.size === 2) pinch = { d: spread(), alt: st.alt };
+});
+canvas.addEventListener('pointermove', e => {
+  const p = ptrs.get(e.pointerId);
+  if (!p) return;
+  if (ptrs.size === 1) pan(e.clientX - p.x, e.clientY - p.y);
+  p.x = e.clientX; p.y = e.clientY;
+  if (ptrs.size === 2 && pinch) { st.alt = clampAlt(pinch.alt * pinch.d / spread()); dirty = true; }
+});
+const lift = e => {
+  if (downAt && e.type === 'pointerup' && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) < 6 && !engaged) {
+    engage(true);
+    flashHint(e.pointerType === 'touch' ? 'Pinch to zoom, drag to turn' : 'Scroll to zoom, drag to turn');
+  }
+  ptrs.delete(e.pointerId); if (ptrs.size < 2) pinch = null; if (!ptrs.size) { canvas.classList.remove('g-drag'); downAt = null; }
+};
+canvas.addEventListener('pointerup', lift);
+canvas.addEventListener('pointercancel', lift);
+canvas.addEventListener('wheel', e => {
+  if (!engaged && !e.ctrlKey && !e.metaKey) { flashHint('Click the globe to zoom with the wheel'); return; }
+  e.preventDefault(); stopTour(); endFlight();
+  const r = canvas.getBoundingClientRect();
+  zoomAt(Math.exp(e.deltaY * (e.deltaMode ? 0.05 : 0.0016)), e.clientX - r.left, e.clientY - r.top);
+}, { passive: false });
+document.addEventListener('pointerdown', e => { if (engaged && !stage.contains(e.target)) engage(false); });
+canvas.addEventListener('keydown', e => {
+  const k = e.key;
+  if (k === '+' || k === '=') zoomAt(0.6); else if (k === '-' || k === '_') zoomAt(1 / 0.6);
+  else if (k === 'ArrowLeft') pan(80, 0); else if (k === 'ArrowRight') pan(-80, 0);
+  else if (k === 'ArrowUp') pan(0, 80); else if (k === 'ArrowDown') pan(0, -80);
+  else return;
+  stopTour(); endFlight(); e.preventDefault();
+});
+addEventListener('keydown', e => { if (e.key === 'Escape' && (selected || touring)) { stopTour(); closeCard(); } });
+$('g-zin').onclick = () => { stopTour(); fly(st.lat, st.lng, st.alt * 0.4, 500); };
+$('g-zout').onclick = () => { stopTour(); fly(st.lat, st.lng, st.alt / 0.4, 500); };
+$('g-back').onclick = () => { stopTour(); closeCard(); engage(false); touched = false; fly(st.lat > 60 || st.lat < -40 ? 22 : st.lat, st.lng, wholeAlt(), 1500); };
+
+/* ---------- cards ---------- */
+function showCard(html) { card.innerHTML = html; card.hidden = false; card.querySelector('.g-x').onclick = () => { stopTour(); closeCard(); }; dirty = true; }
+function closeCard() { card.hidden = true; select(null); }
+function siteCard(s) {
+  const place = V.places.find(p => p.id === s.place), market = V.markets.find(m => m.id === s.market);
+  const eyebrow = s.indicative ? ['Earlier work', s.year] : [KIND[s.kind] || 'Building', BUILT[s.built], s.era === 'archive' && s.year];
+  showCard(`<div class="g-ctop"><span class="g-eyebrow">${esc(eyebrow.filter(Boolean).join(' \u00b7 '))}</span><button class="g-x" aria-label="Close">\u00d7</button></div>
+    <div class="g-h">${esc(s.name)}</div>
+    <p class="g-where">${esc([place && place.name, market && market.name].filter(Boolean).join(', '))}${s.indicative ? ' \u00b7 placed in its area, not at the address' : ''}</p>
+    ${s.summary ? `<p class="g-p">${esc(s.summary)}</p>` : ''}
+    ${s.indicative ? '' : `<div class="g-stages" aria-label="Stages">${STAGES.map(([k, l]) => `<span class="g-st ${esc((s.stages || {})[k] || 'none')}">${l}</span>`).join('')}</div>`}
+    ${s.twin ? `<a class="g-btn" href="${esc(s.twin)}" target="_blank" rel="noopener">Open the twin &#8599;</a>` : ''}`);
+}
+function presenceCard(p) {
+  showCard(`<div class="g-ctop"><span class="g-eyebrow">${esc(PKIND[p.kind] || 'Presence')}</span><button class="g-x" aria-label="Close">\u00d7</button></div>
+    <div class="g-h">${esc(p.name)}</div>${p.summary ? `<p class="g-p">${esc(p.summary)}</p>` : ''}`);
+}
+
+/* ---------- Fly to a building: world, Thailand, Bangkok, the mall, GetFresh and its twin ---------- */
+const gf = V.sites.find(s => /^GetFresh\b/.test(s.name)) || V.sites.find(s => s.twin);
+const mall = gf && V.places.find(p => p.id === gf.place && p.layer);
+const mallLayer = mall && DATA.layers && DATA.layers[mall.id];
+if (mallLayer) { const [x0, y0, x1, y1] = mallLayer.bbox; mall.lat = (y0 + y1) / 2; mall.lon = (x0 + x1) / 2; }
+const TOUR = [
+  { level: 'Country', title: 'Thailand', lat: 14.2, lng: 100.6, alt: 2.1e6, ms: 2600, hold: 2400,
+    text: 'Our busiest country. Housing developments, villas, a restaurant and sports centres, from drawings, scans and drone photos.' },
+  { level: 'City', title: 'Bangkok', lat: 13.715, lng: 100.565, alt: 16000, ms: 2400, hold: 2200,
+    text: 'A restaurant, sports centres, an office and homes across the city.' },
+  mall && { level: 'Building', title: mall.name.replace(/,.*/, ''), lat: mall.lat, lng: mall.lon, alt: 1100, ms: 2400, hold: 3000,
+    text: 'A shopping mall in the middle of Bangkok, drawn from open map data. The restaurant is a corner unit inside it.' },
+  gf && { level: 'Restaurant', title: gf.name.replace(/,.*/, ''), site: gf, ms: 1800, hold: 0,
+    text: (gf.summary || '') + ' Open it to walk through the restaurant.' },
+].filter(Boolean);
+let touring = false, tourId = 0;
+const sleep = ms => new Promise(r => setTimeout(r, STILL.matches ? Math.max(ms, 1600) : ms));
+function stopTour() { tourId++; touring = false; cap.hidden = true; }
+function showCap(i, s, last) {
+  cap.innerHTML = `<div class="g-eyebrow">${esc(s.level)}</div><div class="g-h">${esc(s.title)}</div><p class="g-p">${esc(s.text)}</p>
+    <div class="g-row"><span class="g-dots">${TOUR.map((_, k) => `<i class="${k <= i ? 'g-on' : ''}"></i>`).join('')}</span>
+    <button class="g-linkbtn" id="g-capx">${last ? 'Explore on your own' : 'Stop'}</button></div>`;
+  cap.hidden = false;
+  $('g-capx').onclick = () => { stopTour(); };
+}
+async function runTour() {
+  stopTour(); closeCard();
+  const r = stage.getBoundingClientRect();
+  if (r.top < -40 || r.bottom > innerHeight + 40) stage.scrollIntoView({ behavior: STILL.matches ? 'auto' : 'smooth', block: 'start' });
+  const id = ++tourId; touring = true;
+  if (!STILL.matches && st.alt < 8e6) { await fly(st.lat, st.lng, wholeAlt(), 1200); if (id !== tourId) return; }
+  for (let i = 0; i < TOUR.length; i++) {
+    const s = TOUR[i], last = i === TOUR.length - 1;
+    showCap(i, s, last);
+    if (s.site) {
+      const lb = labels.find(l => l.site === s.site);
+      if (lb) { lb.close = 380; await openLabel(lb, s.ms); lb.close = CLOSE.plot; }
+    } else await fly(s.lat, s.lng, s.alt, s.ms);
+    if (id !== tourId) return;
+    if (!last) { await sleep(s.hold); if (id !== tourId) return; }
+  }
+  // the caption stays with the card; any touch on the globe ends the tour
+  touring = false;
+}
+$('g-tour').onclick = () => runTour();
+
+/* ---------- credits ---------- */
+let lastCredits = '';
+function credits() {
+  const t = active.filter(L => L.visible && L.source).map(L => L.source).join(' \u00b7 ');
+  if (t !== lastCredits) { $('g-credits').textContent = t; lastCredits = t; }
+}
+
+/* ---------- go ---------- */
+let onScreen = true, last = performance.now();
+new IntersectionObserver(es => { onScreen = es[0].isIntersecting; dirty = true; }).observe(stage);
+new ResizeObserver(layout).observe(gridEl);
+addEventListener('resize', layout);
+layout();
+stage.classList.add('g-ready');
+st.alt = wholeAlt();
+{ const f = frameGoal(); shift = shiftGoal = wide() ? f.cx - W / 2 : 0; }
+let lastCx = -1;
+function frame(now) {
+  requestAnimationFrame(frame);
+  const dt = Math.min(64, now - last); last = now;
+  if (!onScreen || document.hidden) return;
+  if (flight) stepFlight(now);
+  exploring = wide() && (touring || !card.hidden || st.alt < 6e6);
+  root.classList.toggle('g-exploring', exploring);
+  root.classList.toggle('g-carded', !card.hidden);
+  root.classList.toggle('g-touring', touring);
+  const f = frameGoal();
+  shiftGoal = wide() && !exploring ? f.cx - W / 2 : 0;
+  if (Math.abs(shiftGoal - shift) > 0.5) { shift += (shiftGoal - shift) * (STILL.matches ? 1 : Math.min(1, dt / 220)); dirty = true; }
+  const cx = Math.round(W / 2 + shift);
+  if (cx !== lastCx) { stage.style.setProperty('--cx', cx + 'px'); lastCx = cx; }
+  // the globe turns slowly on its own until someone takes hold of it
+  if (!engaged && !touched && !flight && !touring && card.hidden && !STILL.matches && st.alt > 6e6) { st.lng = wrap(st.lng - dt * 0.0035); dirty = true; }
+  if (!dirty) return;
+  dirty = false;
+  for (const L of active) { L.visible = st.alt >= L.zoom[0] && st.alt <= L.zoom[1]; L.group.visible = L.visible; }
+  placeCamera();
+  renderer.render(scene, cam);
+  updateLabels();
+  credits();
+}
+requestAnimationFrame(frame);
+window.__hero = { st, fly, labels, runTour, layout };
+</script>
+<!--/globe:script-->
 </body>
 </html>
