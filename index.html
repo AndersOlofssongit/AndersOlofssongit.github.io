@@ -908,6 +908,12 @@ html.g-off .g-stage{display:none}
 
 .g-credits{position:absolute;z-index:3;right:14px;bottom:10px;max-width:min(560px,40%);color:var(--faint);font-size:10.5px;line-height:1.35;text-align:right;pointer-events:none}
 html.g-carded .g-credits,html.g-touring .g-credits{display:none}
+/* the public demo note: just above the Fly button, out of the way while flying or reading a card */
+.g-demo{position:absolute;z-index:3;left:var(--cx,50%);bottom:64px;transform:translateX(-50%);width:max-content;max-width:min(380px,calc(100% - 24px));
+  margin:0;padding:6px 12px;border-radius:10px;background:rgba(11,11,18,.78);text-align:center;color:var(--muted);font-size:11.5px;line-height:1.4;
+  pointer-events:none;transition:opacity .3s ease}
+html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opacity:0}
+.g-card .g-fine{margin:12px 0 0;color:var(--faint);font-size:11.5px;line-height:1.4}
 
 /* the banner video, moved down behind "In use today" */
 .g-banner{position:relative;isolation:isolate;margin-top:-44px;padding:96px 0 72px;min-height:min(56vw,600px);display:flex;flex-direction:column;justify-content:flex-end}
@@ -951,6 +957,7 @@ html.g-carded .g-credits,html.g-touring .g-credits{display:none}
   <div class="g-hint" id="g-hint" aria-hidden="true"></div>
   <div class="g-float g-cap" id="g-cap" hidden aria-live="polite"></div>
   <div class="g-float g-card" id="g-card" hidden aria-live="polite"></div>
+  <p class="g-demo">This is a public demo. Some sites have been adjusted for privacy, and all are approved for use as examples.</p>
   <div class="g-credits" id="g-credits"></div>
 </div>
 <!--/globe:stage-->
@@ -1845,7 +1852,7 @@ html.g-carded .g-credits,html.g-touring .g-credits{display:none}
 <!--globe:script-->
 <script type="importmap">{"imports":{"three":"./assets/globe/three-0.185.1/three.module.min.js"}}</script>
 <script src="assets/globe/topojson-3.0.2.min.js"></script>
-<script>window.G_DATA = Promise.all(['assets/globe/countries-50m.json?v=d5293ac307', 'assets/globe/world-public.json?v=e77b75d177'].map(u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); })));</script>
+<script>window.G_DATA = Promise.all(['assets/globe/countries-50m.json?v=d5293ac307', 'assets/globe/world-public.json?v=6e5d4d95c5'].map(u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); })));</script>
 <script type="module">
 import * as THREE from 'three';
 let WORLD, DATA;
@@ -2205,7 +2212,8 @@ function siteCard(s) {
     <p class="g-where">${esc([place && place.name, market && market.name].filter(Boolean).join(', '))}${s.indicative ? ' \u00b7 placed in its area, not at the address' : ''}</p>
     ${s.summary ? `<p class="g-p">${esc(s.summary)}</p>` : ''}
     ${s.indicative ? '' : `<div class="g-stages" aria-label="Stages">${STAGES.map(([k, l]) => `<span class="g-st ${esc((s.stages || {})[k] || 'none')}">${l}</span>`).join('')}</div>`}
-    ${s.twin ? `<a class="g-btn" href="${esc(s.twin)}" target="_blank" rel="noopener">Open the twin &#8599;</a>` : ''}`);
+    ${s.twin ? `<a class="g-btn" href="${esc(s.twin)}" target="_blank" rel="noopener">Open the twin &#8599;</a>` : ''}
+    <p class="g-fine">This is a public demo. Some sites have been adjusted for privacy, and all are approved for use as examples.</p>`);
 }
 function presenceCard(p) {
   showCard(`<div class="g-ctop"><span class="g-eyebrow">${esc(PKIND[p.kind] || 'Presence')}</span><button class="g-x" aria-label="Close">\u00d7</button></div>
