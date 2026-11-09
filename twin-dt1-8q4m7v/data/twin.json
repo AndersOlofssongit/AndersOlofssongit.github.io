@@ -1,11 +1,11 @@
 {
  "version": 1,
- "name": "Plot 1148 — Msaytbeh, Beirut",
- "subtitle": "Plot (عقار) No. 1148, Msaytbeh, Beirut, Lebanon",
+ "name": "Residential tower, Beirut",
+ "subtitle": "Beirut, Lebanon",
  "models": [
   {
-   "name": "Plot 1148 — Msaytbeh, Beirut BIM 2026-08-26",
-   "file": "models/Plot 1148 Msaytbeh Beirut BIM 2026-08-26.ifc"
+   "name": "Residential tower, Beirut BIM 2026-08-26",
+   "file": "models/Residential tower Beirut BIM 2026-08-26.ifc"
   }
  ],
  "bim": {
@@ -13,8 +13,8 @@
  },
  "pins": [],
  "gps": {
-  "lat": 33.8869722,
-  "lng": 35.4949722
+  "lat": 33.8936,
+  "lng": 35.4752
  },
  "northDeg": -150.0
 }

@@ -3,7 +3,7 @@
  "coordinateSystem": "IFC plan space: right-handed, Z up, metres. plan = (world.x, -world.z), elevation = world.y",
  "model": {
   "version": 1,
-  "projectName": "Plot 1148, Msaytbeh \u2014 Beirut",
+  "projectName": "Residential tower, Beirut",
   "storeys": [
    {
     "id": "st-d155f15e2f",
