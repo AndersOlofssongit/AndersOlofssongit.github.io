@@ -539,6 +539,11 @@
   }
   .cap h4 { margin: 0 0 4px; font-size: 0.97em; font-weight: 650; }
   .cap p { margin: 0; color: var(--muted); font-size: 0.86em; line-height: 1.45; }
+  .caps.tags { grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  @media (max-width: 860px) { .caps.tags { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 520px) { .caps.tags { grid-template-columns: repeat(2, 1fr); } }
+  .caps.tags .cap { padding: 11px 15px; }
+  .caps.tags .cap h4 { margin: 0; font-size: 0.92em; }
 
   /* ── Comparison table ─────────────────────────────────────── */
   .compare-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 14px; }
@@ -989,29 +994,15 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
       <div>
         <div class="kicker">Browser-based BIM platform · Works with your own AI</div>
         <h1>Every building should have a digital twin. Build yours in the browser<span class="dot">.</span></h1>
-        <p class="lede">Skanna is a <strong>BIM platform that runs entirely in your
-        browser</strong>. Model the building yourself, <strong>connect your own AI</strong> to
-        model it through the Skanna MCP connector, or pay <strong>a one-off price to have it
-        digitised for you</strong>. Out come dimensioned drawing sets, an interactive twin
-        anyone can open on a link, and data on every object, all from one model that stays
-        with the building for as long as it stands.</p>
+        <p class="lede">Model it yourself, <strong>let your own AI do it</strong>, or have it
+        done for you. One model gives you the drawings, a twin anyone can open on a link, and
+        data on every object.</p>
         <div class="cta-row">
           <a class="btn" href="skanna-demo/">Open a finished building</a>
           <a class="btn-ghost" href="#start">Prices and how to start</a>
         </div>
-        <p class="store-note">A live link, not a mock-up. The finished building opens in your
-        browser with no account. <strong>Nothing to install:</strong> the whole platform runs
-        in the browser, and accounts are open now.</p>
+        <p class="store-note">A live building, not a mock-up. No account, nothing to install.</p>
       </div>
-    </div>
-
-    <div class="proof-lead">
-      <strong>Running today</strong>On site on multiple continents, making drawings and
-      digital twins. For a 100-unit housing development it produces the drawings, the
-      visualisations and the operations and maintenance system, all from one model. They are
-      dropping clunky CAD tools and scattered systems for booking, service and unit records,
-      cutting their overall cost, and getting software shaped around the way they actually
-      work.
     </div>
 
     <div class="proof">
@@ -1025,11 +1016,7 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
   </header>
 
   <section id="start">
-    <h2>What it is, what it costs, how to start</h2>
-    <p class="section-lede"><strong>Skanna gives a building one living model.</strong> Start
-    from a scan, a drawing, a CAD file or your own AI, and get dimensioned drawings, rendered
-    visuals and a twin anyone can open on a link. The iPhone scanner is free, and the modelling
-    tool runs in your browser.</p>
+    <h2>What it costs, how to start</h2>
 
     <div class="tiers">
       <div class="tier highlight">
@@ -1079,27 +1066,14 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
       <a href="#ai"><span class="k">One-off price per building</span><strong>Have it done for you</strong>Send your drawings or scans and get the finished model back.</a>
       <a href="#app"><span class="k">Optional · free</span><strong>The iPhone scanner</strong>Capture a building with LiDAR, photos and 360° panoramas.</a>
     </div>
-    <p class="pricing-note">Prices in euros, including VAT where it applies. Paid by card
-    through Stripe. Paying in another currency adds a conversion fee, shown at checkout before
-    you pay. Cancel any time under Plan in the app and keep access to the end of the period
-    you paid for. A twin over 10 GB, or one with very heavy traffic, may cost extra; we
-    contact you before anything is charged. Renders and design services are quoted per job.
-    Engineering drawings and calculations must always be checked and stamped by a licensed
-    engineer. Bills of materials must be checked against what is available and ordered, and
-    third parties informed. <strong>The iOS app is free</strong> and stays free.</p>
-
   </section>
 
   <section id="web">
     <h2>Skanna Web · BIM Author</h2>
-    <p class="section-lede">The modelling tool, <strong>entirely in the browser</strong>, built
-    so <strong>an AI can use it, and just as usable by hand</strong>. Connect your own AI and it
-    drafts the model through the <a href="#ai">Skanna MCP connector</a>. Or do it yourself:
-    trace a scan, a splat, a CAD file or an old floor plan, or draw from nothing, and build a
-    real IFC building model floor by floor, with every wall, opening, fixture and service run
-    carrying its real specification. Either way it is the same model, and you can take over
-    from the AI at any point. No CAD seat, no plug-ins, no workstation.
-    <strong>Most people are productive in it in a day.</strong></p>
+    <p class="section-lede">The modelling tool, <strong>entirely in the browser</strong>. Your
+    AI can use it through the <a href="#ai">MCP connector</a>, and so can you by hand. Trace a
+    scan, a CAD file or an old floor plan, or draw from nothing. <strong>Most people are
+    productive in it in a day.</strong></p>
     <figure class="shot-fig">
       <div class="shot-frame">
         <div class="chrome"><i></i><i></i><i></i><span>Skanna Web · BIM Author</span></div>
@@ -1112,44 +1086,36 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
         <div class="chrome"><i></i><i></i><i></i><span>Skanna Web · BIM Author</span></div>
         <img src="assets/bim-author-trace.jpg" width="1800" height="954" alt="Skanna Web BIM Author: a building's colour LiDAR scan in 3D on the left, its ground floor as scan slices in the 2D plan, ready to trace, and the storey settings on the right" loading="lazy">
       </div>
-      <figcaption class="shot-cap"><strong>Based on scans:</strong> a LiDAR scan in 3D, lined up with the scan alignment tool built into Skanna Web, its floor ready to trace.</figcaption>
+      <figcaption class="shot-cap"><strong>Based on scans:</strong> a LiDAR scan, lined up and ready to trace.</figcaption>
     </figure>
-    <p class="ifc-note">Everything comes back out in open formats: <strong>IFC</strong> for the
-    model, <strong>GLB</strong> for the geometry, <strong>DXF, SVG and PDF</strong> for the
-    drawings. Take them to SketchUp, Revit, Blender or any other platform, or keep working here.
+    <p class="ifc-note">Out in open formats: <strong>IFC, GLB, DXF, SVG and PDF</strong>.
     Nothing is trapped.</p>
   </section>
 
   <section id="ai">
     <h2>Digitise a building with your own AI, or have it done for you</h2>
-    <p class="section-lede">A Skanna building model is <strong>documented, open JSON</strong>, not a
-    proprietary binary or a licensed API. So <strong>your own AI can author the model
-    directly</strong>, through a connector that is live today, and nobody has to force an
-    MCP into a closed CAD system that was never going to let it in. Done properly, one
-    professional with their own agents does the drafting of a whole CAD department:
-    <strong>an army of drafters that costs what your tokens cost.</strong></p>
+    <p class="section-lede">A Skanna model is <strong>open, documented JSON</strong>. So
+    <strong>your own AI can build it directly</strong>, through a connector that is live today.
+    <strong>An army of drafters that costs what your tokens cost.</strong></p>
 
     <figure class="shot-fig">
       <div class="shot-frame">
         <div class="chrome"><i></i><i></i><i></i><span>Your own AI, modelling in Skanna</span></div>
         <video muted loop playsinline preload="none" data-autoplay width="1280" height="720" poster="assets/ai-modelling-poster.jpg" aria-label="A restaurant fit-out modelled by AI in Skanna: the plan with every object labelled, then the 3D model with its kitchen, seating and ceiling services, and a walk through it"><source src="assets/ai-modelling.mp4" type="video/mp4"></video>
       </div>
-      <figcaption class="shot-cap"><strong>Modelled by AI:</strong> a restaurant fit-out, drafted in Skanna from its as-built drawings, with the kitchen, seating and services in place.</figcaption>
+      <figcaption class="shot-cap"><strong>Modelled by AI:</strong> a restaurant fit-out, drafted from its as-built drawings.</figcaption>
     </figure>
 
     <div class="doors">
       <div class="door primary">
         <div class="for">Connect your own AI · free to draft</div>
         <h4>The Skanna MCP connector</h4>
-        <p>Add Skanna to ChatGPT, Claude or any AI that takes MCP connectors: one URL, no
-        login. Give it your drawings, scans or files and it drafts the model floor by floor,
-        checks it with the same code the app uses, and draws the plans and elevations for you
-        to compare against the source.</p>
+        <p>Add Skanna to ChatGPT, Claude or any AI that takes MCP connectors. One URL, no
+        login. Give it your drawings, scans or files and it drafts the model floor by floor.</p>
         <ul>
-          <li>Drafting is free. Open the claim link your AI gives you and the building moves
-          into your Skanna account, where hosting it counts against your plan.</li>
-          <li>Every draft is labelled <strong>AI-drafted</strong>: checked as sound, not verified
-          against the building. A person still compares it with the source.</li>
+          <li>Drafting is free. Claim the building into your account to host it.</li>
+          <li>Every draft is labelled <strong>AI-drafted</strong>. A person still checks it
+          against the source.</li>
         </ul>
         <div class="act"><a class="btn" href="https://mcp.skanna.site/">Connect your AI</a></div>
         <p class="after">Connector URL: <code>https://mcp.skanna.site/mcp</code></p>
@@ -1158,15 +1124,12 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
       <div class="door">
         <div class="for">Done for you · one-off price per building</div>
         <h4>Have your building digitised</h4>
-        <p>Send me what you have: DWG or DXF, PDF drawings, scanned paper, LiDAR scans, photos
-        or a 3D model. Tell me what you want at the end. I model it with a person checking
-        every step against the source, and hand over the model, the drawing set and a published
-        twin.</p>
+        <p>Send me what you have: drawings, scanned paper, LiDAR scans, photos or a 3D model.
+        I model it, check every step against the source, and hand over the model, the drawings
+        and a published twin.</p>
         <ul>
-          <li>One price per building, quoted up front. It depends on what goes into the twin, what information you
-          already have, and whether you want to work in rounds.</li>
-          <li>Changes after a round are billed as an extra round, so every piece of work is
-          accounted for.</li>
+          <li>One price per building, quoted up front.</li>
+          <li>Changes after a round are billed as an extra round.</li>
         </ul>
         <div class="act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Digitise%20a%20building&amp;body=The%20building%3A%0AWhere%20it%20is%3A%0AWhat%20we%20have%20(DWG%2FDXF%2C%20PDFs%2C%20scans%2C%20photos%2C%20a%203D%20model)%3A%0AWhat%20we%20want%20at%20the%20end%3A%0A">Ask about your building</a></div>
         <p class="after">Started a draft with your own AI already? Include its claim link and I'll
@@ -1181,24 +1144,21 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
       <img class="app-icon" src="assets/app-icon.png" width="96" height="96" alt="The Skanna app icon">
       <div>
         <h3>Scan a building with your iPhone or iPad Pro</h3>
-        <p class="section-lede">You don't need it to use Skanna. If you have a LiDAR iPhone
-        or iPad Pro, it captures geometry, photos, 360° panoramas and notes in one walk-through,
-        all positioned in space and true to scale, ready to model from. <strong>We don't guess
-        at the geometry and we don't invent the images.</strong> Everything is captured,
-        processed and stored on the device. <strong>Free, no account, and completely
-        private.</strong></p>
+        <p class="section-lede">You don't need it to use Skanna. With a LiDAR iPhone or iPad
+        Pro it captures geometry, photos, 360° panoramas and notes in one walk-through, true to
+        scale. <strong>We don't guess at the geometry and we don't invent the images.</strong>
+        Free, no account, and completely private.</p>
         <a class="app-badge" href="https://apps.apple.com/app/id6789603042"><img src="assets/app-store-badge.svg" width="150" height="50" alt="Download on the App Store"></a>
-        <p class="ifc-note">Needs a LiDAR sensor: iPhone&nbsp;12&nbsp;Pro or later Pro model,
-        or iPad&nbsp;Pro 2020 or later. No Pro iPhone? Nothing else on this page needs one.
-        See <a href="#how">the six ways in</a>. <a href="privacy.html">Privacy policy</a>.</p>
+        <p class="ifc-note">Needs LiDAR: iPhone&nbsp;12&nbsp;Pro or a later Pro, or
+        iPad&nbsp;Pro 2020 or later. <a href="privacy.html">Privacy policy</a>.</p>
       </div>
     </div>
   </section>
 
   <section id="how">
     <h2>How it works</h2>
-    <p class="section-lede">Five stages, once per building. <strong>Click any stage to open
-    it</strong>. In stage&nbsp;two, click the way in that matches what you already have.</p>
+    <p class="section-lede">Five stages, once per building. <strong>Click a stage to open
+    it.</strong></p>
 
     <div class="flow" id="flow">
       <button class="stage" type="button" aria-expanded="false" aria-controls="p1" data-stage="1">
@@ -1315,62 +1275,50 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
       </ul>
     </div>
 
-    <p class="ifc-note">The long version, on why buildings lose their information in the first
-    place and everything a finished model produces, is on
-    <a href="why.html">a page of its own</a>. Picking which of the six ways in to use? See
-    <a href="capture-methods.html">what actually goes wrong with each capture method</a>.</p>
+    <p class="ifc-note">More on <a href="why.html">why buildings lose their information</a>
+    and <a href="capture-methods.html">what goes wrong with each capture method</a>.</p>
   </section>
 
   <section id="who">
     <h2>Who this is for</h2>
-    <p class="section-lede">Everybody gets the same platform, <strong>the whole of it</strong>.
-    Scanning, browser modelling, drawing sets, the published twin, the property portal and the
-    operations side are one product, not tiers sold to different trades. The only difference
-    between the rows below is which part you reach for first.</p>
+    <p class="section-lede">Everybody gets <strong>the whole platform</strong>. The rows only
+    show where you start.</p>
     <div class="router">
       <a class="row" href="#how">
         <span class="who">Property owners</span>
-        <span class="what"><strong>The main one.</strong> You own the building, so you carry
-        every cost of not knowing what is in it: the survey paid for twice, the site visit
-        that existed only to measure something, the material ordered wrong, the contractor
-        quoting from a drawing that stopped being true years ago. One accurate twin ends
-        that. Every trade, valuer, insurer and buyer after it starts from the model. You do
-        not need a scanner: an old floor plan is enough to start. And when you sell, the twin
-        goes with the property, the way keys and deeds do.</span>
+        <span class="what"><strong>The main one.</strong> Stop paying for the same survey
+        twice. An old floor plan is enough to start, and the twin goes with the property when
+        you sell.</span>
         <span class="arrow">Start your own →</span>
       </a>
       <a class="row" href="#twin">
         <span class="who">Property developers</span>
-        <span class="what">Sell off-plan: a buyer explores their own unit, sees the morning
-        light in it and picks finishes months before there is anything to visit. Then keep the
-        same models for permit and construction drawings, handover documentation, and the
-        operations system for the finished estate.</span>
+        <span class="what">Sell off-plan from a twin of each unit. Keep the same models for
+        permits, construction, handover and operations.</span>
         <span class="arrow">The twin →</span>
       </a>
       <a class="row" href="#twin">
         <span class="who">Hotel &amp; property operators</span>
-        <span class="what">Know what you own. Every vent, riser, fixture and finish located and
-        specified, so a refurbishment starts without re-surveying and maintenance hangs off the
-        objects instead of a spreadsheet nobody trusts.</span>
+        <span class="what">Know what you own. Every fixture and finish located, with
+        maintenance kept on the objects.</span>
         <span class="arrow">Building data →</span>
       </a>
       <a class="row" href="#web">
         <span class="who">Designers &amp; fit-out teams</span>
-        <span class="what">Author and share in a browser. No CAD seat, no scanning device, no
-        render budget, and drawings that come out of the model instead of being redrawn.</span>
+        <span class="what">Author and share in a browser. No CAD seat, no scanner, no render
+        budget.</span>
         <span class="arrow">BIM Author →</span>
       </a>
       <a class="row" href="#course">
         <span class="who">People who want to learn it</span>
-        <span class="what">A self-paced online course: reality capture, modelling, and
-        connecting your own AI to Skanna, to set it up in your business or to digitise your
-        own buildings.</span>
+        <span class="what">A self-paced online course in capture, modelling and connecting
+        your own AI.</span>
         <span class="arrow">The course →</span>
       </a>
       <a class="row" href="#access">
         <span class="who">Teams paying for CAD seats</span>
-        <span class="what">Cut the licence, survey and drawing-production lines, and the
-        separate booking, service and document systems alongside them.</span>
+        <span class="what">Cut the licences, the surveys and the separate systems around
+        them.</span>
         <span class="arrow">Talk it through →</span>
       </a>
     </div>
@@ -1378,83 +1326,35 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
 
   <section id="twin">
     <h2>What the model gives you</h2>
-    <p class="section-lede">Publish the finished model to a link. Anyone you send it to opens a
-    fully rendered building in their browser, with <strong>no software, no account and no
-    download</strong>, and everything below is already in it.</p>
+    <p class="section-lede">Publish the model to a link. Anyone opens the rendered building in
+    their browser, with <strong>no software and no account</strong>.</p>
 
     <div class="shot-frame shot-wide">
       <div class="chrome"><i></i><i></i><i></i><span>Digital twin · dollhouse view, after dark</span></div>
       <img src="assets/twin-hero-dollhouse.jpg" width="1800" height="756" alt="A digital twin of a two-bedroom apartment seen from above with the roof off, after dark: rendered walls, tiled floors, a fitted kitchen, a stone feature wall, and a furnished terrace with a pool, all lit by the building's own fixtures" loading="lazy">
     </div>
 
-    <div class="caps" style="margin-top:22px">
-      <div class="cap">
-        <h4>Sun study</h4>
-        <p>Real solar geometry on the site's own coordinates. Move the time and the date, and
-        the shadows follow.</p>
-      </div>
-      <div class="cap">
-        <h4>2D drawings, in vector</h4>
-        <p>Plans, elevations and sections on your title block. PDF, SVG and DXF at any standard
-        scale.</p>
-      </div>
-      <div class="cap">
-        <h4>Lighting</h4>
-        <p>Every fixture is a real emitter, on its own switch, from warm white to daylight.</p>
-      </div>
-      <div class="cap">
-        <h4>Walk and orbit</h4>
-        <p>Drop into first person at eye height, or stay above it and turn it in your hand.</p>
-      </div>
-      <div class="cap">
-        <h4>Measure anything</h4>
-        <p>Two points, a real dimension, off the same geometry the drawings come from.</p>
-      </div>
-      <div class="cap">
-        <h4>Click for the data</h4>
-        <p>Every object carries its type, storey, dimensions and whatever the author attached:
-        manufacturer, capacity, service dates, the manual.</p>
-      </div>
-      <div class="cap">
-        <h4>Building services</h4>
-        <p>Ventilation, electrical, water, drainage, gas and data as real objects. X-ray the
-        structure to see all of it at once.</p>
-      </div>
-      <div class="cap">
-        <h4>Materials the viewer picks</h4>
-        <p>Offer a curated set of finishes and let the buyer restyle a room. Your published
-        model is never touched.</p>
-      </div>
-      <div class="cap">
-        <h4>Furniture and equipment</h4>
-        <p>A catalogue of real products at real dimensions, placed by the viewer and cleared
-        with one button.</p>
-      </div>
-      <div class="cap">
-        <h4>Pins</h4>
-        <p>A photo of how it was actually wired, a 360° panorama of the room as built, a note
-        for whoever comes next, pinned to the surface it describes.</p>
-      </div>
-      <div class="cap">
-        <h4>Property portal</h4>
-        <p>Every building on its own permanent page: models, drawings, documents, media and a
-        dated log of everything ever added.</p>
-      </div>
-      <div class="cap">
-        <h4>Operations</h4>
-        <p>Inventory, condition, service history and renovation progress recorded on the
-        objects themselves.</p>
-      </div>
+    <div class="caps tags" style="margin-top:16px">
+      <div class="cap"><h4>Sun study</h4></div>
+      <div class="cap"><h4>2D drawings, in vector</h4></div>
+      <div class="cap"><h4>Lighting</h4></div>
+      <div class="cap"><h4>Walk and orbit</h4></div>
+      <div class="cap"><h4>Measure anything</h4></div>
+      <div class="cap"><h4>Click for the data</h4></div>
+      <div class="cap"><h4>Building services</h4></div>
+      <div class="cap"><h4>Materials the viewer picks</h4></div>
+      <div class="cap"><h4>Furniture and equipment</h4></div>
+      <div class="cap"><h4>Pins</h4></div>
+      <div class="cap"><h4>Property portal</h4></div>
+      <div class="cap"><h4>Operations</h4></div>
     </div>
   </section>
 
   <section id="compare">
     <h2>How it compares</h2>
-    <p class="section-lede">Skanna costs a fraction of a traditional CAD seat. This is about
-    <strong>scope, not quality</strong>: every tool here is good at the part it was built for.
-    The difference is that <strong>you need all of those parts to keep a building
-    documented</strong>, and buying them separately is where the money and the contradictions
-    go. Open a row to compare.</p>
+    <p class="section-lede">A fraction of the cost of a CAD seat. Every tool below is good at
+    its own part, but <strong>keeping a building documented needs all the parts</strong>. Open a
+    row to compare.</p>
     <div class="router cmp-list">
       <details class="cmp">
         <summary><span class="who">Reality-capture platforms</span><span class="what">Good at capturing a building. The model, the drawings and the life of the building happen somewhere else.</span><span class="arrow">Compare</span></summary>
@@ -1508,10 +1408,8 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
         </div>
       </details>
     </div>
-    <p class="pricing-note">Compared by capability, from public product information and our own
-    use, correct to the best of our knowledge in September 2026. Categories rather than logos,
-    because each of them contains several products that differ. If you think a row is unfair to
-    a tool you use, <a href="mailto:anders@skanna.site">tell me</a> and I will correct it.</p>
+    <p class="pricing-note">From public product information and our own use, September 2026.
+    Think a row is unfair? <a href="mailto:anders@skanna.site">Tell me</a>.</p>
   </section>
 
   <section id="independent">
@@ -1529,15 +1427,11 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
 
   <section id="course">
     <h2>The online course, at your own pace</h2>
-    <p class="section-lede">Short modules with screen recordings, taken online <strong>whenever
-    you like, at your own pace</strong>. Learn reality capture and modelling in Skanna, and how
-    to <strong>connect your own AI to Skanna</strong> through the MCP connector and set it up
-    in your business. Made for people in companies who are taking on reality capture, and
-    just as useful for property owners who want to digitise their own buildings with their
-    own AI.</p>
+    <p class="section-lede">Short modules with screen recordings, <strong>at your own
+    pace</strong>. Reality capture, modelling in Skanna, and how to <strong>connect your own
+    AI</strong> and set it up in your business.</p>
     <div class="cta-row">
       <a class="btn" href="mailto:anders@skanna.site?subject=Skanna%20online%20course&amp;body=I%27d%20like%20to%20sign%20up%20for%20the%20course.%0A%0AName%3A%0ACompany%20(if%20any)%3A%0AWhat%20I%20want%20to%20use%20Skanna%20for%3A%0A">Sign up by email</a>
-      <span class="aside">Email <a href="mailto:anders@skanna.site">anders@skanna.site</a> and I'll send you the details.</span>
     </div>
   </section>
 
@@ -1546,14 +1440,11 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
     <div class="req-cards">
       <div class="req-card req-web">
         <div class="req-text"><strong>Skanna Web: a browser</strong>Safari, Chrome, Edge,
-        Firefox or any other modern browser. That is all you need to create work and model your
-        own buildings by hand. For the modelling itself, we recommend
-        <a href="#ai">connecting your own AI</a>.</div>
+        Firefox or any other modern browser. That's all.</div>
       </div>
       <div class="req-card req-ios">
-        <div class="req-text"><strong>Skanna iOS app: only needs LiDAR</strong>Any iPhone or
-        iPad with LiDAR: iPhone&nbsp;12&nbsp;Pro or any later Pro, or iPad&nbsp;Pro 2020 or
-        later, on iOS&nbsp;16+. Optional, for scanning.</div>
+        <div class="req-text"><strong>Skanna iOS app: only needs LiDAR</strong>iPhone&nbsp;12&nbsp;Pro
+        or any later Pro, or iPad&nbsp;Pro 2020 or later, on iOS&nbsp;16+. Optional.</div>
       </div>
     </div>
   </section>
@@ -1561,9 +1452,8 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
   <section id="support">
     <h2>Support &amp; contact</h2>
     <div class="contact-block">
-      <p>Questions, feedback, or need help? Email
-      <a href="mailto:anders@skanna.site">anders@skanna.site</a> and you'll get a reply from me
-      directly.</p>
+      <p>Questions or feedback? Email <a href="mailto:anders@skanna.site">anders@skanna.site</a>
+      and you'll get a reply from me directly.</p>
     </div>
   </section>
 
@@ -1577,11 +1467,9 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
     <h2>In use today</h2>
     <div class="closer-head">
       <h3>This is in production, not in beta.</h3>
-      <p>Skanna is already on site on multiple continents, making the drawings and digital
-      twins for housing developments, private homes, a restaurant, sports centres and
-      mixed-use buildings. <strong>We are making a difference from the ground up</strong>,
-      in developing markets as much as anywhere, with solutions that work on real
-      buildings. Here are four of the jobs, and what each one started from.</p>
+      <p>On site on multiple continents, making drawings and digital twins for homes,
+      developments, a restaurant, sports centres and mixed-use buildings. <strong>Making a
+      difference from the ground up</strong>, in developing markets as much as anywhere.</p>
     </div>
     </div>
 
@@ -1600,20 +1488,14 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
         <div class="live-body">
           <div class="kicker">One model, many jobs</div>
           <h3>A 100-unit development, and everything else the model can do</h3>
-          <p>On a 100-unit development the same models give the permit and construction
-          drawings, a buyer walkthrough of each unit, and the operations and maintenance system
-          for the finished estate. Villas are measured on site while they are being built, so
-          the model follows what is actually there. And the same model does the work you would
-          otherwise buy from several other places:</p>
+          <p>The same models give the permit and construction drawings, a buyer walkthrough
+          of each unit, and the operations and maintenance system. Villas are measured on site
+          as they are built.</p>
           <ul class="live-uses">
-            <li><strong>Virtual tours</strong>Walk the building on a link, with 360° panoramas
-            pinned where they were taken.</li>
-            <li><strong>Photoreal renderings</strong>The images an image studio would make,
-            rendered from the model.</li>
-            <li><strong>MEP</strong>Ventilation, electrical, water and drainage as real objects,
-            for the companies that design and install them.</li>
-            <li><strong>Operations and maintenance</strong>Inventory, condition and service
-            history kept on the objects themselves.</li>
+            <li><strong>Virtual tours</strong></li>
+            <li><strong>Photoreal renderings</strong></li>
+            <li><strong>MEP</strong></li>
+            <li><strong>Operations and maintenance</strong></li>
           </ul>
           <dl class="live-io">
             <dt>Started from</dt><dd>The architect's DWG and PDF layouts, LiDAR scans and measurements on site</dd>
@@ -1625,9 +1507,7 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
       <article class="live">
         <div class="kicker">Restaurant fit-out</div>
         <h3>A restaurant in a shopping mall</h3>
-        <p>An 83-page as-built drawing set turned into a full model: glazed shopfront, kitchen
-        line and service rooms, four ceiling heights under an exposed slab, and a published
-        twin.</p>
+        <p>An 83-page as-built drawing set, turned into a full model and a published twin.</p>
         <dl class="live-io">
           <dt>Started from</dt><dd>As-built PDF drawings</dd>
           <dt>Delivered</dt><dd>IFC model, drawings, published twin</dd>
@@ -1637,8 +1517,7 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
       <article class="live">
         <div class="kicker">Sports centre</div>
         <h3>A converted factory with no drawings at all</h3>
-        <p>Rink, training areas, gym, changing rooms and viewing platforms, captured with an
-        iPhone in eight LiDAR scans and modelled straight off them.</p>
+        <p>Captured with an iPhone in eight LiDAR scans and modelled straight off them.</p>
         <dl class="live-io">
           <dt>Started from</dt><dd>iPhone LiDAR scans, nothing else</dd>
           <dt>Delivered</dt><dd>Floor plan, model and twin</dd>
@@ -1648,8 +1527,7 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
       <article class="live">
         <div class="kicker">Mixed-use building</div>
         <h3>Shops and apartments, from scanned paper permits</h3>
-        <p>Paper permit drawings, scanned and traced floor by floor from the basements up, with
-        the cores and the façade stacking exactly through every level.</p>
+        <p>Paper permits, scanned and traced floor by floor from the basements up.</p>
         <dl class="live-io">
           <dt>Started from</dt><dd>Scanned paper drawings</dd>
           <dt>Delivered</dt><dd>The whole building, basements to roof</dd>
@@ -1661,55 +1539,41 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
   <section id="access">
     <h2>Get access</h2>
     <div class="closer-head">
-      <p><strong>Anyone can start today.</strong> Your own home is free. Companies sign up
-      the same way and choose Company inside the app. Questions: email me.</p>
+      <p><strong>Anyone can start today.</strong> Your own home is free. Companies choose
+      Company inside the app.</p>
     </div>
 
     <div class="offer">
       <span class="count">Open now</span>
       <span class="terms">Free for your own home. Company from €299 per seat a month.</span>
-      <span class="fine">One site free: model it, make drawings, 3D and IFC. Another address
-      is €49 once, a live twin €9 a month. Sign up and start today.
-      <a href="https://app.skanna.site/?signup">Start free →</a></span>
+      <span class="fine"><a href="https://app.skanna.site/?signup">Start free →</a></span>
     </div>
 
     <div class="doors">
       <div class="door primary">
         <div class="for">For companies</div>
         <h4>Start today by email</h4>
-        <p>Surveyors, designers, architects, contractors, developers, agents, fit-out and
-        renovation teams: describe what you need from the platform, roughly how many seats,
-        and list any questions you have. I'll set up your Company account and answer them.</p>
+        <p>Tell me what you need and roughly how many seats, and I'll set up your Company
+        account.</p>
         <div class="act"><a class="btn" href="mailto:anders@skanna.site?subject=Skanna%20for%20our%20company&amp;body=Company%3A%0ACountry%3A%0AWhat%20we%20need%20from%20the%20platform%3A%0ARoughly%20how%20many%20seats%3A%0AQuestions%3A%0A">Email anders@skanna.site</a></div>
-        <p class="after">Interest is high right now, so a reply can take a few days. You'll
-        hear back from me directly.</p>
+        <p class="after">Interest is high, so a reply can take a few days.</p>
       </div>
 
       <div class="door">
         <div class="for">If you make the products</div>
         <h4>Talk partnerships</h4>
-        <p>For anyone who wants to build on top of Skanna and bring their own products and
-        data into the model. Your range goes in at real dimensions with its data attached, and
-        can then be placed in real buildings by hand in BIM Author, or by AI through the MCP
-        connector.</p>
+        <p>Build on top of Skanna. Your products go into the model at real dimensions with
+        their data, placed by hand or by AI.</p>
         <ul>
-          <li><strong>Material calculation</strong>: quantities and take-offs straight off the
-          walls, floors and finishes in the model</li>
-          <li><strong>Custom furniture and joinery</strong>: made to measure against geometry
-          that is actually correct</li>
-          <li><strong>Materials and fittings suppliers</strong>: your range as finishes and
-          fixtures a designer or buyer can pick</li>
-          <li><strong>Furniture and appliance brands</strong>: your library of models and
-          product data inside the model</li>
-          <li><strong>Interior design-and-build and renovation firms</strong>: design, quote
-          and build from one model, with your own catalogue in it</li>
+          <li>Material calculation</li>
+          <li>Custom furniture and joinery</li>
+          <li>Materials and fittings suppliers</li>
+          <li>Furniture and appliance brands</li>
+          <li>Design-and-build and renovation firms</li>
         </ul>
-        <p>Bring the idea, whether it's a catalogue inside the model, a market of your own or a
-        white-labelled tool, and we'll talk it through.</p>
         <div class="act">
           <a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20partnership&amp;body=We%27d%20like%20to%20talk%20about%20a%20partnership.%0A%0ACompany%3A%0AWhat%20we%20do%3A%0AMarkets%3A%0AWhat%20we%27d%20want%20out%20of%20it%3A%0A">Talk partnerships</a>
         </div>
-        <p class="after">This one goes straight to me.</p>
       </div>
     </div>
   </section>
