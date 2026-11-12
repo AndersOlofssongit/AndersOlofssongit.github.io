@@ -56,7 +56,7 @@
   nav.top .name { font-weight: 700; letter-spacing: 0.02em; }
   nav.top .spacer { flex: 1; }
   nav.top .links { display: flex; gap: 22px; font-size: 0.88em; }
-  nav.top .links a { color: var(--muted); }
+  nav.top .links a { color: var(--muted); white-space: nowrap; }
   nav.top .links a:hover { color: var(--text); text-decoration: none; }
   @media (max-width: 720px) { nav.top .links { display: none; } }
 
@@ -688,6 +688,40 @@
   }
   .start-also strong { display: block; color: var(--text); font-size: 1.05em; margin-bottom: 2px; }
 
+  /* ── Start free: the two free tools side by side, then "use what you have" ── */
+  .free-two {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .free-card { padding: 26px 28px; }
+  .free-card h3 { font-size: 1.4em; line-height: 1.2; margin: 0 0 12px; }
+  .free-card p { font-size: 0.98em; }
+  .free-card p.free-time { color: var(--muted); }
+  .free-card p.free-time strong { color: var(--text); }
+  .free-card ul { color: var(--muted); font-size: 0.95em; }
+  .free-card .tier-act .ifc-note { margin: 6px 0 0; }
+  .free-app-head { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; }
+  .free-app-head .app-icon { width: 64px; height: 64px; flex: none; }
+  .free-app-head h3 { margin: 0; }
+  section#capture { padding-top: 34px; }
+  .ways {
+    display: grid; gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+  .way {
+    color: var(--muted); font-size: 0.92em; line-height: 1.5;
+    background: var(--panel); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .way.best { border-color: rgba(167,139,250,0.45); background: rgba(167,139,250,0.07); }
+  .way .k {
+    display: block; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.74em; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+  }
+  .way strong { display: block; color: var(--text); font-size: 1.08em; margin-bottom: 4px; }
+  @media (max-width: 560px) { .free-card { padding: 20px 20px; } .free-card h3 { font-size: 1.25em; } }
+
   /* ── iOS app, optional — icon, copy and Apple's own badge ─── */
   .app-row { display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; }
   .app-icon { width: 96px; height: 96px; border-radius: 22.37%; display: block;
@@ -975,12 +1009,11 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
     <span class="name">Skanna</span>
     <span class="spacer"></span>
     <nav class="links">
-      <a href="#app">iOS app</a>
-      <a href="#start">Pricing</a>
+      <a href="#start">Start free</a>
       <a href="#web">BIM Author</a>
+      <a href="#companies">Companies</a>
       <a href="#ai">Your AI</a>
       <a href="#how">How it works</a>
-      <a href="#who">Who it's for</a>
       <a href="#twin">The twin</a>
       <a href="#live">In use</a>
       <a href="#access">Get access</a>
@@ -990,97 +1023,81 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
   <header class="hero">
     <div class="hero-grid">
       <div>
-        <div class="kicker">Browser-based BIM platform · Works with your own AI</div>
-        <h1>Every building should have a digital twin. Build yours in the browser<span class="dot">.</span></h1>
-        <p class="lede">Model it yourself, <strong>let your own AI do it</strong>, or have it
-        done for you. One model gives you the drawings, a twin anyone can open on a link, and
-        data on every object.</p>
+        <div class="kicker">Free for your own home</div>
+        <h1>Start the digital twin of your house today<span class="dot">.</span></h1>
+        <p class="lede">Every building should have one. Yours can start tonight, in your
+        browser. <strong>Two free tools:</strong> BIM Author to build the model, and an iPhone
+        app to scan it if you have LiDAR.</p>
         <div class="cta-row">
-          <a class="btn" href="skanna-demo/">Open a finished building</a>
-          <a class="btn-ghost" href="#start">Prices and how to start</a>
+          <a class="btn" href="#start">Start with your house</a>
+          <a class="btn-ghost" href="skanna-demo/">Open a finished building</a>
         </div>
-        <p class="store-note">A live building, not a mock-up. No account, nothing to install.</p>
+        <p class="store-note">Free for private people. Working for clients?
+        <a href="#companies">Skanna for companies</a>.</p>
       </div>
-    </div>
-
-    <div class="proof">
-      <div><strong>Adaptable</strong>One house or a whole development. Drawings, sales
-      visuals, renovation, operations. Use it for what you need.</div>
-      <div><strong>Pay for what you use</strong>Free for your own home, seats for
-      companies, or a one-off price to have a building digitised.</div>
-      <div><strong>Open, web and AI friendly</strong>Runs in the browser. IFC, DXF, PDF and
-      GLB out, in a model format your own AI can read and write.</div>
     </div>
   </header>
 
-  <section id="app">
-    <h2>Skanna Site Capture · iOS app</h2>
-    <div class="app-row">
-      <img class="app-icon" src="assets/app-icon.png" width="96" height="96" alt="The Skanna Site Capture app icon">
-      <div>
-        <h3>A separate app for scanning on site</h3>
-        <p class="section-lede">Free for iPhone and iPad Pro. <strong>It is not the BIM
-        platform:</strong> Skanna Web runs in your browser and works without it. With LiDAR
-        the app captures geometry, photos, 360° panoramas and notes in one walk-through, true to
-        scale. <strong>We don't guess at the geometry and we don't invent the images.</strong>
-        No account, and completely private.</p>
-        <a class="app-badge" href="https://apps.apple.com/app/id6789603042"><img src="assets/app-store-badge.svg" width="150" height="50" alt="Download on the App Store"></a>
-        <p class="ifc-note">Needs LiDAR: iPhone&nbsp;12&nbsp;Pro or a later Pro, or
-        iPad&nbsp;Pro 2020 or later. <a href="privacy.html">Privacy policy</a>.</p>
-      </div>
-    </div>
-  </section>
-
   <section id="start">
-    <h2>What it costs, how to start</h2>
-
-    <div class="tiers">
-      <div class="tier highlight">
-        <div class="kicker">Personal</div>
-        <h3>Free</h3>
-        <p class="tier-alt">for your own home</p>
-        <p>Get your own house much better: keep the record, plan a renovation, make the
-        drawings.</p>
+    <h2>Two free tools. Use one or both.</h2>
+    <div class="free-two">
+      <div class="tier highlight free-card">
+        <div class="kicker">1 · BIM Author · in your browser</div>
+        <h3>Anyone can start with their house today</h3>
+        <p>Sign up, add your address and start drawing. Nothing to install, and you don't
+        need to know CAD.</p>
+        <p class="free-time"><strong>Give it a little time.</strong> Most people get going in
+        an evening. Getting the whole house right takes a few more.</p>
         <ul>
-          <li>One site at one address, free</li>
-          <li>Model it, make drawings, 3D and IFC</li>
+          <li>One home free: model, drawings, 3D and IFC</li>
           <li>Another address: <strong>€49 once</strong></li>
           <li>Share it as a live twin: <strong>€9 a month</strong></li>
         </ul>
         <div class="tier-act"><a class="btn" href="https://app.skanna.site/?signup">Start free</a></div>
       </div>
-      <div class="tier">
-        <div class="kicker">Company</div>
-        <h3>€299 per seat a month</h3>
-        <p class="tier-alt">or €2,990 per seat a year</p>
-        <p>For firms doing on-site work and drawings for their clients.</p>
-        <ul>
-          <li>Unlimited sites, every twin included</li>
-          <li>Skanna Engineering (beta): take-off, loads, services and detail sheets</li>
-          <li>Invite your colleagues to your seats</li>
-          <li>Hosting: 50 GB of sites and 100 GB of twin viewing per seat a month</li>
-        </ul>
-        <div class="tier-act"><a class="btn-ghost" href="https://app.skanna.site/?signup">Start now</a></div>
-      </div>
-      <div class="tier">
-        <div class="kicker">Implementation</div>
-        <h3>Quoted per project</h3>
-        <p class="tier-alt">implementation and integration, as a service</p>
-        <p>We help you digitise your buildings, your systems and the way you work, and
-        connect Skanna to what you already run.</p>
-        <ul>
-          <li>Your buildings modelled into one record you keep</li>
-          <li>Integrations with the systems you already use</li>
-          <li>Your processes set up on the platform, with training</li>
-          <li>Your own brand, domain and product catalogue, if you want them</li>
-        </ul>
-        <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20implementation&amp;body=We%27d%20like%20help%20digitising%20our%20buildings%2C%20systems%20or%20processes.%0A%0ACompany%3A%0AWhat%20we%27d%20want%20to%20digitise%3A%0ASystems%20we%20use%20today%3A%0ATimeline%3A%0A">Talk about a project</a></div>
+
+      <div class="tier free-card" id="app">
+        <div class="kicker">2 · Skanna Site Capture · iOS app</div>
+        <div class="free-app-head">
+          <img class="app-icon" src="assets/app-icon.png" width="64" height="64" alt="The Skanna Site Capture app icon">
+          <h3>iPhone or iPad with LiDAR? Use the app.</h3>
+        </div>
+        <p>Walk through your house and scan it. Geometry, photos, 360° panoramas and notes,
+        true to scale. Then open the scan in BIM Author and trace it.</p>
+        <p class="free-time"><strong>A separate app.</strong> Free, no account, and
+        completely private. BIM Author works without it.</p>
+        <div class="tier-act">
+          <a class="app-badge" href="https://apps.apple.com/app/id6789603042"><img src="assets/app-store-badge.svg" width="150" height="50" alt="Download on the App Store"></a>
+          <p class="ifc-note">Needs LiDAR: iPhone&nbsp;12&nbsp;Pro or a later Pro, or
+          iPad&nbsp;Pro 2020 or later. <a href="privacy.html">Privacy policy</a>.</p>
+        </div>
       </div>
     </div>
-    <div class="start-also">
-      <a href="#ai"><span class="k">Free to draft</span><strong>Connect your own AI</strong>Let it draft the model through the Skanna MCP connector.</a>
-      <a href="#ai"><span class="k">One-off price per building</span><strong>Have it done for you</strong>Send your drawings or scans and get the finished model back.</a>
-      <a href="#app"><span class="k">Separate iOS app · free</span><strong>Skanna Site Capture</strong>Capture a building with LiDAR, photos and 360° panoramas.</a>
+  </section>
+
+  <section id="capture">
+    <h2>No LiDAR? Use what you have.</h2>
+    <p class="section-lede">You don't need a scanner to start. Pick whatever is easiest for
+    you. You can always add a scan later.</p>
+    <div class="ways">
+      <div class="way best">
+        <span class="k">Best</span>
+        <strong>Ask someone to scan it</strong>
+        Know someone with a Pro iPhone or iPad? They scan your house with the free app and send
+        you the files. You open them in BIM Author.
+      </div>
+      <div class="way">
+        <span class="k">Plans</span>
+        <strong>Use your drawings</strong>
+        Old floor plans, the permit set or a PDF from the architect. Put them under the model
+        and trace over them.
+      </div>
+      <div class="way">
+        <span class="k">Phone</span>
+        <strong>Photos and a sketch</strong>
+        Take pictures, sketch the rooms on your phone and measure with a tape. Even a photo of
+        a paper plan works.
+      </div>
     </div>
   </section>
 
@@ -1106,6 +1123,46 @@ html.g-touring .g-demo,html.g-carded .g-demo,.g-stage:not(.g-ready) .g-demo{opac
     </figure>
     <p class="ifc-note">Out in open formats: <strong>IFC, GLB, DXF, SVG and PDF</strong>.
     Nothing is trapped.</p>
+  </section>
+
+  <section id="companies">
+    <h2>For companies</h2>
+    <p class="section-lede"><strong>Free is for private people and their own homes.</strong>
+    Firms doing work for clients pay per seat, and get the full platform.</p>
+
+    <div class="tiers">
+      <div class="tier highlight">
+        <div class="kicker">Company</div>
+        <h3>€299 per seat a month</h3>
+        <p class="tier-alt">or €2,990 per seat a year</p>
+        <p>For firms doing on-site work and drawings for their clients.</p>
+        <ul>
+          <li>Unlimited sites, every twin included</li>
+          <li>Skanna Engineering (beta): take-off, loads, services and detail sheets</li>
+          <li>Invite your colleagues to your seats</li>
+          <li>Hosting: 50 GB of sites and 100 GB of twin viewing per seat a month</li>
+        </ul>
+        <div class="tier-act"><a class="btn" href="https://app.skanna.site/?signup">Start now</a></div>
+      </div>
+      <div class="tier">
+        <div class="kicker">Implementation</div>
+        <h3>Quoted per project</h3>
+        <p class="tier-alt">implementation and integration, as a service</p>
+        <p>We help you digitise your buildings, your systems and the way you work, and
+        connect Skanna to what you already run.</p>
+        <ul>
+          <li>Your buildings modelled into one record you keep</li>
+          <li>Integrations with the systems you already use</li>
+          <li>Your processes set up on the platform, with training</li>
+          <li>Your own brand, domain and product catalogue, if you want them</li>
+        </ul>
+        <div class="tier-act"><a class="btn-ghost" href="mailto:anders@skanna.site?subject=Skanna%20implementation&amp;body=We%27d%20like%20help%20digitising%20our%20buildings%2C%20systems%20or%20processes.%0A%0ACompany%3A%0AWhat%20we%27d%20want%20to%20digitise%3A%0ASystems%20we%20use%20today%3A%0ATimeline%3A%0A">Talk about a project</a></div>
+      </div>
+    </div>
+    <div class="start-also">
+      <a href="#ai"><span class="k">Free to draft</span><strong>Connect your own AI</strong>Let it draft the model through the Skanna MCP connector.</a>
+      <a href="#ai"><span class="k">One-off price per building</span><strong>Have it done for you</strong>Send your drawings or scans and get the finished model back.</a>
+    </div>
   </section>
 
   <section id="ai">
